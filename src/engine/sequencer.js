@@ -2,6 +2,7 @@ const Timer = require('../util/timer');
 const Thread = require('./thread');
 const execute = require('./execute.js');
 const compilerExecute = require('../compiler/jsexecute');
+const ttwExecute = require('../ttw/sched').execute;
 const Sampler = require('./tw-sampler');
 
 /**
@@ -214,11 +215,21 @@ class Sequencer {
      */
     stepThread (thread) {
         if (thread.isCompiled) {
-            compilerExecute(thread);
+            // ttw: TTW threads skip the dispatch in jsexecute
+            if (thread.ttw === null) compilerExecute(thread);
+            else ttwExecute(thread);
             if (this.runtime.sampler.enableBasic) this.runtime.sampler.pc[0] = Sampler.RUNTIME;
             return;
         }
+        this._stepInterpretedThread(thread);
+    }
 
+    /**
+     * ttw: the interpreter's part of stepThread, kept apart so that stepThread stays small enough for
+     * the JIT to inline it into stepThreads.
+     * @param {!Thread} thread Thread object to step.
+     */
+    _stepInterpretedThread (thread) {
         let currentBlockId = thread.peekStack();
         if (!currentBlockId) {
             // A "null block" - empty branch.

@@ -22,7 +22,7 @@ const h0 = g0;
 const h1 = g1;
 let v1 = h1.value;
 let a0;
-if ((a0 = h0.value, typeof a0 === "number" ? false : ("" + a0).toLowerCase() === "true")) {
+if ((a0 = h0.value, typeof a0 === "number" ? false : (a0 === "true" || ("" + a0).toLowerCase() === "true"))) {
 v1 = "last";
 h1.value = v1;
 return "";
@@ -40,13 +40,13 @@ let v1 = h1.value;
 let n0 = 0, n1 = 0, a0, a1, a2, a3;
 runtime.ext_scratch3_looks._say("plan 1", target);
 inl1117: {
-if ((a0 = h0.value, typeof a0 === "number" ? false : ("" + a0).toLowerCase() === "true")) {
+if ((a0 = h0.value, typeof a0 === "number" ? false : (a0 === "true" || ("" + a0).toLowerCase() === "true"))) {
 v1 = "last";
 break inl1117;
 }
 v1 = (1 + 2);
 }
-if ((a3 = (typeof (a2 = v1) === "number" ? (a2 >= 1 && a2 <= L0.len ? (n1 = (a2 | 0) - 1, ((n0 = L0.f64[n1]) === n0 ? n0 : ((a1 = L0.objs[n1]) === undefined ? NaN : a1))) : "") : L0.getSlow(a2)), typeof a3 === "number" ? false : ("" + a3).toLowerCase() === "thing")) {
+if ((a3 = (typeof (a2 = v1) === "number" ? (a2 >= 1 && a2 <= L0.len ? (n1 = (a2 | 0) - 1, ((n0 = L0.f64[n1]) === n0 ? n0 : ((a1 = L0.objs[n1]) === undefined ? NaN : a1))) : "") : L0.getSlow(a2)), typeof a3 === "number" ? false : (a3 === "thing" || ("" + a3).toLowerCase() === "thing"))) {
 runtime.ext_scratch3_looks._say("pass", target);
 }
 runtime.ext_scratch3_looks._say("end", target);

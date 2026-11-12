@@ -86,25 +86,25 @@ runtime.ext_scratch3_looks._say("pass 14", target);
 }
 fr.s1 = n7 - 1; fr.pc = 2; return 0;
 }
-if ((typeof 1 === "number" ? false : "" === ("" + 1).toLowerCase())) {
+if ((typeof 1 === "number" ? false : ("" + 1).length === 0)) {
 runtime.ext_scratch3_looks._say("fail", target);
 }
-if ((typeof 1 === "number" ? false : ("" + 1).toLowerCase() === "")) {
+if ((typeof 1 === "number" ? false : ("" + 1).length === 0)) {
 runtime.ext_scratch3_looks._say("fail", target);
 }
-if ((typeof 1 === "number" ? false : " " === ("" + 1).toLowerCase())) {
+if ((typeof 1 === "number" ? false : (1 === " " || ("" + 1).toLowerCase() === " "))) {
 runtime.ext_scratch3_looks._say("fail", target);
 }
-if ((typeof 0 === "number" ? false : " " === ("" + 0).toLowerCase())) {
+if ((typeof 0 === "number" ? false : (0 === " " || ("" + 0).toLowerCase() === " "))) {
 runtime.ext_scratch3_looks._say("fail", target);
 }
-if ((typeof 0 === "number" ? false : ("" + 0).toLowerCase() === " ")) {
+if ((typeof 0 === "number" ? false : (0 === " " || ("" + 0).toLowerCase() === " "))) {
 runtime.ext_scratch3_looks._say("fail", target);
 }
-if ((typeof 0 === "number" ? false : "" === ("" + 0).toLowerCase())) {
+if ((typeof 0 === "number" ? false : ("" + 0).length === 0)) {
 runtime.ext_scratch3_looks._say("fail", target);
 }
-if ((typeof 0 === "number" ? false : ("" + 0).toLowerCase() === "")) {
+if ((typeof 0 === "number" ? false : ("" + 0).length === 0)) {
 runtime.ext_scratch3_looks._say("fail", target);
 }
 runtime.ext_scratch3_looks._say("end", target);

@@ -21,7 +21,7 @@ let v0 = h0.value;
 runtime.ext_scratch3_looks._say("plan 1", target);
 v0 = "discard me";
 v0 = "";
-if ((typeof v0 === "number" ? false : ("" + v0).toLowerCase() === "")) {
+if ((typeof v0 === "number" ? false : ("" + v0).length === 0)) {
 runtime.ext_scratch3_looks._say("pass non existent procedure returned empty string", target);
 }
 runtime.ext_scratch3_looks._say("end", target);

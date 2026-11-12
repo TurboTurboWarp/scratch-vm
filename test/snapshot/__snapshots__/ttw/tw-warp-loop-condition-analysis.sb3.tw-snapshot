@@ -51,7 +51,7 @@ if (L0.objs.length === 0) {
 n1 = B.k; if (B.k < 4096) B.k *= 2;
 for (;;) {
 if (n1-- === 0) { B.v0 = v0; B.v1 = v1; return 1; }
-if (!!(typeof v0 === "number" ? false : ("" + v0).toLowerCase() === "final")) break;
+if (!!(typeof v0 === "number" ? false : (v0 === "final" || ("" + v0).toLowerCase() === "final"))) break;
 v0 = ((n2 = v1) >= 1 && n2 <= L0.len ? L0.f64[(n2 | 0) - 1] : "");
 v1 = (v1 + 1);
 }
@@ -59,7 +59,7 @@ v1 = (v1 + 1);
 n3 = B.k; if (B.k < 4096) B.k *= 2;
 for (;;) {
 if (n3-- === 0) { B.v0 = v0; B.v1 = v1; return 1; }
-if (!!(typeof v0 === "number" ? false : ("" + v0).toLowerCase() === "final")) break;
+if (!!(typeof v0 === "number" ? false : (v0 === "final" || ("" + v0).toLowerCase() === "final"))) break;
 v0 = ((n6 = v1) >= 1 && n6 <= L0.len ? (n5 = (n6 | 0) - 1, ((n4 = L0.f64[n5]) === n4 ? n4 : ((a1 = L0.objs[n5]) === undefined ? NaN : a1))) : "");
 v1 = (v1 + 1);
 }
@@ -102,7 +102,7 @@ if (L0.objs.length === 0) {
 n1 = B.k; if (B.k < 4096) B.k *= 2;
 for (;;) {
 if (n1-- === 0) { B.v0 = v0; B.v1 = v1; return 1; }
-if (!!(typeof v0 === "number" ? false : ("" + v0).toLowerCase() === "final")) break;
+if (!!(typeof v0 === "number" ? false : (v0 === "final" || ("" + v0).toLowerCase() === "final"))) break;
 v0 = ((n2 = v1) >= 1 && n2 <= L0.len ? L0.f64[(n2 | 0) - 1] : "");
 v1 = (v1 + 1);
 }
@@ -110,7 +110,7 @@ v1 = (v1 + 1);
 n3 = B.k; if (B.k < 4096) B.k *= 2;
 for (;;) {
 if (n3-- === 0) { B.v0 = v0; B.v1 = v1; return 1; }
-if (!!(typeof v0 === "number" ? false : ("" + v0).toLowerCase() === "final")) break;
+if (!!(typeof v0 === "number" ? false : (v0 === "final" || ("" + v0).toLowerCase() === "final"))) break;
 v0 = ((n6 = v1) >= 1 && n6 <= L0.len ? (n5 = (n6 | 0) - 1, ((n4 = L0.f64[n5]) === n4 ? n4 : ((a1 = L0.objs[n5]) === undefined ? NaN : a1))) : "");
 v1 = (v1 + 1);
 }

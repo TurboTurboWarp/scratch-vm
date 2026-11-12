@@ -1184,7 +1184,7 @@ retire(th); return 2;
 }
 }
 }
-q544_0 = ((+(typeof 50 === "number" ? false : "" === ("" + 50).toLowerCase())) === (+(typeof 50 === "number" ? false : "" === ("" + 50).toLowerCase())));
+q544_0 = ((+(typeof 50 === "number" ? false : ("" + 50).length === 0)) === (+(typeof 50 === "number" ? false : ("" + 50).length === 0)));
 q544_1 = "real false = real false";
 inl544: {
 if (!q544_0) {
@@ -1226,7 +1226,7 @@ retire(th); return 2;
 }
 }
 }
-q550_0 = ("false".toLowerCase() === ("" + (typeof 50 === "number" ? false : "" === ("" + 50).toLowerCase())).toLowerCase());
+q550_0 = ("false".toLowerCase() === ("" + (typeof 50 === "number" ? false : ("" + 50).length === 0)).toLowerCase());
 q550_1 = "string false = real false";
 inl550: {
 if (!q550_0) {
@@ -1254,7 +1254,7 @@ retire(th); return 2;
 }
 }
 }
-q554_0 = (("" + (typeof 50 === "number" ? false : "" === ("" + 50).toLowerCase())).toLowerCase() === "false".toLowerCase());
+q554_0 = (("" + (typeof 50 === "number" ? false : ("" + 50).length === 0)).toLowerCase() === "false".toLowerCase());
 q554_1 = "real false = string false";
 inl554: {
 if (!q554_0) {

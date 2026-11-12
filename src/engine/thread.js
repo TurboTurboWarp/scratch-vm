@@ -134,6 +134,17 @@ class _StackFrame {
  */
 class Thread {
     constructor (firstBlock) {
+        // ttw: the fields read on every step of a compiled thread come first so they share cache lines
+        // (V8 lays out in-object properties in assignment order). They are documented below.
+        this.status = 0; /* Thread.STATUS_RUNNING */
+        this.stack = [];
+        this.isCompiled = false;
+        this.ttw = null;
+        this.fn = null;
+        this.frame = null;
+        this.self = null;
+        this.warpTimer = null;
+
         /**
          * ID of top block of the thread
          * @type {!string}

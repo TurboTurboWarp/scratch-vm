@@ -22,10 +22,10 @@ const h1 = g1;
 let v0 = h0.value, v1 = h1.value;
 let n0 = 0, n1 = 0;
 runtime.ext_scratch3_looks._say("plan 8", target);
-if (!(typeof 1 === "number" ? false : "true" === ("" + 1).toLowerCase())) {
+if (!(typeof 1 === "number" ? false : (1 === "true" || ("" + 1).toLowerCase() === "true"))) {
 runtime.ext_scratch3_looks._say("pass", target);
 }
-if (!(typeof 1 === "number" ? false : ("" + 1).toLowerCase() === "true")) {
+if (!(typeof 1 === "number" ? false : (1 === "true" || ("" + 1).toLowerCase() === "true"))) {
 runtime.ext_scratch3_looks._say("pass", target);
 }
 if (((+(2 === 2)) === 1)) {

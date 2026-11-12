@@ -48,17 +48,24 @@ const startThread = (thread, sc) => {
  */
 const execute = thread => {
     if (extDirty.length !== 0) syncLists();
-    const sc = thread.ttw;
-    try {
-        if (sc.native !== null) {
-            sc.native(thread, thread.self);
-            R.retire(thread);
-            return;
+    if (thread.fn !== null) {
+        // Resumable script. One call site keeps the step call monomorphic-friendly and this function small.
+        try {
+            let r;
+            do {
+                r = thread.fn(thread, thread.frame);
+            } while (r === 1);
+            if (r === 2) R.retire(thread);
+        } catch (e) {
+            if (e !== RETIRE) throw e;
         }
-        if (thread.fn === null) return;
-        let r = thread.fn(thread, thread.frame);
-        while (r === 1) r = thread.fn(thread, thread.frame);
-        if (r === 2) R.retire(thread);
+        return;
+    }
+    const native = thread.ttw.native;
+    if (native === null) return;
+    try {
+        native(thread, thread.self);
+        R.retire(thread);
     } catch (e) {
         if (e !== RETIRE) throw e;
     }

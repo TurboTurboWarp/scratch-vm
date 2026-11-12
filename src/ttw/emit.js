@@ -17,7 +17,7 @@ const log = require('../util/log');
 const BlockType = require('../extension-support/block-type');
 const {StackOpcode, InputOpcode, InputType} = require('../compiler/enums');
 const {IntermediateInput, IntermediateStack} = require('../compiler/intermediate');
-const {forEachChild, walkStack, countNodes, LOOP_OPCODES} = require('./ir-walk');
+const {forEachChild, walkInput, walkStack, countNodes, LOOP_OPCODES} = require('./ir-walk');
 
 /* eslint-disable max-len */
 /* eslint-disable no-negated-condition */
@@ -79,6 +79,30 @@ const nonNumericStringConstant = input => {
     const lower = s.toLowerCase();
     if (lower === 'nan' || lower === 'infinity' || lower === '-infinity') return null;
     return lower;
+};
+
+/**
+ * @param {IntermediateInput} a input
+ * @param {IntermediateInput} b input
+ * @returns {boolean} true if both read the same variable or argument or are the same number constant,
+ * possibly through the same number cast (so they evaluate to the same value)
+ */
+const sameSimpleInput = (a, b) => {
+    if (a.opcode !== b.opcode) return false;
+    switch (a.opcode) {
+    case InputOpcode.CAST_NUMBER:
+        return sameSimpleInput(a.inputs.target, b.inputs.target);
+    case InputOpcode.VAR_GET:
+        return a.inputs.variable.id === b.inputs.variable.id && a.inputs.variable.scope === b.inputs.variable.scope;
+    case InputOpcode.PROCEDURE_ARGUMENT:
+        return a.inputs.index === b.inputs.index;
+    case RAW_OPCODE:
+        return a.inputs.js === b.inputs.js;
+    case InputOpcode.CONSTANT:
+        return typeof a.inputs.value === 'number' && Object.is(a.inputs.value, b.inputs.value);
+    default:
+        return false;
+    }
 };
 
 /**
@@ -364,6 +388,8 @@ class UnitEmitter {
         this.stuckName = null;
         /** @type {Set<string>} additional locals (inlined procedure arguments) */
         this.extraLocals = new Set();
+        /** @type {Set<string>} inlined argument temporaries that hold the argument already cast to a number */
+        this.numericRaw = new Set();
         /** @type {Set<string>} locals of variables promoted inside resumable loops */
         this.scopedLocals = new Set();
         /** @type {Array<*>} variables currently promoted inside a resumable loop */
@@ -397,6 +423,12 @@ class UnitEmitter {
         this.inGeneralVersion = false;
         /** IR nodes still allowed to be duplicated by versioning in this unit. */
         this.versioningBudget = 1500;
+        /**
+         * Inside the "in range" version of a counted loop: the induction variable and the lists whose
+         * items at that index are known to exist (see rangePlan).
+         * @type {{key: string, v: string, lists: Set<string>}|null}
+         */
+        this.inRange = null;
 
         /**
          * Numeric view sharing (04 §4), native units: variable key -> numeric temp holding toNumber(variable),
@@ -873,6 +905,18 @@ class UnitEmitter {
             if (target.opcode === InputOpcode.LIST_GET) {
                 return this.listGetNumber(target.inputs);
             }
+            if (target.opcode === RAW_OPCODE && this.numericRaw.has(target.inputs.js)) {
+                // An inlined argument that was converted when it was bound.
+                return target.inputs.js;
+            }
+            if (
+                target.opcode === InputOpcode.OP_MULTIPLY &&
+                target.inputs.left.isAlwaysType(InputType.NUMBER) &&
+                sameSimpleInput(target.inputs.left, target.inputs.right)
+            ) {
+                // x * x is never NaN when x isn't (only 0 * Infinity is).
+                return this.descendInput(target);
+            }
             if (target.opcode === InputOpcode.VAR_GET && !this.resumable) {
                 const cached = this.castCache.get(this.sprite.varKey(target.inputs.variable));
                 if (cached) return cached;
@@ -984,14 +1028,18 @@ class UnitEmitter {
             if (!left.isSometimesType(InputType.NUMBER_INTERPRETABLE) || !right.isSometimesType(InputType.NUMBER_INTERPRETABLE)) {
                 // ttw (04 §6): a number can never equal a constant string that has no numeric interpretation.
                 const rc = nonNumericStringConstant(right);
-                if (rc !== null && left.isSometimesType(InputType.NUMBER_OR_NAN)) {
-                    const [pre, v] = this.once(this.descendInput(left), false);
-                    return `(${pre}typeof ${v} === "number" ? false : ("" + ${v}).toLowerCase() === ${str(rc)})`;
-                }
-                const lc = nonNumericStringConstant(left);
-                if (lc !== null && right.isSometimesType(InputType.NUMBER_OR_NAN)) {
-                    const [pre, v] = this.once(this.descendInput(right), false);
-                    return `(${pre}typeof ${v} === "number" ? false : ${str(lc)} === ("" + ${v}).toLowerCase())`;
+                const lc = rc === null ? nonNumericStringConstant(left) : null;
+                const value = rc === null ? right : left;
+                const constant = rc === null ? left : right;
+                const c = rc === null ? lc : rc;
+                if (c !== null && value.isSometimesType(InputType.NUMBER_OR_NAN)) {
+                    const split = this.listGetSplit(value);
+                    if (split !== null) {
+                        const v = this.anyTemp();
+                        return `(${split.cond} ? false : (${v} = ${split.any}, typeof ${v} === "number" ? false : ${this.equalsStringConstant(v, constant, c)}))`;
+                    }
+                    const [pre, v] = this.once(this.descendInput(value), false);
+                    return `(${pre}typeof ${v} === "number" ? false : ${this.equalsStringConstant(v, constant, c)})`;
                 }
                 return `(${this.descendInput(left.toType(InputType.STRING))}.toLowerCase() === ${this.descendInput(right.toType(InputType.STRING))}.toLowerCase())`;
             }
@@ -1004,6 +1052,10 @@ class UnitEmitter {
                 return `(${this.descendInput(left.toType(InputType.NUMBER))} === ${this.descendInput(right.toType(InputType.NUMBER))})`;
             }
             // No compile-time optimizations possible: inline the fast path of compareEqual at this site (07 R3).
+            {
+                const fused = this.fusedListCompare('===', 'eqSlow', left, right);
+                if (fused !== null) return fused;
+            }
             const [p1, a] = this.once(this.descendInput(left), false);
             const [p2, b] = this.once(this.descendInput(right), false);
             const fast = joinGuards([typeGuard(a, left), typeGuard(b, right), nanGuard(a, left), nanGuard(b, right)]);
@@ -1025,6 +1077,10 @@ class UnitEmitter {
             if (!left.isSometimesType(InputType.NUMBER_INTERPRETABLE) || !right.isSometimesType(InputType.NUMBER_INTERPRETABLE)) {
                 return `(${this.descendInput(left.toType(InputType.STRING))}.toLowerCase() > ${this.descendInput(right.toType(InputType.STRING))}.toLowerCase())`;
             }
+            {
+                const fused = this.fusedListCompare('>', 'gtSlow', left, right);
+                if (fused !== null) return fused;
+            }
             const [p1, a] = this.once(this.descendInput(left), false);
             const [p2, b] = this.once(this.descendInput(right), false);
             const fast = joinGuards([typeGuard(a, left), typeGuard(b, right), nanGuard(a, left)]);
@@ -1045,6 +1101,10 @@ class UnitEmitter {
             }
             if (!left.isSometimesType(InputType.NUMBER_INTERPRETABLE) || !right.isSometimesType(InputType.NUMBER_INTERPRETABLE)) {
                 return `(${this.descendInput(left.toType(InputType.STRING))}.toLowerCase() < ${this.descendInput(right.toType(InputType.STRING))}.toLowerCase())`;
+            }
+            {
+                const fused = this.fusedListCompare('<', 'ltSlow', left, right);
+                if (fused !== null) return fused;
             }
             const [p1, a] = this.once(this.descendInput(left), false);
             const [p2, b] = this.once(this.descendInput(right), false);
@@ -1437,6 +1497,136 @@ class UnitEmitter {
     }
 
     /**
+     * Range check hoisting for the most common list loop in Scratch projects:
+     *
+     *     repeat (n) { ... item (i) of L ... replace item (i) of L ... change i by 1 }
+     *
+     * If `i` is only changed by the loop's last statement (by exactly 1) and the length of L can't change
+     * inside the loop, then every `item (i) of L` is in range iff `i >= 1 && i + n - 1 <= length of L` when
+     * the loop is entered. The loop is emitted twice; the version behind that check does no per-access
+     * range checks, and reads of PURE lists there are plain numbers instead of "number or empty string".
+     * @param {*} block CONTROL_REPEAT block (native unit)
+     * @returns {{key: string, v: string, lists: Set<string>}|null} plan, or null if not applicable
+     */
+    rangePlan (block) {
+        if (this.resumable || this.inRange !== null) return null;
+        if (this.m.runtime.compilerOptions.ttwRangeLoops === false) return null;
+        const body = block.inputs.do;
+        if (!body || body.blocks.length < 2) return null;
+        const last = body.blocks[body.blocks.length - 1];
+        if (last.opcode !== StackOpcode.VAR_SET) return null;
+        const variable = last.inputs.variable;
+        const key = this.sprite.varKey(variable);
+        const info = this.vars.get(key);
+        if (!info || !info.v) return null;
+        const isVar = input => input.opcode === InputOpcode.VAR_GET && this.sprite.varKey(input.inputs.variable) === key;
+        const isVarNumber = input => isVar(input) ||
+            (input.opcode === InputOpcode.CAST_NUMBER && isVar(input.inputs.target));
+        const isOne = input => input.opcode === InputOpcode.CONSTANT && +input.inputs.value === 1 &&
+            input.isAlwaysType(InputType.NUMBER);
+        const value = last.inputs.value;
+        if (value.opcode !== InputOpcode.OP_ADD) return null;
+        if (!(isVarNumber(value.inputs.left) && isOne(value.inputs.right)) &&
+            !(isOne(value.inputs.left) && isVarNumber(value.inputs.right))) return null;
+
+        let ok = true;
+        let size = 0;
+        const indexed = new Map();
+        const resized = new Set();
+        const noteCall = node => {
+            if (this.isEmptyCall(node)) return;
+            const callee = this.calleeOf(node.variant);
+            if (!callee || callee.mod.has(key)) {
+                ok = false;
+                return;
+            }
+            for (const listKey of callee.lmod) resized.add(listKey);
+        };
+        const noteIndexed = node => {
+            if (isVar(node.index) && node.index.isAlwaysType(InputType.NUMBER_OR_NAN)) {
+                indexed.set(this.sprite.varKey(node.list), this.listRef(node.list));
+            }
+        };
+        walkStack(body, {
+            block: b => {
+                size++;
+                switch (b.opcode) {
+                case StackOpcode.VAR_SET:
+                case StackOpcode.CONTROL_FOR:
+                    if (b !== last && this.sprite.varKey(b.inputs.variable) === key) ok = false;
+                    break;
+                case StackOpcode.LIST_ADD:
+                case StackOpcode.LIST_INSERT:
+                case StackOpcode.LIST_DELETE:
+                case StackOpcode.LIST_DELETE_ALL:
+                    resized.add(this.sprite.varKey(b.inputs.list));
+                    break;
+                case StackOpcode.LIST_REPLACE:
+                    noteIndexed(b.inputs);
+                    break;
+                case StackOpcode.PROCEDURE_CALL:
+                    noteCall(b.inputs);
+                    break;
+                }
+            },
+            input: input => {
+                size++;
+                if (input.opcode === InputOpcode.LIST_GET) noteIndexed(input.inputs);
+                else if (input.opcode === InputOpcode.PROCEDURE_CALL) noteCall(input.inputs);
+            }
+        });
+        if (!ok) return null;
+        const lists = new Set();
+        for (const [listKey, L] of indexed) {
+            if (!resized.has(listKey)) lists.add(L);
+        }
+        if (lists.size === 0 || size > this.versioningBudget) return null;
+        this.versioningBudget -= size;
+        return {key, v: info.v, lists};
+    }
+
+    /**
+     * Emit a `repeat` loop whose counter has already been initialized, in an "in range" version and a
+     * general version if rangePlan() applies.
+     * @param {*} block CONTROL_REPEAT block
+     * @param {string} counter numeric temp holding the remaining iterations
+     * @param {() => void} emitLoop emits the loop statement
+     */
+    emitRangeVersions (block, counter, emitLoop) {
+        const plan = this.rangePlan(block);
+        if (plan === null) {
+            emitLoop();
+            return;
+        }
+        const {v} = plan;
+        const conds = [`typeof ${v} === "number"`, `${v} >= 1`, `(${counter} | 0) === ${counter}`];
+        for (const L of plan.lists) conds.push(`${v} + ${counter} - 1 <= ${L}.len`);
+        this.src += `if (${conds.join(' && ')}) {\n`;
+        const saved = new Map(this.castCache);
+        this.inRange = plan;
+        emitLoop();
+        this.inRange = null;
+        this.src += '} else {\n';
+        this.castCache = new Map(saved);
+        // The general version must not be versioned again by loops nested in it... but they may be: they
+        // get their own plans. Only this loop's plan is disabled here.
+        emitLoop();
+        this.castCache = saved;
+        this.src += '}\n';
+    }
+
+    /**
+     * @param {string} L list local
+     * @param {IntermediateInput} index index input
+     * @returns {boolean} true if `item (index) of L` is known to exist here
+     */
+    isInRange (L, index) {
+        const plan = this.inRange;
+        return plan !== null && plan.lists.has(L) && index.opcode === InputOpcode.VAR_GET &&
+            this.sprite.varKey(index.inputs.variable) === plan.key;
+    }
+
+    /**
      * @param {*} block loop block (native unit)
      * @returns {Set<string>|null} list locals to guard if the loop nest can be versioned
      */
@@ -1537,6 +1727,14 @@ class UnitEmitter {
     listGetAny (node) {
         const L = this.listRef(node.list);
         const index = node.index;
+        if (this.isInRange(L, index)) {
+            const iv = this.inRange.v;
+            if (this.isPure(L)) return `${L}.f64[(${iv} | 0) - 1]`;
+            const x2 = this.numTemp();
+            const k2 = this.numTemp();
+            const o2 = this.anyTemp();
+            return `((${x2} = ${L}.f64[${k2} = (${iv} | 0) - 1]) === ${x2} ? ${x2} : ((${o2} = ${L}.objs[${k2}]) === undefined ? NaN : ${o2}))`;
+        }
         if (this.isPure(L) && index.isAlwaysType(InputType.NUMBER_OR_NAN)) {
             // PURE: every element is a number (possibly NaN); out of range is "".
             const i = this.numTemp();
@@ -1558,6 +1756,128 @@ class UnitEmitter {
     }
 
     /**
+     * A list read split into its numeric fast path and the general read, so that a consumer with its own
+     * numeric fast path (comparison, list store) never materializes an "any" value on the hot path: V8
+     * would have to box the number to merge it with the string cases.
+     * `cond` evaluates the index and is true iff the item is a non-NaN number, which is then in `num`.
+     * `any` is the complete read; it may only be evaluated after `cond`.
+     * @param {IntermediateInput} input input
+     * @returns {{cond: string, num: string, any: string}|null} null if the input is not such a read
+     */
+    listGetSplit (input) {
+        if (input.opcode !== InputOpcode.LIST_GET) return null;
+        const node = input.inputs;
+        const index = node.index;
+        if (!index.isAlwaysType(InputType.NUMBER_OR_NAN)) return null;
+        const L = this.listRef(node.list);
+        if (this.isInRange(L, index)) {
+            const iv = this.inRange.v;
+            const x2 = this.numTemp();
+            const k2 = this.numTemp();
+            const cond2 = `(${x2} = ${L}.f64[${k2} = (${iv} | 0) - 1]) === ${x2}`;
+            if (this.isPure(L)) return {cond: cond2, num: x2, any: `${L}.f64[${k2}]`};
+            const o2 = this.anyTemp();
+            return {
+                cond: cond2,
+                num: x2,
+                any: `((${x2} = ${L}.f64[${k2}]) === ${x2} ? ${x2} : ((${o2} = ${L}.objs[${k2}]) === undefined ? NaN : ${o2}))`
+            };
+        }
+        const i = this.numTemp();
+        const x = this.numTemp();
+        const k = this.numTemp();
+        const cond = `(${i} = ${this.descendInput(index)}) >= 1 && ${i} <= ${L}.len && ` +
+            `(${x} = ${L}.f64[(${i} | 0) - 1]) === ${x}`;
+        let any;
+        if (this.isPure(L)) {
+            any = `(${i} >= 1 && ${i} <= ${L}.len ? ${L}.f64[(${i} | 0) - 1] : "")`;
+        } else {
+            const o = this.anyTemp();
+            any = `(${i} >= 1 && ${i} <= ${L}.len ? (${k} = (${i} | 0) - 1, ((${x} = ${L}.f64[${k}]) === ${x} ? ${x} : ` +
+                `((${o} = ${L}.objs[${k}]) === undefined ? NaN : ${o}))) : "")`;
+        }
+        return {cond, num: x, any};
+    }
+
+    /**
+     * @param {*} node ttw.inline inputs
+     * @returns {Set<string>} argument temporaries whose every use in the inlined body is a number cast,
+     * and whose argument isn't already known to be a number
+     */
+    numericOnlyTemps (node) {
+        const all = new Map();
+        const numeric = new Map();
+        const count = (map, js) => map.set(js, (map.get(js) || 0) + 1);
+        walkStack(node.body, {
+            input: input => {
+                if (input.opcode === RAW_OPCODE) {
+                    count(all, input.inputs.js);
+                } else if (input.opcode === InputOpcode.CAST_NUMBER && input.inputs.target.opcode === RAW_OPCODE) {
+                    count(numeric, input.inputs.target.inputs.js);
+                }
+            }
+        });
+        const result = new Set();
+        for (let k = 0; k < node.args.length; k++) {
+            const temp = node.temps[k];
+            if (node.args[k].isAlwaysType(InputType.NUMBER)) continue;
+            if (all.has(temp) && all.get(temp) === numeric.get(temp)) result.add(temp);
+        }
+        return result;
+    }
+
+    /**
+     * @param {IntermediateInput} input input
+     * @returns {boolean} true if evaluating the input can't change any state (so it may be reordered)
+     */
+    isEffectFree (input) {
+        let pure = true;
+        walkInput(input, {
+            input: child => {
+                if (child.opcode === InputOpcode.PROCEDURE_CALL) pure = false;
+            }
+        }, 0);
+        return pure;
+    }
+
+    /**
+     * Fused comparison of a list read with another operand (see listGetSplit).
+     * @param {string} op ">", "<" or "==="
+     * @param {string} slow slow path function
+     * @param {IntermediateInput} left left operand
+     * @param {IntermediateInput} right right operand
+     * @returns {string|null} JS expression, or null if neither operand is a splittable list read
+     */
+    fusedListCompare (op, slow, left, right) {
+        const leftIsRead = left.opcode === InputOpcode.LIST_GET;
+        const other = leftIsRead ? right : left;
+        if (!this.isEffectFree(other)) return null;
+        const split = this.listGetSplit(leftIsRead ? left : right);
+        if (split === null) return null;
+        const [pre, o] = this.once(this.descendInput(other), false);
+        // The read's own guards are part of split.cond. NaN on the other side must take the slow path
+        // unless the comparison tolerates it there (see the unfused code for each operator).
+        const otherNeedsNanGuard = op === '===' || (op === '>' ? !leftIsRead : leftIsRead);
+        const guards = joinGuards([typeGuard(o, other), otherNeedsNanGuard ? nanGuard(o, other) : '']);
+        const fast = leftIsRead ? `${split.num} ${op} ${o}` : `${o} ${op} ${split.num}`;
+        const general = leftIsRead ? `${slow}(${split.any}, ${o})` : `${slow}(${o}, ${split.any})`;
+        return `(${pre}(${split.cond} && ${guards}) ? ${fast} : ${general})`;
+    }
+
+    /**
+     * @param {string} v JS name holding a value that is not a number
+     * @param {IntermediateInput} constant constant string input
+     * @param {string} lower its lower case value
+     * @returns {string} JS condition: the value equals the constant (case insensitive string comparison)
+     */
+    equalsStringConstant (v, constant, lower) {
+        // Nothing but the empty string converts to the empty string.
+        if (lower === '') return `("" + ${v}).length === 0`;
+        // The exact constant is by far the most common match; it needs no case conversion.
+        return `(${v} === ${str(constant.inputs.value)} || ("" + ${v}).toLowerCase() === ${str(lower)})`;
+    }
+
+    /**
      * @param {*} node LIST_GET inputs
      * @returns {string} read in a numeric context (toNumber applied)
      */
@@ -1568,6 +1888,10 @@ class UnitEmitter {
         if (index.isConstant('last')) {
             const k = this.numTemp();
             return `((${k} = ${L}.len - 1) >= 0 && (${x} = ${L}.f64[${k}]) === ${x} ? ${x} : ${L}.numSlow("last"))`;
+        }
+        if (this.isInRange(L, index)) {
+            const iv = this.inRange.v;
+            return `((${x} = ${L}.f64[(${iv} | 0) - 1]) === ${x} ? ${x} : ${this.isPure(L) ? '0' : `${L}.numSlow(${iv})`})`;
         }
         if (index.isAlwaysType(InputType.NUMBER_OR_NAN)) {
             const i = this.numTemp();
@@ -1589,6 +1913,7 @@ class UnitEmitter {
         if (!index.isAlwaysType(InputType.NUMBER_OR_NAN)) {
             return `${L}.setSlow(${this.descendInput(index)}, ${this.descendInput(node.item)});\n`;
         }
+        if (this.isInRange(L, index)) return this.listReplaceInRange(node, L);
         const i = this.numTemp();
         const k = this.numTemp();
         let src = `${i} = ${this.descendInput(index)};\n`;
@@ -1602,9 +1927,44 @@ class UnitEmitter {
                 src += `if (${i} >= 1 && ${i} <= ${L}.len) { ${store}${v}; if (${L}.objs.length !== 0 && ${L}.objs[${k}] !== undefined) ${L}.clearObj(${k}); }\n`;
             }
         } else {
-            const v = this.anyTemp();
-            src += `${v} = ${this.descendInput(node.item)};\n`;
-            src += `if (typeof ${v} === "number" && ${i} >= 1 && ${i} <= ${L}.len) { ${store}${v}; if (${L}.objs.length !== 0 && ${L}.objs[${k}] !== undefined) ${L}.clearObj(${k}); } else ${L}.setSlow(${i}, ${v});\n`;
+            const split = this.listGetSplit(node.item);
+            if (split === null) {
+                const v = this.anyTemp();
+                src += `${v} = ${this.descendInput(node.item)};\n`;
+                src += `if (typeof ${v} === "number" && ${i} >= 1 && ${i} <= ${L}.len) { ${store}${v}; if (${L}.objs.length !== 0 && ${L}.objs[${k}] !== undefined) ${L}.clearObj(${k}); } else ${L}.setSlow(${i}, ${v});\n`;
+            } else {
+                // Copying an item: numbers go from one Float64Array to the other without becoming a JS value.
+                // (setSlow ignores out of range indexes, so it also covers a number with a bad index.)
+                src += `if (${split.cond} && ${i} >= 1 && ${i} <= ${L}.len) { ${store}${split.num}; if (${L}.objs.length !== 0 && ${L}.objs[${k}] !== undefined) ${L}.clearObj(${k}); } else ${L}.setSlow(${i}, ${split.any});\n`;
+            }
+        }
+        src += this.markListChanged(L);
+        return src;
+    }
+
+    /**
+     * @param {*} node LIST_REPLACE inputs whose index is known to be in range (see rangePlan)
+     * @param {string} L list local
+     * @returns {string} statement
+     */
+    listReplaceInRange (node, L) {
+        const iv = this.inRange.v;
+        const k = this.numTemp();
+        const clear = this.isPure(L) ? '' : ` if (${L}.objs.length !== 0 && ${L}.objs[${k}] !== undefined) ${L}.clearObj(${k});`;
+        let src;
+        if (node.item.isAlwaysType(InputType.NUMBER_OR_NAN)) {
+            const v = this.numTemp();
+            src = `${v} = ${this.descendInput(node.item)};\n`;
+            src += `${L}.f64[${k} = (${iv} | 0) - 1] = ${v};${clear}\n`;
+        } else {
+            const split = this.listGetSplit(node.item);
+            if (split === null) {
+                const v = this.anyTemp();
+                src = `${v} = ${this.descendInput(node.item)};\n`;
+                src += `if (typeof ${v} === "number") { ${L}.f64[${k} = (${iv} | 0) - 1] = ${v};${clear} } else ${L}.setSlow(${iv}, ${v});\n`;
+            } else {
+                src = `if (${split.cond}) { ${L}.f64[${k} = (${iv} | 0) - 1] = ${split.num};${clear} } else ${L}.setSlow(${iv}, ${split.any});\n`;
+            }
         }
         src += this.markListChanged(L);
         return src;
@@ -1626,9 +1986,14 @@ class UnitEmitter {
                 src += `if (${L}.len < ${L}.f64.length && ${L}.objs.length === 0) ${L}.f64[${L}.len++] = ${v}; else ${L}.pushSlow(${v});\n`;
             }
         } else {
-            const v = this.anyTemp();
-            src = `${v} = ${this.descendInput(node.item)};\n`;
-            src += `if (typeof ${v} === "number" && ${L}.len < ${L}.f64.length && ${L}.objs.length === 0) ${L}.f64[${L}.len++] = ${v}; else ${L}.pushSlow(${v});\n`;
+            const split = this.listGetSplit(node.item);
+            if (split === null) {
+                const v = this.anyTemp();
+                src = `${v} = ${this.descendInput(node.item)};\n`;
+                src += `if (typeof ${v} === "number" && ${L}.len < ${L}.f64.length && ${L}.objs.length === 0) ${L}.f64[${L}.len++] = ${v}; else ${L}.pushSlow(${v});\n`;
+            } else {
+                src = `if (${split.cond} && ${L}.len < ${L}.f64.length && ${L}.objs.length === 0) ${L}.f64[${L}.len++] = ${split.num}; else ${L}.pushSlow(${split.any});\n`;
+            }
         }
         src += this.markListChanged(L);
         return src;
@@ -1699,15 +2064,21 @@ class UnitEmitter {
                 const cond = node.times.isAlwaysType(InputType.NUMBER_INT | InputType.NUMBER_INF) ? `${i} > 0` : `${i} >= 0.5`;
                 if (chunked) {
                     const budget = this.numTemp();
-                    this.src += `${budget} = B.k; if (B.k < ${CHUNK_ITERATIONS}) B.k *= 2;\nfor (${i} = B.c; ${cond}; ${i}--) {\n`;
-                    this.src += this.chunkBudgetCheck(budget, `B.c = ${i}; `);
-                    this.descendSubstack(node.do, new Frame(true), this.assignedVariables(block));
-                    this.src += `}\n`;
+                    this.src += `${budget} = B.k; if (B.k < ${CHUNK_ITERATIONS}) B.k *= 2;\n${i} = B.c;\n`;
+                    this.emitRangeVersions(block, i, () => {
+                        this.src += `for (; ${cond}; ${i}--) {\n`;
+                        this.src += this.chunkBudgetCheck(budget, `B.c = ${i}; `);
+                        this.descendSubstack(node.do, new Frame(true), this.assignedVariables(block));
+                        this.src += `}\n`;
+                    });
                     return;
                 }
-                this.src += `for (${i} = ${this.descendInput(node.times)}; ${cond}; ${i}--) {\n`;
-                this.descendSubstack(node.do, new Frame(true), this.assignedVariables(block));
-                this.src += `}\n`;
+                this.src += `${i} = ${this.descendInput(node.times)};\n`;
+                this.emitRangeVersions(block, i, () => {
+                    this.src += `for (; ${cond}; ${i}--) {\n`;
+                    this.descendSubstack(node.do, new Frame(true), this.assignedVariables(block));
+                    this.src += `}\n`;
+                });
             });
             break;
         }
@@ -1969,9 +2340,17 @@ class UnitEmitter {
 
         case 'ttw.inline': {
             // Inlined procedure (02 §5): arguments in temporaries, return = break out of the labelled block.
+            const numericOnly = this.numericOnlyTemps(node);
             for (let k = 0; k < node.args.length; k++) {
                 this.extraLocals.add(node.temps[k]);
-                this.src += `${node.temps[k]} = ${this.descendInput(node.args[k])};\n`;
+                if (numericOnly.has(node.temps[k])) {
+                    // Every use converts the argument to a number: convert once, here. The temporary then
+                    // holds a JS number on every path instead of "number or string".
+                    this.numericRaw.add(node.temps[k]);
+                    this.src += `${node.temps[k]} = ${this.descendInput(node.args[k].toType(InputType.NUMBER))};\n`;
+                } else {
+                    this.src += `${node.temps[k]} = ${this.descendInput(node.args[k])};\n`;
+                }
             }
             this.src += `${node.label}: {\n`;
             this.descendSubstack(node.body, new Frame(false));

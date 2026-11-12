@@ -42,7 +42,8 @@ const h0 = S.v0;
 let n0 = 0, n1 = 0, n2 = 0, a0, a1;
 let v0 = B.v0;
 n2 = B.k; if (B.k < 4096) B.k *= 2;
-for (n1 = B.c; n1 > 0; n1--) {
+n1 = B.c;
+for (; n1 > 0; n1--) {
 if (n2-- === 0) { B.c = n1; B.v0 = v0; return 1; }
 v0 = (v0 + 1);
 }
@@ -71,7 +72,8 @@ const h0 = S.v0;
 let n0 = 0, n1 = 0, n2 = 0, n3 = 0, n4 = 0, a0, a1;
 let v0 = B.v0;
 n2 = B.k; if (B.k < 4096) B.k *= 2;
-for (n1 = B.c; n1 > 0; n1--) {
+n1 = B.c;
+for (; n1 > 0; n1--) {
 if (n2-- === 0) { B.c = n1; B.v0 = v0; return 1; }
 n3 = ((n4 = +v0) === n4 ? n4 : 0);
 v0 = (n3 + 1);

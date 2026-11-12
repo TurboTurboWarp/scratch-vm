@@ -22,7 +22,8 @@ let v0 = h0.value;
 if (typeof v0 !== "number" || v0 !== v0) return fp_0$g(th, S);
 let n0 = 0;
 v0 = 0;
-for (n0 = 100; n0 > 0; n0--) {
+n0 = 100;
+for (; n0 > 0; n0--) {
 v0 = (v0 + 1);
 if ((v0 === 25)) {
 h0.value = v0;
@@ -39,7 +40,8 @@ const h0 = g0;
 let v0 = h0.value;
 let n0 = 0;
 v0 = 0;
-for (n0 = 100; n0 > 0; n0--) {
+n0 = 100;
+for (; n0 > 0; n0--) {
 v0 = (v0 + 1);
 if ((v0 === 25)) {
 h0.value = v0;

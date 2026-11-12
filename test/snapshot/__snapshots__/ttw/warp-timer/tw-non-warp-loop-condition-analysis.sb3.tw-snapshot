@@ -42,7 +42,7 @@ L0.upToDate = false;
 h0.value = 0;
 h1.value = "bwah";
 case 1:
-while (!(a1 = h1.value, typeof a1 === "number" ? false : ("" + a1).toLowerCase() === "eof")) {
+while (!(a1 = h1.value, typeof a1 === "number" ? false : (a1 === "eof" || ("" + a1).toLowerCase() === "eof"))) {
 h0.value = (((n1 = +h0.value) === n1 ? n1 : 0) + 1);
 h1.value = ((n4 = h0.value) >= 1 && n4 <= L0.len ? (n3 = (n4 | 0) - 1, ((n2 = L0.f64[n3]) === n2 ? n2 : ((a2 = L0.objs[n3]) === undefined ? NaN : a2))) : "");
 fr.pc = 1; return 0;

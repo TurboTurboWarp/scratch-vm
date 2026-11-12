@@ -42,7 +42,7 @@ L0.deleteSlow("any");
 if ((L0.len === 2)) {
 runtime.ext_scratch3_looks._say("pass", target);
 }
-if ((a4 = (typeof (a3 = "*") === "number" ? (a3 >= 1 && a3 <= L0.len ? (n3 = (a3 | 0) - 1, ((n2 = L0.f64[n3]) === n2 ? n2 : ((a2 = L0.objs[n3]) === undefined ? NaN : a2))) : "") : L0.getSlow(a3)), typeof a4 === "number" ? false : ("" + a4).toLowerCase() === "")) {
+if ((a4 = (typeof (a3 = "*") === "number" ? (a3 >= 1 && a3 <= L0.len ? (n3 = (a3 | 0) - 1, ((n2 = L0.f64[n3]) === n2 ? n2 : ((a2 = L0.objs[n3]) === undefined ? NaN : a2))) : "") : L0.getSlow(a3)), typeof a4 === "number" ? false : ("" + a4).length === 0)) {
 runtime.ext_scratch3_looks._say("pass", target);
 }
 runtime.ext_scratch3_looks._say("end", target);

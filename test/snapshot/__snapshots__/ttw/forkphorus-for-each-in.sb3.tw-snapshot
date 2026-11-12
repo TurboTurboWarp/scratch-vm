@@ -159,7 +159,7 @@ h0.value = fr.s2;
 h1.value = (((n6 = +h1.value) === n6 ? n6 : 0) + 1);
 fr.pc = 3; return 0;
 }
-q284_0 = (a0 = h0.value, typeof a0 === "number" ? false : ("" + a0).toLowerCase() === "no change");
+q284_0 = (a0 = h0.value, typeof a0 === "number" ? false : (a0 === "no change" || ("" + a0).toLowerCase() === "no change"));
 q284_1 = "i = no change (each 0)";
 inl284: {
 if (!q284_0) {
@@ -197,7 +197,7 @@ h0.value = fr.s3;
 h1.value = (((n7 = +h1.value) === n7 ? n7 : 0) + 1);
 fr.pc = 4; return 0;
 }
-q288_0 = (a2 = h0.value, typeof a2 === "number" ? false : ("" + a2).toLowerCase() === "no change");
+q288_0 = (a2 = h0.value, typeof a2 === "number" ? false : (a2 === "no change" || ("" + a2).toLowerCase() === "no change"));
 q288_1 = "i = no change (each -5)";
 inl288: {
 if (!q288_0) {
@@ -235,7 +235,7 @@ h0.value = fr.s4;
 h1.value = (((n8 = +h1.value) === n8 ? n8 : 0) + 1);
 fr.pc = 5; return 0;
 }
-q292_0 = (a4 = h0.value, typeof a4 === "number" ? false : ("" + a4).toLowerCase() === "no change");
+q292_0 = (a4 = h0.value, typeof a4 === "number" ? false : (a4 === "no change" || ("" + a4).toLowerCase() === "no change"));
 q292_1 = "i = no change (each aaaaaa)";
 inl292: {
 if (!q292_0) {
@@ -349,7 +349,7 @@ h0.value = fr.s7;
 h1.value = (((n15 = +h1.value) === n15 ? n15 : 0) + 1);
 fr.pc = 8; return 0;
 }
-q304_0 = (a6 = h0.value, typeof a6 === "number" ? false : ("" + a6).toLowerCase() === "no change");
+q304_0 = (a6 = h0.value, typeof a6 === "number" ? false : (a6 === "no change" || ("" + a6).toLowerCase() === "no change"));
 q304_1 = "i = no change (each -0.1)";
 inl304: {
 if (!q304_0) {

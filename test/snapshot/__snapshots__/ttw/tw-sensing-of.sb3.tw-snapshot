@@ -29,7 +29,7 @@ runtime.ext_scratch3_looks._say("pass backdrop name", target);
 if (((stage ? stage.volume : 0) === 45)) {
 runtime.ext_scratch3_looks._say("pass stage volume", target);
 }
-if ((a3 = (h0.value = v0, (a2 = stage && stage.lookupVariableByNameAndType("Stage variable", "", true)) ? a2.value : 0), typeof a3 === "number" ? false : ("" + a3).toLowerCase() === "variable in stage")) {
+if ((a3 = (h0.value = v0, (a2 = stage && stage.lookupVariableByNameAndType("Stage variable", "", true)) ? a2.value : 0), typeof a3 === "number" ? false : (a3 === "Variable in stage" || ("" + a3).toLowerCase() === "variable in stage"))) {
 runtime.ext_scratch3_looks._say("pass stage variable", target);
 }
 if (((a4 = runtime.getSpriteTargetByName("Test sprite"), a4 ? a4.x : 0) === 19)) {
@@ -44,7 +44,7 @@ runtime.ext_scratch3_looks._say("pass direction", target);
 if (((a7 = runtime.getSpriteTargetByName("Test sprite"), a7 ? a7.currentCostume + 1 : 0) === 3)) {
 runtime.ext_scratch3_looks._say("pass costume #", target);
 }
-if ((a9 = (a8 = runtime.getSpriteTargetByName("Test sprite"), a8 ? a8.getCostumes()[a8.currentCostume].name : 0), typeof a9 === "number" ? false : ("" + a9).toLowerCase() === "costume name test")) {
+if ((a9 = (a8 = runtime.getSpriteTargetByName("Test sprite"), a8 ? a8.getCostumes()[a8.currentCostume].name : 0), typeof a9 === "number" ? false : (a9 === "Costume name test" || ("" + a9).toLowerCase() === "costume name test"))) {
 runtime.ext_scratch3_looks._say("pass costume name", target);
 }
 if (((a10 = runtime.getSpriteTargetByName("Test sprite"), a10 ? a10.size : 0) === 76.01)) {
@@ -53,7 +53,7 @@ runtime.ext_scratch3_looks._say("pass size", target);
 if (((a11 = runtime.getSpriteTargetByName("Test sprite"), a11 ? a11.volume : 0) === 14.3)) {
 runtime.ext_scratch3_looks._say("pass volume", target);
 }
-if ((a14 = (h0.value = v0, a12 = runtime.getSpriteTargetByName("Test sprite"), (a13 = a12 && a12.lookupVariableByNameAndType("Private variable", "", true)) ? a13.value : 0), typeof a14 === "number" ? false : ("" + a14).toLowerCase() === "private variable value")) {
+if ((a14 = (h0.value = v0, a12 = runtime.getSpriteTargetByName("Test sprite"), (a13 = a12 && a12.lookupVariableByNameAndType("Private variable", "", true)) ? a13.value : 0), typeof a14 === "number" ? false : (a14 === "Private variable value" || ("" + a14).toLowerCase() === "private variable value"))) {
 runtime.ext_scratch3_looks._say("pass private variable", target);
 }
 if ((a17 = (h0.value = v0, (a16 = stage && stage.lookupVariableByNameAndType("This variable used to exist", "", true)) ? a16.value : 0), ((typeof a17 === "number" && a17 === a17) || a17 === 0) ? a17 === 0 : eqSlow(a17, 0))) {

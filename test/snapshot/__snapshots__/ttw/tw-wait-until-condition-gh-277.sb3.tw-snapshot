@@ -32,7 +32,7 @@ runtime.ext_scratch3_looks._say("plan 0", target);
 broadcastH(bc0);
 h0.value = "bwah";
 case 1:
-while (!(a0 = h0.value, typeof a0 === "number" ? false : ("" + a0).toLowerCase() === "bleh")) {
+while (!(a0 = h0.value, typeof a0 === "number" ? false : (a0 === "bleh" || ("" + a0).toLowerCase() === "bleh"))) {
 fr.pc = 1; return 0;
 }
 runtime.ext_scratch3_looks._say("end", target);

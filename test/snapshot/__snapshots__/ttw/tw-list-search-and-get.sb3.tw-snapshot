@@ -44,23 +44,23 @@ if (L0.contains("3.00")) {
 runtime.ext_scratch3_looks._say("pass contains 3.00", target);
 }
 v0 = 2;
-if ((a1 = ((n2 = v0) >= 1 && n2 <= L0.len ? (n1 = (n2 | 0) - 1, ((n0 = L0.f64[n1]) === n0 ? n0 : ((a0 = L0.objs[n1]) === undefined ? NaN : a0))) : ""), typeof a1 === "number" ? false : ("" + a1).toLowerCase() === "banana")) {
+if (((n0 = v0) >= 1 && n0 <= L0.len && (n1 = L0.f64[(n0 | 0) - 1]) === n1 ? false : (a1 = (n0 >= 1 && n0 <= L0.len ? (n2 = (n0 | 0) - 1, ((n1 = L0.f64[n2]) === n1 ? n1 : ((a0 = L0.objs[n2]) === undefined ? NaN : a0))) : ""), typeof a1 === "number" ? false : (a1 === "banana" || ("" + a1).toLowerCase() === "banana")))) {
 runtime.ext_scratch3_looks._say("pass item of string index", target);
 }
 v0 = 2.9;
-if ((a3 = ((n5 = v0) >= 1 && n5 <= L0.len ? (n4 = (n5 | 0) - 1, ((n3 = L0.f64[n4]) === n3 ? n3 : ((a2 = L0.objs[n4]) === undefined ? NaN : a2))) : ""), typeof a3 === "number" ? false : ("" + a3).toLowerCase() === "banana")) {
+if (((n3 = v0) >= 1 && n3 <= L0.len && (n4 = L0.f64[(n3 | 0) - 1]) === n4 ? false : (a3 = (n3 >= 1 && n3 <= L0.len ? (n5 = (n3 | 0) - 1, ((n4 = L0.f64[n5]) === n4 ? n4 : ((a2 = L0.objs[n5]) === undefined ? NaN : a2))) : ""), typeof a3 === "number" ? false : (a3 === "banana" || ("" + a3).toLowerCase() === "banana")))) {
 runtime.ext_scratch3_looks._say("pass item of fractional index", target);
 }
 v0 = 0;
-if ((a5 = ((n8 = v0) >= 1 && n8 <= L0.len ? (n7 = (n8 | 0) - 1, ((n6 = L0.f64[n7]) === n6 ? n6 : ((a4 = L0.objs[n7]) === undefined ? NaN : a4))) : ""), typeof a5 === "number" ? false : ("" + a5).toLowerCase() === "")) {
+if (((n6 = v0) >= 1 && n6 <= L0.len && (n7 = L0.f64[(n6 | 0) - 1]) === n7 ? false : (a5 = (n6 >= 1 && n6 <= L0.len ? (n8 = (n6 | 0) - 1, ((n7 = L0.f64[n8]) === n7 ? n7 : ((a4 = L0.objs[n8]) === undefined ? NaN : a4))) : ""), typeof a5 === "number" ? false : ("" + a5).length === 0))) {
 runtime.ext_scratch3_looks._say("pass item of index 0", target);
 }
 v0 = 7;
-if ((a7 = ((n11 = v0) >= 1 && n11 <= L0.len ? (n10 = (n11 | 0) - 1, ((n9 = L0.f64[n10]) === n9 ? n9 : ((a6 = L0.objs[n10]) === undefined ? NaN : a6))) : ""), typeof a7 === "number" ? false : ("" + a7).toLowerCase() === "")) {
+if (((n9 = v0) >= 1 && n9 <= L0.len && (n10 = L0.f64[(n9 | 0) - 1]) === n10 ? false : (a7 = (n9 >= 1 && n9 <= L0.len ? (n11 = (n9 | 0) - 1, ((n10 = L0.f64[n11]) === n10 ? n10 : ((a6 = L0.objs[n11]) === undefined ? NaN : a6))) : ""), typeof a7 === "number" ? false : ("" + a7).length === 0))) {
 runtime.ext_scratch3_looks._say("pass item of index past end", target);
 }
 v0 = "last";
-if ((a10 = (typeof (a9 = v0) === "number" ? (a9 >= 1 && a9 <= L0.len ? (n13 = (a9 | 0) - 1, ((n12 = L0.f64[n13]) === n12 ? n12 : ((a8 = L0.objs[n13]) === undefined ? NaN : a8))) : "") : L0.getSlow(a9)), typeof a10 === "number" ? false : ("" + a10).toLowerCase() === "last")) {
+if ((a10 = (typeof (a9 = v0) === "number" ? (a9 >= 1 && a9 <= L0.len ? (n13 = (a9 | 0) - 1, ((n12 = L0.f64[n13]) === n12 ? n12 : ((a8 = L0.objs[n13]) === undefined ? NaN : a8))) : "") : L0.getSlow(a9)), typeof a10 === "number" ? false : (a10 === "last" || ("" + a10).toLowerCase() === "last"))) {
 runtime.ext_scratch3_looks._say("pass item of last", target);
 }
 if (((typeof (a11 = ((n17 = 3) >= 1 && n17 <= L0.len ? (n16 = (n17 | 0) - 1, ((n15 = L0.f64[n16]) === n15 ? n15 : ((a12 = L0.objs[n16]) === undefined ? NaN : a12))) : "")) === "number" && a11 >= 1 && a11 <= L0.len && (n14 = L0.f64[(a11 | 0) - 1]) === n14 ? n14 : L0.numSlow(a11)) === 3)) {

@@ -85,7 +85,7 @@ runtime.ext_scratch3_looks._say("plan 1", target);
 { const nf = new Fp_0(fr); th.frame = nf; th.fn = rp_0; }
 fr.pc = 1; return 1;
 case 1:
-if ((a0 = h0.value, typeof a0 === "number" ? false : ("" + a0).toLowerCase() === "babab")) {
+if ((a0 = h0.value, typeof a0 === "number" ? false : (a0 === "babab" || ("" + a0).toLowerCase() === "babab"))) {
 runtime.ext_scratch3_looks._say("pass", target);
 }
 runtime.ext_scratch3_looks._say("end", target);

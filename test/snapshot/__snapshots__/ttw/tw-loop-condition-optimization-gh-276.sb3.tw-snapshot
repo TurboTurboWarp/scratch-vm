@@ -43,7 +43,7 @@ if (L0.objs.length === 0) {
 n3 = B.k; if (B.k < 4096) B.k *= 2;
 for (;;) {
 if (n3-- === 0) { B.v0 = v0; return 1; }
-if (!!(a3 = (typeof (a2 = v0) === "number" ? (a2 >= 1 && a2 <= L0.len ? (n2 = (a2 | 0) - 1, ((n1 = L0.f64[n2]) === n1 ? n1 : ((a1 = L0.objs[n2]) === undefined ? NaN : a1))) : "") : L0.getSlow(a2)), typeof a3 === "number" ? false : ("" + a3).toLowerCase() === "something")) break;
+if (!!(a3 = (typeof (a2 = v0) === "number" ? (a2 >= 1 && a2 <= L0.len ? (n2 = (a2 | 0) - 1, ((n1 = L0.f64[n2]) === n1 ? n1 : ((a1 = L0.objs[n2]) === undefined ? NaN : a1))) : "") : L0.getSlow(a2)), typeof a3 === "number" ? false : (a3 === "something" || ("" + a3).toLowerCase() === "something"))) break;
 n4 = ((n5 = +v0) === n5 ? n5 : 0);
 v0 = (n4 + 1);
 }
@@ -51,7 +51,7 @@ v0 = (n4 + 1);
 n8 = B.k; if (B.k < 4096) B.k *= 2;
 for (;;) {
 if (n8-- === 0) { B.v0 = v0; return 1; }
-if (!!(a6 = (typeof (a5 = v0) === "number" ? (a5 >= 1 && a5 <= L0.len ? (n7 = (a5 | 0) - 1, ((n6 = L0.f64[n7]) === n6 ? n6 : ((a4 = L0.objs[n7]) === undefined ? NaN : a4))) : "") : L0.getSlow(a5)), typeof a6 === "number" ? false : ("" + a6).toLowerCase() === "something")) break;
+if (!!(a6 = (typeof (a5 = v0) === "number" ? (a5 >= 1 && a5 <= L0.len ? (n7 = (a5 | 0) - 1, ((n6 = L0.f64[n7]) === n6 ? n6 : ((a4 = L0.objs[n7]) === undefined ? NaN : a4))) : "") : L0.getSlow(a5)), typeof a6 === "number" ? false : (a6 === "something" || ("" + a6).toLowerCase() === "something"))) break;
 n9 = ((n10 = +v0) === n10 ? n10 : 0);
 v0 = (n9 + 1);
 }
@@ -65,7 +65,7 @@ const h0 = g0;
 let a0;
 runtime.ext_scratch3_looks._say("plan 1", target);
 fp_0(th, S, "random");
-if ((a0 = h0.value, typeof a0 === "number" ? false : ("" + a0).toLowerCase() === "random")) {
+if ((a0 = h0.value, typeof a0 === "number" ? false : (a0 === "random" || ("" + a0).toLowerCase() === "random"))) {
 runtime.ext_scratch3_looks._say("pass", target);
 }
 runtime.ext_scratch3_looks._say("end", target);

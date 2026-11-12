@@ -55,7 +55,7 @@ function fs_1 (th, S) {
 const target = S.target;
 const h0 = g0;
 let a0;
-if ((a0 = h0.value, typeof a0 === "number" ? false : ("" + a0).toLowerCase() === "initial")) {
+if ((a0 = h0.value, typeof a0 === "number" ? false : (a0 === "Initial" || ("" + a0).toLowerCase() === "initial"))) {
 runtime.ext_scratch3_looks._say("pass", target);
 }
 }

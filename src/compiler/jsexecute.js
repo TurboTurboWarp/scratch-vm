@@ -634,7 +634,17 @@ runtimeFunctions.yieldThenCallGenerator = `const yieldThenCallGenerator = functi
  * Step a compiled thread.
  * @param {import("../engine/thread")} thread The thread to step.
  */
+/**
+ * ttw: step function for threads run by the TurboTurboWarp backend (set by src/ttw/sched.js).
+ * @type {Function|null}
+ */
+let ttwExecute = null;
+
 const execute = thread => {
+    if (thread.ttw) {
+        ttwExecute(thread);
+        return;
+    }
     try {
         globalState.thread = thread;
         if (thread.compiledFunction) {
@@ -684,6 +694,9 @@ const scopedEval = source => {
 };
 
 execute.scopedEval = scopedEval;
+execute.setTTWExecute = fn => {
+    ttwExecute = fn;
+};
 execute.runtimeFunctions = runtimeFunctions;
 execute.saveGlobalState = saveGlobalState;
 execute.restoreGlobalState = restoreGlobalState;

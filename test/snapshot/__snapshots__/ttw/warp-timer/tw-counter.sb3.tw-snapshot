@@ -1,0 +1,84 @@
+// TW Snapshot
+// Input SHA-256: 29dd30c632645f071bfd450530dab86dc85a2c1cf30564bee984394a790eca6a
+
+// 2 module
+(function ttw$2_N (R, G) {
+"use strict";
+const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, makeStuck, RETIRE} = R;
+const runtime = G.runtime;
+const stage = G.stage;
+const CONTINUE = {};
+class Self {
+constructor (target) {
+this.target = target;
+}
+}
+function fs_0 (th, S) {
+const target = S.target;
+if ((runtime.ext_scratch3_control._counter === 10)) {
+runtime.ext_scratch3_looks._say("pass global", target);
+}
+runtime.ext_scratch3_looks._say("end", target);
+}
+return {Self, scripts: {
+"A": {index: 0, native: fs_0, step: null, Frame: null, executableHat: false},
+}};
+})
+
+// 1 module
+(function ttw$1_N (R, G) {
+"use strict";
+const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, makeStuck, RETIRE} = R;
+const runtime = G.runtime;
+const stage = G.stage;
+const CONTINUE = {};
+class Self {
+constructor (target) {
+this.target = target;
+}
+}
+class Fs_0 {
+constructor (parent) {
+this.parent = parent;
+this.pc = 0;
+this.s0 = undefined;
+}
+}
+function rs_0 (th, fr) {
+const S = th.self;
+const target = S.target;
+let n0 = 0;
+for (;;) switch (fr.pc) {
+case 0:
+runtime.ext_scratch3_looks._say("plan 5", target);
+if ((runtime.ext_scratch3_control._counter === 0)) {
+runtime.ext_scratch3_looks._say("pass initial value = 0", target);
+}
+runtime.ext_scratch3_control._counter++;
+if ((runtime.ext_scratch3_control._counter === 1)) {
+runtime.ext_scratch3_looks._say("pass incr 1", target);
+}
+runtime.ext_scratch3_control._counter++;
+if ((runtime.ext_scratch3_control._counter === 2)) {
+runtime.ext_scratch3_looks._say("pass incr 2", target);
+}
+runtime.ext_scratch3_control._counter = 0;
+if ((runtime.ext_scratch3_control._counter === 0)) {
+runtime.ext_scratch3_looks._say("pass clear = 0", target);
+}
+fr.s0 = 10;
+case 1:
+for (n0 = fr.s0; n0 > 0; n0--) {
+runtime.ext_scratch3_control._counter++;
+fr.s0 = n0 - 1; fr.pc = 1; return 0;
+}
+broadcast(runtime, "check globalness");
+return 2;
+default: throw new Error("TTW: bad pc " + fr.pc);
+}
+}
+Fs_0.prototype.fnRef = rs_0;
+return {Self, scripts: {
+"p": {index: 0, native: null, step: rs_0, Frame: Fs_0, executableHat: false},
+}};
+})

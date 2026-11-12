@@ -1,0 +1,41 @@
+// TW Snapshot
+// Input SHA-256: 2afbb43dad9e66e37997e13bf3ffb90bf39effd8974c2eb1a95bed61d437b6de
+
+// Sprite1 module
+(function ttw$Sprite1_N (R, G) {
+"use strict";
+const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, makeStuck, RETIRE} = R;
+const runtime = G.runtime;
+const stage = G.stage;
+const CONTINUE = {};
+const g0 = stage.variables["`jEk@4|i[#Fk?(8x)AV.-my variable"];
+class Self {
+constructor (target) {
+this.target = target;
+}
+}
+function fp_0 (th, S) {
+const target = S.target;
+const h0 = g0;
+h0.value = "help";
+return "";
+}
+function fs_1 (th, S) {
+const target = S.target;
+const h0 = g0;
+let v0 = h0.value;
+runtime.ext_scratch3_looks._say("plan 1", target);
+v0 = "";
+inl1093: {
+v0 = "help";
+}
+if (!(v0.toLowerCase() === "".toLowerCase())) {
+runtime.ext_scratch3_looks._say("pass", target);
+}
+runtime.ext_scratch3_looks._say("end", target);
+h0.value = v0;
+}
+return {Self, scripts: {
+"nYnT}gQua++!FH{~7TRy": {index: 0, native: fs_1, step: null, Frame: null, executableHat: false},
+}};
+})

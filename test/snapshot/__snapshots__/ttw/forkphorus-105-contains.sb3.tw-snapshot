@@ -1,0 +1,106 @@
+// TW Snapshot
+// Input SHA-256: d641b68a89119171eff5d36de1bd4f59b1649acc5ae55803fb0b797b636f52bb
+
+// Sprite1 module
+(function ttw$Sprite1_N (R, G) {
+"use strict";
+const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, makeStuck, RETIRE} = R;
+const runtime = G.runtime;
+const stage = G.stage;
+const CONTINUE = {};
+class Self {
+constructor (target) {
+this.target = target;
+}
+}
+function fp_0 (th, S, p0) {
+const target = S.target;
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + p0), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); throw RETIRE;
+return "";
+}
+function fp_1 (th, S, p0, p1) {
+const target = S.target;
+let q0_0 = 0;
+if (!p0) {
+q0_0 = p1;
+inl0: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + q0_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); throw RETIRE;
+}
+}
+return "";
+}
+function fp_2 (th, S, p0) {
+const target = S.target;
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("pass " + p0), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); throw RETIRE;
+return "";
+}
+function fs_3 (th, S) {
+const target = S.target;
+let q1_0 = 0, q1_1 = 0, q2_0 = 0, q3_0 = 0, q3_1 = 0, q4_0 = 0, q5_0 = 0, q5_1 = 0, q6_0 = 0, q7_0 = 0;
+q1_0 = ("apple".toLowerCase().indexOf("aPPle".toLowerCase()) !== -1);
+q1_1 = "apple contains aPPle";
+inl1: {
+if (!q1_0) {
+q2_0 = q1_1;
+inl2: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + q2_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return;
+}
+}
+}
+q3_0 = ("APPLE".toLowerCase().indexOf("app".toLowerCase()) !== -1);
+q3_1 = "APPLE contains app";
+inl3: {
+if (!q3_0) {
+q4_0 = q3_1;
+inl4: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + q4_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return;
+}
+}
+}
+q5_0 = ("appLe".toLowerCase().indexOf("LE".toLowerCase()) !== -1);
+q5_1 = "appLe contains LE";
+inl5: {
+if (!q5_0) {
+q6_0 = q5_1;
+inl6: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + q6_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return;
+}
+}
+}
+q7_0 = "ok";
+inl7: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("pass " + q7_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return;
+}
+}
+return {Self, scripts: {
+"C": {index: 0, native: fs_3, step: null, Frame: null, executableHat: false},
+}};
+})

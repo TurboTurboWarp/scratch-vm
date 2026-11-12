@@ -12,6 +12,7 @@ const centralDispatch = require('./dispatch/central-dispatch');
 const ExtensionManager = require('./extension-support/extension-manager');
 const log = require('./util/log');
 const MathUtil = require('./util/math-util');
+const {normalizeTargets} = require('./ttw/normalize');
 const Runtime = require('./engine/runtime');
 const RenderedTarget = require('./sprites/rendered-target');
 const Sprite = require('./sprites/sprite');
@@ -391,6 +392,8 @@ class VirtualMachine extends EventEmitter {
         // Remove the target key, since it's a circular reference.
         const filteredThreadData = JSON.stringify(threadData, (key, value) => {
             if (key === 'target' || key === 'blockContainer') return;
+            // ttw: compiled module data is not useful here (and is circular)
+            if (key === 'ttw' || key === 'self' || key === 'frame') return;
             return value;
         }, 2);
         this.emit('playgroundData', {
@@ -839,9 +842,14 @@ class VirtualMachine extends EventEmitter {
                 // Ensure unique sprite name
                 if (target.isSprite()) this.renameSprite(target.id, target.getName());
             });
+            // ttw: load-time normalization of canonical numeric strings (spec 03 §6)
+            if (this.runtime.compilerOptions.normalizeNumericStrings !== false) {
+                normalizeTargets(this.runtime, targets);
+            }
             if (layerOrders) {
                 // Sort the executable targets by layer order.
                 this.runtime.executableTargets.sort((a, b) => layerOrders.get(a) - layerOrders.get(b));
+                this.runtime.ttwExecutableVersion++;
             }
 
             // Select the first target for editing, e.g., the first sprite.

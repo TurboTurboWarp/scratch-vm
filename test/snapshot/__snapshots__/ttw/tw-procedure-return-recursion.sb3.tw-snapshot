@@ -1,0 +1,388 @@
+// TW Snapshot
+// Input SHA-256: b1802636bbbd479dcf8634a525798c5b4dd9b0201cf6af6f5b4879455368c328
+
+// Sprite1 module
+(function ttw$Sprite1_N (R, G) {
+"use strict";
+const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, makeStuck, RETIRE} = R;
+const runtime = G.runtime;
+const stage = G.stage;
+const CONTINUE = {};
+const g0 = stage.variables["Go=PJS7BFXYo_qi2S:kQ"];
+const g1 = stage.variables["`jEk@4|i[#Fk?(8x)AV.-my variable"];
+const gl0 = stage.variables["4HH82mPlVMOONdl(Ot*7"]._tl;
+class Self {
+constructor (target) {
+this.target = target;
+}
+}
+class Fp_0 {
+constructor (parent) {
+this.parent = parent;
+this.pc = 0;
+this.s0 = undefined;
+this.s1 = undefined;
+this.s2 = undefined;
+}
+}
+function rp_0 (th, fr) {
+const S = th.self;
+const target = S.target;
+for (;;) switch (fr.pc) {
+case 0:
+if (!(fr.s0 > 0)) { fr.pc = 1; continue; }
+fr.s1 = (fr.s0 - 1);
+fr.pc = 3; return 0;
+case 3:
+{ const nf = new Fp_0(fr); nf.s0 = fr.s1; th.frame = nf; th.fn = rp_0; }
+fr.pc = 4; return 1;
+case 4:
+fr.s2 = th.ret;
+th.ret = fr.s2; th.frame = fr.parent; th.fn = fr.parent.fnRef; return 1;
+fr.pc = 2; continue;
+case 1:
+case 2:
+th.ret = ""; th.frame = fr.parent; th.fn = fr.parent.fnRef; return 1;
+default: throw new Error("TTW: bad pc " + fr.pc);
+}
+}
+Fp_0.prototype.fnRef = rp_0;
+function fp_1 (th, S, p0) {
+const target = S.target;
+if ((p0 > 0)) {
+return fp_1(th, S, (p0 - 1));
+}
+return "";
+}
+class Fp_2 {
+constructor (parent) {
+this.parent = parent;
+this.pc = 0;
+this.s0 = undefined;
+this.s1 = undefined;
+this.s2 = undefined;
+this.s3 = undefined;
+this.s4 = undefined;
+this.s5 = undefined;
+}
+}
+function rp_2 (th, fr) {
+const S = th.self;
+const target = S.target;
+let n0 = 0, n1 = 0;
+for (;;) switch (fr.pc) {
+case 0:
+if (!(fr.s0 < 2)) { fr.pc = 1; continue; }
+th.ret = fr.s0; th.frame = fr.parent; th.fn = fr.parent.fnRef; return 1;
+fr.pc = 2; continue;
+case 1:
+fr.s1 = (fr.s0 - 1);
+fr.pc = 3; return 0;
+case 3:
+{ const nf = new Fp_2(fr); nf.s0 = fr.s1; th.frame = nf; th.fn = rp_2; }
+fr.pc = 4; return 1;
+case 4:
+fr.s2 = th.ret;
+fr.s3 = ((n0 = +fr.s2) === n0 ? n0 : 0);
+fr.s4 = (fr.s0 - 2);
+fr.pc = 5; return 0;
+case 5:
+{ const nf = new Fp_2(fr); nf.s0 = fr.s4; th.frame = nf; th.fn = rp_2; }
+fr.pc = 6; return 1;
+case 6:
+fr.s5 = th.ret;
+th.ret = (fr.s3 + ((n1 = +fr.s5) === n1 ? n1 : 0)); th.frame = fr.parent; th.fn = fr.parent.fnRef; return 1;
+case 2:
+th.ret = ""; th.frame = fr.parent; th.fn = fr.parent.fnRef; return 1;
+default: throw new Error("TTW: bad pc " + fr.pc);
+}
+}
+Fp_2.prototype.fnRef = rp_2;
+class Fp_3 {
+constructor (parent) {
+this.parent = parent;
+this.pc = 0;
+this.s0 = undefined;
+this.s1 = undefined;
+this.s2 = undefined;
+this.s3 = undefined;
+this.s4 = undefined;
+this.s5 = undefined;
+this.s6 = undefined;
+this.s7 = undefined;
+this.s8 = undefined;
+this.s9 = undefined;
+this.s10 = undefined;
+this.s11 = undefined;
+}
+}
+function rp_3 (th, fr) {
+const S = th.self;
+const target = S.target;
+const h0 = g0;
+const h1 = g1;
+let n0 = 0, n1 = 0, n2 = 0, n3 = 0, n4 = 0, n5 = 0, n6 = 0, n7 = 0, n8 = 0, n9 = 0, n10 = 0, a0;
+for (;;) switch (fr.pc) {
+case 0:
+if (!(typeof fr.s0 === "number" ? false : ("" + fr.s0).toLowerCase() === "initial")) { fr.pc = 1; continue; }
+h0.value = 0;
+fr.pc = 3; return 0;
+case 3:
+{ const nf = new Fp_3(fr); nf.s0 = 1; th.frame = nf; th.fn = rp_3; }
+fr.pc = 4; return 1;
+case 4:
+fr.s1 = th.ret;
+fr.s2 = ((n0 = +fr.s1) === n0 ? n0 : 0);
+fr.pc = 5; return 0;
+case 5:
+{ const nf = new Fp_3(fr); nf.s0 = 1; th.frame = nf; th.fn = rp_3; }
+fr.pc = 6; return 1;
+case 6:
+fr.s3 = th.ret;
+fr.s4 = ((n1 = +fr.s3) === n1 ? n1 : 0);
+fr.pc = 7; return 0;
+case 7:
+{ const nf = new Fp_3(fr); nf.s0 = 2; th.frame = nf; th.fn = rp_3; }
+fr.pc = 8; return 1;
+case 8:
+fr.s5 = th.ret;
+fr.s6 = ((n2 = +fr.s5) === n2 ? n2 : 0);
+fr.pc = 9; return 0;
+case 9:
+{ const nf = new Fp_3(fr); nf.s0 = 2; th.frame = nf; th.fn = rp_3; }
+fr.pc = 10; return 1;
+case 10:
+fr.s7 = th.ret;
+fr.s8 = ((n3 = +fr.s7) === n3 ? n3 : 0);
+fr.pc = 11; return 0;
+case 11:
+{ const nf = new Fp_3(fr); nf.s0 = 3; th.frame = nf; th.fn = rp_3; }
+fr.pc = 12; return 1;
+case 12:
+fr.s9 = th.ret;
+fr.s10 = ((n4 = +fr.s9) === n4 ? n4 : 0);
+fr.pc = 13; return 0;
+case 13:
+{ const nf = new Fp_3(fr); nf.s0 = 3; th.frame = nf; th.fn = rp_3; }
+fr.pc = 14; return 1;
+case 14:
+fr.s11 = th.ret;
+h1.value = (fr.s2 + ((n5 = (fr.s4 + ((n6 = (fr.s6 + ((n7 = (fr.s8 + ((n8 = (fr.s10 + ((n9 = +fr.s11) === n9 ? n9 : 0))) === n8 ? n8 : 0))) === n7 ? n7 : 0))) === n6 ? n6 : 0))) === n5 ? n5 : 0));
+if ((((n10 = +h0.value) === n10 ? n10 : 0) === 3)) {
+runtime.ext_scratch3_looks._say("pass recursing between calls yields final", target);
+} else {
+runtime.ext_scratch3_looks._say("fail recursing between calls yields final", target);
+}
+fr.pc = 2; continue;
+case 1:
+if ((a0 = h0.value, ((typeof a0 === "number" && typeof fr.s0 === "number" && a0 === a0 && fr.s0 === fr.s0) || a0 === fr.s0) ? a0 === fr.s0 : eqSlow(a0, fr.s0))) {
+runtime.ext_scratch3_looks._say(("pass recursing between calls yields " + ("" + fr.s0)), target);
+} else {
+runtime.ext_scratch3_looks._say(("fail recursing between calls yields " + ("" + fr.s0)), target);
+}
+case 2:
+th.ret = ""; th.frame = fr.parent; th.fn = fr.parent.fnRef; return 1;
+default: throw new Error("TTW: bad pc " + fr.pc);
+}
+}
+Fp_3.prototype.fnRef = rp_3;
+class Fp_4 {
+constructor (parent) {
+this.parent = parent;
+this.pc = 0;
+this.s0 = undefined;
+this.s1 = undefined;
+this.s2 = undefined;
+this.s3 = undefined;
+this.s4 = undefined;
+this.s5 = undefined;
+this.s6 = undefined;
+this.s7 = undefined;
+this.s8 = undefined;
+this.s9 = undefined;
+this.s10 = undefined;
+}
+}
+function rp_4 (th, fr) {
+const S = th.self;
+const target = S.target;
+const h0 = g0;
+const h1 = g1;
+const L0 = gl0;
+let n0 = 0, n1 = 0, n2 = 0, n3 = 0, n4 = 0, n5 = 0, n6 = 0, n7 = 0, n8 = 0, n9 = 0, n10 = 0, n11 = 0, n12 = 0, n13 = 0, n14 = 0, n15 = 0, n16 = 0, n17 = 0, n18 = 0, n19 = 0, n20 = 0, a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14;
+for (;;) switch (fr.pc) {
+case 0:
+if (!(fr.s0.toLowerCase() === "initial".toLowerCase())) { fr.pc = 1; continue; }
+L0.clear();
+h0.value = 0;
+fr.pc = 3; return 0;
+case 3:
+{ const nf = new Fp_4(fr); nf.s0 = "child 4"; nf.s1 = ""; nf.s2 = ""; nf.s3 = ""; th.frame = nf; th.fn = rp_4; }
+fr.pc = 4; return 1;
+case 4:
+fr.s4 = th.ret;
+fr.pc = 5; return 0;
+case 5:
+{ const nf = new Fp_4(fr); nf.s0 = "child 5"; nf.s1 = ""; nf.s2 = ""; nf.s3 = ""; th.frame = nf; th.fn = rp_4; }
+fr.pc = 6; return 1;
+case 6:
+fr.s5 = th.ret;
+fr.pc = 7; return 0;
+case 7:
+{ const nf = new Fp_4(fr); nf.s0 = "child 6"; nf.s1 = ""; nf.s2 = ""; nf.s3 = ""; th.frame = nf; th.fn = rp_4; }
+fr.pc = 8; return 1;
+case 8:
+fr.s6 = th.ret;
+fr.pc = 9; return 0;
+case 9:
+{ const nf = new Fp_4(fr); nf.s0 = "child 3"; nf.s1 = fr.s4; nf.s2 = fr.s5; nf.s3 = fr.s6; th.frame = nf; th.fn = rp_4; }
+fr.pc = 10; return 1;
+case 10:
+fr.s7 = th.ret;
+fr.pc = 11; return 0;
+case 11:
+{ const nf = new Fp_4(fr); nf.s0 = "child 2"; nf.s1 = fr.s7; nf.s2 = ""; nf.s3 = ""; th.frame = nf; th.fn = rp_4; }
+fr.pc = 12; return 1;
+case 12:
+fr.s8 = th.ret;
+fr.pc = 13; return 0;
+case 13:
+{ const nf = new Fp_4(fr); nf.s0 = "child 7"; nf.s1 = ""; nf.s2 = ""; nf.s3 = ""; th.frame = nf; th.fn = rp_4; }
+fr.pc = 14; return 1;
+case 14:
+fr.s9 = th.ret;
+fr.pc = 15; return 0;
+case 15:
+{ const nf = new Fp_4(fr); nf.s0 = "child 1"; nf.s1 = fr.s8; nf.s2 = ""; nf.s3 = fr.s9; th.frame = nf; th.fn = rp_4; }
+fr.pc = 16; return 1;
+case 16:
+fr.s10 = th.ret;
+h1.value = fr.s10;
+if ((a1 = ((n2 = 1) >= 1 && n2 <= L0.len ? (n1 = (n2 | 0) - 1, ((n0 = L0.f64[n1]) === n0 ? n0 : ((a0 = L0.objs[n1]) === undefined ? NaN : a0))) : ""), typeof a1 === "number" ? false : ("" + a1).toLowerCase() === "1/child 4")) {
+runtime.ext_scratch3_looks._say("pass recurse arg order - 1", target);
+}
+if ((a3 = ((n5 = 2) >= 1 && n5 <= L0.len ? (n4 = (n5 | 0) - 1, ((n3 = L0.f64[n4]) === n3 ? n3 : ((a2 = L0.objs[n4]) === undefined ? NaN : a2))) : ""), typeof a3 === "number" ? false : ("" + a3).toLowerCase() === "1/child 5")) {
+runtime.ext_scratch3_looks._say("pass recurse arg order - 2", target);
+}
+if ((a5 = ((n8 = 3) >= 1 && n8 <= L0.len ? (n7 = (n8 | 0) - 1, ((n6 = L0.f64[n7]) === n6 ? n6 : ((a4 = L0.objs[n7]) === undefined ? NaN : a4))) : ""), typeof a5 === "number" ? false : ("" + a5).toLowerCase() === "2/child 6")) {
+runtime.ext_scratch3_looks._say("pass recurse arg order - 3", target);
+}
+if ((a7 = ((n11 = 4) >= 1 && n11 <= L0.len ? (n10 = (n11 | 0) - 1, ((n9 = L0.f64[n10]) === n9 ? n9 : ((a6 = L0.objs[n10]) === undefined ? NaN : a6))) : ""), typeof a7 === "number" ? false : ("" + a7).toLowerCase() === "2/child 3")) {
+runtime.ext_scratch3_looks._say("pass recurse arg order - 4", target);
+}
+if ((a9 = ((n14 = 5) >= 1 && n14 <= L0.len ? (n13 = (n14 | 0) - 1, ((n12 = L0.f64[n13]) === n12 ? n12 : ((a8 = L0.objs[n13]) === undefined ? NaN : a8))) : ""), typeof a9 === "number" ? false : ("" + a9).toLowerCase() === "3/child 2")) {
+runtime.ext_scratch3_looks._say("pass recurse arg order - 5", target);
+}
+if ((a11 = ((n17 = 6) >= 1 && n17 <= L0.len ? (n16 = (n17 | 0) - 1, ((n15 = L0.f64[n16]) === n15 ? n15 : ((a10 = L0.objs[n16]) === undefined ? NaN : a10))) : ""), typeof a11 === "number" ? false : ("" + a11).toLowerCase() === "3/child 7")) {
+runtime.ext_scratch3_looks._say("pass recurse arg order - 6", target);
+}
+if ((a13 = ((n20 = 7) >= 1 && n20 <= L0.len ? (n19 = (n20 | 0) - 1, ((n18 = L0.f64[n19]) === n18 ? n18 : ((a12 = L0.objs[n19]) === undefined ? NaN : a12))) : ""), typeof a13 === "number" ? false : ("" + a13).toLowerCase() === "4/child 1")) {
+runtime.ext_scratch3_looks._say("pass recurse arg order - 7", target);
+}
+if ((L0.len === 7)) {
+runtime.ext_scratch3_looks._say("pass recurse arg order - length is correct", target);
+}
+fr.pc = 2; continue;
+case 1:
+a14 = (("" + h0.value) + ("/" + fr.s0));
+if (typeof a14 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a14; else L0.pushSlow(a14);
+L0.upToDate = false;
+case 2:
+th.ret = ""; th.frame = fr.parent; th.fn = fr.parent.fnRef; return 1;
+default: throw new Error("TTW: bad pc " + fr.pc);
+}
+}
+Fp_4.prototype.fnRef = rp_4;
+class Fs_5 {
+constructor (parent) {
+this.parent = parent;
+this.pc = 0;
+this.s0 = undefined;
+this.s1 = undefined;
+}
+}
+function rs_5 (th, fr) {
+const S = th.self;
+const target = S.target;
+const h0 = g0;
+const h1 = g1;
+let n0 = 0, n1 = 0;
+for (;;) switch (fr.pc) {
+case 0:
+runtime.ext_scratch3_looks._say("plan 18", target);
+h0.value = 0;
+{ const nf = new Fp_0(fr); nf.s0 = 8; th.frame = nf; th.fn = rp_0; }
+fr.pc = 1; return 1;
+case 1:
+fr.s0 = th.ret;
+h1.value = fr.s0;
+if ((((n0 = +h0.value) === n0 ? n0 : 0) === 4)) {
+runtime.ext_scratch3_looks._say("pass non warp recursion yields", target);
+}
+h0.value = 0;
+h1.value = fp_1(th, S, 8);
+if ((h0.value === 0)) {
+runtime.ext_scratch3_looks._say("pass warp recursion does not yield", target);
+}
+h0.value = 0;
+{ const nf = new Fp_2(fr); nf.s0 = 7; th.frame = nf; th.fn = rp_2; }
+fr.pc = 2; return 1;
+case 2:
+fr.s1 = th.ret;
+h1.value = fr.s1;
+if ((((n1 = +h0.value) === n1 ? n1 : 0) === 20)) {
+runtime.ext_scratch3_looks._say("pass non warp fib yielded", target);
+}
+{ const nf = new Fp_3(fr); nf.s0 = "initial"; th.frame = nf; th.fn = rp_3; }
+fr.pc = 3; return 1;
+case 3:
+{ const nf = new Fp_4(fr); nf.s0 = "initial"; nf.s1 = ""; nf.s2 = ""; nf.s3 = ""; th.frame = nf; th.fn = rp_4; }
+fr.pc = 4; return 1;
+case 4:
+runtime.stopForTarget(target, th);
+runtime.ext_scratch3_looks._say("end", target);
+return 2;
+default: throw new Error("TTW: bad pc " + fr.pc);
+}
+}
+Fs_5.prototype.fnRef = rs_5;
+class Fs_6 {
+constructor (parent) {
+this.parent = parent;
+this.pc = 0;
+this.s0 = undefined;
+this.s1 = undefined;
+}
+}
+function rs_6 (th, fr) {
+const S = th.self;
+const target = S.target;
+const h0 = g0;
+let n0 = 0;
+for (;;) switch (fr.pc) {
+case 0:
+h0.value = 0;
+case 1:
+if (!true) { fr.pc = 2; continue; }
+h0.value = (((n0 = +h0.value) === n0 ? n0 : 0) + 1);
+fr.s0 = timer(runtime);
+fr.s1 = Math.max(0, 1000 * -1);
+runtime.requestRedraw();
+fr.pc = 3; return 0;
+case 3:
+while (fr.s0.timeElapsed() < fr.s1) {
+fr.pc = 3; return 0;
+}
+fr.s0 = null;
+fr.pc = 1; return 0;
+case 2:
+return 2;
+default: throw new Error("TTW: bad pc " + fr.pc);
+}
+}
+Fs_6.prototype.fnRef = rs_6;
+return {Self, scripts: {
+"al": {index: 0, native: null, step: rs_5, Frame: Fs_5, executableHat: false},
+"aw": {index: 1, native: null, step: rs_6, Frame: Fs_6, executableHat: false},
+}};
+})

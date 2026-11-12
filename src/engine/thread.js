@@ -221,6 +221,22 @@ class Thread {
         this.procedures = null;
         this.executableHat = false;
         this.compatibilityStackFrame = null;
+
+        // ttw (TurboTurboWarp backend) data. Fields are always present so Thread keeps one shape.
+        /** Script info from a TTW module, or null if not run by TTW. */
+        this.ttw = null;
+        /** The module's per-target state (Self). */
+        this.self = null;
+        /** Current step function (resumable scripts). */
+        this.fn = null;
+        /** Current frame record (resumable scripts). */
+        this.frame = null;
+        /** Value passed back from a procedure or compatibility layer call. */
+        this.ret = '';
+        /** True if the last compatibility layer call waited on a promise. */
+        this.fromPromise = false;
+        /** True if `ret` holds an unfinished promise result. */
+        this.compatPending = false;
     }
 
     /**
@@ -475,10 +491,22 @@ class Thread {
             return;
         }
 
+        this.triedToCompile = true;
+
+        // ttw: try the TurboTurboWarp backend first. Stack clicks always use the TW backend.
+        const runtime = this.target.runtime;
+        if (!this.stackClick && runtime.compilerOptions.backend !== 'tw') {
+            if (runtime.getTTW().tryStart(this)) {
+                if (!this.blockContainer.forceNoGlow) {
+                    this.blockGlowInFrame = this.topBlock;
+                    this.requestScriptGlowInFrame = true;
+                }
+                return;
+            }
+        }
+
         // importing the compiler here avoids circular dependency issues
         const compile = require('../compiler/compile');
-
-        this.triedToCompile = true;
 
         // stackClick === true disables hat block generation
         // It would be great to cache these separately, but for now it's easiest to just disable them to avoid

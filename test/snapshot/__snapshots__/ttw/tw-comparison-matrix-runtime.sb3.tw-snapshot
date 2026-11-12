@@ -1,0 +1,451 @@
+// TW Snapshot
+// Input SHA-256: 698b7a46d7ae7b0ea802888a6515a629f9a13721cae399629902031b0aa9c633
+
+// Sprite1 module
+(function ttw$Sprite1_N (R, G) {
+"use strict";
+const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, makeStuck, RETIRE} = R;
+const runtime = G.runtime;
+const stage = G.stage;
+const CONTINUE = {};
+const g0 = stage.variables["mfV;yS}9e:%h5UZ)QyiY"];
+const g1 = stage.variables["`jEk@4|i[#Fk?(8x)AV.-my variable"];
+const g2 = stage.variables["_]6^lq+-%H0{ov`tKt7$"];
+const gl0 = stage.variables["n^wm8jw#b24sggt.S^tD"]._tl;
+const gl1 = stage.variables["3lyKRepBc$tx)EWlpr!y"]._tl;
+class Self {
+constructor (target) {
+this.target = target;
+}
+}
+function fp_0 (th, S) {
+const target = S.target;
+const L0 = gl0;
+let n0 = 0, n1 = 0, n2 = 0, n3 = 0, n4 = 0, n5 = 0, n6 = 0, n7 = 0, n8 = 0, n9 = 0, n10 = 0, n11 = 0, n12 = 0, n13 = 0, n14 = 0, n15 = 0, n16 = 0, n17 = 0, n18 = 0, a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18;
+L0.clear();
+n0 = 0;
+if (L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = n0; else L0.pushSlow(n0);
+n1 = 1;
+if (L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = n1; else L0.pushSlow(n1);
+n2 = 2;
+if (L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = n2; else L0.pushSlow(n2);
+n3 = -1;
+if (L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = n3; else L0.pushSlow(n3);
+n4 = -2;
+if (L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = n4; else L0.pushSlow(n4);
+a0 = "0.0";
+if (typeof a0 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a0; else L0.pushSlow(a0);
+a1 = "-0.";
+if (typeof a1 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a1; else L0.pushSlow(a1);
+a2 = "-0.0";
+if (typeof a2 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a2; else L0.pushSlow(a2);
+a3 = ".123";
+if (typeof a3 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a3; else L0.pushSlow(a3);
+a4 = "-.123";
+if (typeof a4 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a4; else L0.pushSlow(a4);
+a5 = "1.";
+if (typeof a5 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a5; else L0.pushSlow(a5);
+n5 = (0 + 0);
+if (L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = n5; else L0.pushSlow(n5);
+n6 = (1 + 0);
+if (L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = n6; else L0.pushSlow(n6);
+n7 = (2 + 0);
+if (L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = n7; else L0.pushSlow(n7);
+n8 = (-1 + 0);
+if (L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = n8; else L0.pushSlow(n8);
+n9 = (-2 + 0);
+if (L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = n9; else L0.pushSlow(n9);
+n10 = (0.123 + 0);
+if (L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = n10; else L0.pushSlow(n10);
+n11 = (-0.123 + 0);
+if (L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = n11; else L0.pushSlow(n11);
+n12 = (1 + 0);
+if (L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = n12; else L0.pushSlow(n12);
+a6 = "1e99";
+if (typeof a6 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a6; else L0.pushSlow(a6);
+n13 = (1e+99 + 0);
+if (L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = n13; else L0.pushSlow(n13);
+n14 = Infinity;
+if (L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = n14; else L0.pushSlow(n14);
+n15 = -Infinity;
+if (L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = n15; else L0.pushSlow(n15);
+a7 = "-infinitY";
+if (typeof a7 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a7; else L0.pushSlow(a7);
+n16 = (1 / 0);
+if (L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = n16; else L0.pushSlow(n16);
+n17 = (-1 / 0);
+if (L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = n17; else L0.pushSlow(n17);
+n18 = (0 / 0);
+if (L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = n18; else L0.pushSlow(n18);
+a8 = "NaN";
+if (typeof a8 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a8; else L0.pushSlow(a8);
+a9 = "nan";
+if (typeof a9 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a9; else L0.pushSlow(a9);
+a10 = "-NaN";
+if (typeof a10 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a10; else L0.pushSlow(a10);
+a11 = "true";
+if (typeof a11 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a11; else L0.pushSlow(a11);
+a12 = "false";
+if (typeof a12 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a12; else L0.pushSlow(a12);
+a13 = !false;
+if (typeof a13 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a13; else L0.pushSlow(a13);
+a14 = !!false;
+if (typeof a14 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a14; else L0.pushSlow(a14);
+a15 = "";
+if (typeof a15 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a15; else L0.pushSlow(a15);
+a16 = "Banana";
+if (typeof a16 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a16; else L0.pushSlow(a16);
+a17 = " ";
+if (typeof a17 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a17; else L0.pushSlow(a17);
+a18 = "🎉";
+if (typeof a18 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a18; else L0.pushSlow(a18);
+L0.upToDate = false;
+return "";
+}
+function fp_1 (th, S) {
+const target = S.target;
+const h0 = g0;
+const h1 = g1;
+const h2 = g2;
+const L0 = gl0;
+const L1 = gl1;
+let v0 = h0.value, v1 = h1.value, v2 = h2.value;
+if (typeof v0 !== "number" || v0 !== v0 || typeof v1 !== "number" || v1 !== v1 || typeof v2 !== "number" || v2 !== v2) return fp_1$g(th, S);
+let n0 = 0, n1 = 0, n2 = 0, n3 = 0, n4 = 0, n5 = 0, n6 = 0, n7 = 0, n8 = 0, n9 = 0, n10 = 0, n11 = 0, n12 = 0, n13 = 0, n14 = 0, n15 = 0, n16 = 0, n17 = 0, n18 = 0, n19 = 0, n20 = 0, n21 = 0, n22 = 0, n23 = 0, n24 = 0, n25 = 0, n26 = 0, n27 = 0, n28 = 0, n29 = 0, n30 = 0, n31 = 0, n32 = 0, n33 = 0, n34 = 0, n35 = 0, n36 = 0, n37 = 0, n38 = 0, n39 = 0, n40 = 0, n41 = 0, n42 = 0, n43 = 0, n44 = 0, n45 = 0, n46 = 0, n47 = 0, n48 = 0, n49 = 0, n50 = 0, n51 = 0, n52 = 0, n53 = 0, n54 = 0, n55 = 0, n56 = 0, n57 = 0, n58 = 0, n59 = 0, n60 = 0, n61 = 0, n62 = 0, n63 = 0, n64 = 0, n65 = 0, n66 = 0, n67 = 0, n68 = 0, n69 = 0, n70 = 0, n71 = 0, n72 = 0, n73 = 0, n74 = 0, n75 = 0, n76 = 0, n77 = 0, n78 = 0, n79 = 0, n80 = 0, n81 = 0, n82 = 0, n83 = 0, n84 = 0, n85 = 0, a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19, a20, a21, a22, a23, a24, a25, a26, a27, a28, a29, a30, a31, a32, a33, a34, a35, a36, a37, a38, a39, a40, a41, a42, a43, a44, a45, a46, a47, a48, a49, a50, a51, a52, a53, a54, a55, a56, a57, a58, a59;
+inl1076: {
+L0.clear();
+n0 = 0;
+if (L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = n0; else L0.pushSlow(n0);
+n1 = 1;
+if (L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = n1; else L0.pushSlow(n1);
+n2 = 2;
+if (L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = n2; else L0.pushSlow(n2);
+n3 = -1;
+if (L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = n3; else L0.pushSlow(n3);
+n4 = -2;
+if (L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = n4; else L0.pushSlow(n4);
+a0 = "0.0";
+if (typeof a0 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a0; else L0.pushSlow(a0);
+a1 = "-0.";
+if (typeof a1 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a1; else L0.pushSlow(a1);
+a2 = "-0.0";
+if (typeof a2 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a2; else L0.pushSlow(a2);
+a3 = ".123";
+if (typeof a3 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a3; else L0.pushSlow(a3);
+a4 = "-.123";
+if (typeof a4 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a4; else L0.pushSlow(a4);
+a5 = "1.";
+if (typeof a5 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a5; else L0.pushSlow(a5);
+n5 = (0 + 0);
+if (L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = n5; else L0.pushSlow(n5);
+n6 = (1 + 0);
+if (L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = n6; else L0.pushSlow(n6);
+n7 = (2 + 0);
+if (L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = n7; else L0.pushSlow(n7);
+n8 = (-1 + 0);
+if (L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = n8; else L0.pushSlow(n8);
+n9 = (-2 + 0);
+if (L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = n9; else L0.pushSlow(n9);
+n10 = (0.123 + 0);
+if (L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = n10; else L0.pushSlow(n10);
+n11 = (-0.123 + 0);
+if (L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = n11; else L0.pushSlow(n11);
+n12 = (1 + 0);
+if (L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = n12; else L0.pushSlow(n12);
+a6 = "1e99";
+if (typeof a6 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a6; else L0.pushSlow(a6);
+n13 = (1e+99 + 0);
+if (L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = n13; else L0.pushSlow(n13);
+n14 = Infinity;
+if (L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = n14; else L0.pushSlow(n14);
+n15 = -Infinity;
+if (L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = n15; else L0.pushSlow(n15);
+a7 = "-infinitY";
+if (typeof a7 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a7; else L0.pushSlow(a7);
+n16 = (1 / 0);
+if (L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = n16; else L0.pushSlow(n16);
+n17 = (-1 / 0);
+if (L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = n17; else L0.pushSlow(n17);
+n18 = (0 / 0);
+if (L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = n18; else L0.pushSlow(n18);
+a8 = "NaN";
+if (typeof a8 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a8; else L0.pushSlow(a8);
+a9 = "nan";
+if (typeof a9 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a9; else L0.pushSlow(a9);
+a10 = "-NaN";
+if (typeof a10 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a10; else L0.pushSlow(a10);
+a11 = "true";
+if (typeof a11 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a11; else L0.pushSlow(a11);
+a12 = "false";
+if (typeof a12 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a12; else L0.pushSlow(a12);
+a13 = !false;
+if (typeof a13 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a13; else L0.pushSlow(a13);
+a14 = !!false;
+if (typeof a14 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a14; else L0.pushSlow(a14);
+a15 = "";
+if (typeof a15 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a15; else L0.pushSlow(a15);
+a16 = "Banana";
+if (typeof a16 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a16; else L0.pushSlow(a16);
+a17 = " ";
+if (typeof a17 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a17; else L0.pushSlow(a17);
+a18 = "🎉";
+if (typeof a18 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a18; else L0.pushSlow(a18);
+}
+v0 = 0;
+v1 = 0;
+a19 = {v0: v0, v1: v1, v2: v2, c: L0.len, k: 1, r: ""};
+while ((n19 = fp_1$c0(th, S, a19)) === 1);
+v0 = a19.v0;
+v1 = a19.v1;
+v2 = a19.v2;
+if (n19 === 2) {
+a59 = a19.r;
+h0.value = v0;
+h1.value = v1;
+h2.value = v2;
+L0.upToDate = false;
+return a59;
+}
+h0.value = v0;
+h1.value = v1;
+h2.value = v2;
+L0.upToDate = false;
+return "";
+}
+function fp_1$c0 (th, S, B) {
+const target = S.target;
+const h0 = g0;
+const h1 = g1;
+const h2 = g2;
+const L0 = gl0;
+const L1 = gl1;
+let n0 = 0, n1 = 0, n2 = 0, n3 = 0, n4 = 0, n5 = 0, n6 = 0, n7 = 0, n8 = 0, n9 = 0, n10 = 0, n11 = 0, n12 = 0, n13 = 0, n14 = 0, n15 = 0, n16 = 0, n17 = 0, n18 = 0, n19 = 0, n20 = 0, n21 = 0, n22 = 0, n23 = 0, n24 = 0, n25 = 0, n26 = 0, n27 = 0, n28 = 0, n29 = 0, n30 = 0, n31 = 0, n32 = 0, n33 = 0, n34 = 0, n35 = 0, n36 = 0, n37 = 0, n38 = 0, n39 = 0, n40 = 0, n41 = 0, n42 = 0, n43 = 0, n44 = 0, n45 = 0, n46 = 0, n47 = 0, n48 = 0, n49 = 0, n50 = 0, n51 = 0, n52 = 0, n53 = 0, n54 = 0, n55 = 0, n56 = 0, n57 = 0, n58 = 0, n59 = 0, n60 = 0, n61 = 0, n62 = 0, n63 = 0, n64 = 0, n65 = 0, n66 = 0, n67 = 0, n68 = 0, n69 = 0, n70 = 0, n71 = 0, n72 = 0, n73 = 0, n74 = 0, n75 = 0, n76 = 0, n77 = 0, n78 = 0, n79 = 0, n80 = 0, n81 = 0, n82 = 0, n83 = 0, n84 = 0, n85 = 0, a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19, a20, a21, a22, a23, a24, a25, a26, a27, a28, a29, a30, a31, a32, a33, a34, a35, a36, a37, a38, a39, a40, a41, a42, a43, a44, a45, a46, a47, a48, a49, a50, a51, a52, a53, a54, a55, a56, a57, a58, a59;
+let v0 = B.v0, v1 = B.v1, v2 = B.v2;
+if (L0.objs.length === 0 && L1.objs.length === 0) {
+n21 = B.k; if (B.k < 4096) B.k *= 2;
+for (n20 = B.c; n20 > 0; n20--) {
+if (n21-- === 0) { B.c = n20; B.v0 = v0; B.v1 = v1; B.v2 = v2; return 1; }
+v1 = (v1 + 1);
+v2 = 0;
+for (n22 = L0.len; n22 > 0; n22--) {
+v2 = (v2 + 1);
+v0 = (v0 + 1);
+if (!(a22 = (a20 = ((n23 = v1) >= 1 && n23 <= L0.len ? L0.f64[(n23 | 0) - 1] : ""), a21 = ((n24 = v2) >= 1 && n24 <= L0.len ? L0.f64[(n24 | 0) - 1] : ""), ((typeof a20 === "number" && typeof a21 === "number" && a20 === a20)) ? a20 > a21 : gtSlow(a20, a21)), a23 = ((n25 = v0) >= 1 && n25 <= L1.len ? L1.f64[(n25 | 0) - 1] : ""), ((typeof a22 === "number" && typeof a23 === "number" && a22 === a22 && a23 === a23) || a22 === a23) ? a22 === a23 : eqSlow(a22, a23))) {
+runtime.ext_scratch3_looks._say(("fail " + (("" + ((n26 = v1) >= 1 && n26 <= L0.len ? L0.f64[(n26 | 0) - 1] : "")) + (" should be > " + ("" + ((n27 = v2) >= 1 && n27 <= L0.len ? L0.f64[(n27 | 0) - 1] : ""))))), target);
+}
+v0 = (v0 + 1);
+if (!(a26 = (a24 = ((n28 = v1) >= 1 && n28 <= L0.len ? L0.f64[(n28 | 0) - 1] : ""), a25 = ((n29 = v2) >= 1 && n29 <= L0.len ? L0.f64[(n29 | 0) - 1] : ""), ((typeof a24 === "number" && typeof a25 === "number" && a24 === a24 && a25 === a25) || a24 === a25) ? a24 === a25 : eqSlow(a24, a25)), a27 = ((n30 = v0) >= 1 && n30 <= L1.len ? L1.f64[(n30 | 0) - 1] : ""), ((typeof a26 === "number" && typeof a27 === "number" && a26 === a26 && a27 === a27) || a26 === a27) ? a26 === a27 : eqSlow(a26, a27))) {
+runtime.ext_scratch3_looks._say(("fail " + (("" + ((n31 = v1) >= 1 && n31 <= L0.len ? L0.f64[(n31 | 0) - 1] : "")) + (" should be = " + ("" + ((n32 = v2) >= 1 && n32 <= L0.len ? L0.f64[(n32 | 0) - 1] : ""))))), target);
+}
+v0 = (v0 + 1);
+if (!(a30 = (a28 = ((n33 = v1) >= 1 && n33 <= L0.len ? L0.f64[(n33 | 0) - 1] : ""), a29 = ((n34 = v2) >= 1 && n34 <= L0.len ? L0.f64[(n34 | 0) - 1] : ""), ((typeof a28 === "number" && typeof a29 === "number" && a29 === a29)) ? a28 < a29 : ltSlow(a28, a29)), a31 = ((n35 = v0) >= 1 && n35 <= L1.len ? L1.f64[(n35 | 0) - 1] : ""), ((typeof a30 === "number" && typeof a31 === "number" && a30 === a30 && a31 === a31) || a30 === a31) ? a30 === a31 : eqSlow(a30, a31))) {
+runtime.ext_scratch3_looks._say(("fail " + (("" + ((n36 = v1) >= 1 && n36 <= L0.len ? L0.f64[(n36 | 0) - 1] : "")) + (" should be < " + ("" + ((n37 = v2) >= 1 && n37 <= L0.len ? L0.f64[(n37 | 0) - 1] : ""))))), target);
+}
+}
+}
+} else {
+n39 = B.k; if (B.k < 4096) B.k *= 2;
+for (n38 = B.c; n38 > 0; n38--) {
+if (n39-- === 0) { B.c = n38; B.v0 = v0; B.v1 = v1; B.v2 = v2; return 1; }
+v1 = (v1 + 1);
+v2 = 0;
+for (n40 = L0.len; n40 > 0; n40--) {
+v2 = (v2 + 1);
+v0 = (v0 + 1);
+if (!(a36 = (a33 = ((n43 = v1) >= 1 && n43 <= L0.len ? (n42 = (n43 | 0) - 1, ((n41 = L0.f64[n42]) === n41 ? n41 : ((a32 = L0.objs[n42]) === undefined ? NaN : a32))) : ""), a35 = ((n46 = v2) >= 1 && n46 <= L0.len ? (n45 = (n46 | 0) - 1, ((n44 = L0.f64[n45]) === n44 ? n44 : ((a34 = L0.objs[n45]) === undefined ? NaN : a34))) : ""), ((typeof a33 === "number" && typeof a35 === "number" && a33 === a33)) ? a33 > a35 : gtSlow(a33, a35)), a38 = ((n49 = v0) >= 1 && n49 <= L1.len ? (n48 = (n49 | 0) - 1, ((n47 = L1.f64[n48]) === n47 ? n47 : ((a37 = L1.objs[n48]) === undefined ? NaN : a37))) : ""), ((typeof a36 === "number" && typeof a38 === "number" && a36 === a36 && a38 === a38) || a36 === a38) ? a36 === a38 : eqSlow(a36, a38))) {
+runtime.ext_scratch3_looks._say(("fail " + (("" + ((n52 = v1) >= 1 && n52 <= L0.len ? (n51 = (n52 | 0) - 1, ((n50 = L0.f64[n51]) === n50 ? n50 : ((a39 = L0.objs[n51]) === undefined ? NaN : a39))) : "")) + (" should be > " + ("" + ((n55 = v2) >= 1 && n55 <= L0.len ? (n54 = (n55 | 0) - 1, ((n53 = L0.f64[n54]) === n53 ? n53 : ((a40 = L0.objs[n54]) === undefined ? NaN : a40))) : ""))))), target);
+}
+v0 = (v0 + 1);
+if (!(a45 = (a42 = ((n58 = v1) >= 1 && n58 <= L0.len ? (n57 = (n58 | 0) - 1, ((n56 = L0.f64[n57]) === n56 ? n56 : ((a41 = L0.objs[n57]) === undefined ? NaN : a41))) : ""), a44 = ((n61 = v2) >= 1 && n61 <= L0.len ? (n60 = (n61 | 0) - 1, ((n59 = L0.f64[n60]) === n59 ? n59 : ((a43 = L0.objs[n60]) === undefined ? NaN : a43))) : ""), ((typeof a42 === "number" && typeof a44 === "number" && a42 === a42 && a44 === a44) || a42 === a44) ? a42 === a44 : eqSlow(a42, a44)), a47 = ((n64 = v0) >= 1 && n64 <= L1.len ? (n63 = (n64 | 0) - 1, ((n62 = L1.f64[n63]) === n62 ? n62 : ((a46 = L1.objs[n63]) === undefined ? NaN : a46))) : ""), ((typeof a45 === "number" && typeof a47 === "number" && a45 === a45 && a47 === a47) || a45 === a47) ? a45 === a47 : eqSlow(a45, a47))) {
+runtime.ext_scratch3_looks._say(("fail " + (("" + ((n67 = v1) >= 1 && n67 <= L0.len ? (n66 = (n67 | 0) - 1, ((n65 = L0.f64[n66]) === n65 ? n65 : ((a48 = L0.objs[n66]) === undefined ? NaN : a48))) : "")) + (" should be = " + ("" + ((n70 = v2) >= 1 && n70 <= L0.len ? (n69 = (n70 | 0) - 1, ((n68 = L0.f64[n69]) === n68 ? n68 : ((a49 = L0.objs[n69]) === undefined ? NaN : a49))) : ""))))), target);
+}
+v0 = (v0 + 1);
+if (!(a54 = (a51 = ((n73 = v1) >= 1 && n73 <= L0.len ? (n72 = (n73 | 0) - 1, ((n71 = L0.f64[n72]) === n71 ? n71 : ((a50 = L0.objs[n72]) === undefined ? NaN : a50))) : ""), a53 = ((n76 = v2) >= 1 && n76 <= L0.len ? (n75 = (n76 | 0) - 1, ((n74 = L0.f64[n75]) === n74 ? n74 : ((a52 = L0.objs[n75]) === undefined ? NaN : a52))) : ""), ((typeof a51 === "number" && typeof a53 === "number" && a53 === a53)) ? a51 < a53 : ltSlow(a51, a53)), a56 = ((n79 = v0) >= 1 && n79 <= L1.len ? (n78 = (n79 | 0) - 1, ((n77 = L1.f64[n78]) === n77 ? n77 : ((a55 = L1.objs[n78]) === undefined ? NaN : a55))) : ""), ((typeof a54 === "number" && typeof a56 === "number" && a54 === a54 && a56 === a56) || a54 === a56) ? a54 === a56 : eqSlow(a54, a56))) {
+runtime.ext_scratch3_looks._say(("fail " + (("" + ((n82 = v1) >= 1 && n82 <= L0.len ? (n81 = (n82 | 0) - 1, ((n80 = L0.f64[n81]) === n80 ? n80 : ((a57 = L0.objs[n81]) === undefined ? NaN : a57))) : "")) + (" should be < " + ("" + ((n85 = v2) >= 1 && n85 <= L0.len ? (n84 = (n85 | 0) - 1, ((n83 = L0.f64[n84]) === n83 ? n83 : ((a58 = L0.objs[n84]) === undefined ? NaN : a58))) : ""))))), target);
+}
+}
+}
+}
+B.v0 = v0;
+B.v1 = v1;
+B.v2 = v2;
+return 0;
+}
+function fp_1$g (th, S) {
+const target = S.target;
+const h0 = g0;
+const h1 = g1;
+const h2 = g2;
+const L0 = gl0;
+const L1 = gl1;
+let v0 = h0.value, v1 = h1.value, v2 = h2.value;
+let n0 = 0, n1 = 0, n2 = 0, n3 = 0, n4 = 0, n5 = 0, n6 = 0, n7 = 0, n8 = 0, n9 = 0, n10 = 0, n11 = 0, n12 = 0, n13 = 0, n14 = 0, n15 = 0, n16 = 0, n17 = 0, n18 = 0, n19 = 0, n20 = 0, n21 = 0, n22 = 0, n23 = 0, n24 = 0, n25 = 0, n26 = 0, n27 = 0, n28 = 0, n29 = 0, n30 = 0, n31 = 0, n32 = 0, n33 = 0, n34 = 0, n35 = 0, n36 = 0, n37 = 0, n38 = 0, n39 = 0, n40 = 0, n41 = 0, n42 = 0, n43 = 0, n44 = 0, n45 = 0, n46 = 0, n47 = 0, n48 = 0, n49 = 0, n50 = 0, n51 = 0, n52 = 0, n53 = 0, n54 = 0, n55 = 0, n56 = 0, n57 = 0, n58 = 0, n59 = 0, n60 = 0, n61 = 0, n62 = 0, n63 = 0, n64 = 0, n65 = 0, n66 = 0, n67 = 0, n68 = 0, n69 = 0, n70 = 0, n71 = 0, n72 = 0, n73 = 0, n74 = 0, n75 = 0, n76 = 0, n77 = 0, n78 = 0, n79 = 0, n80 = 0, n81 = 0, n82 = 0, n83 = 0, n84 = 0, n85 = 0, a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19, a20, a21, a22, a23, a24, a25, a26, a27, a28, a29, a30, a31, a32, a33, a34, a35, a36, a37, a38, a39, a40, a41, a42, a43, a44, a45, a46, a47, a48, a49, a50, a51, a52, a53, a54, a55, a56, a57, a58, a59;
+inl1077: {
+L0.clear();
+n0 = 0;
+if (L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = n0; else L0.pushSlow(n0);
+n1 = 1;
+if (L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = n1; else L0.pushSlow(n1);
+n2 = 2;
+if (L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = n2; else L0.pushSlow(n2);
+n3 = -1;
+if (L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = n3; else L0.pushSlow(n3);
+n4 = -2;
+if (L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = n4; else L0.pushSlow(n4);
+a0 = "0.0";
+if (typeof a0 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a0; else L0.pushSlow(a0);
+a1 = "-0.";
+if (typeof a1 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a1; else L0.pushSlow(a1);
+a2 = "-0.0";
+if (typeof a2 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a2; else L0.pushSlow(a2);
+a3 = ".123";
+if (typeof a3 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a3; else L0.pushSlow(a3);
+a4 = "-.123";
+if (typeof a4 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a4; else L0.pushSlow(a4);
+a5 = "1.";
+if (typeof a5 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a5; else L0.pushSlow(a5);
+n5 = (0 + 0);
+if (L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = n5; else L0.pushSlow(n5);
+n6 = (1 + 0);
+if (L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = n6; else L0.pushSlow(n6);
+n7 = (2 + 0);
+if (L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = n7; else L0.pushSlow(n7);
+n8 = (-1 + 0);
+if (L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = n8; else L0.pushSlow(n8);
+n9 = (-2 + 0);
+if (L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = n9; else L0.pushSlow(n9);
+n10 = (0.123 + 0);
+if (L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = n10; else L0.pushSlow(n10);
+n11 = (-0.123 + 0);
+if (L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = n11; else L0.pushSlow(n11);
+n12 = (1 + 0);
+if (L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = n12; else L0.pushSlow(n12);
+a6 = "1e99";
+if (typeof a6 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a6; else L0.pushSlow(a6);
+n13 = (1e+99 + 0);
+if (L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = n13; else L0.pushSlow(n13);
+n14 = Infinity;
+if (L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = n14; else L0.pushSlow(n14);
+n15 = -Infinity;
+if (L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = n15; else L0.pushSlow(n15);
+a7 = "-infinitY";
+if (typeof a7 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a7; else L0.pushSlow(a7);
+n16 = (1 / 0);
+if (L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = n16; else L0.pushSlow(n16);
+n17 = (-1 / 0);
+if (L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = n17; else L0.pushSlow(n17);
+n18 = (0 / 0);
+if (L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = n18; else L0.pushSlow(n18);
+a8 = "NaN";
+if (typeof a8 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a8; else L0.pushSlow(a8);
+a9 = "nan";
+if (typeof a9 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a9; else L0.pushSlow(a9);
+a10 = "-NaN";
+if (typeof a10 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a10; else L0.pushSlow(a10);
+a11 = "true";
+if (typeof a11 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a11; else L0.pushSlow(a11);
+a12 = "false";
+if (typeof a12 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a12; else L0.pushSlow(a12);
+a13 = !false;
+if (typeof a13 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a13; else L0.pushSlow(a13);
+a14 = !!false;
+if (typeof a14 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a14; else L0.pushSlow(a14);
+a15 = "";
+if (typeof a15 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a15; else L0.pushSlow(a15);
+a16 = "Banana";
+if (typeof a16 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a16; else L0.pushSlow(a16);
+a17 = " ";
+if (typeof a17 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a17; else L0.pushSlow(a17);
+a18 = "🎉";
+if (typeof a18 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a18; else L0.pushSlow(a18);
+}
+v0 = 0;
+v1 = 0;
+a19 = {v0: v0, v1: v1, v2: v2, c: L0.len, k: 1, r: ""};
+while ((n19 = fp_1$g$c0(th, S, a19)) === 1);
+v0 = a19.v0;
+v1 = a19.v1;
+v2 = a19.v2;
+if (n19 === 2) {
+a59 = a19.r;
+h0.value = v0;
+h1.value = v1;
+h2.value = v2;
+L0.upToDate = false;
+return a59;
+}
+h0.value = v0;
+h1.value = v1;
+h2.value = v2;
+L0.upToDate = false;
+return "";
+}
+function fp_1$g$c0 (th, S, B) {
+const target = S.target;
+const h0 = g0;
+const h1 = g1;
+const h2 = g2;
+const L0 = gl0;
+const L1 = gl1;
+let n0 = 0, n1 = 0, n2 = 0, n3 = 0, n4 = 0, n5 = 0, n6 = 0, n7 = 0, n8 = 0, n9 = 0, n10 = 0, n11 = 0, n12 = 0, n13 = 0, n14 = 0, n15 = 0, n16 = 0, n17 = 0, n18 = 0, n19 = 0, n20 = 0, n21 = 0, n22 = 0, n23 = 0, n24 = 0, n25 = 0, n26 = 0, n27 = 0, n28 = 0, n29 = 0, n30 = 0, n31 = 0, n32 = 0, n33 = 0, n34 = 0, n35 = 0, n36 = 0, n37 = 0, n38 = 0, n39 = 0, n40 = 0, n41 = 0, n42 = 0, n43 = 0, n44 = 0, n45 = 0, n46 = 0, n47 = 0, n48 = 0, n49 = 0, n50 = 0, n51 = 0, n52 = 0, n53 = 0, n54 = 0, n55 = 0, n56 = 0, n57 = 0, n58 = 0, n59 = 0, n60 = 0, n61 = 0, n62 = 0, n63 = 0, n64 = 0, n65 = 0, n66 = 0, n67 = 0, n68 = 0, n69 = 0, n70 = 0, n71 = 0, n72 = 0, n73 = 0, n74 = 0, n75 = 0, n76 = 0, n77 = 0, n78 = 0, n79 = 0, n80 = 0, n81 = 0, n82 = 0, n83 = 0, n84 = 0, n85 = 0, a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19, a20, a21, a22, a23, a24, a25, a26, a27, a28, a29, a30, a31, a32, a33, a34, a35, a36, a37, a38, a39, a40, a41, a42, a43, a44, a45, a46, a47, a48, a49, a50, a51, a52, a53, a54, a55, a56, a57, a58, a59;
+let v0 = B.v0, v1 = B.v1, v2 = B.v2;
+if (L0.objs.length === 0 && L1.objs.length === 0) {
+n21 = B.k; if (B.k < 4096) B.k *= 2;
+for (n20 = B.c; n20 > 0; n20--) {
+if (n21-- === 0) { B.c = n20; B.v0 = v0; B.v1 = v1; B.v2 = v2; return 1; }
+v1 = (v1 + 1);
+v2 = 0;
+for (n22 = L0.len; n22 > 0; n22--) {
+v2 = (v2 + 1);
+v0 = (v0 + 1);
+if (!(a22 = (a20 = ((n23 = v1) >= 1 && n23 <= L0.len ? L0.f64[(n23 | 0) - 1] : ""), a21 = ((n24 = v2) >= 1 && n24 <= L0.len ? L0.f64[(n24 | 0) - 1] : ""), ((typeof a20 === "number" && typeof a21 === "number" && a20 === a20)) ? a20 > a21 : gtSlow(a20, a21)), a23 = ((n25 = v0) >= 1 && n25 <= L1.len ? L1.f64[(n25 | 0) - 1] : ""), ((typeof a22 === "number" && typeof a23 === "number" && a22 === a22 && a23 === a23) || a22 === a23) ? a22 === a23 : eqSlow(a22, a23))) {
+runtime.ext_scratch3_looks._say(("fail " + (("" + ((n26 = v1) >= 1 && n26 <= L0.len ? L0.f64[(n26 | 0) - 1] : "")) + (" should be > " + ("" + ((n27 = v2) >= 1 && n27 <= L0.len ? L0.f64[(n27 | 0) - 1] : ""))))), target);
+}
+v0 = (v0 + 1);
+if (!(a26 = (a24 = ((n28 = v1) >= 1 && n28 <= L0.len ? L0.f64[(n28 | 0) - 1] : ""), a25 = ((n29 = v2) >= 1 && n29 <= L0.len ? L0.f64[(n29 | 0) - 1] : ""), ((typeof a24 === "number" && typeof a25 === "number" && a24 === a24 && a25 === a25) || a24 === a25) ? a24 === a25 : eqSlow(a24, a25)), a27 = ((n30 = v0) >= 1 && n30 <= L1.len ? L1.f64[(n30 | 0) - 1] : ""), ((typeof a26 === "number" && typeof a27 === "number" && a26 === a26 && a27 === a27) || a26 === a27) ? a26 === a27 : eqSlow(a26, a27))) {
+runtime.ext_scratch3_looks._say(("fail " + (("" + ((n31 = v1) >= 1 && n31 <= L0.len ? L0.f64[(n31 | 0) - 1] : "")) + (" should be = " + ("" + ((n32 = v2) >= 1 && n32 <= L0.len ? L0.f64[(n32 | 0) - 1] : ""))))), target);
+}
+v0 = (v0 + 1);
+if (!(a30 = (a28 = ((n33 = v1) >= 1 && n33 <= L0.len ? L0.f64[(n33 | 0) - 1] : ""), a29 = ((n34 = v2) >= 1 && n34 <= L0.len ? L0.f64[(n34 | 0) - 1] : ""), ((typeof a28 === "number" && typeof a29 === "number" && a29 === a29)) ? a28 < a29 : ltSlow(a28, a29)), a31 = ((n35 = v0) >= 1 && n35 <= L1.len ? L1.f64[(n35 | 0) - 1] : ""), ((typeof a30 === "number" && typeof a31 === "number" && a30 === a30 && a31 === a31) || a30 === a31) ? a30 === a31 : eqSlow(a30, a31))) {
+runtime.ext_scratch3_looks._say(("fail " + (("" + ((n36 = v1) >= 1 && n36 <= L0.len ? L0.f64[(n36 | 0) - 1] : "")) + (" should be < " + ("" + ((n37 = v2) >= 1 && n37 <= L0.len ? L0.f64[(n37 | 0) - 1] : ""))))), target);
+}
+}
+}
+} else {
+n39 = B.k; if (B.k < 4096) B.k *= 2;
+for (n38 = B.c; n38 > 0; n38--) {
+if (n39-- === 0) { B.c = n38; B.v0 = v0; B.v1 = v1; B.v2 = v2; return 1; }
+v1 = (v1 + 1);
+v2 = 0;
+for (n40 = L0.len; n40 > 0; n40--) {
+v2 = (v2 + 1);
+v0 = (v0 + 1);
+if (!(a36 = (a33 = ((n43 = v1) >= 1 && n43 <= L0.len ? (n42 = (n43 | 0) - 1, ((n41 = L0.f64[n42]) === n41 ? n41 : ((a32 = L0.objs[n42]) === undefined ? NaN : a32))) : ""), a35 = ((n46 = v2) >= 1 && n46 <= L0.len ? (n45 = (n46 | 0) - 1, ((n44 = L0.f64[n45]) === n44 ? n44 : ((a34 = L0.objs[n45]) === undefined ? NaN : a34))) : ""), ((typeof a33 === "number" && typeof a35 === "number" && a33 === a33)) ? a33 > a35 : gtSlow(a33, a35)), a38 = ((n49 = v0) >= 1 && n49 <= L1.len ? (n48 = (n49 | 0) - 1, ((n47 = L1.f64[n48]) === n47 ? n47 : ((a37 = L1.objs[n48]) === undefined ? NaN : a37))) : ""), ((typeof a36 === "number" && typeof a38 === "number" && a36 === a36 && a38 === a38) || a36 === a38) ? a36 === a38 : eqSlow(a36, a38))) {
+runtime.ext_scratch3_looks._say(("fail " + (("" + ((n52 = v1) >= 1 && n52 <= L0.len ? (n51 = (n52 | 0) - 1, ((n50 = L0.f64[n51]) === n50 ? n50 : ((a39 = L0.objs[n51]) === undefined ? NaN : a39))) : "")) + (" should be > " + ("" + ((n55 = v2) >= 1 && n55 <= L0.len ? (n54 = (n55 | 0) - 1, ((n53 = L0.f64[n54]) === n53 ? n53 : ((a40 = L0.objs[n54]) === undefined ? NaN : a40))) : ""))))), target);
+}
+v0 = (v0 + 1);
+if (!(a45 = (a42 = ((n58 = v1) >= 1 && n58 <= L0.len ? (n57 = (n58 | 0) - 1, ((n56 = L0.f64[n57]) === n56 ? n56 : ((a41 = L0.objs[n57]) === undefined ? NaN : a41))) : ""), a44 = ((n61 = v2) >= 1 && n61 <= L0.len ? (n60 = (n61 | 0) - 1, ((n59 = L0.f64[n60]) === n59 ? n59 : ((a43 = L0.objs[n60]) === undefined ? NaN : a43))) : ""), ((typeof a42 === "number" && typeof a44 === "number" && a42 === a42 && a44 === a44) || a42 === a44) ? a42 === a44 : eqSlow(a42, a44)), a47 = ((n64 = v0) >= 1 && n64 <= L1.len ? (n63 = (n64 | 0) - 1, ((n62 = L1.f64[n63]) === n62 ? n62 : ((a46 = L1.objs[n63]) === undefined ? NaN : a46))) : ""), ((typeof a45 === "number" && typeof a47 === "number" && a45 === a45 && a47 === a47) || a45 === a47) ? a45 === a47 : eqSlow(a45, a47))) {
+runtime.ext_scratch3_looks._say(("fail " + (("" + ((n67 = v1) >= 1 && n67 <= L0.len ? (n66 = (n67 | 0) - 1, ((n65 = L0.f64[n66]) === n65 ? n65 : ((a48 = L0.objs[n66]) === undefined ? NaN : a48))) : "")) + (" should be = " + ("" + ((n70 = v2) >= 1 && n70 <= L0.len ? (n69 = (n70 | 0) - 1, ((n68 = L0.f64[n69]) === n68 ? n68 : ((a49 = L0.objs[n69]) === undefined ? NaN : a49))) : ""))))), target);
+}
+v0 = (v0 + 1);
+if (!(a54 = (a51 = ((n73 = v1) >= 1 && n73 <= L0.len ? (n72 = (n73 | 0) - 1, ((n71 = L0.f64[n72]) === n71 ? n71 : ((a50 = L0.objs[n72]) === undefined ? NaN : a50))) : ""), a53 = ((n76 = v2) >= 1 && n76 <= L0.len ? (n75 = (n76 | 0) - 1, ((n74 = L0.f64[n75]) === n74 ? n74 : ((a52 = L0.objs[n75]) === undefined ? NaN : a52))) : ""), ((typeof a51 === "number" && typeof a53 === "number" && a53 === a53)) ? a51 < a53 : ltSlow(a51, a53)), a56 = ((n79 = v0) >= 1 && n79 <= L1.len ? (n78 = (n79 | 0) - 1, ((n77 = L1.f64[n78]) === n77 ? n77 : ((a55 = L1.objs[n78]) === undefined ? NaN : a55))) : ""), ((typeof a54 === "number" && typeof a56 === "number" && a54 === a54 && a56 === a56) || a54 === a56) ? a54 === a56 : eqSlow(a54, a56))) {
+runtime.ext_scratch3_looks._say(("fail " + (("" + ((n82 = v1) >= 1 && n82 <= L0.len ? (n81 = (n82 | 0) - 1, ((n80 = L0.f64[n81]) === n80 ? n80 : ((a57 = L0.objs[n81]) === undefined ? NaN : a57))) : "")) + (" should be < " + ("" + ((n85 = v2) >= 1 && n85 <= L0.len ? (n84 = (n85 | 0) - 1, ((n83 = L0.f64[n84]) === n83 ? n83 : ((a58 = L0.objs[n84]) === undefined ? NaN : a58))) : ""))))), target);
+}
+}
+}
+}
+B.v0 = v0;
+B.v1 = v1;
+B.v2 = v2;
+return 0;
+}
+function fs_2 (th, S) {
+const target = S.target;
+runtime.ext_scratch3_looks._say("plan 0", target);
+fp_1(th, S);
+runtime.ext_scratch3_looks._say("end", target);
+}
+return {Self, scripts: {
+"aY": {index: 0, native: fs_2, step: null, Frame: null, executableHat: false},
+}};
+})

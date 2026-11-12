@@ -1,0 +1,525 @@
+// TW Snapshot
+// Input SHA-256: 4a00d758e882b2fe0b57020459268c0db38afb7aee290e57f045a5dab2ece743
+
+// Sprite1 module
+(function ttw$Sprite1_N (R, G) {
+"use strict";
+const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, makeStuck, RETIRE} = R;
+const runtime = G.runtime;
+const stage = G.stage;
+const CONTINUE = {};
+const g0 = stage.variables["om$AKtHax/H0kJUzYbbi"];
+const g1 = stage.variables["7Oj/v$#js7a33uH`xGl;"];
+class Self {
+constructor (target) {
+this.target = target;
+}
+}
+function fp_0 (th, S, p0) {
+const target = S.target;
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + p0), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); throw RETIRE;
+return "";
+}
+function fp_1 (th, S, p0, p1) {
+const target = S.target;
+let q275_0 = 0;
+if (!p0) {
+q275_0 = p1;
+inl275: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + q275_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); throw RETIRE;
+}
+}
+return "";
+}
+function fp_2 (th, S, p0) {
+const target = S.target;
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("pass " + p0), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); throw RETIRE;
+return "";
+}
+class Fs_3 {
+constructor (parent) {
+this.parent = parent;
+this.pc = 0;
+this.s0 = undefined;
+this.s1 = undefined;
+this.s2 = undefined;
+this.s3 = undefined;
+this.s4 = undefined;
+this.s5 = undefined;
+this.s6 = undefined;
+this.s7 = undefined;
+this.s8 = undefined;
+this.s9 = undefined;
+this.s10 = undefined;
+}
+}
+function rs_3 (th, fr) {
+const S = th.self;
+const target = S.target;
+const h0 = g0;
+const h1 = g1;
+let n0 = 0, n1 = 0, n2 = 0, n3 = 0, n4 = 0, n5 = 0, n6 = 0, n7 = 0, n8 = 0, n9 = 0, n10 = 0, n11 = 0, n12 = 0, n13 = 0, n14 = 0, n15 = 0, n16 = 0, n17 = 0, n18 = 0, n19 = 0, n20 = 0, n21 = 0, n22 = 0, n23 = 0, a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, q276_0 = 0, q276_1 = 0, q277_0 = 0, q278_0 = 0, q278_1 = 0, q279_0 = 0, q280_0 = 0, q280_1 = 0, q281_0 = 0, q282_0 = 0, q282_1 = 0, q283_0 = 0, q284_0 = 0, q284_1 = 0, q285_0 = 0, q286_0 = 0, q286_1 = 0, q287_0 = 0, q288_0 = 0, q288_1 = 0, q289_0 = 0, q290_0 = 0, q290_1 = 0, q291_0 = 0, q292_0 = 0, q292_1 = 0, q293_0 = 0, q294_0 = 0, q294_1 = 0, q295_0 = 0, q296_0 = 0, q296_1 = 0, q297_0 = 0, q298_0 = 0, q298_1 = 0, q299_0 = 0, q300_0 = 0, q300_1 = 0, q301_0 = 0, q302_0 = 0, q302_1 = 0, q303_0 = 0, q304_0 = 0, q304_1 = 0, q305_0 = 0, q306_0 = 0, q306_1 = 0, q307_0 = 0, q308_0 = 0, q308_1 = 0, q309_0 = 0, q310_0 = 0, q310_1 = 0, q311_0 = 0, q312_0 = 0, q312_1 = 0, q313_0 = 0, q314_0 = 0, q314_1 = 0, q315_0 = 0, q316_0 = 0, q316_1 = 0, q317_0 = 0, q318_0 = 0, q318_1 = 0, q319_0 = 0, q320_0 = 0, q320_1 = 0, q321_0 = 0, q322_0 = 0;
+for (;;) switch (fr.pc) {
+case 0:
+h0.value = "no change";
+h1.value = 0;
+fr.s0 = 0;
+case 1:
+while (fr.s0 < 10) {
+fr.s0++;
+h0.value = fr.s0;
+h1.value = (((n0 = +h1.value) === n0 ? n0 : 0) + 1);
+fr.pc = 1; return 0;
+}
+q276_0 = (((n1 = +h0.value) === n1 ? n1 : 0) === 10);
+q276_1 = "i = 10 (each 10)";
+inl276: {
+if (!q276_0) {
+q277_0 = q276_1;
+inl277: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + q277_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q278_0 = (((n2 = +h1.value) === n2 ? n2 : 0) === 10);
+q278_1 = "dummy = 10 (each 10)";
+inl278: {
+if (!q278_0) {
+q279_0 = q278_1;
+inl279: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + q279_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+h0.value = "no change";
+h1.value = 0;
+fr.s1 = 0;
+case 2:
+while (fr.s1 < 1) {
+fr.s1++;
+h0.value = fr.s1;
+h1.value = (((n3 = +h1.value) === n3 ? n3 : 0) + 1);
+fr.pc = 2; return 0;
+}
+q280_0 = (((n4 = +h0.value) === n4 ? n4 : 0) === 1);
+q280_1 = "i = 1 (each 1)";
+inl280: {
+if (!q280_0) {
+q281_0 = q280_1;
+inl281: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + q281_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q282_0 = (((n5 = +h1.value) === n5 ? n5 : 0) === 1);
+q282_1 = "dummy = 1 (each 1)";
+inl282: {
+if (!q282_0) {
+q283_0 = q282_1;
+inl283: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + q283_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+h0.value = "no change";
+h1.value = 0;
+fr.s2 = 0;
+case 3:
+while (fr.s2 < 0) {
+fr.s2++;
+h0.value = fr.s2;
+h1.value = (((n6 = +h1.value) === n6 ? n6 : 0) + 1);
+fr.pc = 3; return 0;
+}
+q284_0 = (a0 = h0.value, typeof a0 === "number" ? false : ("" + a0).toLowerCase() === "no change");
+q284_1 = "i = no change (each 0)";
+inl284: {
+if (!q284_0) {
+q285_0 = q284_1;
+inl285: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + q285_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q286_0 = (a1 = h1.value, ((typeof a1 === "number" && a1 === a1) || a1 === 0) ? a1 === 0 : eqSlow(a1, 0));
+q286_1 = "dummy = 0 (each 0)";
+inl286: {
+if (!q286_0) {
+q287_0 = q286_1;
+inl287: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + q287_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+h0.value = "no change";
+h1.value = 0;
+fr.s3 = 0;
+case 4:
+while (fr.s3 < -5) {
+fr.s3++;
+h0.value = fr.s3;
+h1.value = (((n7 = +h1.value) === n7 ? n7 : 0) + 1);
+fr.pc = 4; return 0;
+}
+q288_0 = (a2 = h0.value, typeof a2 === "number" ? false : ("" + a2).toLowerCase() === "no change");
+q288_1 = "i = no change (each -5)";
+inl288: {
+if (!q288_0) {
+q289_0 = q288_1;
+inl289: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + q289_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q290_0 = (a3 = h1.value, ((typeof a3 === "number" && a3 === a3) || a3 === 0) ? a3 === 0 : eqSlow(a3, 0));
+q290_1 = "dummy = 0 (each -5)";
+inl290: {
+if (!q290_0) {
+q291_0 = q290_1;
+inl291: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + q291_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+h0.value = "no change";
+h1.value = 0;
+fr.s4 = 0;
+case 5:
+while (fr.s4 < 0) {
+fr.s4++;
+h0.value = fr.s4;
+h1.value = (((n8 = +h1.value) === n8 ? n8 : 0) + 1);
+fr.pc = 5; return 0;
+}
+q292_0 = (a4 = h0.value, typeof a4 === "number" ? false : ("" + a4).toLowerCase() === "no change");
+q292_1 = "i = no change (each aaaaaa)";
+inl292: {
+if (!q292_0) {
+q293_0 = q292_1;
+inl293: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + q293_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q294_0 = (a5 = h1.value, ((typeof a5 === "number" && a5 === a5) || a5 === 0) ? a5 === 0 : eqSlow(a5, 0));
+q294_1 = "dummy = 0 (each aaaaaa)";
+inl294: {
+if (!q294_0) {
+q295_0 = q294_1;
+inl295: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + q295_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+h0.value = "no change";
+h1.value = 0;
+fr.s5 = 0;
+case 6:
+while (fr.s5 < 5.9) {
+fr.s5++;
+h0.value = fr.s5;
+h1.value = (((n9 = +h1.value) === n9 ? n9 : 0) + 1);
+fr.pc = 6; return 0;
+}
+q296_0 = (((n10 = +h0.value) === n10 ? n10 : 0) === 6);
+q296_1 = "i = 6 (each 5.9)";
+inl296: {
+if (!q296_0) {
+q297_0 = q296_1;
+inl297: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + q297_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q298_0 = (((n11 = +h1.value) === n11 ? n11 : 0) === 6);
+q298_1 = "dummy = 6 (each 5.9)";
+inl298: {
+if (!q298_0) {
+q299_0 = q298_1;
+inl299: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + q299_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+h0.value = "no change";
+h1.value = 0;
+fr.s6 = 0;
+case 7:
+while (fr.s6 < 5.1) {
+fr.s6++;
+h0.value = fr.s6;
+h1.value = (((n12 = +h1.value) === n12 ? n12 : 0) + 1);
+fr.pc = 7; return 0;
+}
+q300_0 = (((n13 = +h0.value) === n13 ? n13 : 0) === 6);
+q300_1 = "i = 6 (each 5.1)";
+inl300: {
+if (!q300_0) {
+q301_0 = q300_1;
+inl301: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + q301_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q302_0 = (((n14 = +h1.value) === n14 ? n14 : 0) === 6);
+q302_1 = "dummy = 6 (each 5.1)";
+inl302: {
+if (!q302_0) {
+q303_0 = q302_1;
+inl303: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + q303_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+h0.value = "no change";
+h1.value = 0;
+fr.s7 = 0;
+case 8:
+while (fr.s7 < -0.1) {
+fr.s7++;
+h0.value = fr.s7;
+h1.value = (((n15 = +h1.value) === n15 ? n15 : 0) + 1);
+fr.pc = 8; return 0;
+}
+q304_0 = (a6 = h0.value, typeof a6 === "number" ? false : ("" + a6).toLowerCase() === "no change");
+q304_1 = "i = no change (each -0.1)";
+inl304: {
+if (!q304_0) {
+q305_0 = q304_1;
+inl305: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + q305_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q306_0 = (a7 = h1.value, ((typeof a7 === "number" && a7 === a7) || a7 === 0) ? a7 === 0 : eqSlow(a7, 0));
+q306_1 = "dummy = 0 (each -0.1)";
+inl306: {
+if (!q306_0) {
+q307_0 = q306_1;
+inl307: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + q307_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+h0.value = "no change";
+h1.value = 0;
+fr.s8 = 0;
+case 9:
+while (fr.s8 < 0.1) {
+fr.s8++;
+h0.value = fr.s8;
+h1.value = (((n16 = +h1.value) === n16 ? n16 : 0) + 1);
+fr.pc = 9; return 0;
+}
+q308_0 = (((n17 = +h0.value) === n17 ? n17 : 0) === 1);
+q308_1 = "i = 1 (each 0.1)";
+inl308: {
+if (!q308_0) {
+q309_0 = q308_1;
+inl309: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + q309_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q310_0 = (((n18 = +h1.value) === n18 ? n18 : 0) === 1);
+q310_1 = "dummy = 1 (each 0.1)";
+inl310: {
+if (!q310_0) {
+q311_0 = q310_1;
+inl311: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + q311_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+h0.value = "no change";
+fr.s9 = 0;
+case 10:
+while (fr.s9 < 5) {
+fr.s9++;
+h0.value = fr.s9;
+h0.value = 8;
+h1.value = 9;
+fr.pc = 10; return 0;
+}
+q312_0 = (((n19 = +h0.value) === n19 ? n19 : 0) === 8);
+q312_1 = "i = 8 (each 5 w/set)";
+inl312: {
+if (!q312_0) {
+q313_0 = q312_1;
+inl313: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + q313_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q314_0 = (((n20 = +h1.value) === n20 ? n20 : 0) === 9);
+q314_1 = "dummy = 9 (each 5 w/set)";
+inl314: {
+if (!q314_0) {
+q315_0 = q314_1;
+inl315: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + q315_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+h0.value = "no change";
+h1.value = 1;
+fr.s10 = 0;
+case 11:
+while (fr.s10 < 5) {
+fr.s10++;
+h0.value = fr.s10;
+q316_0 = (a8 = h0.value, a9 = h1.value, ((typeof a8 === "number" && typeof a9 === "number" && a8 === a8 && a9 === a9) || a8 === a9) ? a8 === a9 : eqSlow(a8, a9));
+q316_1 = "i = dummy (each 5 w/set+dummy check)";
+inl316: {
+if (!q316_0) {
+q317_0 = q316_1;
+inl317: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + q317_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+h1.value = (((n21 = +h1.value) === n21 ? n21 : 0) + 1);
+h0.value = 9999;
+fr.pc = 11; return 0;
+}
+q318_0 = (((n22 = +h0.value) === n22 ? n22 : 0) === 9999);
+q318_1 = "i = 9999 (after each 5 w/set+dummy check)";
+inl318: {
+if (!q318_0) {
+q319_0 = q318_1;
+inl319: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + q319_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q320_0 = (((n23 = +h1.value) === n23 ? n23 : 0) === 6);
+q320_1 = "dummy = 6 (after each 5 w/set+dummy check)";
+inl320: {
+if (!q320_0) {
+q321_0 = q320_1;
+inl321: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + q321_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q322_0 = "ok";
+inl322: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("pass " + q322_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+return 2;
+default: throw new Error("TTW: bad pc " + fr.pc);
+}
+}
+Fs_3.prototype.fnRef = rs_3;
+return {Self, scripts: {
+"af": {index: 0, native: null, step: rs_3, Frame: Fs_3, executableHat: false},
+}};
+})

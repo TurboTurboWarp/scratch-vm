@@ -7,13 +7,10 @@ const b0 = stage.variables[";~q(!vt3c.Jrz2M]ZMy]"];
 const b1 = stage.variables[",23fjp~KN1aMG|;66K@Z"];
 return function funXYZ () {
 runtime.ext_scratch3_looks._say("plan 1", target);
-b0.value = [];
-b0.value.push((1 + 2));
-b0._monitorUpToDate = false;
-b0.value.push((3 + 4));
-b0._monitorUpToDate = false;
-b0.value.push("final");
-b0._monitorUpToDate = false;
+b0._tl.clear();
+b0._tl.pushSlow((1 + 2));
+b0._tl.pushSlow((3 + 4));
+b0._tl.pushSlow("final");
 thread.procedures["Wtest"]();
 if ((b1.value === 4)) {
 runtime.ext_scratch3_looks._say("pass", target);
@@ -31,7 +28,7 @@ return function funXYZ_test () {
 b0.value = "";
 b1.value = 1;
 while (!(("" + b0.value).toLowerCase() === "final".toLowerCase())) {
-b0.value = (b2.value[b1.value - 1] ?? "");
+b0.value = b2._tl.getSlow(b1.value);
 b1.value = (b1.value + 1);
 }
 return "";

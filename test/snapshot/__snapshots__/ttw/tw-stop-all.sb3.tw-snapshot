@@ -1,0 +1,82 @@
+// TW Snapshot
+// Input SHA-256: 7782540909fd8654cc6ae927f490cb38477bbe4cd2878bb3a4c1df04db4c8935
+
+// Sprite1 module
+(function ttw$Sprite1_N (R, G) {
+"use strict";
+const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, makeStuck, RETIRE} = R;
+const runtime = G.runtime;
+const stage = G.stage;
+const CONTINUE = {};
+const g0 = stage.variables["`jEk@4|i[#Fk?(8x)AV.-my variable"];
+const o0 = runtime.getOpcodeFunction("event_whengreaterthan");
+class Self {
+constructor (target) {
+this.target = target;
+}
+}
+function fp_0 (th, S) {
+const target = S.target;
+runtime.stopAll();
+retire(th); throw RETIRE;
+return "";
+}
+function fs_1 (th, S) {
+const target = S.target;
+const h0 = g0;
+h0.value = 1;
+runtime.ext_scratch3_looks._say("plan 0", target);
+inl1119: {
+runtime.stopAll();
+retire(th); return;
+}
+runtime.ext_scratch3_looks._say("fail", target);
+}
+class Fs_2 {
+constructor (parent) {
+this.parent = parent;
+this.pc = 0;
+this.s0 = undefined;
+this.s1 = undefined;
+this.s2 = undefined;
+this.s3 = undefined;
+}
+}
+function rs_2 (th, fr) {
+const S = th.self;
+const target = S.target;
+const h0 = g0;
+let n0 = 0, a0, a1, a2;
+for (;;) switch (fr.pc) {
+case 0:
+fr.s1 = {"VALUE":0,"WHENGREATERTHANMENU":"TIMER",};
+fr.s2 = {};
+fr.s3 = false;
+case 1:
+switch (compatCall(th, fr.s1, fr.s2, o0, null, "i", null, fr.s3)) {
+case 1: fr.s3 = true; fr.pc = 1; return 0;
+case 3: fr.s3 = true; fr.pc = 1; continue;
+case 2: fr.pc = 2; return 0;
+}
+case 2:
+fr.s0 = compatResume(th, null);
+fr.s1 = null; fr.s2 = null;
+a0 = toBoolean(fr.s0);
+a1 = target.hasEdgeActivatedValue("i");
+a2 = target.updateEdgeActivatedValue("i", a0);
+if (!(a1 ? (!a2 && a0) : a0)) return 2;
+fr.pc = 3; return 0;
+case 3:
+if ((((n0 = +h0.value) === n0 ? n0 : 0) === 1)) {
+runtime.ext_scratch3_looks._say("end", target);
+}
+return 2;
+default: throw new Error("TTW: bad pc " + fr.pc);
+}
+}
+Fs_2.prototype.fnRef = rs_2;
+return {Self, scripts: {
+"h": {index: 0, native: fs_1, step: null, Frame: null, executableHat: false},
+"i": {index: 1, native: null, step: rs_2, Frame: Fs_2, executableHat: true},
+}};
+})

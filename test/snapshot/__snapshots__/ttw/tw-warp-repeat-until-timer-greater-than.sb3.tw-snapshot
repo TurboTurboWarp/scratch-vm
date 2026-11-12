@@ -1,0 +1,80 @@
+// TW Snapshot
+// Input SHA-256: 2ae215411916e72c845c0f613d5b93f017b16af3010c6f4b0bbb3d1087eec301
+
+// Sprite1 module
+(function ttw$Sprite1_N (R, G) {
+"use strict";
+const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, makeStuck, RETIRE} = R;
+const runtime = G.runtime;
+const stage = G.stage;
+const CONTINUE = {};
+const g0 = stage.variables["F?*}X,`9XBpN_[piGRrz"];
+class Self {
+constructor (target) {
+this.target = target;
+}
+}
+const stk1 = makeStuck(runtime);
+class Fp_0 {
+constructor (parent) {
+this.parent = parent;
+this.pc = 0;
+}
+}
+function rp_0 (th, fr) {
+const S = th.self;
+const target = S.target;
+const h0 = g0;
+let n0 = 0, n1 = 0, a0, a1, a2, v0 = 0;
+for (;;) switch (fr.pc) {
+case 0:
+h0.value = ((daysSince2000() * 86400) + 3);
+runtime.ioDevices.clock.resetProjectTimer();
+case 1:
+if ((n1 = rp_0$l0(th, fr)) !== -1) { if (n1 === -2) continue; return n1; }
+if ((a1 = (daysSince2000() * 86400), a2 = h0.value, ((typeof a2 === "number" && a2 === a2)) ? a1 < a2 : ltSlow(a1, a2))) {
+runtime.ext_scratch3_looks._say("pass", target);
+}
+th.ret = ""; th.frame = fr.parent; th.fn = fr.parent.fnRef; return 1;
+default: throw new Error("TTW: bad pc " + fr.pc);
+}
+}
+Fp_0.prototype.fnRef = rp_0;
+function rp_0$l0 (th, fr) {
+const S = th.self;
+const target = S.target;
+const h0 = g0;
+let n0 = 0, n1 = 0, a0, a1, a2, v0 = 0;
+n0 = 4096;
+v0 = h0.value;
+while (!((runtime.ioDevices.clock.projectTimer() > 0.1) || (a0 = (daysSince2000() * 86400), ((typeof v0 === "number")) ? a0 > v0 : gtSlow(a0, v0)))) {
+if (stk1()) { fr.pc = 1; return 0; }
+if (--n0 === 0) { fr.pc = 1; return -2; }
+}
+return -1;
+}
+class Fs_2 {
+constructor (parent) {
+this.parent = parent;
+this.pc = 0;
+}
+}
+function rs_2 (th, fr) {
+const S = th.self;
+const target = S.target;
+for (;;) switch (fr.pc) {
+case 0:
+runtime.ext_scratch3_looks._say("plan 1", target);
+{ const nf = new Fp_0(fr); th.frame = nf; th.fn = rp_0; }
+fr.pc = 1; return 1;
+case 1:
+runtime.ext_scratch3_looks._say("end", target);
+return 2;
+default: throw new Error("TTW: bad pc " + fr.pc);
+}
+}
+Fs_2.prototype.fnRef = rs_2;
+return {Self, scripts: {
+"p": {index: 0, native: null, step: rs_2, Frame: Fs_2, executableHat: false},
+}};
+})

@@ -470,8 +470,24 @@ class Runtime extends EventEmitter {
 
         this.compilerOptions = {
             enabled: true,
-            warpTimer: false
+            warpTimer: false,
+            // ttw: 'ttw' (TurboTurboWarp, default) or 'tw'. TTW falls back to TW, then to the interpreter.
+            backend: 'ttw',
+            // ttw: load-time normalization of canonical numeric strings (spec 03 §6)
+            normalizeNumericStrings: true
         };
+
+        /**
+         * ttw: TurboTurboWarp backend state (created on first use).
+         * @type {import('../ttw/index').TTWRuntime|null}
+         */
+        this.ttw = null;
+
+        /**
+         * ttw: incremented whenever executableTargets changes (used by the broadcast table).
+         * @type {number}
+         */
+        this.ttwExecutableVersion = 0;
 
         this.debug = false;
 
@@ -2340,9 +2356,23 @@ class Runtime extends EventEmitter {
     addTarget (target) {
         this.targets.push(target);
         this.executableTargets.push(target);
+        this.ttwExecutableVersion++;
+        if (target.isOriginal !== false && this.ttw) this.ttw.invalidate();
         if (target.isStage && !this._stageTarget) {
             this._stageTarget = target;
         }
+    }
+
+    /**
+     * ttw: get the TurboTurboWarp backend state.
+     * @returns {import('../ttw/index').TTWRuntime} backend
+     */
+    getTTW () {
+        if (this.ttw === null) {
+            const {TTWRuntime} = require('../ttw/index');
+            this.ttw = new TTWRuntime(this);
+        }
+        return this.ttw;
     }
 
     /**
@@ -2358,6 +2388,7 @@ class Runtime extends EventEmitter {
     moveExecutable (executableTarget, delta) {
         const oldIndex = this.executableTargets.indexOf(executableTarget);
         this.executableTargets.splice(oldIndex, 1);
+        this.ttwExecutableVersion++;
         let newIndex = oldIndex + delta;
         if (newIndex > this.executableTargets.length) {
             newIndex = this.executableTargets.length;
@@ -2396,6 +2427,7 @@ class Runtime extends EventEmitter {
         const oldIndex = this.executableTargets.indexOf(executableTarget);
         if (oldIndex > -1) {
             this.executableTargets.splice(oldIndex, 1);
+            this.ttwExecutableVersion++;
         }
     }
 
@@ -2404,6 +2436,7 @@ class Runtime extends EventEmitter {
      * @param {!Target} disposingTarget Target to dispose of.
      */
     disposeTarget (disposingTarget) {
+        if (disposingTarget.isOriginal !== false && this.ttw) this.ttw.invalidate();
         this.targets = this.targets.filter(target => {
             if (disposingTarget !== target) return true;
             // Allow target to do dispose actions.

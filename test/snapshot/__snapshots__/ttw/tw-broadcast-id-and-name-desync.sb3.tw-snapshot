@@ -1,0 +1,47 @@
+// TW Snapshot
+// Input SHA-256: f2d984762d77ff375ba3e39b5d57190b71a131f0d8620d2becb2735b7da116c3
+
+// Sprite1 module
+(function ttw$Sprite1_N (R, G) {
+"use strict";
+const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, makeStuck, RETIRE} = R;
+const runtime = G.runtime;
+const stage = G.stage;
+const CONTINUE = {};
+class Self {
+constructor (target) {
+this.target = target;
+}
+}
+function fs_0 (th, S) {
+const target = S.target;
+runtime.ext_scratch3_looks._say("pass", target);
+}
+class Fs_1 {
+constructor (parent) {
+this.parent = parent;
+this.pc = 0;
+this.s0 = undefined;
+}
+}
+function rs_1 (th, fr) {
+const S = th.self;
+const target = S.target;
+for (;;) switch (fr.pc) {
+case 0:
+runtime.ext_scratch3_looks._say("plan 1", target);
+fr.s0 = broadcast(runtime, "message1");
+case 1:
+if (waitThreads(th, fr.s0)) { fr.pc = 1; return 0; }
+fr.s0 = null;
+runtime.ext_scratch3_looks._say("end", target);
+return 2;
+default: throw new Error("TTW: bad pc " + fr.pc);
+}
+}
+Fs_1.prototype.fnRef = rs_1;
+return {Self, scripts: {
+";*HXX?L?v4S3M(e0?U,e": {index: 0, native: fs_0, step: null, Frame: null, executableHat: false},
+")1:M73/,|oTwUEGrZ)M7": {index: 1, native: null, step: rs_1, Frame: Fs_1, executableHat: false},
+}};
+})

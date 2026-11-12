@@ -16,12 +16,11 @@ const b1 = stage.variables["o4+OyKx[M=quu6p{=kRl-i-"];
 const b2 = stage.variables["o4+OyKx[M=quu6p{=kRl-input-list"];
 return function* genXYZ_copy_input () {
 let t;
-b0.value = [];
+b0._tl.clear();
 b1.value = 0;
-for (var a0 = b2.value.length; a0 > 0; a0--) {
+for (var a0 = b2._tl.getLength(); a0 > 0; a0--) {
 b1.value = (((t = +b1.value) === t ? t : 0) + 1);
-b0.value.push((b2.value[(b1.value | 0) - 1] ?? ""));
-b0._monitorUpToDate = false;
+b0._tl.pushSlow(b2._tl.getSlow(b1.value));
 if (isStuck()) yield;
 }
 return "";
@@ -40,8 +39,8 @@ return function* genXYZ_befunge () {
 b0.value = 1;
 b1.value = 1;
 b2.value = (b4 ? b4.value : 0);
-b5.value = [];
-b6.value = [];
+b5._tl.clear();
+b6._tl.clear();
 yield* thread.procedures["Wget max length"]();
 while (true) {
 yield* thread.procedures["Zstep"]();
@@ -59,10 +58,10 @@ return function* genXYZ_get_max_length () {
 let t;
 b0.value = 0;
 b1.value = 0;
-for (var a0 = b2.value.length; a0 > 0; a0--) {
+for (var a0 = b2._tl.getLength(); a0 > 0; a0--) {
 b1.value = (((t = +b1.value) === t ? t : 0) + 1);
-if (compareGreaterThan(("" + (b2.value[(b1.value | 0) - 1] ?? "")).length, b0.value)) {
-b0.value = ("" + (b2.value[(b1.value | 0) - 1] ?? "")).length;
+if (compareGreaterThan(("" + b2._tl.getSlow(b1.value)).length, b0.value)) {
+b0.value = ("" + b2._tl.getSlow(b1.value)).length;
 }
 if (isStuck()) yield;
 }
@@ -90,7 +89,7 @@ const b15 = stage.variables["o4+OyKx[M=quu6p{=kRl-ascii2-list"];
 const b16 = stage.variables["o4+OyKx[M=quu6p{=kRl-numbers-list"];
 return function* genXYZ_step () {
 let t;
-b0.value = ((("" + listGet(b1.value, b2.value)))[((+b3.value) | 0) - 1] || "");
+b0.value = ((("" + b1._tl.getSlow(b2.value)))[((+b3.value) | 0) - 1] || "");
 if ((b0.value.toLowerCase() === ">".toLowerCase())) {
 b4.value = (b6 ? b6.value : 0);
 }
@@ -111,35 +110,35 @@ yield* thread.procedures["Zexit & verify"]();
 }
 if ((("" + b0.value).toLowerCase() === "+".toLowerCase())) {
 yield* thread.procedures["Zpop %n"](2);
-thread.procedures["Zpush %n"]((((t = +(b10.value[1 - 1] ?? "")) === t ? t : 0) + ((t = +(b10.value[2 - 1] ?? "")) === t ? t : 0)));
+thread.procedures["Zpush %n"]((((t = +b10._tl.getSlow(1)) === t ? t : 0) + ((t = +b10._tl.getSlow(2)) === t ? t : 0)));
 }
 if ((("" + b0.value).toLowerCase() === "-".toLowerCase())) {
 yield* thread.procedures["Zpop %n"](2);
-thread.procedures["Zpush %n"]((((t = +(b10.value[2 - 1] ?? "")) === t ? t : 0) - ((t = +(b10.value[1 - 1] ?? "")) === t ? t : 0)));
+thread.procedures["Zpush %n"]((((t = +b10._tl.getSlow(2)) === t ? t : 0) - ((t = +b10._tl.getSlow(1)) === t ? t : 0)));
 }
 if ((("" + b0.value).toLowerCase() === "*".toLowerCase())) {
 yield* thread.procedures["Zpop %n"](2);
-thread.procedures["Zpush %n"]((((t = +(b10.value[2 - 1] ?? "")) === t ? t : 0) * ((t = +(b10.value[1 - 1] ?? "")) === t ? t : 0)));
+thread.procedures["Zpush %n"]((((t = +b10._tl.getSlow(2)) === t ? t : 0) * ((t = +b10._tl.getSlow(1)) === t ? t : 0)));
 }
 if ((("" + b0.value).toLowerCase() === "/".toLowerCase())) {
 yield* thread.procedures["Zpop %n"](2);
-thread.procedures["Zpush %n"](Math.floor(((t = (((t = +(b10.value[2 - 1] ?? "")) === t ? t : 0) / ((t = +(b10.value[1 - 1] ?? "")) === t ? t : 0))) === t ? t : 0)));
+thread.procedures["Zpush %n"](Math.floor(((t = (((t = +b10._tl.getSlow(2)) === t ? t : 0) / ((t = +b10._tl.getSlow(1)) === t ? t : 0))) === t ? t : 0)));
 }
 if ((("" + b0.value).toLowerCase() === "%".toLowerCase())) {
 yield* thread.procedures["Zpop %n"](2);
-thread.procedures["Zpush %n"](mod(((t = +(b10.value[2 - 1] ?? "")) === t ? t : 0), ((t = +(b10.value[1 - 1] ?? "")) === t ? t : 0)));
+thread.procedures["Zpush %n"](mod(((t = +b10._tl.getSlow(2)) === t ? t : 0), ((t = +b10._tl.getSlow(1)) === t ? t : 0)));
 }
 if ((("" + b0.value).toLowerCase() === "!".toLowerCase())) {
 yield* thread.procedures["Zpop %n"](1);
-thread.procedures["Zpush bool %b"](compareEqual((b10.value[1 - 1] ?? ""), 0));
+thread.procedures["Zpush bool %b"](compareEqual(b10._tl.getSlow(1), 0));
 }
 if ((("" + b0.value).toLowerCase() === "`".toLowerCase())) {
 yield* thread.procedures["Zpop %n"](2);
-thread.procedures["Zpush bool %b"](compareGreaterThan((b10.value[2 - 1] ?? ""), (b10.value[1 - 1] ?? "")));
+thread.procedures["Zpush bool %b"](compareGreaterThan(b10._tl.getSlow(2), b10._tl.getSlow(1)));
 }
 if ((("" + b0.value).toLowerCase() === "_".toLowerCase())) {
 yield* thread.procedures["Zpop %n"](1);
-if ((compareEqual((b10.value[1 - 1] ?? ""), 0) || (("" + (b10.value[1 - 1] ?? "")).toLowerCase() === "".toLowerCase()))) {
+if ((compareEqual(b10._tl.getSlow(1), 0) || (("" + b10._tl.getSlow(1)).toLowerCase() === "".toLowerCase()))) {
 b4.value = (b6 ? b6.value : 0);
 } else {
 b4.value = (b7 ? b7.value : 0);
@@ -147,7 +146,7 @@ b4.value = (b7 ? b7.value : 0);
 }
 if ((("" + b0.value).toLowerCase() === "|".toLowerCase())) {
 yield* thread.procedures["Zpop %n"](1);
-if ((compareEqual((b10.value[1 - 1] ?? ""), 0) || (("" + (b10.value[1 - 1] ?? "")).toLowerCase() === "".toLowerCase()))) {
+if ((compareEqual(b10._tl.getSlow(1), 0) || (("" + b10._tl.getSlow(1)).toLowerCase() === "".toLowerCase()))) {
 b4.value = (b9 ? b9.value : 0);
 } else {
 b4.value = (b8 ? b8.value : 0);
@@ -155,60 +154,58 @@ b4.value = (b8 ? b8.value : 0);
 }
 if ((("" + b0.value).toLowerCase() === "\"".toLowerCase())) {
 yield* thread.procedures["Znext char"]();
-while (!(((("" + listGet(b1.value, b2.value)))[((+b3.value) | 0) - 1] || "").toLowerCase() === "\"".toLowerCase())) {
-yield* thread.procedures["Wascii to number %s"](((("" + listGet(b1.value, b2.value)))[((+b3.value) | 0) - 1] || ""));
+while (!(((("" + b1._tl.getSlow(b2.value)))[((+b3.value) | 0) - 1] || "").toLowerCase() === "\"".toLowerCase())) {
+yield* thread.procedures["Wascii to number %s"](((("" + b1._tl.getSlow(b2.value)))[((+b3.value) | 0) - 1] || ""));
 thread.procedures["Zpush %n"](b11.value);
 yield* thread.procedures["Znext char"]();
 yield;
 }
 }
 if ((("" + b0.value).toLowerCase() === ":".toLowerCase())) {
-thread.procedures["Zpush %n"]((b12.value[b12.value.length - 1] ?? ""));
+thread.procedures["Zpush %n"](b12._tl.getSlow("last"));
 }
 if ((("" + b0.value).toLowerCase() === "\\".toLowerCase())) {
 yield* thread.procedures["Zpop %n"](2);
-thread.procedures["Zpush %n"]((b10.value[1 - 1] ?? ""));
-thread.procedures["Zpush %n"]((b10.value[2 - 1] ?? ""));
+thread.procedures["Zpush %n"](b10._tl.getSlow(1));
+thread.procedures["Zpush %n"](b10._tl.getSlow(2));
 }
 if ((("" + b0.value).toLowerCase() === "$".toLowerCase())) {
 yield* thread.procedures["Zpop %n"](1);
 }
 if ((("" + b0.value).toLowerCase() === ".".toLowerCase())) {
 yield* thread.procedures["Zpop %n"](1);
-b13.value.push((b10.value[1 - 1] ?? ""));
-b13._monitorUpToDate = false;
+b13._tl.pushSlow(b10._tl.getSlow(1));
 }
 if ((("" + b0.value).toLowerCase() === ",".toLowerCase())) {
 yield* thread.procedures["Zpop %n"](1);
-thread.procedures["ZFAIL %s"](("did not expect ascii output: " + ("" + (b14.value[((((t = +(b10.value[1 - 1] ?? "")) === t ? t : 0) + 1) | 0) - 1] ?? ""))));
+thread.procedures["ZFAIL %s"](("did not expect ascii output: " + ("" + b14._tl.getSlow((((t = +b10._tl.getSlow(1)) === t ? t : 0) + 1)))));
 }
 if ((("" + b0.value).toLowerCase() === "#".toLowerCase())) {
 yield* thread.procedures["Znext char"]();
 }
 if ((("" + b0.value).toLowerCase() === "g".toLowerCase())) {
 yield* thread.procedures["Zpop %n"](2);
-yield* thread.procedures["Zascii to number but it lies %s"](((("" + (b1.value[((((t = +(b10.value[1 - 1] ?? "")) === t ? t : 0) + 1) | 0) - 1] ?? "")))[((((t = +(b10.value[2 - 1] ?? "")) === t ? t : 0) + 1) | 0) - 1] || ""));
+yield* thread.procedures["Zascii to number but it lies %s"](((("" + b1._tl.getSlow((((t = +b10._tl.getSlow(1)) === t ? t : 0) + 1))))[((((t = +b10._tl.getSlow(2)) === t ? t : 0) + 1) | 0) - 1] || ""));
 thread.procedures["Zpush %n"](b11.value);
 }
 if ((("" + b0.value).toLowerCase() === "p".toLowerCase())) {
 yield* thread.procedures["Zpop %n"](3);
-listReplace(b10, 1, (((t = +(b10.value[1 - 1] ?? "")) === t ? t : 0) + 1));
-listReplace(b10, 2, (((t = +(b10.value[2 - 1] ?? "")) === t ? t : 0) + 1));
-if (compareLessThan(b1.value.length, (b10.value[1 - 1] ?? ""))) {
-while (!compareEqual(b1.value.length, (b10.value[1 - 1] ?? ""))) {
-b1.value.push("");
-b1._monitorUpToDate = false;
+b10._tl.setSlow(1, (((t = +b10._tl.getSlow(1)) === t ? t : 0) + 1));
+b10._tl.setSlow(2, (((t = +b10._tl.getSlow(2)) === t ? t : 0) + 1));
+if (compareLessThan(b1._tl.getLength(), b10._tl.getSlow(1))) {
+while (!compareEqual(b1._tl.getLength(), b10._tl.getSlow(1))) {
+b1._tl.pushSlow("");
 yield;
 }
 }
-if (compareLessThan(("" + listGet(b1.value, (b10.value[1 - 1] ?? ""))).length, (b10.value[2 - 1] ?? ""))) {
-while (!compareEqual(("" + listGet(b1.value, (b10.value[1 - 1] ?? ""))).length, (b10.value[2 - 1] ?? ""))) {
-listReplace(b1, (b10.value[1 - 1] ?? ""), (("" + listGet(b1.value, (b10.value[1 - 1] ?? ""))) + " "));
+if (compareLessThan(("" + b1._tl.getSlow(b10._tl.getSlow(1))).length, b10._tl.getSlow(2))) {
+while (!compareEqual(("" + b1._tl.getSlow(b10._tl.getSlow(1))).length, b10._tl.getSlow(2))) {
+b1._tl.setSlow(b10._tl.getSlow(1), (("" + b1._tl.getSlow(b10._tl.getSlow(1))) + " "));
 yield;
 }
 }
-yield* thread.procedures["Winsert %s %n %s"](listGet(b1.value, (b10.value[1 - 1] ?? "")),(b10.value[2 - 1] ?? ""),(b15.value[((((t = +(b10.value[3 - 1] ?? "")) === t ? t : 0) + 1) | 0) - 1] ?? ""));
-listReplace(b1, (b10.value[1 - 1] ?? ""), b11.value);
+yield* thread.procedures["Winsert %s %n %s"](b1._tl.getSlow(b10._tl.getSlow(1)),b10._tl.getSlow(2),b15._tl.getSlow((((t = +b10._tl.getSlow(3)) === t ? t : 0) + 1)));
+b1._tl.setSlow(b10._tl.getSlow(1), b11.value);
 }
 if ((("" + b0.value).toLowerCase() === "&".toLowerCase())) {
 thread.procedures["ZFAIL %s"]("unexpected ask for integer input");
@@ -216,7 +213,7 @@ thread.procedures["ZFAIL %s"]("unexpected ask for integer input");
 if ((("" + b0.value).toLowerCase() === "~".toLowerCase())) {
 thread.procedures["ZFAIL %s"]("unexpected ask for ascii input");
 }
-if (listContains(b16, b0.value)) {
+if (b16._tl.contains(b0.value)) {
 thread.procedures["Zpush %n"](b0.value);
 }
 yield* thread.procedures["Znext char"]();
@@ -230,11 +227,11 @@ const b1 = stage.variables["o4+OyKx[M=quu6p{=kRl-i-"];
 const b2 = stage.variables["f]9Ph]^v5P2CT7ju($Qb"];
 return function* genXYZ_exit___verify () {
 let t;
-thread.procedures["ZassertTrue %b %s"]((b0.value.length === 22),"should output 22 items");
+thread.procedures["ZassertTrue %b %s"]((b0._tl.getLength() === 22),"should output 22 items");
 b1.value = 0;
-for (var a0 = b0.value.length; a0 > 0; a0--) {
+for (var a0 = b0._tl.getLength(); a0 > 0; a0--) {
 b1.value = (((t = +b1.value) === t ? t : 0) + 1);
-thread.procedures["ZassertTrue %b %s"](compareEqual(listGet(b0.value, b1.value), listGet(b2.value, b1.value)),("item " + (("" + b1.value) + " should match expected output")));
+thread.procedures["ZassertTrue %b %s"](compareEqual(b0._tl.getSlow(b1.value), b2._tl.getSlow(b1.value)),("item " + (("" + b1.value) + " should match expected output")));
 yield;
 }
 thread.procedures["ZOKAY %s"]((("" + runtime.ioDevices.clock.projectTimer()) + " seconds"));
@@ -249,16 +246,13 @@ const b0 = stage.variables["o4+OyKx[M=quu6p{=kRl-pop-list"];
 const b1 = stage.variables["o4+OyKx[M=quu6p{=kRl-mem-list"];
 return function* genXYZ_pop_ (p0) {
 let t;
-b0.value = [];
+b0._tl.clear();
 for (var a0 = ((t = +p0) === t ? t : 0); a0 >= 0.5; a0--) {
-if ((b1.value.length > 0)) {
-b0.value.push((b1.value[b1.value.length - 1] ?? ""));
-b0._monitorUpToDate = false;
-b1.value.pop();
-b1._monitorUpToDate = false;
+if ((b1._tl.getLength() > 0)) {
+b0._tl.pushSlow(b1._tl.getSlow("last"));
+b1._tl.deleteSlow("last");
 } else {
-b0.value.push(0);
-b0._monitorUpToDate = false;
+b0._tl.pushSlow(0);
 }
 yield;
 }
@@ -269,8 +263,7 @@ return "";
 (function factoryXYZ(thread) { const target = thread.target; const runtime = target.runtime; const stage = runtime.getTargetForStage();
 const b0 = stage.variables["o4+OyKx[M=quu6p{=kRl-mem-list"];
 return function funXYZ_push_ (p0) {
-b0.value.push(p0);
-b0._monitorUpToDate = false;
+b0._tl.pushSlow(p0);
 return "";
 }; })
 
@@ -319,11 +312,11 @@ retire(); throw 1;
 }
 }
 }
-if (compareGreaterThan(b6.value, b9.value.length)) {
+if (compareGreaterThan(b6.value, b9._tl.getLength())) {
 b6.value = 1;
 }
 if (compareLessThan(b6.value, 0)) {
-b6.value = b9.value.length;
+b6.value = b9._tl.getLength();
 }
 if (compareGreaterThan(b3.value, b10.value)) {
 b3.value = 1;
@@ -342,7 +335,7 @@ const b2 = stage.variables["o4+OyKx[M=quu6p{=kRl-i-"];
 const b3 = stage.variables["o4+OyKx[M=quu6p{=kRl-ascii-list"];
 return function* genXYZ_ascii_to_number_ (p0) {
 let t;
-if (listContains(b0, p0)) {
+if (b0._tl.contains(p0)) {
 runtime.ext_scratch3_looks._setCostume(target, p0);
 if (((target.currentCostume + 1) > 26)) {
 b1.value = ((target.currentCostume + 1) + 38);
@@ -351,9 +344,9 @@ b1.value = ((target.currentCostume + 1) + 96);
 }
 } else {
 b2.value = 0;
-for (var a0 = b3.value.length; a0 > 0; a0--) {
+for (var a0 = b3._tl.getLength(); a0 > 0; a0--) {
 b2.value = (((t = +b2.value) === t ? t : 0) + 1);
-if (compareEqual((b3.value[(b2.value | 0) - 1] ?? ""), p0)) {
+if (compareEqual(b3._tl.getSlow(b2.value), p0)) {
 b1.value = (b2.value - 1);
 return "";
 }
@@ -383,7 +376,7 @@ const b2 = stage.variables["o4+OyKx[M=quu6p{=kRl-i-"];
 const b3 = stage.variables["o4+OyKx[M=quu6p{=kRl-ascii2-list"];
 return function* genXYZ_ascii_to_number_but_ (p0) {
 let t;
-if (listContains(b0, p0)) {
+if (b0._tl.contains(p0)) {
 runtime.ext_scratch3_looks._setCostume(target, p0);
 if (((target.currentCostume + 1) > 26)) {
 b1.value = ((target.currentCostume + 1) + 38);
@@ -392,9 +385,9 @@ b1.value = ((target.currentCostume + 1) + 96);
 }
 } else {
 b2.value = 0;
-for (var a0 = b3.value.length; a0 > 0; a0--) {
+for (var a0 = b3._tl.getLength(); a0 > 0; a0--) {
 b2.value = (((t = +b2.value) === t ? t : 0) + 1);
-if (compareEqual((b3.value[(b2.value | 0) - 1] ?? ""), p0)) {
+if (compareEqual(b3._tl.getSlow(b2.value), p0)) {
 b1.value = (b2.value - 1);
 return "";
 }

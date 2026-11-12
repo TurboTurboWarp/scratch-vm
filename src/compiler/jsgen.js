@@ -4,7 +4,6 @@ const log = require('../util/log');
 const BlockType = require('../extension-support/block-type');
 const VariablePool = require('./variable-pool');
 const jsexecute = require('./jsexecute');
-const environment = require('./environment');
 const {StackOpcode, InputOpcode, InputType} = require('./enums.js');
 const oldCompilerCompatibility = require('./old-compiler-compatibility.js');
 const Sampler = require('../engine/tw-sampler.js');
@@ -242,25 +241,20 @@ class JSGenerator {
         case InputOpcode.SENSING_KEY_DOWN:
             return `runtime.ioDevices.keyboard.getKeyIsDown(${this.descendInput(node.key)})`;
 
+        // ttw: lists are TLists (spec 03). The TW backend uses the exact slow-path methods.
         case InputOpcode.LIST_CONTAINS:
-            return `listContains(${this.referenceVariable(node.list)}, ${this.descendInput(node.item)})`;
+            return `${this.referenceVariable(node.list)}._tl.contains(${this.descendInput(node.item)})`;
         case InputOpcode.LIST_CONTENTS:
-            return `listContents(${this.referenceVariable(node.list)})`;
-        case InputOpcode.LIST_GET: {
-            if (environment.supportsNullishCoalescing) {
-                if (node.index.isAlwaysType(InputType.NUMBER_INTERPRETABLE | InputType.NUMBER_NAN)) {
-                    return `(${this.referenceVariable(node.list)}.value[${this.descendInput(node.index.toType(InputType.NUMBER_INDEX))} - 1] ?? "")`;
-                }
-                if (node.index.isConstant('last')) {
-                    return `(${this.referenceVariable(node.list)}.value[${this.referenceVariable(node.list)}.value.length - 1] ?? "")`;
-                }
+            return `${this.referenceVariable(node.list)}._tl.contents()`;
+        case InputOpcode.LIST_GET:
+            if (node.index.isAlwaysType(InputType.NUMBER_INTERPRETABLE | InputType.NUMBER_NAN)) {
+                return `${this.referenceVariable(node.list)}._tl.getSlow(${this.descendInput(node.index.toType(InputType.NUMBER_OR_NAN))})`;
             }
-            return `listGet(${this.referenceVariable(node.list)}.value, ${this.descendInput(node.index)})`;
-        }
+            return `${this.referenceVariable(node.list)}._tl.getSlow(${this.descendInput(node.index)})`;
         case InputOpcode.LIST_INDEX_OF:
-            return `(listFind(${this.referenceVariable(node.list)}.value, ${this.descendInput(node.item)}) + 1)`;
+            return `(${this.referenceVariable(node.list)}._tl.indexOf(${this.descendInput(node.item)}) + 1)`;
         case InputOpcode.LIST_LENGTH:
-            return `${this.referenceVariable(node.list)}.value.length`;
+            return `${this.referenceVariable(node.list)}._tl.getLength()`;
 
         case InputOpcode.LOOKS_SIZE_GET:
             return 'Math.round(target.size)';
@@ -688,30 +682,15 @@ class JSGenerator {
             this.yielded();
             break;
 
-        case StackOpcode.LIST_ADD: {
-            const list = this.referenceVariable(node.list);
-            this.source += `${list}.value.push(${this.descendInput(node.item)});\n`;
-            this.source += `${list}._monitorUpToDate = false;\n`;
+        case StackOpcode.LIST_ADD:
+            this.source += `${this.referenceVariable(node.list)}._tl.pushSlow(${this.descendInput(node.item)});\n`;
             break;
-        }
-        case StackOpcode.LIST_DELETE: {
-            const list = this.referenceVariable(node.list);
-            if (node.index.isConstant('last')) {
-                this.source += `${list}.value.pop();\n`;
-                this.source += `${list}._monitorUpToDate = false;\n`;
-                break;
-            }
-            if (node.index.isConstant(1)) {
-                this.source += `${list}.value.shift();\n`;
-                this.source += `${list}._monitorUpToDate = false;\n`;
-                break;
-            }
+        case StackOpcode.LIST_DELETE:
             // do not need a special case for all as that is handled in IR generation (list.deleteAll)
-            this.source += `listDelete(${list}, ${this.descendInput(node.index)});\n`;
+            this.source += `${this.referenceVariable(node.list)}._tl.deleteSlow(${this.descendInput(node.index)});\n`;
             break;
-        }
         case StackOpcode.LIST_DELETE_ALL:
-            this.source += `${this.referenceVariable(node.list)}.value = [];\n`;
+            this.source += `${this.referenceVariable(node.list)}._tl.clear();\n`;
             break;
         case StackOpcode.LIST_HIDE:
             this.source += `runtime.monitorBlocks.changeBlock({ id: "${sanitize(node.list.id)}", element: "checkbox", value: false }, runtime);\n`;
@@ -719,16 +698,11 @@ class JSGenerator {
         case StackOpcode.LIST_INSERT: {
             const list = this.referenceVariable(node.list);
             const item = this.descendInput(node.item);
-            if (node.index.isConstant(1)) {
-                this.source += `${list}.value.unshift(${item});\n`;
-                this.source += `${list}._monitorUpToDate = false;\n`;
-                break;
-            }
-            this.source += `listInsert(${list}, ${this.descendInput(node.index)}, ${item});\n`;
+            this.source += `${list}._tl.insertSlow(${this.descendInput(node.index)}, ${item});\n`;
             break;
         }
         case StackOpcode.LIST_REPLACE:
-            this.source += `listReplace(${this.referenceVariable(node.list)}, ${this.descendInput(node.index)}, ${this.descendInput(node.item)});\n`;
+            this.source += `${this.referenceVariable(node.list)}._tl.setSlow(${this.descendInput(node.index)}, ${this.descendInput(node.item)});\n`;
             break;
         case StackOpcode.LIST_SHOW:
             this.source += `runtime.monitorBlocks.changeBlock({ id: "${sanitize(node.list.id)}", element: "checkbox", value: true }, runtime);\n`;

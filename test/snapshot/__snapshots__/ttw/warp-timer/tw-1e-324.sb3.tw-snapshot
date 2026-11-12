@@ -1,0 +1,36 @@
+// TW Snapshot
+// Input SHA-256: 69c2146d0fefc93d19cfcb872c94b9286488914e027a9f934c8276cc7fbc9a56
+
+// Sprite1 module
+(function ttw$Sprite1_N (R, G) {
+"use strict";
+const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, makeStuck, RETIRE} = R;
+const runtime = G.runtime;
+const stage = G.stage;
+const CONTINUE = {};
+class Self {
+constructor (target) {
+this.target = target;
+}
+}
+function fs_0 (th, S) {
+const target = S.target;
+runtime.ext_scratch3_looks._say("plan 4", target);
+if (!(0 < 0)) {
+runtime.ext_scratch3_looks._say("pass not 1e-324 < 0", target);
+}
+if ((0 === 0)) {
+runtime.ext_scratch3_looks._say("pass not 1e-324 = 0", target);
+}
+if (!(0 > 0)) {
+runtime.ext_scratch3_looks._say("pass not 1e-324 > 0", target);
+}
+if ((0 === 0)) {
+runtime.ext_scratch3_looks._say("pass 0.000[...]0001 = 0", target);
+}
+runtime.ext_scratch3_looks._say("end", target);
+}
+return {Self, scripts: {
+"h": {index: 0, native: fs_0, step: null, Frame: null, executableHat: false},
+}};
+})

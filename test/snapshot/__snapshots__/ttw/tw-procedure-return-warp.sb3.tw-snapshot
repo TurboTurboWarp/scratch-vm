@@ -1,0 +1,244 @@
+// TW Snapshot
+// Input SHA-256: e652f448fbf09a37afacb03afa9f3448cce43aef06439b58b44aeec73edb0438
+
+// Sprite1 module
+(function ttw$Sprite1_N (R, G) {
+"use strict";
+const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, makeStuck, RETIRE} = R;
+const runtime = G.runtime;
+const stage = G.stage;
+const CONTINUE = {};
+const g0 = stage.variables["Go=PJS7BFXYo_qi2S:kQ"];
+class Self {
+constructor (target) {
+this.target = target;
+}
+}
+class Fs_0 {
+constructor (parent) {
+this.parent = parent;
+this.pc = 0;
+this.s0 = undefined;
+this.s1 = undefined;
+}
+}
+function rs_0 (th, fr) {
+const S = th.self;
+const target = S.target;
+const h0 = g0;
+let n0 = 0;
+for (;;) switch (fr.pc) {
+case 0:
+h0.value = 0;
+case 1:
+if (!true) { fr.pc = 2; continue; }
+h0.value = (((n0 = +h0.value) === n0 ? n0 : 0) + 1);
+fr.s0 = timer(runtime);
+fr.s1 = Math.max(0, 1000 * -1);
+runtime.requestRedraw();
+fr.pc = 3; return 0;
+case 3:
+while (fr.s0.timeElapsed() < fr.s1) {
+fr.pc = 3; return 0;
+}
+fr.s0 = null;
+fr.pc = 1; return 0;
+case 2:
+return 2;
+default: throw new Error("TTW: bad pc " + fr.pc);
+}
+}
+Fs_0.prototype.fnRef = rs_0;
+const stk2 = makeStuck(runtime);
+class Fp_1 {
+constructor (parent) {
+this.parent = parent;
+this.pc = 0;
+this.s0 = undefined;
+this.s1 = undefined;
+this.s2 = undefined;
+this.s3 = undefined;
+}
+}
+function rp_1 (th, fr) {
+const S = th.self;
+const target = S.target;
+const h0 = g0;
+let a0;
+for (;;) switch (fr.pc) {
+case 0:
+h0.value = 0;
+fr.s1 = 5;
+case 1:
+if (!(fr.s1 > 0)) { fr.pc = 2; continue; }
+fr.s1--;
+fr.s2 = timer(runtime);
+fr.s3 = Math.max(0, 1000 * 0);
+runtime.requestRedraw();
+case 3:
+while (fr.s2.timeElapsed() < fr.s3) {
+if (stk2()) { fr.pc = 3; return 0; }
+}
+fr.s2 = null;
+fr.pc = 1; continue;
+case 2:
+if (!(a0 = h0.value, ((typeof a0 === "number" && a0 === a0) || a0 === 0) ? a0 === 0 : eqSlow(a0, 0))) {
+runtime.ext_scratch3_looks._say("fail did not run warp", target);
+}
+th.ret = ("warp: " + fr.s0); th.frame = fr.parent; th.fn = fr.parent.fnRef; return 1;
+th.ret = ""; th.frame = fr.parent; th.fn = fr.parent.fnRef; return 1;
+default: throw new Error("TTW: bad pc " + fr.pc);
+}
+}
+Fp_1.prototype.fnRef = rp_1;
+class Fp_3 {
+constructor (parent) {
+this.parent = parent;
+this.pc = 0;
+this.s0 = undefined;
+this.s1 = undefined;
+this.s2 = undefined;
+this.s3 = undefined;
+}
+}
+function rp_3 (th, fr) {
+const S = th.self;
+const target = S.target;
+const h0 = g0;
+let a0;
+for (;;) switch (fr.pc) {
+case 0:
+h0.value = 0;
+fr.s1 = 5;
+case 1:
+if (!(fr.s1 > 0)) { fr.pc = 2; continue; }
+fr.s1--;
+fr.s2 = timer(runtime);
+fr.s3 = Math.max(0, 1000 * 0);
+runtime.requestRedraw();
+fr.pc = 3; return 0;
+case 3:
+while (fr.s2.timeElapsed() < fr.s3) {
+fr.pc = 3; return 0;
+}
+fr.s2 = null;
+fr.pc = 1; return 0;
+case 2:
+if ((a0 = h0.value, ((typeof a0 === "number" && a0 === a0) || a0 === 0) ? a0 === 0 : eqSlow(a0, 0))) {
+runtime.ext_scratch3_looks._say("fail ran warp", target);
+}
+th.ret = ("non warp: " + fr.s0); th.frame = fr.parent; th.fn = fr.parent.fnRef; return 1;
+th.ret = ""; th.frame = fr.parent; th.fn = fr.parent.fnRef; return 1;
+default: throw new Error("TTW: bad pc " + fr.pc);
+}
+}
+Fp_3.prototype.fnRef = rp_3;
+class Fp_4 {
+constructor (parent) {
+this.parent = parent;
+this.pc = 0;
+this.s0 = undefined;
+this.s1 = undefined;
+this.s2 = undefined;
+this.s3 = undefined;
+this.s4 = undefined;
+this.s5 = undefined;
+this.s6 = undefined;
+this.s7 = undefined;
+this.s8 = undefined;
+}
+}
+function rp_4 (th, fr) {
+const S = th.self;
+const target = S.target;
+const h0 = g0;
+let n0 = 0, n1 = 0;
+for (;;) switch (fr.pc) {
+case 0:
+h0.value = 0;
+fr.s0 = 5;
+case 1:
+if (!(fr.s0 > 0)) { fr.pc = 2; continue; }
+fr.s0--;
+fr.s1 = timer(runtime);
+fr.s2 = Math.max(0, 1000 * 0);
+runtime.requestRedraw();
+fr.pc = 3; return 0;
+case 3:
+while (fr.s1.timeElapsed() < fr.s2) {
+fr.pc = 3; return 0;
+}
+fr.s1 = null;
+fr.pc = 1; return 0;
+case 2:
+if ((((n0 = +h0.value) === n0 ? n0 : 0) === 5)) {
+runtime.ext_scratch3_looks._say("pass non warp 1", target);
+}
+{ const nf = new Fp_1(fr); nf.s0 = "abc"; th.frame = nf; th.fn = rp_1; }
+fr.pc = 4; return 1;
+case 4:
+fr.s3 = th.ret;
+{ const nf = new Fp_3(fr); nf.s0 = fr.s3; th.frame = nf; th.fn = rp_3; }
+fr.pc = 5; return 1;
+case 5:
+fr.s4 = th.ret;
+{ const nf = new Fp_1(fr); nf.s0 = fr.s4; th.frame = nf; th.fn = rp_1; }
+fr.pc = 6; return 1;
+case 6:
+fr.s5 = th.ret;
+if (!(fr.s5.toLowerCase() === "warp: non warp: warp: abc".toLowerCase())) { fr.pc = 7; continue; }
+runtime.ext_scratch3_looks._say("pass non warp and warp mix", target);
+fr.pc = 8; continue;
+case 7:
+case 8:
+h0.value = 0;
+fr.s6 = 5;
+case 9:
+if (!(fr.s6 > 0)) { fr.pc = 10; continue; }
+fr.s6--;
+fr.s7 = timer(runtime);
+fr.s8 = Math.max(0, 1000 * 0);
+runtime.requestRedraw();
+fr.pc = 11; return 0;
+case 11:
+while (fr.s7.timeElapsed() < fr.s8) {
+fr.pc = 11; return 0;
+}
+fr.s7 = null;
+fr.pc = 9; return 0;
+case 10:
+if ((((n1 = +h0.value) === n1 ? n1 : 0) === 5)) {
+runtime.ext_scratch3_looks._say("pass non warp 2", target);
+}
+th.ret = ""; th.frame = fr.parent; th.fn = fr.parent.fnRef; return 1;
+default: throw new Error("TTW: bad pc " + fr.pc);
+}
+}
+Fp_4.prototype.fnRef = rp_4;
+class Fs_5 {
+constructor (parent) {
+this.parent = parent;
+this.pc = 0;
+}
+}
+function rs_5 (th, fr) {
+const S = th.self;
+const target = S.target;
+for (;;) switch (fr.pc) {
+case 0:
+runtime.ext_scratch3_looks._say("plan 3", target);
+{ const nf = new Fp_4(fr); th.frame = nf; th.fn = rp_4; }
+fr.pc = 1; return 1;
+case 1:
+runtime.stopForTarget(target, th);
+runtime.ext_scratch3_looks._say("end", target);
+return 2;
+default: throw new Error("TTW: bad pc " + fr.pc);
+}
+}
+Fs_5.prototype.fnRef = rs_5;
+return {Self, scripts: {
+"G": {index: 0, native: null, step: rs_0, Frame: Fs_0, executableHat: false},
+"H": {index: 1, native: null, step: rs_5, Frame: Fs_5, executableHat: false},
+}};
+})

@@ -1,0 +1,144 @@
+// TW Snapshot
+// Input SHA-256: 53f9471a2e476b366db519bae1d739833c0210dd92ca501a29a3dfce9a1f960d
+
+// Sprite1 module
+(function ttw$Sprite1_N (R, G) {
+"use strict";
+const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, makeStuck, RETIRE} = R;
+const runtime = G.runtime;
+const stage = G.stage;
+const CONTINUE = {};
+const g0 = stage.variables["5*)/o6gQzEw)31Ah!j:j"];
+const g1 = stage.variables["sYUvu8`..xuGcWX3!B1k"];
+class Self {
+constructor (target) {
+this.target = target;
+}
+}
+function fs_0 (th, S) {
+const target = S.target;
+broadcast(runtime, "3loop");
+}
+function fp_1 (th, S, p0) {
+const target = S.target;
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("pass " + p0), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); throw RETIRE;
+return "";
+}
+function fp_2 (th, S, p0) {
+const target = S.target;
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + p0), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); throw RETIRE;
+return "";
+}
+class Fs_3 {
+constructor (parent) {
+this.parent = parent;
+this.pc = 0;
+}
+}
+function rs_3 (th, fr) {
+const S = th.self;
+const target = S.target;
+const h0 = g0;
+const h1 = g1;
+let n0 = 0, n1 = 0, a0, a1, q888_0 = 0, q889_0 = 0, q890_0 = 0;
+for (;;) switch (fr.pc) {
+case 0:
+case 1:
+while (!(a0 = h0.value, ((typeof a0 === "number" && a0 === a0)) ? a0 > 2 : gtSlow(a0, 2))) {
+h0.value = (((n0 = +h0.value) === n0 ? n0 : 0) + 1);
+fr.pc = 1; return 0;
+}
+if ((((n1 = +h1.value) === n1 ? n1 : 0) === 1)) {
+q888_0 = "";
+inl888: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("pass " + q888_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+} else {
+if ((a1 = h1.value, ((typeof a1 === "number" && a1 === a1) || a1 === 0) ? a1 === 0 : eqSlow(a1, 0))) {
+q889_0 = "variable 1 haven't been incremented";
+inl889: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + q889_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+} else {
+q890_0 = "variable 1 got incremented multiple times";
+inl890: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + q890_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+return 2;
+default: throw new Error("TTW: bad pc " + fr.pc);
+}
+}
+Fs_3.prototype.fnRef = rs_3;
+function fs_4 (th, S) {
+const target = S.target;
+const h0 = g1;
+const h1 = g0;
+h0.value = 0;
+h1.value = 0;
+broadcast(runtime, "1");
+broadcast(runtime, "2");
+broadcast(runtime, "3");
+}
+function fs_5 (th, S) {
+const target = S.target;
+runtime.stopAll();
+retire(th); return;
+}
+function fs_6 (th, S) {
+const target = S.target;
+broadcast(runtime, "1loop");
+}
+class Fs_7 {
+constructor (parent) {
+this.parent = parent;
+this.pc = 0;
+}
+}
+function rs_7 (th, fr) {
+const S = th.self;
+const target = S.target;
+const h0 = g1;
+let n0 = 0;
+for (;;) switch (fr.pc) {
+case 0:
+case 1:
+while (true) {
+h0.value = (((n0 = +h0.value) === n0 ? n0 : 0) + 1);
+fr.pc = 1; return 0;
+}
+return 2;
+default: throw new Error("TTW: bad pc " + fr.pc);
+}
+}
+Fs_7.prototype.fnRef = rs_7;
+return {Self, scripts: {
+"y": {index: 0, native: fs_0, step: null, Frame: null, executableHat: false},
+"A": {index: 1, native: null, step: rs_3, Frame: Fs_3, executableHat: false},
+"I": {index: 2, native: fs_4, step: null, Frame: null, executableHat: false},
+"K": {index: 3, native: fs_5, step: null, Frame: null, executableHat: false},
+"M": {index: 4, native: fs_6, step: null, Frame: null, executableHat: false},
+"O": {index: 5, native: null, step: rs_7, Frame: Fs_7, executableHat: false},
+}};
+})

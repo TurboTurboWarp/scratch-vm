@@ -9,7 +9,7 @@ return function* genXYZ () {
 runtime.ext_scratch3_looks._say("plan 1", target);
 b0.value = (1 + 2);
 yield* thread.procedures["Znon-warp recursion %s"](2);
-if ((("" + listGet(b1.value, b0.value)).toLowerCase() === "the only thing".toLowerCase())) {
+if ((("" + b1._tl.getSlow(b0.value)).toLowerCase() === "the only thing".toLowerCase())) {
 runtime.ext_scratch3_looks._say("pass", target);
 }
 runtime.ext_scratch3_looks._say("end", target);

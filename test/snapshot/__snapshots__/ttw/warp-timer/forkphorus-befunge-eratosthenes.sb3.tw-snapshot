@@ -1,0 +1,981 @@
+// TW Snapshot
+// Input SHA-256: 81139c5bfe7cf38a74769e99279d2d211e5acb5dbc301dbd2bae79a6676015a3
+
+// Sprite1 module
+(function ttw$Sprite1_N (R, G) {
+"use strict";
+const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, makeStuck, RETIRE} = R;
+const runtime = G.runtime;
+const stage = G.stage;
+const CONTINUE = {};
+const g0 = stage.variables["o4+OyKx[M=quu6p{=kRl-i-"];
+const g1 = stage.variables["o4+OyKx[M=quu6p{=kRl-max length-"];
+const g2 = stage.variables["o4+OyKx[M=quu6p{=kRl-direction-"];
+const g3 = stage.variables["o4+OyKx[M=quu6p{=kRl-px-"];
+const g4 = stage.variables["o4+OyKx[M=quu6p{=kRl-py-"];
+const g5 = stage.variables["o4+OyKx[M=quu6p{=kRl-result-"];
+const g6 = stage.variables["o4+OyKx[M=quu6p{=kRl-char-"];
+const gl0 = stage.variables["o4+OyKx[M=quu6p{=kRl-P-list"]._tl;
+const gl1 = stage.variables["o4+OyKx[M=quu6p{=kRl-input-list"]._tl;
+const gl2 = stage.variables["4s|,s}H*n$XE+1ez}%eC"]._tl;
+const gl3 = stage.variables["f]9Ph]^v5P2CT7ju($Qb"]._tl;
+const gl4 = stage.variables["o4+OyKx[M=quu6p{=kRl-pop-list"]._tl;
+const gl5 = stage.variables["o4+OyKx[M=quu6p{=kRl-mem-list"]._tl;
+const gl6 = stage.variables["o4+OyKx[M=quu6p{=kRl-costumes-list"]._tl;
+const gl7 = stage.variables["o4+OyKx[M=quu6p{=kRl-ascii-list"]._tl;
+const gl8 = stage.variables["o4+OyKx[M=quu6p{=kRl-ascii2-list"]._tl;
+const gl9 = stage.variables["o4+OyKx[M=quu6p{=kRl-numbers-list"]._tl;
+const o0 = runtime.getOpcodeFunction("sensing_askandwait");
+class Self {
+constructor (target) {
+this.target = target;
+}
+}
+const stk1 = makeStuck(runtime);
+class Fp_0 {
+constructor (parent) {
+this.parent = parent;
+this.pc = 0;
+this.s0 = undefined;
+}
+}
+function rp_0 (th, fr) {
+const S = th.self;
+const target = S.target;
+const h0 = g0;
+const L0 = gl0;
+const L1 = gl1;
+let n0 = 0, n1 = 0, n2 = 0, n3 = 0, n4 = 0, n5 = 0, n6 = 0, a0, a1, v0 = 0;
+for (;;) switch (fr.pc) {
+case 0:
+L0.clear();
+h0.value = 0;
+fr.s0 = L1.len;
+case 1:
+if ((n6 = rp_0$l0(th, fr)) !== -1) { if (n6 === -2) continue; return n6; }
+th.ret = ""; th.frame = fr.parent; th.fn = fr.parent.fnRef; return 1;
+default: throw new Error("TTW: bad pc " + fr.pc);
+}
+}
+Fp_0.prototype.fnRef = rp_0;
+function rp_0$l0 (th, fr) {
+const S = th.self;
+const target = S.target;
+const h0 = g0;
+const L0 = gl0;
+const L1 = gl1;
+let n0 = 0, n1 = 0, n2 = 0, n3 = 0, n4 = 0, n5 = 0, n6 = 0, a0, a1, v0 = 0;
+n1 = 4096;
+v0 = h0.value;
+for (n0 = fr.s0; n0 > 0; n0--) {
+v0 = (((n2 = +v0) === n2 ? n2 : 0) + 1);
+a0 = ((n5 = v0) >= 1 && n5 <= L1.len ? (n4 = (n5 | 0) - 1, ((n3 = L1.f64[n4]) === n3 ? n3 : ((a1 = L1.objs[n4]) === undefined ? NaN : a1))) : "");
+if (typeof a0 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a0; else L0.pushSlow(a0);
+L0.upToDate = false;
+if (stk1()) { fr.s0 = n0 - 1; h0.value = v0; fr.pc = 1; return 0; }
+if (--n1 === 0) { fr.s0 = n0 - 1; h0.value = v0; fr.pc = 1; return -2; }
+}
+h0.value = v0; 
+return -1;
+}
+const stk3 = makeStuck(runtime);
+class Fp_2 {
+constructor (parent) {
+this.parent = parent;
+this.pc = 0;
+this.s0 = undefined;
+}
+}
+function rp_2 (th, fr) {
+const S = th.self;
+const target = S.target;
+const h0 = g1;
+const h1 = g0;
+const L0 = gl1;
+let n0 = 0, n1 = 0, n2 = 0, n3 = 0, n4 = 0, n5 = 0, n6 = 0, n7 = 0, n8 = 0, n9 = 0, a0, a1, a2, v1 = 0, v0 = 0;
+for (;;) switch (fr.pc) {
+case 0:
+h0.value = 0;
+h1.value = 0;
+fr.s0 = L0.len;
+case 1:
+if ((n9 = rp_2$l0(th, fr)) !== -1) { if (n9 === -2) continue; return n9; }
+th.ret = ""; th.frame = fr.parent; th.fn = fr.parent.fnRef; return 1;
+default: throw new Error("TTW: bad pc " + fr.pc);
+}
+}
+Fp_2.prototype.fnRef = rp_2;
+function rp_2$l0 (th, fr) {
+const S = th.self;
+const target = S.target;
+const h0 = g1;
+const h1 = g0;
+const L0 = gl1;
+let n0 = 0, n1 = 0, n2 = 0, n3 = 0, n4 = 0, n5 = 0, n6 = 0, n7 = 0, n8 = 0, n9 = 0, a0, a1, a2, v1 = 0, v0 = 0;
+n1 = 4096;
+v1 = h1.value;
+v0 = h0.value;
+for (n0 = fr.s0; n0 > 0; n0--) {
+v1 = (((n2 = +v1) === n2 ? n2 : 0) + 1);
+if ((a1 = ("" + ((n5 = v1) >= 1 && n5 <= L0.len ? (n4 = (n5 | 0) - 1, ((n3 = L0.f64[n4]) === n3 ? n3 : ((a0 = L0.objs[n4]) === undefined ? NaN : a0))) : "")).length, ((typeof v0 === "number")) ? a1 > v0 : gtSlow(a1, v0))) {
+v0 = ("" + ((n8 = v1) >= 1 && n8 <= L0.len ? (n7 = (n8 | 0) - 1, ((n6 = L0.f64[n7]) === n6 ? n6 : ((a2 = L0.objs[n7]) === undefined ? NaN : a2))) : "")).length;
+}
+if (stk3()) { fr.s0 = n0 - 1; h1.value = v1; h0.value = v0; fr.pc = 1; return 0; }
+if (--n1 === 0) { fr.s0 = n0 - 1; h1.value = v1; h0.value = v0; fr.pc = 1; return -2; }
+}
+h1.value = v1; h0.value = v0; 
+return -1;
+}
+function fp_4 (th, S, p0) {
+const target = S.target;
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); throw RETIRE;
+return "";
+}
+function fp_5 (th, S, p0, p1) {
+const target = S.target;
+let q239_0 = 0;
+if (!p0) {
+q239_0 = p1;
+inl239: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); throw RETIRE;
+}
+}
+return "";
+}
+function fp_6 (th, S, p0) {
+const target = S.target;
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("pass " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); throw RETIRE;
+return "";
+}
+class Fp_7 {
+constructor (parent) {
+this.parent = parent;
+this.pc = 0;
+this.s0 = undefined;
+}
+}
+function rp_7 (th, fr) {
+const S = th.self;
+const target = S.target;
+const h0 = g0;
+const L0 = gl2;
+const L1 = gl3;
+let n0 = 0, n1 = 0, n2 = 0, n3 = 0, n4 = 0, n5 = 0, n6 = 0, n7 = 0, a0, a1, a2, a3, q240_0 = 0, q240_1 = 0, q241_0 = 0, q242_0 = 0, q242_1 = 0, q243_0 = 0, q244_0 = 0;
+for (;;) switch (fr.pc) {
+case 0:
+q240_0 = (L0.len === 22);
+q240_1 = "should output 22 items";
+inl240: {
+if (!q240_0) {
+q241_0 = q240_1;
+inl241: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+h0.value = 0;
+fr.s0 = L0.len;
+case 1:
+for (n0 = fr.s0; n0 > 0; n0--) {
+h0.value = (((n1 = +h0.value) === n1 ? n1 : 0) + 1);
+q242_0 = (a1 = ((n4 = h0.value) >= 1 && n4 <= L0.len ? (n3 = (n4 | 0) - 1, ((n2 = L0.f64[n3]) === n2 ? n2 : ((a0 = L0.objs[n3]) === undefined ? NaN : a0))) : ""), a3 = ((n7 = h0.value) >= 1 && n7 <= L1.len ? (n6 = (n7 | 0) - 1, ((n5 = L1.f64[n6]) === n5 ? n5 : ((a2 = L1.objs[n6]) === undefined ? NaN : a2))) : ""), ((typeof a1 === "number" && typeof a3 === "number" && a1 === a1 && a3 === a3) || a1 === a3) ? a1 === a3 : eqSlow(a1, a3));
+q242_1 = ("item " + (("" + h0.value) + " should match expected output"));
+inl242: {
+if (!q242_0) {
+q243_0 = q242_1;
+inl243: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+fr.s0 = n0 - 1; fr.pc = 1; return 0;
+}
+q244_0 = (("" + runtime.ioDevices.clock.projectTimer()) + " seconds");
+inl244: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("pass " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+runtime.stopAll();
+retire(th); return 2;
+th.ret = ""; th.frame = fr.parent; th.fn = fr.parent.fnRef; return 1;
+default: throw new Error("TTW: bad pc " + fr.pc);
+}
+}
+Fp_7.prototype.fnRef = rp_7;
+class Fp_8 {
+constructor (parent) {
+this.parent = parent;
+this.pc = 0;
+this.s0 = undefined;
+this.s1 = undefined;
+}
+}
+function rp_8 (th, fr) {
+const S = th.self;
+const target = S.target;
+const L0 = gl4;
+const L1 = gl5;
+let n0 = 0, n1 = 0, n2 = 0, n3 = 0, a0, a1;
+for (;;) switch (fr.pc) {
+case 0:
+L0.clear();
+fr.s1 = fr.s0;
+case 1:
+for (n0 = fr.s1; n0 > 0; n0--) {
+if ((L1.len > 0)) {
+a0 = ((n2 = L1.len - 1) >= 0 ? ((n1 = L1.f64[n2]) === n1 ? n1 : ((a1 = L1.objs[n2]) === undefined ? NaN : a1)) : "");
+if (typeof a0 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a0; else L0.pushSlow(a0);
+L0.upToDate = false;
+L1.deleteSlow("last");
+} else {
+n3 = 0;
+if (L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = n3; else L0.pushSlow(n3);
+L0.upToDate = false;
+}
+fr.s1 = n0 - 1; fr.pc = 1; return 0;
+}
+th.ret = ""; th.frame = fr.parent; th.fn = fr.parent.fnRef; return 1;
+default: throw new Error("TTW: bad pc " + fr.pc);
+}
+}
+Fp_8.prototype.fnRef = rp_8;
+function fp_9 (th, S, p0) {
+const target = S.target;
+const L0 = gl5;
+let a0;
+a0 = p0;
+if (typeof a0 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a0; else L0.pushSlow(a0);
+L0.upToDate = false;
+return "";
+}
+function fp_10 (th, S, p0) {
+const target = S.target;
+const L0 = gl5;
+let n0 = 0, n1 = 0, q245_0 = 0, q246_0 = 0;
+if (p0) {
+q245_0 = 1;
+inl245: {
+n0 = q245_0;
+if (L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = n0; else L0.pushSlow(n0);
+}
+} else {
+q246_0 = 0;
+inl246: {
+n1 = q246_0;
+if (L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = n1; else L0.pushSlow(n1);
+}
+}
+L0.upToDate = false;
+return "";
+}
+class Fp_11 {
+constructor (parent) {
+this.parent = parent;
+this.pc = 0;
+this.s0 = undefined;
+this.s1 = undefined;
+this.s2 = undefined;
+}
+}
+function rp_11 (th, fr) {
+const S = th.self;
+const target = S.target;
+const h0 = g2;
+const h1 = g3;
+const h2 = g4;
+const h3 = g1;
+const L0 = gl0;
+let n0 = 0, n1 = 0, n2 = 0, n3 = 0, a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19, a20, a21;
+for (;;) switch (fr.pc) {
+case 0:
+if (!(a0 = h0.value, a3 = (a1 = runtime.getSpriteTargetByName("directions"), (a2 = a1 && a1.lookupVariableByNameAndType("RIGHT", "", true)) ? a2.value : 0), ((typeof a0 === "number" && typeof a3 === "number" && a0 === a0 && a3 === a3) || a0 === a3) ? a0 === a3 : eqSlow(a0, a3))) { fr.pc = 1; continue; }
+h1.value = (((n0 = +h1.value) === n0 ? n0 : 0) + 1);
+fr.pc = 2; continue;
+case 1:
+if (!(a4 = h0.value, a7 = (a5 = runtime.getSpriteTargetByName("directions"), (a6 = a5 && a5.lookupVariableByNameAndType("LEFT", "", true)) ? a6.value : 0), ((typeof a4 === "number" && typeof a7 === "number" && a4 === a4 && a7 === a7) || a4 === a7) ? a4 === a7 : eqSlow(a4, a7))) { fr.pc = 3; continue; }
+h1.value = (((n1 = +h1.value) === n1 ? n1 : 0) + -1);
+fr.pc = 4; continue;
+case 3:
+if (!(a8 = h0.value, a11 = (a9 = runtime.getSpriteTargetByName("directions"), (a10 = a9 && a9.lookupVariableByNameAndType("UP", "", true)) ? a10.value : 0), ((typeof a8 === "number" && typeof a11 === "number" && a8 === a8 && a11 === a11) || a8 === a11) ? a8 === a11 : eqSlow(a8, a11))) { fr.pc = 5; continue; }
+h2.value = (((n2 = +h2.value) === n2 ? n2 : 0) + -1);
+fr.pc = 6; continue;
+case 5:
+if (!(a12 = h0.value, a15 = (a13 = runtime.getSpriteTargetByName("directions"), (a14 = a13 && a13.lookupVariableByNameAndType("DOWN", "", true)) ? a14.value : 0), ((typeof a12 === "number" && typeof a15 === "number" && a12 === a12 && a15 === a15) || a12 === a15) ? a12 === a15 : eqSlow(a12, a15))) { fr.pc = 7; continue; }
+h2.value = (((n3 = +h2.value) === n3 ? n3 : 0) + 1);
+fr.pc = 8; continue;
+case 7:
+fr.s0 = {"QUESTION":("ERROR: Unkown direction (" + (("" + h0.value) + ")")),};
+fr.s1 = {};
+fr.s2 = false;
+case 9:
+switch (compatCall(th, fr.s0, fr.s1, o0, null, "/", null, fr.s2)) {
+case 1: fr.s2 = true; fr.pc = 9; return 0;
+case 3: fr.s2 = true; fr.pc = 9; continue;
+case 2: fr.pc = 10; return 0;
+}
+case 10:
+compatResume(th, null);
+fr.s0 = null; fr.s1 = null;
+runtime.stopAll();
+retire(th); return 2;
+case 8:
+case 6:
+case 4:
+case 2:
+if ((a16 = h2.value, a17 = L0.len, ((typeof a16 === "number" && a16 === a16)) ? a16 > a17 : gtSlow(a16, a17))) {
+h2.value = 1;
+}
+if ((a18 = h2.value, ((typeof a18 === "number")) ? a18 < 0 : ltSlow(a18, 0))) {
+h2.value = L0.len;
+}
+if ((a19 = h1.value, a20 = h3.value, ((typeof a19 === "number" && typeof a20 === "number" && a19 === a19)) ? a19 > a20 : gtSlow(a19, a20))) {
+h1.value = 1;
+}
+if ((a21 = h1.value, ((typeof a21 === "number")) ? a21 < 0 : ltSlow(a21, 0))) {
+h1.value = h3.value;
+}
+th.ret = ""; th.frame = fr.parent; th.fn = fr.parent.fnRef; return 1;
+default: throw new Error("TTW: bad pc " + fr.pc);
+}
+}
+Fp_11.prototype.fnRef = rp_11;
+const stk13 = makeStuck(runtime);
+class Fp_12 {
+constructor (parent) {
+this.parent = parent;
+this.pc = 0;
+this.s0 = undefined;
+this.s1 = undefined;
+}
+}
+function rp_12 (th, fr) {
+const S = th.self;
+const target = S.target;
+const h0 = g5;
+const h1 = g0;
+const L0 = gl6;
+const L1 = gl7;
+let n0 = 0, n1 = 0, n2 = 0, n3 = 0, n4 = 0, n5 = 0, n6 = 0, a0, a1, a2, v1 = 0, v0 = 0;
+for (;;) switch (fr.pc) {
+case 0:
+if (!L0.contains(fr.s0)) { fr.pc = 1; continue; }
+runtime.ext_scratch3_looks._setCostume(target, fr.s0);
+if (((target.currentCostume + 1) > 26)) {
+h0.value = ((target.currentCostume + 1) + 38);
+} else {
+h0.value = ((target.currentCostume + 1) + 96);
+}
+fr.pc = 2; continue;
+case 1:
+h1.value = 0;
+fr.s1 = L1.len;
+case 3:
+if ((n6 = rp_12$l0(th, fr)) !== -1) { if (n6 === -2) continue; return n6; }
+h0.value = -1;
+case 2:
+th.ret = ""; th.frame = fr.parent; th.fn = fr.parent.fnRef; return 1;
+default: throw new Error("TTW: bad pc " + fr.pc);
+}
+}
+Fp_12.prototype.fnRef = rp_12;
+function rp_12$l0 (th, fr) {
+const S = th.self;
+const target = S.target;
+const h0 = g5;
+const h1 = g0;
+const L0 = gl6;
+const L1 = gl7;
+let n0 = 0, n1 = 0, n2 = 0, n3 = 0, n4 = 0, n5 = 0, n6 = 0, a0, a1, a2, v1 = 0, v0 = 0;
+n1 = 4096;
+v1 = h1.value;
+v0 = h0.value;
+for (n0 = fr.s1; n0 > 0; n0--) {
+v1 = (((n2 = +v1) === n2 ? n2 : 0) + 1);
+if ((a1 = ((n5 = v1) >= 1 && n5 <= L1.len ? (n4 = (n5 | 0) - 1, ((n3 = L1.f64[n4]) === n3 ? n3 : ((a0 = L1.objs[n4]) === undefined ? NaN : a0))) : ""), ((typeof a1 === "number" && typeof fr.s0 === "number" && a1 === a1 && fr.s0 === fr.s0) || a1 === fr.s0) ? a1 === fr.s0 : eqSlow(a1, fr.s0))) {
+v0 = (v1 - 1);
+a2 = ""; h1.value = v1; h0.value = v0; th.ret = a2; th.frame = fr.parent; th.fn = fr.parent.fnRef; return 1;
+}
+if (stk13()) { fr.s1 = n0 - 1; h1.value = v1; h0.value = v0; fr.pc = 3; return 0; }
+if (--n1 === 0) { fr.s1 = n0 - 1; h1.value = v1; h0.value = v0; fr.pc = 3; return -2; }
+}
+h1.value = v1; h0.value = v0; 
+return -1;
+}
+class Fp_14 {
+constructor (parent) {
+this.parent = parent;
+this.pc = 0;
+this.s0 = undefined;
+this.s1 = undefined;
+}
+}
+function rp_14 (th, fr) {
+const S = th.self;
+const target = S.target;
+const h0 = g5;
+const h1 = g0;
+const L0 = gl6;
+const L1 = gl8;
+let n0 = 0, n1 = 0, n2 = 0, n3 = 0, n4 = 0, a0, a1;
+for (;;) switch (fr.pc) {
+case 0:
+if (!L0.contains(fr.s0)) { fr.pc = 1; continue; }
+runtime.ext_scratch3_looks._setCostume(target, fr.s0);
+if (((target.currentCostume + 1) > 26)) {
+h0.value = ((target.currentCostume + 1) + 38);
+} else {
+h0.value = ((target.currentCostume + 1) + 96);
+}
+fr.pc = 2; continue;
+case 1:
+h1.value = 0;
+fr.s1 = L1.len;
+case 3:
+for (n0 = fr.s1; n0 > 0; n0--) {
+h1.value = (((n1 = +h1.value) === n1 ? n1 : 0) + 1);
+if ((a1 = ((n4 = h1.value) >= 1 && n4 <= L1.len ? (n3 = (n4 | 0) - 1, ((n2 = L1.f64[n3]) === n2 ? n2 : ((a0 = L1.objs[n3]) === undefined ? NaN : a0))) : ""), ((typeof a1 === "number" && typeof fr.s0 === "number" && a1 === a1 && fr.s0 === fr.s0) || a1 === fr.s0) ? a1 === fr.s0 : eqSlow(a1, fr.s0))) {
+h0.value = (h1.value - 1);
+th.ret = ""; th.frame = fr.parent; th.fn = fr.parent.fnRef; return 1;
+}
+fr.s1 = n0 - 1; fr.pc = 3; return 0;
+}
+h0.value = 0;
+case 2:
+th.ret = ""; th.frame = fr.parent; th.fn = fr.parent.fnRef; return 1;
+default: throw new Error("TTW: bad pc " + fr.pc);
+}
+}
+Fp_14.prototype.fnRef = rp_14;
+const stk16 = makeStuck(runtime);
+class Fp_15 {
+constructor (parent) {
+this.parent = parent;
+this.pc = 0;
+this.s0 = undefined;
+this.s1 = undefined;
+this.s2 = undefined;
+this.s3 = undefined;
+this.s4 = undefined;
+}
+}
+function rp_15 (th, fr) {
+const S = th.self;
+const target = S.target;
+const h0 = g5;
+const h1 = g0;
+let n0 = 0, n1 = 0, n2 = 0, n3 = 0, n4 = 0, n5 = 0, n6 = 0, n7 = 0, n8 = 0, n9 = 0, v1 = 0, v0 = 0;
+for (;;) switch (fr.pc) {
+case 0:
+h0.value = "";
+h1.value = 0;
+fr.s3 = (((n0 = +fr.s1) === n0 ? n0 : 0) - 1);
+case 1:
+if ((n4 = rp_15$l0(th, fr)) !== -1) { if (n4 === -2) continue; return n4; }
+h0.value = (("" + h0.value) + ("" + fr.s2));
+h1.value = (((n5 = +h1.value) === n5 ? n5 : 0) + 1);
+fr.s4 = (("" + fr.s0).length - h1.value);
+case 2:
+if ((n9 = rp_15$l1(th, fr)) !== -1) { if (n9 === -2) continue; return n9; }
+th.ret = ""; th.frame = fr.parent; th.fn = fr.parent.fnRef; return 1;
+default: throw new Error("TTW: bad pc " + fr.pc);
+}
+}
+Fp_15.prototype.fnRef = rp_15;
+function rp_15$l0 (th, fr) {
+const S = th.self;
+const target = S.target;
+const h0 = g5;
+const h1 = g0;
+let n0 = 0, n1 = 0, n2 = 0, n3 = 0, n4 = 0, n5 = 0, n6 = 0, n7 = 0, n8 = 0, n9 = 0, v1 = 0, v0 = 0;
+n2 = 4096;
+v1 = h1.value;
+v0 = h0.value;
+for (n1 = fr.s3; n1 >= 0.5; n1--) {
+v1 = (((n3 = +v1) === n3 ? n3 : 0) + 1);
+v0 = (("" + v0) + ((("" + fr.s0))[(v1 | 0) - 1] || ""));
+if (stk16()) { fr.s3 = n1 - 1; h1.value = v1; h0.value = v0; fr.pc = 1; return 0; }
+if (--n2 === 0) { fr.s3 = n1 - 1; h1.value = v1; h0.value = v0; fr.pc = 1; return -2; }
+}
+h1.value = v1; h0.value = v0; 
+return -1;
+}
+function rp_15$l1 (th, fr) {
+const S = th.self;
+const target = S.target;
+const h0 = g5;
+const h1 = g0;
+let n0 = 0, n1 = 0, n2 = 0, n3 = 0, n4 = 0, n5 = 0, n6 = 0, n7 = 0, n8 = 0, n9 = 0, v1 = 0, v0 = 0;
+n7 = 4096;
+v1 = h1.value;
+v0 = h0.value;
+for (n6 = fr.s4; n6 >= 0.5; n6--) {
+v1 = (((n8 = +v1) === n8 ? n8 : 0) + 1);
+v0 = (("" + v0) + ((("" + fr.s0))[(v1 | 0) - 1] || ""));
+if (stk16()) { fr.s4 = n6 - 1; h1.value = v1; h0.value = v0; fr.pc = 2; return 0; }
+if (--n7 === 0) { fr.s4 = n6 - 1; h1.value = v1; h0.value = v0; fr.pc = 2; return -2; }
+}
+h1.value = v1; h0.value = v0; 
+return -1;
+}
+class Fp_17 {
+constructor (parent) {
+this.parent = parent;
+this.pc = 0;
+this.s0 = undefined;
+this.s1 = undefined;
+this.s2 = undefined;
+this.s3 = undefined;
+this.s4 = undefined;
+}
+}
+function rp_17 (th, fr) {
+const S = th.self;
+const target = S.target;
+const h0 = g4;
+const h1 = g3;
+const h2 = g6;
+const h3 = g2;
+const h4 = g5;
+const L0 = gl0;
+const L1 = gl4;
+const L2 = gl5;
+const L3 = gl2;
+const L4 = gl7;
+const L5 = gl8;
+const L6 = gl9;
+let n0 = 0, n1 = 0, n2 = 0, n3 = 0, n4 = 0, n5 = 0, n6 = 0, n7 = 0, n8 = 0, n9 = 0, n10 = 0, n11 = 0, n12 = 0, n13 = 0, n14 = 0, n15 = 0, n16 = 0, n17 = 0, n18 = 0, n19 = 0, n20 = 0, n21 = 0, n22 = 0, n23 = 0, n24 = 0, n25 = 0, n26 = 0, n27 = 0, n28 = 0, n29 = 0, n30 = 0, n31 = 0, n32 = 0, n33 = 0, n34 = 0, n35 = 0, n36 = 0, n37 = 0, n38 = 0, n39 = 0, n40 = 0, n41 = 0, n42 = 0, n43 = 0, n44 = 0, n45 = 0, n46 = 0, n47 = 0, n48 = 0, n49 = 0, n50 = 0, n51 = 0, n52 = 0, n53 = 0, n54 = 0, n55 = 0, n56 = 0, n57 = 0, n58 = 0, n59 = 0, n60 = 0, n61 = 0, n62 = 0, n63 = 0, n64 = 0, n65 = 0, n66 = 0, n67 = 0, n68 = 0, n69 = 0, n70 = 0, n71 = 0, n72 = 0, n73 = 0, n74 = 0, n75 = 0, n76 = 0, n77 = 0, n78 = 0, n79 = 0, n80 = 0, n81 = 0, n82 = 0, n83 = 0, n84 = 0, n85 = 0, n86 = 0, n87 = 0, n88 = 0, n89 = 0, n90 = 0, n91 = 0, n92 = 0, n93 = 0, n94 = 0, n95 = 0, n96 = 0, n97 = 0, n98 = 0, n99 = 0, n100 = 0, n101 = 0, n102 = 0, n103 = 0, n104 = 0, n105 = 0, n106 = 0, n107 = 0, n108 = 0, n109 = 0, n110 = 0, n111 = 0, n112 = 0, n113 = 0, n114 = 0, n115 = 0, n116 = 0, n117 = 0, n118 = 0, n119 = 0, n120 = 0, n121 = 0, n122 = 0, n123 = 0, n124 = 0, n125 = 0, n126 = 0, n127 = 0, n128 = 0, n129 = 0, n130 = 0, n131 = 0, n132 = 0, n133 = 0, n134 = 0, n135 = 0, n136 = 0, n137 = 0, n138 = 0, n139 = 0, n140 = 0, a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19, a20, a21, a22, a23, a24, a25, a26, a27, a28, a29, a30, a31, a32, a33, a34, a35, a36, a37, a38, a39, a40, a41, a42, a43, a44, a45, a46, a47, a48, a49, a50, a51, a52, a53, a54, a55, a56, a57, a58, a59, a60, a61, a62, a63, a64, a65, a66, a67, a68, a69, a70, a71, a72, a73, a74, a75, a76, a77, a78, a79, a80, a81, a82, a83, a84, a85, a86, a87, a88, a89, a90, a91, a92, a93, a94, a95, q247_0 = 0, q248_0 = 0, q249_0 = 0, q250_0 = 0, q251_0 = 0, q252_0 = 0, q253_0 = 0, q254_0 = 0, q255_0 = 0, q256_0 = 0, q257_0 = 0, q258_0 = 0, q259_0 = 0, q260_0 = 0, q261_0 = 0, q262_0 = 0, q263_0 = 0, q264_0 = 0, q265_0 = 0, q266_0 = 0;
+for (;;) switch (fr.pc) {
+case 0:
+h2.value = ((("" + (typeof (a1 = h0.value) === "number" ? (a1 >= 1 && a1 <= L0.len ? (n1 = (a1 | 0) - 1, ((n0 = L0.f64[n1]) === n0 ? n0 : ((a0 = L0.objs[n1]) === undefined ? NaN : a0))) : "") : L0.getSlow(a1))))[((+h1.value) | 0) - 1] || "");
+if ((h2.value.toLowerCase() === ">".toLowerCase())) {
+h3.value = (a2 = runtime.getSpriteTargetByName("directions"), (a3 = a2 && a2.lookupVariableByNameAndType("RIGHT", "", true)) ? a3.value : 0);
+}
+if ((h2.value.toLowerCase() === "<".toLowerCase())) {
+h3.value = (a4 = runtime.getSpriteTargetByName("directions"), (a5 = a4 && a4.lookupVariableByNameAndType("LEFT", "", true)) ? a5.value : 0);
+}
+if ((h2.value.toLowerCase() === "^".toLowerCase())) {
+h3.value = (a6 = runtime.getSpriteTargetByName("directions"), (a7 = a6 && a6.lookupVariableByNameAndType("UP", "", true)) ? a7.value : 0);
+}
+if ((h2.value.toLowerCase() === "v".toLowerCase())) {
+h3.value = (a8 = runtime.getSpriteTargetByName("directions"), (a9 = a8 && a8.lookupVariableByNameAndType("DOWN", "", true)) ? a9.value : 0);
+}
+if ((h2.value.toLowerCase() === "?".toLowerCase())) {
+h3.value = randomInt(1, 4);
+}
+if (!(h2.value.toLowerCase() === "@".toLowerCase())) { fr.pc = 1; continue; }
+{ const nf = new Fp_7(fr); th.frame = nf; th.fn = rp_7; }
+fr.pc = 3; return 1;
+case 3:
+fr.pc = 2; continue;
+case 1:
+case 2:
+if (!(a10 = h2.value, typeof a10 === "number" ? false : ("" + a10).toLowerCase() === "+")) { fr.pc = 4; continue; }
+{ const nf = new Fp_8(fr); nf.s0 = 2; th.frame = nf; th.fn = rp_8; }
+fr.pc = 6; return 1;
+case 6:
+q247_0 = (((n3 = 1) >= 1 && n3 <= L1.len && (n2 = L1.f64[(n3 | 0) - 1]) === n2 ? n2 : L1.numSlow(n3)) + ((n5 = 2) >= 1 && n5 <= L1.len && (n4 = L1.f64[(n5 | 0) - 1]) === n4 ? n4 : L1.numSlow(n5)));
+inl247: {
+n6 = q247_0;
+if (L2.len < L2.f64.length && L2.objs.length === 0) L2.f64[L2.len++] = n6; else L2.pushSlow(n6);
+L2.upToDate = false;
+}
+fr.pc = 5; continue;
+case 4:
+case 5:
+if (!(a11 = h2.value, typeof a11 === "number" ? false : ("" + a11).toLowerCase() === "-")) { fr.pc = 7; continue; }
+{ const nf = new Fp_8(fr); nf.s0 = 2; th.frame = nf; th.fn = rp_8; }
+fr.pc = 9; return 1;
+case 9:
+q248_0 = (((n8 = 2) >= 1 && n8 <= L1.len && (n7 = L1.f64[(n8 | 0) - 1]) === n7 ? n7 : L1.numSlow(n8)) - ((n10 = 1) >= 1 && n10 <= L1.len && (n9 = L1.f64[(n10 | 0) - 1]) === n9 ? n9 : L1.numSlow(n10)));
+inl248: {
+n11 = q248_0;
+if (L2.len < L2.f64.length && L2.objs.length === 0) L2.f64[L2.len++] = n11; else L2.pushSlow(n11);
+L2.upToDate = false;
+}
+fr.pc = 8; continue;
+case 7:
+case 8:
+if (!(a12 = h2.value, typeof a12 === "number" ? false : ("" + a12).toLowerCase() === "*")) { fr.pc = 10; continue; }
+{ const nf = new Fp_8(fr); nf.s0 = 2; th.frame = nf; th.fn = rp_8; }
+fr.pc = 12; return 1;
+case 12:
+q249_0 = (((n13 = 2) >= 1 && n13 <= L1.len && (n12 = L1.f64[(n13 | 0) - 1]) === n12 ? n12 : L1.numSlow(n13)) * ((n15 = 1) >= 1 && n15 <= L1.len && (n14 = L1.f64[(n15 | 0) - 1]) === n14 ? n14 : L1.numSlow(n15)));
+inl249: {
+n16 = q249_0;
+if (L2.len < L2.f64.length && L2.objs.length === 0) L2.f64[L2.len++] = n16; else L2.pushSlow(n16);
+L2.upToDate = false;
+}
+fr.pc = 11; continue;
+case 10:
+case 11:
+if (!(a13 = h2.value, typeof a13 === "number" ? false : ("" + a13).toLowerCase() === "/")) { fr.pc = 13; continue; }
+{ const nf = new Fp_8(fr); nf.s0 = 2; th.frame = nf; th.fn = rp_8; }
+fr.pc = 15; return 1;
+case 15:
+q250_0 = Math.floor(((n17 = (((n19 = 2) >= 1 && n19 <= L1.len && (n18 = L1.f64[(n19 | 0) - 1]) === n18 ? n18 : L1.numSlow(n19)) / ((n21 = 1) >= 1 && n21 <= L1.len && (n20 = L1.f64[(n21 | 0) - 1]) === n20 ? n20 : L1.numSlow(n21)))) === n17 ? n17 : 0));
+inl250: {
+n22 = q250_0;
+if (L2.len < L2.f64.length && L2.objs.length === 0) L2.f64[L2.len++] = n22; else L2.pushSlow(n22);
+L2.upToDate = false;
+}
+fr.pc = 14; continue;
+case 13:
+case 14:
+if (!(a14 = h2.value, typeof a14 === "number" ? false : ("" + a14).toLowerCase() === "%")) { fr.pc = 16; continue; }
+{ const nf = new Fp_8(fr); nf.s0 = 2; th.frame = nf; th.fn = rp_8; }
+fr.pc = 18; return 1;
+case 18:
+q251_0 = (n23 = ((n27 = 2) >= 1 && n27 <= L1.len && (n26 = L1.f64[(n27 | 0) - 1]) === n26 ? n26 : L1.numSlow(n27)), n24 = ((n29 = 1) >= 1 && n29 <= L1.len && (n28 = L1.f64[(n29 | 0) - 1]) === n28 ? n28 : L1.numSlow(n29)), n25 = n23 % n24, n25 / n24 < 0 ? n25 + n24 : n25);
+inl251: {
+n30 = q251_0;
+if (L2.len < L2.f64.length && L2.objs.length === 0) L2.f64[L2.len++] = n30; else L2.pushSlow(n30);
+L2.upToDate = false;
+}
+fr.pc = 17; continue;
+case 16:
+case 17:
+if (!(a15 = h2.value, typeof a15 === "number" ? false : ("" + a15).toLowerCase() === "!")) { fr.pc = 19; continue; }
+{ const nf = new Fp_8(fr); nf.s0 = 1; th.frame = nf; th.fn = rp_8; }
+fr.pc = 21; return 1;
+case 21:
+q252_0 = (a17 = ((n33 = 1) >= 1 && n33 <= L1.len ? (n32 = (n33 | 0) - 1, ((n31 = L1.f64[n32]) === n31 ? n31 : ((a16 = L1.objs[n32]) === undefined ? NaN : a16))) : ""), ((typeof a17 === "number" && a17 === a17) || a17 === 0) ? a17 === 0 : eqSlow(a17, 0));
+inl252: {
+if (q252_0) {
+q253_0 = 1;
+inl253: {
+n34 = q253_0;
+if (L2.len < L2.f64.length && L2.objs.length === 0) L2.f64[L2.len++] = n34; else L2.pushSlow(n34);
+L2.upToDate = false;
+}
+} else {
+q254_0 = 0;
+inl254: {
+n35 = q254_0;
+if (L2.len < L2.f64.length && L2.objs.length === 0) L2.f64[L2.len++] = n35; else L2.pushSlow(n35);
+L2.upToDate = false;
+}
+}
+}
+fr.pc = 20; continue;
+case 19:
+case 20:
+if (!(a18 = h2.value, typeof a18 === "number" ? false : ("" + a18).toLowerCase() === "`")) { fr.pc = 22; continue; }
+{ const nf = new Fp_8(fr); nf.s0 = 2; th.frame = nf; th.fn = rp_8; }
+fr.pc = 24; return 1;
+case 24:
+q255_0 = (a20 = ((n38 = 2) >= 1 && n38 <= L1.len ? (n37 = (n38 | 0) - 1, ((n36 = L1.f64[n37]) === n36 ? n36 : ((a19 = L1.objs[n37]) === undefined ? NaN : a19))) : ""), a22 = ((n41 = 1) >= 1 && n41 <= L1.len ? (n40 = (n41 | 0) - 1, ((n39 = L1.f64[n40]) === n39 ? n39 : ((a21 = L1.objs[n40]) === undefined ? NaN : a21))) : ""), ((typeof a20 === "number" && typeof a22 === "number" && a20 === a20)) ? a20 > a22 : gtSlow(a20, a22));
+inl255: {
+if (q255_0) {
+q256_0 = 1;
+inl256: {
+n42 = q256_0;
+if (L2.len < L2.f64.length && L2.objs.length === 0) L2.f64[L2.len++] = n42; else L2.pushSlow(n42);
+L2.upToDate = false;
+}
+} else {
+q257_0 = 0;
+inl257: {
+n43 = q257_0;
+if (L2.len < L2.f64.length && L2.objs.length === 0) L2.f64[L2.len++] = n43; else L2.pushSlow(n43);
+L2.upToDate = false;
+}
+}
+}
+fr.pc = 23; continue;
+case 22:
+case 23:
+if (!(a23 = h2.value, typeof a23 === "number" ? false : ("" + a23).toLowerCase() === "_")) { fr.pc = 25; continue; }
+{ const nf = new Fp_8(fr); nf.s0 = 1; th.frame = nf; th.fn = rp_8; }
+fr.pc = 27; return 1;
+case 27:
+if (((a25 = ((n46 = 1) >= 1 && n46 <= L1.len ? (n45 = (n46 | 0) - 1, ((n44 = L1.f64[n45]) === n44 ? n44 : ((a24 = L1.objs[n45]) === undefined ? NaN : a24))) : ""), ((typeof a25 === "number" && a25 === a25) || a25 === 0) ? a25 === 0 : eqSlow(a25, 0)) || (a27 = ((n49 = 1) >= 1 && n49 <= L1.len ? (n48 = (n49 | 0) - 1, ((n47 = L1.f64[n48]) === n47 ? n47 : ((a26 = L1.objs[n48]) === undefined ? NaN : a26))) : ""), typeof a27 === "number" ? false : ("" + a27).toLowerCase() === ""))) {
+h3.value = (a28 = runtime.getSpriteTargetByName("directions"), (a29 = a28 && a28.lookupVariableByNameAndType("RIGHT", "", true)) ? a29.value : 0);
+} else {
+h3.value = (a30 = runtime.getSpriteTargetByName("directions"), (a31 = a30 && a30.lookupVariableByNameAndType("LEFT", "", true)) ? a31.value : 0);
+}
+fr.pc = 26; continue;
+case 25:
+case 26:
+if (!(a32 = h2.value, typeof a32 === "number" ? false : ("" + a32).toLowerCase() === "|")) { fr.pc = 28; continue; }
+{ const nf = new Fp_8(fr); nf.s0 = 1; th.frame = nf; th.fn = rp_8; }
+fr.pc = 30; return 1;
+case 30:
+if (((a34 = ((n52 = 1) >= 1 && n52 <= L1.len ? (n51 = (n52 | 0) - 1, ((n50 = L1.f64[n51]) === n50 ? n50 : ((a33 = L1.objs[n51]) === undefined ? NaN : a33))) : ""), ((typeof a34 === "number" && a34 === a34) || a34 === 0) ? a34 === 0 : eqSlow(a34, 0)) || (a36 = ((n55 = 1) >= 1 && n55 <= L1.len ? (n54 = (n55 | 0) - 1, ((n53 = L1.f64[n54]) === n53 ? n53 : ((a35 = L1.objs[n54]) === undefined ? NaN : a35))) : ""), typeof a36 === "number" ? false : ("" + a36).toLowerCase() === ""))) {
+h3.value = (a37 = runtime.getSpriteTargetByName("directions"), (a38 = a37 && a37.lookupVariableByNameAndType("DOWN", "", true)) ? a38.value : 0);
+} else {
+h3.value = (a39 = runtime.getSpriteTargetByName("directions"), (a40 = a39 && a39.lookupVariableByNameAndType("UP", "", true)) ? a40.value : 0);
+}
+fr.pc = 29; continue;
+case 28:
+case 29:
+if (!(a41 = h2.value, typeof a41 === "number" ? false : ("" + a41).toLowerCase() === "\"")) { fr.pc = 31; continue; }
+{ const nf = new Fp_11(fr); th.frame = nf; th.fn = rp_11; }
+fr.pc = 33; return 1;
+case 33:
+case 34:
+if (!!(((("" + (typeof (a43 = h0.value) === "number" ? (a43 >= 1 && a43 <= L0.len ? (n57 = (a43 | 0) - 1, ((n56 = L0.f64[n57]) === n56 ? n56 : ((a42 = L0.objs[n57]) === undefined ? NaN : a42))) : "") : L0.getSlow(a43))))[((+h1.value) | 0) - 1] || "").toLowerCase() === "\"".toLowerCase())) { fr.pc = 35; continue; }
+fr.s0 = ((("" + (typeof (a45 = h0.value) === "number" ? (a45 >= 1 && a45 <= L0.len ? (n59 = (a45 | 0) - 1, ((n58 = L0.f64[n59]) === n58 ? n58 : ((a44 = L0.objs[n59]) === undefined ? NaN : a44))) : "") : L0.getSlow(a45))))[((+h1.value) | 0) - 1] || "");
+{ const nf = new Fp_12(fr); nf.s0 = fr.s0; th.frame = nf; th.fn = rp_12; }
+fr.pc = 36; return 1;
+case 36:
+q258_0 = h4.value;
+inl258: {
+n60 = q258_0;
+if (L2.len < L2.f64.length && L2.objs.length === 0) L2.f64[L2.len++] = n60; else L2.pushSlow(n60);
+L2.upToDate = false;
+}
+{ const nf = new Fp_11(fr); th.frame = nf; th.fn = rp_11; }
+fr.pc = 37; return 1;
+case 37:
+fr.pc = 34; return 0;
+case 35:
+fr.pc = 32; continue;
+case 31:
+case 32:
+if ((a46 = h2.value, typeof a46 === "number" ? false : ("" + a46).toLowerCase() === ":")) {
+q259_0 = ((n62 = L2.len - 1) >= 0 ? ((n61 = L2.f64[n62]) === n61 ? n61 : ((a47 = L2.objs[n62]) === undefined ? NaN : a47)) : "");
+inl259: {
+a48 = q259_0;
+if (typeof a48 === "number" && L2.len < L2.f64.length && L2.objs.length === 0) L2.f64[L2.len++] = a48; else L2.pushSlow(a48);
+L2.upToDate = false;
+}
+}
+if (!(a49 = h2.value, typeof a49 === "number" ? false : ("" + a49).toLowerCase() === "\\")) { fr.pc = 38; continue; }
+{ const nf = new Fp_8(fr); nf.s0 = 2; th.frame = nf; th.fn = rp_8; }
+fr.pc = 40; return 1;
+case 40:
+q260_0 = ((n65 = 1) >= 1 && n65 <= L1.len ? (n64 = (n65 | 0) - 1, ((n63 = L1.f64[n64]) === n63 ? n63 : ((a50 = L1.objs[n64]) === undefined ? NaN : a50))) : "");
+inl260: {
+a51 = q260_0;
+if (typeof a51 === "number" && L2.len < L2.f64.length && L2.objs.length === 0) L2.f64[L2.len++] = a51; else L2.pushSlow(a51);
+L2.upToDate = false;
+}
+q261_0 = ((n68 = 2) >= 1 && n68 <= L1.len ? (n67 = (n68 | 0) - 1, ((n66 = L1.f64[n67]) === n66 ? n66 : ((a52 = L1.objs[n67]) === undefined ? NaN : a52))) : "");
+inl261: {
+a53 = q261_0;
+if (typeof a53 === "number" && L2.len < L2.f64.length && L2.objs.length === 0) L2.f64[L2.len++] = a53; else L2.pushSlow(a53);
+L2.upToDate = false;
+}
+fr.pc = 39; continue;
+case 38:
+case 39:
+if (!(a54 = h2.value, typeof a54 === "number" ? false : ("" + a54).toLowerCase() === "$")) { fr.pc = 41; continue; }
+{ const nf = new Fp_8(fr); nf.s0 = 1; th.frame = nf; th.fn = rp_8; }
+fr.pc = 43; return 1;
+case 43:
+fr.pc = 42; continue;
+case 41:
+case 42:
+if (!(a55 = h2.value, typeof a55 === "number" ? false : ("" + a55).toLowerCase() === ".")) { fr.pc = 44; continue; }
+{ const nf = new Fp_8(fr); nf.s0 = 1; th.frame = nf; th.fn = rp_8; }
+fr.pc = 46; return 1;
+case 46:
+a56 = ((n71 = 1) >= 1 && n71 <= L1.len ? (n70 = (n71 | 0) - 1, ((n69 = L1.f64[n70]) === n69 ? n69 : ((a57 = L1.objs[n70]) === undefined ? NaN : a57))) : "");
+if (typeof a56 === "number" && L3.len < L3.f64.length && L3.objs.length === 0) L3.f64[L3.len++] = a56; else L3.pushSlow(a56);
+L3.upToDate = false;
+fr.pc = 45; continue;
+case 44:
+case 45:
+if (!(a58 = h2.value, typeof a58 === "number" ? false : ("" + a58).toLowerCase() === ",")) { fr.pc = 47; continue; }
+{ const nf = new Fp_8(fr); nf.s0 = 1; th.frame = nf; th.fn = rp_8; }
+fr.pc = 49; return 1;
+case 49:
+q262_0 = ("did not expect ascii output: " + ("" + ((n74 = (((n76 = 1) >= 1 && n76 <= L1.len && (n75 = L1.f64[(n76 | 0) - 1]) === n75 ? n75 : L1.numSlow(n76)) + 1)) >= 1 && n74 <= L4.len ? (n73 = (n74 | 0) - 1, ((n72 = L4.f64[n73]) === n72 ? n72 : ((a59 = L4.objs[n73]) === undefined ? NaN : a59))) : "")));
+inl262: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+fr.pc = 48; continue;
+case 47:
+case 48:
+if (!(a60 = h2.value, typeof a60 === "number" ? false : ("" + a60).toLowerCase() === "#")) { fr.pc = 50; continue; }
+{ const nf = new Fp_11(fr); th.frame = nf; th.fn = rp_11; }
+fr.pc = 52; return 1;
+case 52:
+fr.pc = 51; continue;
+case 50:
+case 51:
+if (!(a61 = h2.value, typeof a61 === "number" ? false : ("" + a61).toLowerCase() === "g")) { fr.pc = 53; continue; }
+{ const nf = new Fp_8(fr); nf.s0 = 2; th.frame = nf; th.fn = rp_8; }
+fr.pc = 55; return 1;
+case 55:
+fr.s1 = ((("" + ((n79 = (((n81 = 1) >= 1 && n81 <= L1.len && (n80 = L1.f64[(n81 | 0) - 1]) === n80 ? n80 : L1.numSlow(n81)) + 1)) >= 1 && n79 <= L0.len ? (n78 = (n79 | 0) - 1, ((n77 = L0.f64[n78]) === n77 ? n77 : ((a62 = L0.objs[n78]) === undefined ? NaN : a62))) : "")))[((((n83 = 2) >= 1 && n83 <= L1.len && (n82 = L1.f64[(n83 | 0) - 1]) === n82 ? n82 : L1.numSlow(n83)) + 1) | 0) - 1] || "");
+{ const nf = new Fp_14(fr); nf.s0 = fr.s1; th.frame = nf; th.fn = rp_14; }
+fr.pc = 56; return 1;
+case 56:
+q263_0 = h4.value;
+inl263: {
+n84 = q263_0;
+if (L2.len < L2.f64.length && L2.objs.length === 0) L2.f64[L2.len++] = n84; else L2.pushSlow(n84);
+L2.upToDate = false;
+}
+fr.pc = 54; continue;
+case 53:
+case 54:
+if (!(a63 = h2.value, typeof a63 === "number" ? false : ("" + a63).toLowerCase() === "p")) { fr.pc = 57; continue; }
+{ const nf = new Fp_8(fr); nf.s0 = 3; th.frame = nf; th.fn = rp_8; }
+fr.pc = 59; return 1;
+case 59:
+n85 = 1;
+n87 = (((n89 = 1) >= 1 && n89 <= L1.len && (n88 = L1.f64[(n89 | 0) - 1]) === n88 ? n88 : L1.numSlow(n89)) + 1);
+if (n85 >= 1 && n85 <= L1.len) { L1.f64[n86 = (n85 | 0) - 1] = n87; if (L1.objs.length !== 0 && L1.objs[n86] !== undefined) L1.clearObj(n86); }
+L1.upToDate = false;
+n90 = 2;
+n92 = (((n94 = 2) >= 1 && n94 <= L1.len && (n93 = L1.f64[(n94 | 0) - 1]) === n93 ? n93 : L1.numSlow(n94)) + 1);
+if (n90 >= 1 && n90 <= L1.len) { L1.f64[n91 = (n90 | 0) - 1] = n92; if (L1.objs.length !== 0 && L1.objs[n91] !== undefined) L1.clearObj(n91); }
+L1.upToDate = false;
+if (!(a64 = L0.len, a66 = ((n97 = 1) >= 1 && n97 <= L1.len ? (n96 = (n97 | 0) - 1, ((n95 = L1.f64[n96]) === n95 ? n95 : ((a65 = L1.objs[n96]) === undefined ? NaN : a65))) : ""), ((typeof a66 === "number" && a66 === a66)) ? a64 < a66 : ltSlow(a64, a66))) { fr.pc = 60; continue; }
+case 62:
+while (!(a67 = L0.len, a69 = ((n100 = 1) >= 1 && n100 <= L1.len ? (n99 = (n100 | 0) - 1, ((n98 = L1.f64[n99]) === n98 ? n98 : ((a68 = L1.objs[n99]) === undefined ? NaN : a68))) : ""), ((typeof a69 === "number" && a69 === a69) || a67 === a69) ? a67 === a69 : eqSlow(a67, a69))) {
+a70 = "";
+if (typeof a70 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a70; else L0.pushSlow(a70);
+L0.upToDate = false;
+fr.pc = 62; return 0;
+}
+fr.pc = 61; continue;
+case 60:
+case 61:
+if (!(a74 = ("" + (typeof (a72 = ((n105 = 1) >= 1 && n105 <= L1.len ? (n104 = (n105 | 0) - 1, ((n103 = L1.f64[n104]) === n103 ? n103 : ((a73 = L1.objs[n104]) === undefined ? NaN : a73))) : "")) === "number" ? (a72 >= 1 && a72 <= L0.len ? (n102 = (a72 | 0) - 1, ((n101 = L0.f64[n102]) === n101 ? n101 : ((a71 = L0.objs[n102]) === undefined ? NaN : a71))) : "") : L0.getSlow(a72))).length, a76 = ((n108 = 2) >= 1 && n108 <= L1.len ? (n107 = (n108 | 0) - 1, ((n106 = L1.f64[n107]) === n106 ? n106 : ((a75 = L1.objs[n107]) === undefined ? NaN : a75))) : ""), ((typeof a76 === "number" && a76 === a76)) ? a74 < a76 : ltSlow(a74, a76))) { fr.pc = 63; continue; }
+case 65:
+while (!(a80 = ("" + (typeof (a78 = ((n113 = 1) >= 1 && n113 <= L1.len ? (n112 = (n113 | 0) - 1, ((n111 = L1.f64[n112]) === n111 ? n111 : ((a79 = L1.objs[n112]) === undefined ? NaN : a79))) : "")) === "number" ? (a78 >= 1 && a78 <= L0.len ? (n110 = (a78 | 0) - 1, ((n109 = L0.f64[n110]) === n109 ? n109 : ((a77 = L0.objs[n110]) === undefined ? NaN : a77))) : "") : L0.getSlow(a78))).length, a82 = ((n116 = 2) >= 1 && n116 <= L1.len ? (n115 = (n116 | 0) - 1, ((n114 = L1.f64[n115]) === n114 ? n114 : ((a81 = L1.objs[n115]) === undefined ? NaN : a81))) : ""), ((typeof a82 === "number" && a82 === a82) || a80 === a82) ? a80 === a82 : eqSlow(a80, a82))) {
+L0.setSlow(((n119 = 1) >= 1 && n119 <= L1.len ? (n118 = (n119 | 0) - 1, ((n117 = L1.f64[n118]) === n117 ? n117 : ((a83 = L1.objs[n118]) === undefined ? NaN : a83))) : ""), (("" + (typeof (a85 = ((n124 = 1) >= 1 && n124 <= L1.len ? (n123 = (n124 | 0) - 1, ((n122 = L1.f64[n123]) === n122 ? n122 : ((a86 = L1.objs[n123]) === undefined ? NaN : a86))) : "")) === "number" ? (a85 >= 1 && a85 <= L0.len ? (n121 = (a85 | 0) - 1, ((n120 = L0.f64[n121]) === n120 ? n120 : ((a84 = L0.objs[n121]) === undefined ? NaN : a84))) : "") : L0.getSlow(a85))) + " "));
+fr.pc = 65; return 0;
+}
+fr.pc = 64; continue;
+case 63:
+case 64:
+fr.s2 = (typeof (a88 = ((n129 = 1) >= 1 && n129 <= L1.len ? (n128 = (n129 | 0) - 1, ((n127 = L1.f64[n128]) === n127 ? n127 : ((a89 = L1.objs[n128]) === undefined ? NaN : a89))) : "")) === "number" ? (a88 >= 1 && a88 <= L0.len ? (n126 = (a88 | 0) - 1, ((n125 = L0.f64[n126]) === n125 ? n125 : ((a87 = L0.objs[n126]) === undefined ? NaN : a87))) : "") : L0.getSlow(a88));
+fr.s3 = ((n132 = 2) >= 1 && n132 <= L1.len ? (n131 = (n132 | 0) - 1, ((n130 = L1.f64[n131]) === n130 ? n130 : ((a90 = L1.objs[n131]) === undefined ? NaN : a90))) : "");
+fr.s4 = ((n135 = (((n137 = 3) >= 1 && n137 <= L1.len && (n136 = L1.f64[(n137 | 0) - 1]) === n136 ? n136 : L1.numSlow(n137)) + 1)) >= 1 && n135 <= L5.len ? (n134 = (n135 | 0) - 1, ((n133 = L5.f64[n134]) === n133 ? n133 : ((a91 = L5.objs[n134]) === undefined ? NaN : a91))) : "");
+{ const nf = new Fp_15(fr); nf.s0 = fr.s2; nf.s1 = fr.s3; nf.s2 = fr.s4; th.frame = nf; th.fn = rp_15; }
+fr.pc = 66; return 1;
+case 66:
+L0.setSlow(((n140 = 1) >= 1 && n140 <= L1.len ? (n139 = (n140 | 0) - 1, ((n138 = L1.f64[n139]) === n138 ? n138 : ((a92 = L1.objs[n139]) === undefined ? NaN : a92))) : ""), h4.value);
+fr.pc = 58; continue;
+case 57:
+case 58:
+if ((a93 = h2.value, typeof a93 === "number" ? false : ("" + a93).toLowerCase() === "&")) {
+q264_0 = "unexpected ask for integer input";
+inl264: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+if ((a94 = h2.value, typeof a94 === "number" ? false : ("" + a94).toLowerCase() === "~")) {
+q265_0 = "unexpected ask for ascii input";
+inl265: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+if (L6.contains(h2.value)) {
+q266_0 = h2.value;
+inl266: {
+a95 = q266_0;
+if (typeof a95 === "number" && L2.len < L2.f64.length && L2.objs.length === 0) L2.f64[L2.len++] = a95; else L2.pushSlow(a95);
+L2.upToDate = false;
+}
+}
+{ const nf = new Fp_11(fr); th.frame = nf; th.fn = rp_11; }
+fr.pc = 67; return 1;
+case 67:
+th.ret = ""; th.frame = fr.parent; th.fn = fr.parent.fnRef; return 1;
+default: throw new Error("TTW: bad pc " + fr.pc);
+}
+}
+Fp_17.prototype.fnRef = rp_17;
+class Fp_18 {
+constructor (parent) {
+this.parent = parent;
+this.pc = 0;
+}
+}
+function rp_18 (th, fr) {
+const S = th.self;
+const target = S.target;
+const h0 = g3;
+const h1 = g4;
+const h2 = g2;
+const L0 = gl5;
+const L1 = gl2;
+let a0, a1;
+for (;;) switch (fr.pc) {
+case 0:
+h0.value = 1;
+h1.value = 1;
+h2.value = (a0 = runtime.getSpriteTargetByName("directions"), (a1 = a0 && a0.lookupVariableByNameAndType("RIGHT", "", true)) ? a1.value : 0);
+L0.clear();
+L1.clear();
+{ const nf = new Fp_2(fr); th.frame = nf; th.fn = rp_2; }
+fr.pc = 1; return 1;
+case 1:
+case 2:
+if (!true) { fr.pc = 3; continue; }
+{ const nf = new Fp_17(fr); th.frame = nf; th.fn = rp_17; }
+fr.pc = 4; return 1;
+case 4:
+fr.pc = 2; return 0;
+case 3:
+th.ret = ""; th.frame = fr.parent; th.fn = fr.parent.fnRef; return 1;
+default: throw new Error("TTW: bad pc " + fr.pc);
+}
+}
+Fp_18.prototype.fnRef = rp_18;
+class Fs_19 {
+constructor (parent) {
+this.parent = parent;
+this.pc = 0;
+}
+}
+function rs_19 (th, fr) {
+const S = th.self;
+const target = S.target;
+for (;;) switch (fr.pc) {
+case 0:
+{ const nf = new Fp_0(fr); th.frame = nf; th.fn = rp_0; }
+fr.pc = 1; return 1;
+case 1:
+{ const nf = new Fp_18(fr); th.frame = nf; th.fn = rp_18; }
+fr.pc = 2; return 1;
+case 2:
+return 2;
+default: throw new Error("TTW: bad pc " + fr.pc);
+}
+}
+Fs_19.prototype.fnRef = rs_19;
+return {Self, scripts: {
+"eY": {index: 0, native: null, step: rs_19, Frame: Fs_19, executableHat: false},
+}};
+})

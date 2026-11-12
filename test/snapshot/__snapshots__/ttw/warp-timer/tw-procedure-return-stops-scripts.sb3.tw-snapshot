@@ -1,0 +1,125 @@
+// TW Snapshot
+// Input SHA-256: 27368530b97e0ab5053bf4faf8fd116aa30cea34adcbd95fc6ddcf0a9d6d4976
+
+// Sprite1 module
+(function ttw$Sprite1_N (R, G) {
+"use strict";
+const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, makeStuck, RETIRE} = R;
+const runtime = G.runtime;
+const stage = G.stage;
+const CONTINUE = {};
+const g0 = stage.variables["PsAI*C{QHI3*4?O8p#TM"];
+class Self {
+constructor (target) {
+this.target = target;
+}
+}
+const stk1 = makeStuck(runtime);
+class Fp_0 {
+constructor (parent) {
+this.parent = parent;
+this.pc = 0;
+this.s0 = undefined;
+}
+}
+function rp_0 (th, fr) {
+const S = th.self;
+const target = S.target;
+const h0 = g0;
+let n0 = 0, n1 = 0, n2 = 0, n3 = 0, a0, v0 = 0;
+for (;;) switch (fr.pc) {
+case 0:
+h0.value = 0;
+fr.s0 = 100;
+case 1:
+if ((n3 = rp_0$l0(th, fr)) !== -1) { if (n3 === -2) continue; return n3; }
+runtime.ext_scratch3_looks._say("fail return did not stop the script immediately", target);
+th.ret = ""; th.frame = fr.parent; th.fn = fr.parent.fnRef; return 1;
+default: throw new Error("TTW: bad pc " + fr.pc);
+}
+}
+Fp_0.prototype.fnRef = rp_0;
+function rp_0$l0 (th, fr) {
+const S = th.self;
+const target = S.target;
+const h0 = g0;
+let n0 = 0, n1 = 0, n2 = 0, n3 = 0, a0, v0 = 0;
+n1 = 4096;
+v0 = h0.value;
+for (n0 = fr.s0; n0 > 0; n0--) {
+v0 = (((n2 = +v0) === n2 ? n2 : 0) + 1);
+if ((v0 === 25)) {
+a0 = "stopped!"; h0.value = v0; th.ret = a0; th.frame = fr.parent; th.fn = fr.parent.fnRef; return 1;
+}
+if (stk1()) { fr.s0 = n0 - 1; h0.value = v0; fr.pc = 1; return 0; }
+if (--n1 === 0) { fr.s0 = n0 - 1; h0.value = v0; fr.pc = 1; return -2; }
+}
+h0.value = v0; 
+return -1;
+}
+class Fs_2 {
+constructor (parent) {
+this.parent = parent;
+this.pc = 0;
+this.s0 = undefined;
+}
+}
+function rs_2 (th, fr) {
+const S = th.self;
+const target = S.target;
+const h0 = g0;
+let n0 = 0, n1 = 0;
+for (;;) switch (fr.pc) {
+case 0:
+runtime.ext_scratch3_looks._say("plan 2", target);
+{ const nf = new Fp_0(fr); th.frame = nf; th.fn = rp_0; }
+fr.pc = 1; return 1;
+case 1:
+if ((((n0 = +h0.value) === n0 ? n0 : 0) === 25)) {
+runtime.ext_scratch3_looks._say("pass return stopped the script immediately", target);
+}
+fr.s0 = broadcast(runtime, "Test return outside of custom block");
+case 2:
+if (waitThreads(th, fr.s0)) { fr.pc = 2; return 0; }
+fr.s0 = null;
+if ((((n1 = +h0.value) === n1 ? n1 : 0) === 18)) {
+runtime.ext_scratch3_looks._say("pass return worked to stop outside of custom block", target);
+}
+runtime.ext_scratch3_looks._say("end", target);
+return 2;
+default: throw new Error("TTW: bad pc " + fr.pc);
+}
+}
+Fs_2.prototype.fnRef = rs_2;
+class Fs_3 {
+constructor (parent) {
+this.parent = parent;
+this.pc = 0;
+}
+}
+function rs_3 (th, fr) {
+const S = th.self;
+const target = S.target;
+const h0 = g0;
+let n0 = 0;
+for (;;) switch (fr.pc) {
+case 0:
+h0.value = 0;
+case 1:
+while (true) {
+h0.value = (((n0 = +h0.value) === n0 ? n0 : 0) + 1);
+if ((h0.value === 18)) {
+return 2;
+}
+fr.pc = 1; return 0;
+}
+return 2;
+default: throw new Error("TTW: bad pc " + fr.pc);
+}
+}
+Fs_3.prototype.fnRef = rs_3;
+return {Self, scripts: {
+"p": {index: 0, native: null, step: rs_2, Frame: Fs_2, executableHat: false},
+"q": {index: 1, native: null, step: rs_3, Frame: Fs_3, executableHat: false},
+}};
+})

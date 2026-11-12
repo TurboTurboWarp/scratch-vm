@@ -1,0 +1,88 @@
+// TW Snapshot
+// Input SHA-256: 7916f21ea252ad0887060c6eb7ade266b41077b30ed849ad33947e01e6f73514
+
+// Sprite1 module
+(function ttw$Sprite1_N (R, G) {
+"use strict";
+const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, makeStuck, RETIRE} = R;
+const runtime = G.runtime;
+const stage = G.stage;
+const CONTINUE = {};
+class Self {
+constructor (target) {
+this.target = target;
+}
+}
+function fs_0 (th, S) {
+const target = S.target;
+let n0 = 0, n1 = 0, n2 = 0, n3 = 0, n4 = 0, n5 = 0, n6 = 0, n7 = 0, n8 = 0, n9 = 0, n10 = 0, n11 = 0, n12 = 0, n13 = 0, n14 = 0, n15 = 0;
+runtime.ext_scratch3_looks._say("plan 21", target);
+if (!(("" + (0 / 0)).toLowerCase() === "0".toLowerCase())) {
+runtime.ext_scratch3_looks._say("pass", target);
+}
+if ((("" + (0 * Infinity)).toLowerCase() === "NaN".toLowerCase())) {
+runtime.ext_scratch3_looks._say("pass", target);
+}
+if (((((0 * Infinity) || 0) * 1) === 0)) {
+runtime.ext_scratch3_looks._say("pass", target);
+}
+if ((("" + ((Math.acos(1.01) * 180) / Math.PI)).toLowerCase() === "NaN".toLowerCase())) {
+runtime.ext_scratch3_looks._say("pass", target);
+}
+if (((((n0 = ((Math.acos(1.01) * 180) / Math.PI)) === n0 ? n0 : 0) * 1) === 0)) {
+runtime.ext_scratch3_looks._say("pass", target);
+}
+if ((("" + ((Math.asin(1.01) * 180) / Math.PI)).toLowerCase() === "NaN".toLowerCase())) {
+runtime.ext_scratch3_looks._say("pass", target);
+}
+if (((((n1 = ((Math.asin(1.01) * 180) / Math.PI)) === n1 ? n1 : 0) * 1) === 0)) {
+runtime.ext_scratch3_looks._say("pass", target);
+}
+if ((("" + (0 / 0)).toLowerCase() === "NaN".toLowerCase())) {
+runtime.ext_scratch3_looks._say("pass", target);
+}
+if (((((0 / 0) || 0) * 1) === 0)) {
+runtime.ext_scratch3_looks._say("pass", target);
+}
+if ((("" + Math.sqrt(-1)).toLowerCase() === "NaN".toLowerCase())) {
+runtime.ext_scratch3_looks._say("pass", target);
+}
+if (((((n2 = Math.sqrt(-1)) === n2 ? n2 : 0) * 1) === 0)) {
+runtime.ext_scratch3_looks._say("pass", target);
+}
+if ((("" + (n3 = 0, n4 = 0, n5 = n3 % n4, n5 / n4 < 0 ? n5 + n4 : n5)).toLowerCase() === "NaN".toLowerCase())) {
+runtime.ext_scratch3_looks._say("pass", target);
+}
+if (((((n6 = (n7 = 0, n8 = 0, n9 = n7 % n8, n9 / n8 < 0 ? n9 + n8 : n9)) === n6 ? n6 : 0) * 1) === 0)) {
+runtime.ext_scratch3_looks._say("pass", target);
+}
+if ((("" + Math.log(-1)).toLowerCase() === "NaN".toLowerCase())) {
+runtime.ext_scratch3_looks._say("pass", target);
+}
+if (((((n10 = Math.log(-1)) === n10 ? n10 : 0) * 1) === 0)) {
+runtime.ext_scratch3_looks._say("pass", target);
+}
+if ((("" + (Math.log(-1) / Math.LN10)).toLowerCase() === "NaN".toLowerCase())) {
+runtime.ext_scratch3_looks._say("pass", target);
+}
+if (((((n11 = (Math.log(-1) / Math.LN10)) === n11 ? n11 : 0) * 1) === 0)) {
+runtime.ext_scratch3_looks._say("pass", target);
+}
+if (((((n12 = (Math.round(Math.sin((Math.PI * (1 / 0)) / 180) * 1e10) / 1e10)) === n12 ? n12 : 0) * 1) === 0)) {
+runtime.ext_scratch3_looks._say("pass", target);
+}
+if (((((n13 = (Math.round(Math.cos((Math.PI * (1 / 0)) / 180) * 1e10) / 1e10)) === n13 ? n13 : 0) * 1) === 0)) {
+runtime.ext_scratch3_looks._say("pass", target);
+}
+if (((((n14 = tan((1 / 0))) === n14 ? n14 : 0) * 1) === 0)) {
+runtime.ext_scratch3_looks._say("pass", target);
+}
+if (((((n15 = runtime.ext_scratch3_operators._random((-1 / 0), (1 / 0))) === n15 ? n15 : 0) * 1) === 0)) {
+runtime.ext_scratch3_looks._say("pass", target);
+}
+runtime.ext_scratch3_looks._say("end", target);
+}
+return {Self, scripts: {
+".": {index: 0, native: fs_0, step: null, Frame: null, executableHat: false},
+}};
+})

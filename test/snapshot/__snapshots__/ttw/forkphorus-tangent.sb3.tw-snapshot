@@ -1,0 +1,70 @@
+// TW Snapshot
+// Input SHA-256: 1446684578b41ff41cf29fbe14696ef717cca636e8d46babd7d9dec6df723a33
+
+// Sprite1 module
+(function ttw$Sprite1_N (R, G) {
+"use strict";
+const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, makeStuck, RETIRE} = R;
+const runtime = G.runtime;
+const stage = G.stage;
+const CONTINUE = {};
+class Self {
+constructor (target) {
+this.target = target;
+}
+}
+function fs_0 (th, S) {
+const target = S.target;
+let n0 = 0, n1 = 0, n2 = 0, n3 = 0, n4 = 0, n5 = 0, n6 = 0, n7 = 0, a0, a1, a2, a3, a4, a5, a6;
+runtime.ext_scratch3_looks._say("plan 15", target);
+if ((a0 = tan(0), ((a0 === a0) || a0 === 0) ? a0 === 0 : eqSlow(a0, 0))) {
+runtime.ext_scratch3_looks._say("pass 0", target);
+}
+if ((((n0 = tan(90)) === n0 ? n0 : 0) === Infinity)) {
+runtime.ext_scratch3_looks._say("pass 90", target);
+}
+if ((a1 = tan(180), ((a1 === a1) || a1 === 0) ? a1 === 0 : eqSlow(a1, 0))) {
+runtime.ext_scratch3_looks._say("pass 180", target);
+}
+if ((((n1 = tan(270)) === n1 ? n1 : 0) === -Infinity)) {
+runtime.ext_scratch3_looks._say("pass 270", target);
+}
+if ((a2 = tan(360), ((a2 === a2) || a2 === 0) ? a2 === 0 : eqSlow(a2, 0))) {
+runtime.ext_scratch3_looks._say("pass 360", target);
+}
+if ((((n2 = tan(450)) === n2 ? n2 : 0) === Infinity)) {
+runtime.ext_scratch3_looks._say("pass 450", target);
+}
+if ((a3 = tan(540), ((a3 === a3) || a3 === 0) ? a3 === 0 : eqSlow(a3, 0))) {
+runtime.ext_scratch3_looks._say("pass 540", target);
+}
+if ((((n3 = tan(630)) === n3 ? n3 : 0) === -Infinity)) {
+runtime.ext_scratch3_looks._say("pass 630", target);
+}
+if ((a4 = tan(720), ((a4 === a4) || a4 === 0) ? a4 === 0 : eqSlow(a4, 0))) {
+runtime.ext_scratch3_looks._say("pass 720", target);
+}
+if ((((n4 = tan(810)) === n4 ? n4 : 0) === Infinity)) {
+runtime.ext_scratch3_looks._say("pass 810", target);
+}
+if ((((n5 = tan(-90)) === n5 ? n5 : 0) === -Infinity)) {
+runtime.ext_scratch3_looks._say("pass -90", target);
+}
+if ((a5 = tan(-180), ((a5 === a5) || a5 === 0) ? a5 === 0 : eqSlow(a5, 0))) {
+runtime.ext_scratch3_looks._say("pass -180", target);
+}
+if ((((n6 = tan(-270)) === n6 ? n6 : 0) === Infinity)) {
+runtime.ext_scratch3_looks._say("pass -270", target);
+}
+if ((a6 = tan(-360), ((a6 === a6) || a6 === 0) ? a6 === 0 : eqSlow(a6, 0))) {
+runtime.ext_scratch3_looks._say("pass -360", target);
+}
+if ((((n7 = tan(-450)) === n7 ? n7 : 0) === -Infinity)) {
+runtime.ext_scratch3_looks._say("pass -450", target);
+}
+runtime.ext_scratch3_looks._say("end", target);
+}
+return {Self, scripts: {
+"F": {index: 0, native: fs_0, step: null, Frame: null, executableHat: false},
+}};
+})

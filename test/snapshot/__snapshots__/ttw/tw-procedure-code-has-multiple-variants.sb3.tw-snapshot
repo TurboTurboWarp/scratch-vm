@@ -1,0 +1,148 @@
+// TW Snapshot
+// Input SHA-256: 80d4acbc6049ae14c69abf2f7caf76283f89d2b869d8864052d6b27bd3c94411
+
+// Sprite1 module
+(function ttw$Sprite1_N (R, G) {
+"use strict";
+const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, makeStuck, RETIRE} = R;
+const runtime = G.runtime;
+const stage = G.stage;
+const CONTINUE = {};
+const g0 = stage.variables["2RhZ|2@pLo8UqcDKlYn4"];
+class Self {
+constructor (target) {
+this.target = target;
+}
+}
+function fp_0 (th, S) {
+const target = S.target;
+const h0 = g0;
+let v0 = h0.value;
+if (typeof v0 !== "number" || v0 !== v0) return fp_0$g(th, S);
+v0 = 0;
+v0 = (v0 + 1);
+if ((v0 === 1)) {
+runtime.ext_scratch3_looks._say("pass", target);
+}
+h0.value = v0;
+return "";
+}
+function fp_0$g (th, S) {
+const target = S.target;
+const h0 = g0;
+let v0 = h0.value;
+v0 = 0;
+v0 = (v0 + 1);
+if ((v0 === 1)) {
+runtime.ext_scratch3_looks._say("pass", target);
+}
+h0.value = v0;
+return "";
+}
+function fp_1 (th, S) {
+const target = S.target;
+const h0 = g0;
+let v0 = h0.value;
+if (typeof v0 !== "number" || v0 !== v0) return fp_1$g(th, S);
+inl1095: {
+v0 = 0;
+v0 = (v0 + 1);
+if ((v0 === 1)) {
+runtime.ext_scratch3_looks._say("pass", target);
+}
+}
+h0.value = v0;
+return "";
+}
+function fp_1$g (th, S) {
+const target = S.target;
+const h0 = g0;
+let v0 = h0.value;
+inl1096: {
+v0 = 0;
+v0 = (v0 + 1);
+if ((v0 === 1)) {
+runtime.ext_scratch3_looks._say("pass", target);
+}
+}
+h0.value = v0;
+return "";
+}
+function fp_2 (th, S) {
+const target = S.target;
+const h0 = g0;
+let v0 = h0.value;
+if (typeof v0 !== "number" || v0 !== v0) return fp_2$g(th, S);
+v0 = 0;
+v0 = (v0 + 1);
+if ((v0 === 1)) {
+runtime.ext_scratch3_looks._say("pass", target);
+}
+h0.value = v0;
+return "";
+}
+function fp_2$g (th, S) {
+const target = S.target;
+const h0 = g0;
+let v0 = h0.value;
+v0 = 0;
+v0 = (v0 + 1);
+if ((v0 === 1)) {
+runtime.ext_scratch3_looks._say("pass", target);
+}
+h0.value = v0;
+return "";
+}
+function fs_3 (th, S) {
+const target = S.target;
+const h0 = g0;
+let v0 = h0.value;
+if (typeof v0 !== "number" || v0 !== v0) return fs_3$g(th, S);
+runtime.ext_scratch3_looks._say("plan 2", target);
+inl1097: {
+inl1098: {
+v0 = 0;
+v0 = (v0 + 1);
+if ((v0 === 1)) {
+runtime.ext_scratch3_looks._say("pass", target);
+}
+}
+}
+inl1099: {
+v0 = 0;
+v0 = (v0 + 1);
+if ((v0 === 1)) {
+runtime.ext_scratch3_looks._say("pass", target);
+}
+}
+runtime.ext_scratch3_looks._say("end", target);
+h0.value = v0;
+}
+function fs_3$g (th, S) {
+const target = S.target;
+const h0 = g0;
+let v0 = h0.value;
+runtime.ext_scratch3_looks._say("plan 2", target);
+inl1100: {
+inl1101: {
+v0 = 0;
+v0 = (v0 + 1);
+if ((v0 === 1)) {
+runtime.ext_scratch3_looks._say("pass", target);
+}
+}
+}
+inl1102: {
+v0 = 0;
+v0 = (v0 + 1);
+if ((v0 === 1)) {
+runtime.ext_scratch3_looks._say("pass", target);
+}
+}
+runtime.ext_scratch3_looks._say("end", target);
+h0.value = v0;
+}
+return {Self, scripts: {
+"m": {index: 0, native: fs_3, step: null, Frame: null, executableHat: false},
+}};
+})

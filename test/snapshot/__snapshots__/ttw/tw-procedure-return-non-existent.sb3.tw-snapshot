@@ -1,0 +1,33 @@
+// TW Snapshot
+// Input SHA-256: 2d07ab31e7f1e6f263996fa42ff79f849fed048a047d68960bd324960bcc1452
+
+// Sprite2 module
+(function ttw$Sprite2_N (R, G) {
+"use strict";
+const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, makeStuck, RETIRE} = R;
+const runtime = G.runtime;
+const stage = G.stage;
+const CONTINUE = {};
+const g0 = stage.variables["`jEk@4|i[#Fk?(8x)AV.-my variable"];
+class Self {
+constructor (target) {
+this.target = target;
+}
+}
+function fs_0 (th, S) {
+const target = S.target;
+const h0 = g0;
+let v0 = h0.value;
+runtime.ext_scratch3_looks._say("plan 1", target);
+v0 = "discard me";
+v0 = "";
+if ((typeof v0 === "number" ? false : ("" + v0).toLowerCase() === "")) {
+runtime.ext_scratch3_looks._say("pass non existent procedure returned empty string", target);
+}
+runtime.ext_scratch3_looks._say("end", target);
+h0.value = v0;
+}
+return {Self, scripts: {
+"f": {index: 0, native: fs_0, step: null, Frame: null, executableHat: false},
+}};
+})

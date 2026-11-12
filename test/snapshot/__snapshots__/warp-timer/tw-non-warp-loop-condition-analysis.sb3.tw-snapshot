@@ -9,16 +9,14 @@ const b2 = stage.variables["`jEk@4|i[#Fk?(8x)AV.-my variable"];
 return function* genXYZ () {
 let t;
 runtime.ext_scratch3_looks._say("plan 1", target);
-b0.value = [];
-b0.value.push((1 + 2));
-b0._monitorUpToDate = false;
-b0.value.push("eof");
-b0._monitorUpToDate = false;
+b0._tl.clear();
+b0._tl.pushSlow((1 + 2));
+b0._tl.pushSlow("eof");
 b1.value = 0;
 b2.value = "bwah";
 while (!(("" + b2.value).toLowerCase() === "eof".toLowerCase())) {
 b1.value = (((t = +b1.value) === t ? t : 0) + 1);
-b2.value = (b0.value[(b1.value | 0) - 1] ?? "");
+b2.value = b0._tl.getSlow(b1.value);
 yield;
 }
 if ((((t = +b1.value) === t ? t : 0) === 2)) {

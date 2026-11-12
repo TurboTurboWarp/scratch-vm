@@ -1,0 +1,117 @@
+// TW Snapshot
+// Input SHA-256: cd516553f3cbf4a41ae9a8bc1f5d06a3392d365226bccdfa294578314f18facb
+
+// Sprite1 module
+(function ttw$Sprite1_N (R, G) {
+"use strict";
+const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, makeStuck, RETIRE} = R;
+const runtime = G.runtime;
+const stage = G.stage;
+const CONTINUE = {};
+const g0 = stage.variables["`jEk@4|i[#Fk?(8x)AV.-my variable"];
+class Self {
+constructor (target) {
+this.target = target;
+}
+}
+function fp_0 (th, S) {
+const target = S.target;
+return "It works!";
+return "";
+}
+function fp_1 (th, S) {
+const target = S.target;
+return "discard nesting 2";
+return "";
+}
+function fp_2 (th, S, p0, p1) {
+const target = S.target;
+return (p0 * p1);
+return "";
+}
+function fp_3 (th, S) {
+const target = S.target;
+let a0;
+inl1112: {
+a0 = "discard nesting 2";
+break inl1112;
+}
+return (("" + fp_2(th, S, 6, 7)) + ("" + fp_2(th, S, -1, 54)));
+return "";
+}
+function fp_4 (th, S, p0) {
+const target = S.target;
+let n0 = 0, n1 = 0;
+if ((p0 < 2)) {
+return p0;
+} else {
+return (((n0 = +fp_4(th, S, (p0 - 1))) === n0 ? n0 : 0) + ((n1 = +fp_4(th, S, (p0 - 2))) === n1 ? n1 : 0));
+}
+return "";
+}
+function fp_5 (th, S, p0) {
+const target = S.target;
+return fp_4(th, S, p0);
+return "";
+}
+function fp_6 (th, S, p0) {
+const target = S.target;
+let n0 = 0;
+if ((p0 > 1)) {
+return (p0 * ((n0 = fp_6(th, S, (p0 - 1))) === n0 ? n0 : 0));
+}
+return 1;
+return "";
+}
+function fp_7 (th, S, p0, p1) {
+const target = S.target;
+return "discard shadow 2";
+return "";
+}
+function fp_8 (th, S, p0, p1) {
+const target = S.target;
+const h0 = g0;
+let v0 = h0.value;
+if (((p0.toLowerCase() === "f".toLowerCase()) && (p1.toLowerCase() === "g".toLowerCase()))) {
+runtime.ext_scratch3_looks._say("pass shadow check 1", target);
+}
+v0 = fp_7(th, S, 1, 2);
+if (((p0.toLowerCase() === "f".toLowerCase()) && (p1.toLowerCase() === "g".toLowerCase()))) {
+runtime.ext_scratch3_looks._say("pass shadow check 2", target);
+}
+v0 = fp_7(th, S, 3, 4);
+if (((p0.toLowerCase() === "f".toLowerCase()) && (p1.toLowerCase() === "g".toLowerCase()))) {
+runtime.ext_scratch3_looks._say("pass shadow check 3", target);
+}
+h0.value = v0;
+return "";
+}
+function fs_9 (th, S) {
+const target = S.target;
+const h0 = g0;
+let v0 = h0.value;
+let n0 = 0, n1 = 0, a0;
+runtime.ext_scratch3_looks._say("plan 8", target);
+if ((fp_0(th, S).toLowerCase() === "It works!".toLowerCase())) {
+runtime.ext_scratch3_looks._say("pass simplest", target);
+}
+if ((fp_3(th, S).toLowerCase() === "42-54".toLowerCase())) {
+runtime.ext_scratch3_looks._say("pass nesting1", target);
+}
+if ((((n0 = +fp_5(th, S, 12)) === n0 ? n0 : 0) === 144)) {
+runtime.ext_scratch3_looks._say("pass fib 12", target);
+}
+if ((((n1 = fp_6(th, S, 12)) === n1 ? n1 : 0) === 479001600)) {
+runtime.ext_scratch3_looks._say("pass factorial 12", target);
+}
+v0 = (h0.value = v0, a0 = fp_8(th, S, "f", "g"), v0 = h0.value, a0);
+if ((v0.toLowerCase() === "".toLowerCase())) {
+runtime.ext_scratch3_looks._say("pass default return value", target);
+}
+runtime.ext_scratch3_looks._say("end", target);
+h0.value = v0;
+}
+return {Self, scripts: {
+"/": {index: 0, native: fs_9, step: null, Frame: null, executableHat: false},
+}};
+})

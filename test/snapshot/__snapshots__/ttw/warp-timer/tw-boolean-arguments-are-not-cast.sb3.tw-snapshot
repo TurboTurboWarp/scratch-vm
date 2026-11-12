@@ -1,0 +1,42 @@
+// TW Snapshot
+// Input SHA-256: 9ecff9e3c4b1dcdf3e23d0e49c0a2da3de446b6d626a2b5ee39d761be20344ca
+
+// Sprite1 module
+(function ttw$Sprite1_N (R, G) {
+"use strict";
+const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, makeStuck, RETIRE} = R;
+const runtime = G.runtime;
+const stage = G.stage;
+const CONTINUE = {};
+class Self {
+constructor (target) {
+this.target = target;
+}
+}
+function fp_0 (th, S, p0) {
+const target = S.target;
+if ((p0.toLowerCase() === "Hai!!!".toLowerCase())) {
+runtime.ext_scratch3_looks._say("pass did not cast", target);
+} else {
+runtime.ext_scratch3_looks._say("fail was casted", target);
+}
+return "";
+}
+function fs_1 (th, S) {
+const target = S.target;
+let q1075_0 = 0;
+runtime.ext_scratch3_looks._say("plan 1", target);
+q1075_0 = "Hai!!!";
+inl1075: {
+if ((q1075_0.toLowerCase() === "Hai!!!".toLowerCase())) {
+runtime.ext_scratch3_looks._say("pass did not cast", target);
+} else {
+runtime.ext_scratch3_looks._say("fail was casted", target);
+}
+}
+runtime.ext_scratch3_looks._say("end", target);
+}
+return {Self, scripts: {
+"o": {index: 0, native: fs_1, step: null, Frame: null, executableHat: false},
+}};
+})

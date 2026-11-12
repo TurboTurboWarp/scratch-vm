@@ -1,0 +1,325 @@
+// TW Snapshot
+// Input SHA-256: 801a8e9ac5e607f022601f2eda4bddf37b29c30627f0e24864c7b0f9cf7b65f9
+
+// Sprite1 module
+(function ttw$Sprite1_N (R, G) {
+"use strict";
+const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, makeStuck, RETIRE} = R;
+const runtime = G.runtime;
+const stage = G.stage;
+const CONTINUE = {};
+const g0 = stage.variables["G3sNM{+Wa29PviNsXl~;"];
+class Self {
+constructor (target) {
+this.target = target;
+}
+}
+function fp_0 (th, S, p0) {
+const target = S.target;
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + p0), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); throw RETIRE;
+return "";
+}
+function fp_1 (th, S, p0, p1) {
+const target = S.target;
+let q96_0 = 0;
+if (!p0) {
+q96_0 = p1;
+inl96: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + q96_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); throw RETIRE;
+}
+}
+return "";
+}
+function fp_2 (th, S, p0) {
+const target = S.target;
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("pass " + p0), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); throw RETIRE;
+return "";
+}
+function fs_3 (th, S) {
+const target = S.target;
+const h0 = g0;
+let v0 = h0.value;
+let n0 = 0, n1 = 0, n2 = 0, n3 = 0, q97_0 = 0, q97_1 = 0, q98_0 = 0, q99_0 = 0, q99_1 = 0, q100_0 = 0, q101_0 = 0, q101_1 = 0, q102_0 = 0, q103_0 = 0, q103_1 = 0, q104_0 = 0, q105_0 = 0, q105_1 = 0, q106_0 = 0, q107_0 = 0, q107_1 = 0, q108_0 = 0, q109_0 = 0, q109_1 = 0, q110_0 = 0, q111_0 = 0, q111_1 = 0, q112_0 = 0, q113_0 = 0, q113_1 = 0, q114_0 = 0, q115_0 = 0, q115_1 = 0, q116_0 = 0, q117_0 = 0, q117_1 = 0, q118_0 = 0, q119_0 = 0, q119_1 = 0, q120_0 = 0, q121_0 = 0, q121_1 = 0, q122_0 = 0, q123_0 = 0, q123_1 = 0, q124_0 = 0, q125_0 = 0, q125_1 = 0, q126_0 = 0, q127_0 = 0, q127_1 = 0, q128_0 = 0, q129_0 = 0;
+v0 = "4";
+runtime.ext_scratch3_looks._setCostume(target, v0);
+q97_0 = (((n0 = +target.getCostumes()[target.currentCostume].name) === n0 ? n0 : 0) === 4);
+q97_1 = "cn=4";
+inl97: {
+if (!q97_0) {
+q98_0 = q97_1;
+inl98: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + q98_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+h0.value = v0;
+runtime.stopAll();
+retire(th); return;
+}
+}
+}
+q99_0 = ((target.currentCostume + 1) === 2);
+q99_1 = "c#=2";
+inl99: {
+if (!q99_0) {
+q100_0 = q99_1;
+inl100: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + q100_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+h0.value = v0;
+runtime.stopAll();
+retire(th); return;
+}
+}
+}
+v0 = 3;
+runtime.ext_scratch3_looks._setCostume(target, v0);
+q101_0 = (target.getCostumes()[target.currentCostume].name.toLowerCase() === "costume3".toLowerCase());
+q101_1 = "cn=costume3";
+inl101: {
+if (!q101_0) {
+q102_0 = q101_1;
+inl102: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + q102_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+h0.value = v0;
+runtime.stopAll();
+retire(th); return;
+}
+}
+}
+q103_0 = ((target.currentCostume + 1) === 3);
+q103_1 = "c#=3";
+inl103: {
+if (!q103_0) {
+q104_0 = q103_1;
+inl104: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + q104_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+h0.value = v0;
+runtime.stopAll();
+retire(th); return;
+}
+}
+}
+v0 = ("" + "4");
+runtime.ext_scratch3_looks._setCostume(target, v0);
+q105_0 = (((n1 = +target.getCostumes()[target.currentCostume].name) === n1 ? n1 : 0) === 4);
+q105_1 = "cn=4";
+inl105: {
+if (!q105_0) {
+q106_0 = q105_1;
+inl106: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + q106_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+h0.value = v0;
+runtime.stopAll();
+retire(th); return;
+}
+}
+}
+q107_0 = ((target.currentCostume + 1) === 2);
+q107_1 = "c#=2";
+inl107: {
+if (!q107_0) {
+q108_0 = q107_1;
+inl108: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + q108_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+h0.value = v0;
+runtime.stopAll();
+retire(th); return;
+}
+}
+}
+v0 = (4 * 1);
+runtime.ext_scratch3_looks._setCostume(target, v0);
+q109_0 = (target.getCostumes()[target.currentCostume].name.toLowerCase() === "costume4".toLowerCase());
+q109_1 = "cn=costume4";
+inl109: {
+if (!q109_0) {
+q110_0 = q109_1;
+inl110: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + q110_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+h0.value = v0;
+runtime.stopAll();
+retire(th); return;
+}
+}
+}
+q111_0 = ((target.currentCostume + 1) === 4);
+q111_1 = "c#=4";
+inl111: {
+if (!q111_0) {
+q112_0 = q111_1;
+inl112: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + q112_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+h0.value = v0;
+runtime.stopAll();
+retire(th); return;
+}
+}
+}
+v0 = "4";
+runtime.ext_scratch3_looks._setBackdrop(stage, v0);
+q113_0 = (((n2 = +stage.getCostumes()[stage.currentCostume].name) === n2 ? n2 : 0) === 4);
+q113_1 = "bn=4";
+inl113: {
+if (!q113_0) {
+q114_0 = q113_1;
+inl114: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + q114_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+h0.value = v0;
+runtime.stopAll();
+retire(th); return;
+}
+}
+}
+q115_0 = ((stage.currentCostume + 1) === 2);
+q115_1 = "b#=2";
+inl115: {
+if (!q115_0) {
+q116_0 = q115_1;
+inl116: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + q116_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+h0.value = v0;
+runtime.stopAll();
+retire(th); return;
+}
+}
+}
+v0 = 3;
+runtime.ext_scratch3_looks._setBackdrop(stage, v0);
+q117_0 = (stage.getCostumes()[stage.currentCostume].name.toLowerCase() === "backdrop3".toLowerCase());
+q117_1 = "cn=backdrop3";
+inl117: {
+if (!q117_0) {
+q118_0 = q117_1;
+inl118: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + q118_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+h0.value = v0;
+runtime.stopAll();
+retire(th); return;
+}
+}
+}
+q119_0 = ((stage.currentCostume + 1) === 3);
+q119_1 = "c#=3";
+inl119: {
+if (!q119_0) {
+q120_0 = q119_1;
+inl120: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + q120_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+h0.value = v0;
+runtime.stopAll();
+retire(th); return;
+}
+}
+}
+v0 = ("" + "4");
+runtime.ext_scratch3_looks._setBackdrop(stage, v0);
+q121_0 = (((n3 = +stage.getCostumes()[stage.currentCostume].name) === n3 ? n3 : 0) === 4);
+q121_1 = "bn=4";
+inl121: {
+if (!q121_0) {
+q122_0 = q121_1;
+inl122: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + q122_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+h0.value = v0;
+runtime.stopAll();
+retire(th); return;
+}
+}
+}
+q123_0 = ((stage.currentCostume + 1) === 2);
+q123_1 = "b#=2";
+inl123: {
+if (!q123_0) {
+q124_0 = q123_1;
+inl124: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + q124_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+h0.value = v0;
+runtime.stopAll();
+retire(th); return;
+}
+}
+}
+v0 = (4 * 1);
+runtime.ext_scratch3_looks._setBackdrop(stage, v0);
+q125_0 = (stage.getCostumes()[stage.currentCostume].name.toLowerCase() === "backdrop4".toLowerCase());
+q125_1 = "bn=backdrop4";
+inl125: {
+if (!q125_0) {
+q126_0 = q125_1;
+inl126: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + q126_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+h0.value = v0;
+runtime.stopAll();
+retire(th); return;
+}
+}
+}
+q127_0 = ((stage.currentCostume + 1) === 4);
+q127_1 = "b#=4";
+inl127: {
+if (!q127_0) {
+q128_0 = q127_1;
+inl128: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + q128_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+h0.value = v0;
+runtime.stopAll();
+retire(th); return;
+}
+}
+}
+q129_0 = "";
+inl129: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("pass " + q129_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+h0.value = v0;
+runtime.stopAll();
+retire(th); return;
+}
+h0.value = v0;
+}
+return {Self, scripts: {
+"{": {index: 0, native: fs_3, step: null, Frame: null, executableHat: false},
+}};
+})

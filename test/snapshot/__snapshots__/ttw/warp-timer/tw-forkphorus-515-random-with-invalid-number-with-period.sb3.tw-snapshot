@@ -1,0 +1,77 @@
+// TW Snapshot
+// Input SHA-256: 725e0683c8cd39c78a143727bf26f8827d1e9fd627eef68a772d8a3a06806c65
+
+// Sprite1 module
+(function ttw$Sprite1_N (R, G) {
+"use strict";
+const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, makeStuck, RETIRE} = R;
+const runtime = G.runtime;
+const stage = G.stage;
+const CONTINUE = {};
+const g0 = stage.variables["`jEk@4|i[#Fk?(8x)AV.-my variable"];
+class Self {
+constructor (target) {
+this.target = target;
+}
+}
+function fs_0 (th, S) {
+const target = S.target;
+const h0 = g0;
+let v0 = h0.value;
+if (typeof v0 !== "number") return fs_0$g(th, S);
+runtime.ext_scratch3_looks._say("plan 6", target);
+v0 = runtime.ext_scratch3_operators._random(("an invalid number" + "."), 1);
+if (!(v0 <= 0)) {
+runtime.ext_scratch3_looks._say("pass", target);
+}
+if ((v0 < 1)) {
+runtime.ext_scratch3_looks._say("pass", target);
+}
+if ((("" + v0).toLowerCase().indexOf(".".toLowerCase()) !== -1)) {
+runtime.ext_scratch3_looks._say("pass", target);
+}
+v0 = runtime.ext_scratch3_operators._random(1, ("an invalid number" + "."));
+if (!(v0 <= 0)) {
+runtime.ext_scratch3_looks._say("pass", target);
+}
+if ((v0 < 1)) {
+runtime.ext_scratch3_looks._say("pass", target);
+}
+if ((("" + v0).toLowerCase().indexOf(".".toLowerCase()) !== -1)) {
+runtime.ext_scratch3_looks._say("pass", target);
+}
+runtime.ext_scratch3_looks._say("end", target);
+h0.value = v0;
+}
+function fs_0$g (th, S) {
+const target = S.target;
+const h0 = g0;
+let v0 = h0.value;
+runtime.ext_scratch3_looks._say("plan 6", target);
+v0 = runtime.ext_scratch3_operators._random(("an invalid number" + "."), 1);
+if (!(v0 <= 0)) {
+runtime.ext_scratch3_looks._say("pass", target);
+}
+if ((v0 < 1)) {
+runtime.ext_scratch3_looks._say("pass", target);
+}
+if ((("" + v0).toLowerCase().indexOf(".".toLowerCase()) !== -1)) {
+runtime.ext_scratch3_looks._say("pass", target);
+}
+v0 = runtime.ext_scratch3_operators._random(1, ("an invalid number" + "."));
+if (!(v0 <= 0)) {
+runtime.ext_scratch3_looks._say("pass", target);
+}
+if ((v0 < 1)) {
+runtime.ext_scratch3_looks._say("pass", target);
+}
+if ((("" + v0).toLowerCase().indexOf(".".toLowerCase()) !== -1)) {
+runtime.ext_scratch3_looks._say("pass", target);
+}
+runtime.ext_scratch3_looks._say("end", target);
+h0.value = v0;
+}
+return {Self, scripts: {
+"p": {index: 0, native: fs_0, step: null, Frame: null, executableHat: false},
+}};
+})

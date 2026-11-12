@@ -1,0 +1,53 @@
+// TW Snapshot
+// Input SHA-256: 86c1734c101ee85e6f737f891d6ca338d72b17026ab60d289ea7861351c65124
+
+// Sprite1 module
+(function ttw$Sprite1_N (R, G) {
+"use strict";
+const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, makeStuck, RETIRE} = R;
+const runtime = G.runtime;
+const stage = G.stage;
+const CONTINUE = {};
+const g0 = stage.variables["Kl,Own0m6{^v3$E{Wsc="];
+class Self {
+constructor (target) {
+this.target = target;
+}
+}
+function fs_0 (th, S) {
+const target = S.target;
+const h0 = g0;
+runtime.ext_scratch3_looks._say("plan 6", target);
+h0.value = "\t";
+broadcast(runtime, "message1");
+}
+function fs_1 (th, S) {
+const target = S.target;
+const h0 = g0;
+let v0 = h0.value;
+let a0, a1, a2, a3, a4, a5, a6;
+if ((a0 = ("0" + ""), ((typeof v0 === "number" && typeof a0 === "number" && v0 === v0 && a0 === a0) || v0 === a0) ? v0 === a0 : eqSlow(v0, a0))) {
+runtime.ext_scratch3_looks._say("pass \\t in a variable = string 0", target);
+}
+if ((a1 = ("0" + ""), ((typeof "\t" === "number" && typeof a1 === "number" && "\t" === "\t" && a1 === a1) || "\t" === a1) ? "\t" === a1 : eqSlow("\t", a1))) {
+runtime.ext_scratch3_looks._say("pass literal \\t = string 0", target);
+}
+if ((a2 = ("    " + ("" + v0)), a3 = ("0" + ""), ((typeof a2 === "number" && typeof a3 === "number" && a2 === a2 && a3 === a3) || a2 === a3) ? a2 === a3 : eqSlow(a2, a3))) {
+runtime.ext_scratch3_looks._say("pass \\t and other spaces = string 0", target);
+}
+if ((a4 = (0 + 0), ((typeof v0 === "number" && v0 === v0) || v0 === a4) ? v0 === a4 : eqSlow(v0, a4))) {
+runtime.ext_scratch3_looks._say("pass \\t in a variable = number 0", target);
+}
+if ((0 === (0 + 0))) {
+runtime.ext_scratch3_looks._say("pass literal \\t = number 0", target);
+}
+if ((a5 = ("    " + ("" + v0)), a6 = (0 + 0), ((typeof a5 === "number" && a5 === a5) || a5 === a6) ? a5 === a6 : eqSlow(a5, a6))) {
+runtime.ext_scratch3_looks._say("pass \\t and other spaces = number 0", target);
+}
+runtime.ext_scratch3_looks._say("end", target);
+}
+return {Self, scripts: {
+"p": {index: 0, native: fs_0, step: null, Frame: null, executableHat: false},
+"r": {index: 1, native: fs_1, step: null, Frame: null, executableHat: false},
+}};
+})

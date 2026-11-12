@@ -1,0 +1,133 @@
+// TW Snapshot
+// Input SHA-256: 95f7dfd29f2a3aec8027d03eab202b439a7630a1ee6b9a7cf534c7d971e41ef7
+
+// Sprite1 module
+(function ttw$Sprite1_N (R, G) {
+"use strict";
+const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, makeStuck, RETIRE} = R;
+const runtime = G.runtime;
+const stage = G.stage;
+const CONTINUE = {};
+const gl0 = stage.variables[")@7t1F9WM1F[_jBWx]7["]._tl;
+const gl1 = stage.variables[",VHjOaLurDh*^;8kZ~I?"]._tl;
+class Self {
+constructor (target) {
+this.target = target;
+}
+}
+function fp_0 (th, S, p0) {
+const target = S.target;
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + p0), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); throw RETIRE;
+return "";
+}
+function fp_1 (th, S, p0, p1) {
+const target = S.target;
+let q162_0 = 0;
+if (!p0) {
+q162_0 = p1;
+inl162: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + q162_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); throw RETIRE;
+}
+}
+return "";
+}
+function fp_2 (th, S, p0) {
+const target = S.target;
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("pass " + p0), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); throw RETIRE;
+return "";
+}
+function fs_3 (th, S) {
+const target = S.target;
+const L0 = gl0;
+const L1 = gl1;
+let n0 = 0, n1 = 0, n2 = 0, n3 = 0, n4 = 0, n5 = 0, a0, q163_0 = 0, q163_1 = 0, q164_0 = 0, q165_0 = 0, q165_1 = 0, q166_0 = 0, q167_0 = 0, q167_1 = 0, q168_0 = 0, q169_0 = 0;
+L0.clear();
+L1.clear();
+n0 = 3;
+if (L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = n0; else L0.pushSlow(n0);
+n1 = 2;
+if (L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = n1; else L0.pushSlow(n1);
+n2 = 8;
+if (L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = n2; else L0.pushSlow(n2);
+n3 = 4;
+if (L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = n3; else L0.pushSlow(n3);
+a0 = L0.contents();
+if (typeof a0 === "number" && L1.len < L1.f64.length && L1.objs.length === 0) L1.f64[L1.len++] = a0; else L1.pushSlow(a0);
+L0.clear();
+q163_0 = (L1.len === 1);
+q163_1 = "output length = 1";
+inl163: {
+if (!q163_0) {
+q164_0 = q163_1;
+inl164: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + q164_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+L0.upToDate = false;
+L1.upToDate = false;
+runtime.stopAll();
+retire(th); return;
+}
+}
+}
+q165_0 = (L0.len === 0);
+q165_1 = "data length = 0";
+inl165: {
+if (!q165_0) {
+q166_0 = q165_1;
+inl166: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + q166_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+L0.upToDate = false;
+L1.upToDate = false;
+runtime.stopAll();
+retire(th); return;
+}
+}
+}
+q167_0 = (((n5 = 1) >= 1 && n5 <= L1.len && (n4 = L1.f64[(n5 | 0) - 1]) === n4 ? n4 : L1.numSlow(n5)) === 3284);
+q167_1 = "output item 1";
+inl167: {
+if (!q167_0) {
+q168_0 = q167_1;
+inl168: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + q168_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+L0.upToDate = false;
+L1.upToDate = false;
+runtime.stopAll();
+retire(th); return;
+}
+}
+}
+q169_0 = "";
+inl169: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("pass " + q169_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+L0.upToDate = false;
+L1.upToDate = false;
+runtime.stopAll();
+retire(th); return;
+}
+L0.upToDate = false;
+L1.upToDate = false;
+}
+return {Self, scripts: {
+"N": {index: 0, native: fs_3, step: null, Frame: null, executableHat: false},
+}};
+})

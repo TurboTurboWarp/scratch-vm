@@ -1,0 +1,1510 @@
+// TW Snapshot
+// Input SHA-256: 0d7c7d4a267a29ff249f9314e87a7a7170870dc48175ffdba5a12fa48e8ba0a2
+
+// Sprite1 module
+(function ttw$Sprite1_N (R, G) {
+"use strict";
+const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, makeStuck, RETIRE} = R;
+const runtime = G.runtime;
+const stage = G.stage;
+const CONTINUE = {};
+const g0 = stage.variables["aBQ}o|vZt_fHtB~ZyHPZ-sutils:iterator-"];
+const g1 = stage.variables["aBQ}o|vZt_fHtB~ZyHPZ-@return-"];
+const gl0 = stage.variables["aBQ}o|vZt_fHtB~ZyHPZ-sutils:bufferl-list"]._tl;
+const gl1 = stage.variables["aBQ}o|vZt_fHtB~ZyHPZ-sutils:templ-list"]._tl;
+class Self {
+constructor (target) {
+this.target = target;
+}
+}
+function fp_0 (th, S, p0, p1) {
+const target = S.target;
+const h0 = g0;
+const h1 = g1;
+const L0 = gl0;
+let v0 = h0.value;
+if (typeof v0 !== "number" || v0 !== v0) return fp_0$g(th, S, p0, p1);
+let n0 = 0, n1 = 0, n2 = 0, a0, a1, a2;
+L0.clear();
+v0 = ("" + p0).length;
+a0 = {v0: v0, c: ("" + p1).length, k: 1, r: ""};
+while ((n0 = fp_0$c0(th, S, p0, p1, a0)) === 1);
+v0 = a0.v0;
+if (n0 === 2) {
+a1 = a0.r;
+h0.value = v0;
+return a1;
+}
+h1.value = (a2 = L0.contents(), ((typeof a2 === "number" && typeof p1 === "number" && a2 === a2 && p1 === p1) || a2 === p1) ? a2 === p1 : eqSlow(a2, p1));
+h0.value = v0;
+return "";
+}
+function fp_0$c0 (th, S, p0, p1, B) {
+const target = S.target;
+const h0 = g0;
+const h1 = g1;
+const L0 = gl0;
+let n0 = 0, n1 = 0, n2 = 0, a0, a1, a2;
+let v0 = B.v0;
+n2 = B.k; if (B.k < 4096) B.k *= 2;
+for (n1 = B.c; n1 > 0; n1--) {
+if (n2-- === 0) { B.c = n1; B.v0 = v0; return 1; }
+L0.insertSlow(1, ((("" + p0))[v0 - 1] || ""));
+v0 = (v0 + -1);
+}
+B.v0 = v0;
+return 0;
+}
+function fp_0$g (th, S, p0, p1) {
+const target = S.target;
+const h0 = g0;
+const h1 = g1;
+const L0 = gl0;
+let v0 = h0.value;
+let n0 = 0, n1 = 0, n2 = 0, a0, a1, a2;
+L0.clear();
+v0 = ("" + p0).length;
+a0 = {v0: v0, c: ("" + p1).length, k: 1, r: ""};
+while ((n0 = fp_0$g$c0(th, S, p0, p1, a0)) === 1);
+v0 = a0.v0;
+if (n0 === 2) {
+a1 = a0.r;
+h0.value = v0;
+return a1;
+}
+h1.value = (a2 = L0.contents(), ((typeof a2 === "number" && typeof p1 === "number" && a2 === a2 && p1 === p1) || a2 === p1) ? a2 === p1 : eqSlow(a2, p1));
+h0.value = v0;
+return "";
+}
+function fp_0$g$c0 (th, S, p0, p1, B) {
+const target = S.target;
+const h0 = g0;
+const h1 = g1;
+const L0 = gl0;
+let n0 = 0, n1 = 0, n2 = 0, a0, a1, a2;
+let v0 = B.v0;
+n2 = B.k; if (B.k < 4096) B.k *= 2;
+for (n1 = B.c; n1 > 0; n1--) {
+if (n2-- === 0) { B.c = n1; B.v0 = v0; return 1; }
+L0.insertSlow(1, ((("" + p0))[v0 - 1] || ""));
+v0 = (v0 + -1);
+}
+B.v0 = v0;
+return 0;
+}
+function fp_1 (th, S, p0) {
+const target = S.target;
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); throw RETIRE;
+return "";
+}
+function fp_2 (th, S, p0, p1) {
+const target = S.target;
+let q891_0 = 0;
+if (!p0) {
+q891_0 = p1;
+inl891: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); throw RETIRE;
+}
+}
+return "";
+}
+function fp_3 (th, S, p0, p1) {
+const target = S.target;
+const h0 = g1;
+const h1 = g0;
+const L0 = gl0;
+let v0 = h0.value, v1 = h1.value;
+if (typeof v1 !== "number" || v1 !== v1) return fp_3$g(th, S, p0, p1);
+let n0 = 0, n1 = 0, n2 = 0, a0, a1, a2;
+if ((p1.length === 0)) {
+v0 = "true";
+h0.value = v0;
+h1.value = v1;
+L0.upToDate = false;
+return "";
+}
+L0.clear();
+v0 = "false";
+v1 = 0;
+a0 = {v0: v0, v1: v1, c: p0.length, k: 1, r: ""};
+while ((n0 = fp_3$c0(th, S, p0, p1, a0)) === 1);
+v0 = a0.v0;
+v1 = a0.v1;
+if (n0 === 2) {
+a2 = a0.r;
+h0.value = v0;
+h1.value = v1;
+L0.upToDate = false;
+return a2;
+}
+h0.value = v0;
+h1.value = v1;
+L0.upToDate = false;
+return "";
+}
+function fp_3$c0 (th, S, p0, p1, B) {
+const target = S.target;
+const h0 = g1;
+const h1 = g0;
+const L0 = gl0;
+let n0 = 0, n1 = 0, n2 = 0, a0, a1, a2;
+let v0 = B.v0, v1 = B.v1;
+n2 = B.k; if (B.k < 4096) B.k *= 2;
+for (n1 = B.c; n1 > 0; n1--) {
+if (n2-- === 0) { B.c = n1; B.v0 = v0; B.v1 = v1; return 1; }
+v1 = (v1 + 1);
+a1 = ((p0)[v1 - 1] || "");
+if (typeof a1 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a1; else L0.pushSlow(a1);
+if ((L0.len > p1.length)) {
+L0.deleteSlow(1);
+}
+if ((L0.contents().toLowerCase() === p1.toLowerCase())) {
+v0 = "true";
+B.r = ""; B.v0 = v0; B.v1 = v1; return 2;
+}
+}
+B.v0 = v0;
+B.v1 = v1;
+return 0;
+}
+function fp_3$g (th, S, p0, p1) {
+const target = S.target;
+const h0 = g1;
+const h1 = g0;
+const L0 = gl0;
+let v0 = h0.value, v1 = h1.value;
+let n0 = 0, n1 = 0, n2 = 0, a0, a1, a2;
+if ((p1.length === 0)) {
+v0 = "true";
+h0.value = v0;
+h1.value = v1;
+L0.upToDate = false;
+return "";
+}
+L0.clear();
+v0 = "false";
+v1 = 0;
+a0 = {v0: v0, v1: v1, c: p0.length, k: 1, r: ""};
+while ((n0 = fp_3$g$c0(th, S, p0, p1, a0)) === 1);
+v0 = a0.v0;
+v1 = a0.v1;
+if (n0 === 2) {
+a2 = a0.r;
+h0.value = v0;
+h1.value = v1;
+L0.upToDate = false;
+return a2;
+}
+h0.value = v0;
+h1.value = v1;
+L0.upToDate = false;
+return "";
+}
+function fp_3$g$c0 (th, S, p0, p1, B) {
+const target = S.target;
+const h0 = g1;
+const h1 = g0;
+const L0 = gl0;
+let n0 = 0, n1 = 0, n2 = 0, a0, a1, a2;
+let v0 = B.v0, v1 = B.v1;
+n2 = B.k; if (B.k < 4096) B.k *= 2;
+for (n1 = B.c; n1 > 0; n1--) {
+if (n2-- === 0) { B.c = n1; B.v0 = v0; B.v1 = v1; return 1; }
+v1 = (v1 + 1);
+a1 = ((p0)[v1 - 1] || "");
+if (typeof a1 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a1; else L0.pushSlow(a1);
+if ((L0.len > p1.length)) {
+L0.deleteSlow(1);
+}
+if ((L0.contents().toLowerCase() === p1.toLowerCase())) {
+v0 = "true";
+B.r = ""; B.v0 = v0; B.v1 = v1; return 2;
+}
+}
+B.v0 = v0;
+B.v1 = v1;
+return 0;
+}
+function fp_4 (th, S) {
+const target = S.target;
+const h0 = g1;
+let v0 = h0.value;
+let a0, a1, a2, a3, a4, a5, a6, q892_0 = 0, q892_1 = 0, q893_0 = 0, q894_0 = 0, q894_1 = 0, q895_0 = 0, q896_0 = 0, q896_1 = 0, q897_0 = 0, q898_0 = 0, q898_1 = 0, q899_0 = 0, q900_0 = 0, q900_1 = 0, q901_0 = 0, q902_0 = 0, q902_1 = 0, q903_0 = 0;
+(a0 = fp_0(th, S, 12333, 333), v0 = h0.value, a0);
+q892_0 = (("" + v0).toLowerCase() === "true".toLowerCase());
+q892_1 = "12333 must end with 333";
+inl892: {
+if (!q892_0) {
+q893_0 = q892_1;
+inl893: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); throw RETIRE;
+}
+}
+}
+(a1 = fp_0(th, S, 12333, 33), v0 = h0.value, a1);
+q894_0 = (("" + v0).toLowerCase() === "true".toLowerCase());
+q894_1 = "12333 must end with 33";
+inl894: {
+if (!q894_0) {
+q895_0 = q894_1;
+inl895: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); throw RETIRE;
+}
+}
+}
+(a2 = fp_0(th, S, 12333, ""), v0 = h0.value, a2);
+q896_0 = (("" + v0).toLowerCase() === "true".toLowerCase());
+q896_1 = "12333 must end with empty string";
+inl896: {
+if (!q896_0) {
+q897_0 = q896_1;
+inl897: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); throw RETIRE;
+}
+}
+}
+(a3 = fp_0(th, S, 12333, 4), v0 = h0.value, a3);
+q898_0 = (("" + v0).toLowerCase() === "false".toLowerCase());
+q898_1 = "12333 must not end with 4";
+inl898: {
+if (!q898_0) {
+q899_0 = q898_1;
+inl899: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); throw RETIRE;
+}
+}
+}
+(a4 = fp_0(th, S, 12333, 123334), v0 = h0.value, a4);
+q900_0 = (("" + v0).toLowerCase() === "false".toLowerCase());
+q900_1 = "12333 must not end with 123334";
+inl900: {
+if (!q900_0) {
+q901_0 = q900_1;
+inl901: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); throw RETIRE;
+}
+}
+}
+(a5 = fp_0(th, S, 12333, 12333), v0 = h0.value, a5);
+q902_0 = (("" + v0).toLowerCase() === "true".toLowerCase());
+q902_1 = "12333 must end with itself";
+inl902: {
+if (!q902_0) {
+q903_0 = q902_1;
+inl903: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); throw RETIRE;
+}
+}
+}
+(a6 = fp_3(th, S, "abc", ""), v0 = h0.value, a6);
+return "";
+}
+function fp_5 (th, S, p0, p1) {
+const target = S.target;
+const h0 = g0;
+const h1 = g1;
+const L0 = gl0;
+let v0 = h0.value;
+if (typeof v0 !== "number" || v0 !== v0) return fp_5$g(th, S, p0, p1);
+let n0 = 0, n1 = 0, n2 = 0, a0, a1, a2, a3;
+L0.clear();
+v0 = 0;
+a0 = {v0: v0, c: ("" + p1).length, k: 1, r: ""};
+while ((n0 = fp_5$c0(th, S, p0, p1, a0)) === 1);
+v0 = a0.v0;
+if (n0 === 2) {
+a2 = a0.r;
+h0.value = v0;
+L0.upToDate = false;
+return a2;
+}
+h1.value = (a3 = L0.contents(), ((typeof a3 === "number" && typeof p1 === "number" && a3 === a3 && p1 === p1) || a3 === p1) ? a3 === p1 : eqSlow(a3, p1));
+h0.value = v0;
+L0.upToDate = false;
+return "";
+}
+function fp_5$c0 (th, S, p0, p1, B) {
+const target = S.target;
+const h0 = g0;
+const h1 = g1;
+const L0 = gl0;
+let n0 = 0, n1 = 0, n2 = 0, a0, a1, a2, a3;
+let v0 = B.v0;
+n2 = B.k; if (B.k < 4096) B.k *= 2;
+for (n1 = B.c; n1 > 0; n1--) {
+if (n2-- === 0) { B.c = n1; B.v0 = v0; return 1; }
+v0 = (v0 + 1);
+a1 = ((("" + p0))[v0 - 1] || "");
+if (typeof a1 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a1; else L0.pushSlow(a1);
+}
+B.v0 = v0;
+return 0;
+}
+function fp_5$g (th, S, p0, p1) {
+const target = S.target;
+const h0 = g0;
+const h1 = g1;
+const L0 = gl0;
+let v0 = h0.value;
+let n0 = 0, n1 = 0, n2 = 0, a0, a1, a2, a3;
+L0.clear();
+v0 = 0;
+a0 = {v0: v0, c: ("" + p1).length, k: 1, r: ""};
+while ((n0 = fp_5$g$c0(th, S, p0, p1, a0)) === 1);
+v0 = a0.v0;
+if (n0 === 2) {
+a2 = a0.r;
+h0.value = v0;
+L0.upToDate = false;
+return a2;
+}
+h1.value = (a3 = L0.contents(), ((typeof a3 === "number" && typeof p1 === "number" && a3 === a3 && p1 === p1) || a3 === p1) ? a3 === p1 : eqSlow(a3, p1));
+h0.value = v0;
+L0.upToDate = false;
+return "";
+}
+function fp_5$g$c0 (th, S, p0, p1, B) {
+const target = S.target;
+const h0 = g0;
+const h1 = g1;
+const L0 = gl0;
+let n0 = 0, n1 = 0, n2 = 0, a0, a1, a2, a3;
+let v0 = B.v0;
+n2 = B.k; if (B.k < 4096) B.k *= 2;
+for (n1 = B.c; n1 > 0; n1--) {
+if (n2-- === 0) { B.c = n1; B.v0 = v0; return 1; }
+v0 = (v0 + 1);
+a1 = ((("" + p0))[v0 - 1] || "");
+if (typeof a1 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a1; else L0.pushSlow(a1);
+}
+B.v0 = v0;
+return 0;
+}
+function fp_6 (th, S) {
+const target = S.target;
+const h0 = g1;
+let v0 = h0.value;
+let a0, a1, a2, a3, a4, a5, a6, q904_0 = 0, q904_1 = 0, q905_0 = 0, q906_0 = 0, q906_1 = 0, q907_0 = 0, q908_0 = 0, q908_1 = 0, q909_0 = 0, q910_0 = 0, q910_1 = 0, q911_0 = 0, q912_0 = 0, q912_1 = 0, q913_0 = 0, q914_0 = 0, q914_1 = 0, q915_0 = 0, q916_0 = 0, q916_1 = 0, q917_0 = 0;
+(a0 = fp_5(th, S, 12333, 12333), v0 = h0.value, a0);
+q904_0 = (("" + v0).toLowerCase() === "true".toLowerCase());
+q904_1 = "12333 must start with 12333";
+inl904: {
+if (!q904_0) {
+q905_0 = q904_1;
+inl905: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); throw RETIRE;
+}
+}
+}
+(a1 = fp_5(th, S, 12333, 1233), v0 = h0.value, a1);
+q906_0 = (("" + v0).toLowerCase() === "true".toLowerCase());
+q906_1 = "12333 must start with 1233";
+inl906: {
+if (!q906_0) {
+q907_0 = q906_1;
+inl907: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); throw RETIRE;
+}
+}
+}
+(a2 = fp_5(th, S, 12333, 123), v0 = h0.value, a2);
+q908_0 = (("" + v0).toLowerCase() === "true".toLowerCase());
+q908_1 = "12333 must start with 123";
+inl908: {
+if (!q908_0) {
+q909_0 = q908_1;
+inl909: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); throw RETIRE;
+}
+}
+}
+(a3 = fp_5(th, S, 12333, 12), v0 = h0.value, a3);
+q910_0 = (("" + v0).toLowerCase() === "true".toLowerCase());
+q910_1 = "12333 must start with 12";
+inl910: {
+if (!q910_0) {
+q911_0 = q910_1;
+inl911: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); throw RETIRE;
+}
+}
+}
+(a4 = fp_5(th, S, 12333, 1), v0 = h0.value, a4);
+q912_0 = (("" + v0).toLowerCase() === "true".toLowerCase());
+q912_1 = "12333 must start with 1";
+inl912: {
+if (!q912_0) {
+q913_0 = q912_1;
+inl913: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); throw RETIRE;
+}
+}
+}
+(a5 = fp_5(th, S, 12333, ""), v0 = h0.value, a5);
+q914_0 = (("" + v0).toLowerCase() === "true".toLowerCase());
+q914_1 = "12333 must start with empty string";
+inl914: {
+if (!q914_0) {
+q915_0 = q914_1;
+inl915: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); throw RETIRE;
+}
+}
+}
+(a6 = fp_5(th, S, 12333, 33), v0 = h0.value, a6);
+q916_0 = (("" + v0).toLowerCase() === "false".toLowerCase());
+q916_1 = "12333 must not start with 33";
+inl916: {
+if (!q916_0) {
+q917_0 = q916_1;
+inl917: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); throw RETIRE;
+}
+}
+}
+return "";
+}
+function fp_7 (th, S) {
+const target = S.target;
+const h0 = g1;
+let v0 = h0.value;
+let a0, a1, a2, a3, a4, a5, a6, a7, a8, q918_0 = 0, q918_1 = 0, q919_0 = 0, q920_0 = 0, q920_1 = 0, q921_0 = 0, q922_0 = 0, q922_1 = 0, q923_0 = 0, q924_0 = 0, q924_1 = 0, q925_0 = 0, q926_0 = 0, q926_1 = 0, q927_0 = 0, q928_0 = 0, q928_1 = 0, q929_0 = 0, q930_0 = 0, q930_1 = 0, q931_0 = 0, q932_0 = 0, q932_1 = 0, q933_0 = 0, q934_0 = 0, q934_1 = 0, q935_0 = 0;
+(a0 = fp_3(th, S, "abc", ""), v0 = h0.value, a0);
+q918_0 = (v0.toLowerCase() === "true".toLowerCase());
+q918_1 = "abc must include empty string";
+inl918: {
+if (!q918_0) {
+q919_0 = q918_1;
+inl919: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); throw RETIRE;
+}
+}
+}
+(a1 = fp_3(th, S, "", ""), v0 = h0.value, a1);
+q920_0 = (v0.toLowerCase() === "true".toLowerCase());
+q920_1 = "empty string must include empty string";
+inl920: {
+if (!q920_0) {
+q921_0 = q920_1;
+inl921: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); throw RETIRE;
+}
+}
+}
+(a2 = fp_3(th, S, "abc", "abc"), v0 = h0.value, a2);
+q922_0 = (v0.toLowerCase() === "true".toLowerCase());
+q922_1 = "abc must include abc";
+inl922: {
+if (!q922_0) {
+q923_0 = q922_1;
+inl923: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); throw RETIRE;
+}
+}
+}
+(a3 = fp_3(th, S, "abc", "a"), v0 = h0.value, a3);
+q924_0 = (v0.toLowerCase() === "true".toLowerCase());
+q924_1 = "abc must include a";
+inl924: {
+if (!q924_0) {
+q925_0 = q924_1;
+inl925: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); throw RETIRE;
+}
+}
+}
+(a4 = fp_3(th, S, "abc", "b"), v0 = h0.value, a4);
+q926_0 = (v0.toLowerCase() === "true".toLowerCase());
+q926_1 = "abc must include b";
+inl926: {
+if (!q926_0) {
+q927_0 = q926_1;
+inl927: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); throw RETIRE;
+}
+}
+}
+(a5 = fp_3(th, S, "abc", "c"), v0 = h0.value, a5);
+q928_0 = (v0.toLowerCase() === "true".toLowerCase());
+q928_1 = "abc must include c";
+inl928: {
+if (!q928_0) {
+q929_0 = q928_1;
+inl929: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); throw RETIRE;
+}
+}
+}
+(a6 = fp_3(th, S, "abc", "ab"), v0 = h0.value, a6);
+q930_0 = (v0.toLowerCase() === "true".toLowerCase());
+q930_1 = "abc must include ab";
+inl930: {
+if (!q930_0) {
+q931_0 = q930_1;
+inl931: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); throw RETIRE;
+}
+}
+}
+(a7 = fp_3(th, S, "abc", "bc"), v0 = h0.value, a7);
+q932_0 = (v0.toLowerCase() === "true".toLowerCase());
+q932_1 = "abc must include bc";
+inl932: {
+if (!q932_0) {
+q933_0 = q932_1;
+inl933: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); throw RETIRE;
+}
+}
+}
+(a8 = fp_3(th, S, "abc", "aa"), v0 = h0.value, a8);
+q934_0 = (v0.toLowerCase() === "false".toLowerCase());
+q934_1 = "abc must not include aa";
+inl934: {
+if (!q934_0) {
+q935_0 = q934_1;
+inl935: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); throw RETIRE;
+}
+}
+}
+return "";
+}
+function fp_8 (th, S, p0, p1) {
+const target = S.target;
+const h0 = g1;
+const h1 = g0;
+const L0 = gl0;
+let v0 = h0.value, v1 = h1.value;
+if (typeof v1 !== "number" || v1 !== v1) return fp_8$g(th, S, p0, p1);
+let n0 = 0, n1 = 0, n2 = 0, a0, a1, a2, a3;
+L0.clear();
+v0 = -1;
+v1 = 0;
+a0 = {v0: v0, v1: v1, c: ("" + p0).length, k: 1, r: ""};
+while ((n0 = fp_8$c0(th, S, p0, p1, a0)) === 1);
+v0 = a0.v0;
+v1 = a0.v1;
+if (n0 === 2) {
+a3 = a0.r;
+h0.value = v0;
+h1.value = v1;
+L0.upToDate = false;
+return a3;
+}
+h0.value = v0;
+h1.value = v1;
+L0.upToDate = false;
+return "";
+}
+function fp_8$c0 (th, S, p0, p1, B) {
+const target = S.target;
+const h0 = g1;
+const h1 = g0;
+const L0 = gl0;
+let n0 = 0, n1 = 0, n2 = 0, a0, a1, a2, a3;
+let v0 = B.v0, v1 = B.v1;
+n2 = B.k; if (B.k < 4096) B.k *= 2;
+for (n1 = B.c; n1 > 0; n1--) {
+if (n2-- === 0) { B.c = n1; B.v0 = v0; B.v1 = v1; return 1; }
+v1 = (v1 + 1);
+a1 = ((("" + p0))[v1 - 1] || "");
+if (typeof a1 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a1; else L0.pushSlow(a1);
+if ((L0.len > ("" + p1).length)) {
+L0.deleteSlow(1);
+}
+if ((a2 = L0.contents(), ((typeof a2 === "number" && typeof p1 === "number" && a2 === a2 && p1 === p1) || a2 === p1) ? a2 === p1 : eqSlow(a2, p1))) {
+v0 = (v1 - (("" + p1).length - 1));
+B.r = ""; B.v0 = v0; B.v1 = v1; return 2;
+}
+}
+B.v0 = v0;
+B.v1 = v1;
+return 0;
+}
+function fp_8$g (th, S, p0, p1) {
+const target = S.target;
+const h0 = g1;
+const h1 = g0;
+const L0 = gl0;
+let v0 = h0.value, v1 = h1.value;
+let n0 = 0, n1 = 0, n2 = 0, a0, a1, a2, a3;
+L0.clear();
+v0 = -1;
+v1 = 0;
+a0 = {v0: v0, v1: v1, c: ("" + p0).length, k: 1, r: ""};
+while ((n0 = fp_8$g$c0(th, S, p0, p1, a0)) === 1);
+v0 = a0.v0;
+v1 = a0.v1;
+if (n0 === 2) {
+a3 = a0.r;
+h0.value = v0;
+h1.value = v1;
+L0.upToDate = false;
+return a3;
+}
+h0.value = v0;
+h1.value = v1;
+L0.upToDate = false;
+return "";
+}
+function fp_8$g$c0 (th, S, p0, p1, B) {
+const target = S.target;
+const h0 = g1;
+const h1 = g0;
+const L0 = gl0;
+let n0 = 0, n1 = 0, n2 = 0, a0, a1, a2, a3;
+let v0 = B.v0, v1 = B.v1;
+n2 = B.k; if (B.k < 4096) B.k *= 2;
+for (n1 = B.c; n1 > 0; n1--) {
+if (n2-- === 0) { B.c = n1; B.v0 = v0; B.v1 = v1; return 1; }
+v1 = (v1 + 1);
+a1 = ((("" + p0))[v1 - 1] || "");
+if (typeof a1 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a1; else L0.pushSlow(a1);
+if ((L0.len > ("" + p1).length)) {
+L0.deleteSlow(1);
+}
+if ((a2 = L0.contents(), ((typeof a2 === "number" && typeof p1 === "number" && a2 === a2 && p1 === p1) || a2 === p1) ? a2 === p1 : eqSlow(a2, p1))) {
+v0 = (v1 - (("" + p1).length - 1));
+B.r = ""; B.v0 = v0; B.v1 = v1; return 2;
+}
+}
+B.v0 = v0;
+B.v1 = v1;
+return 0;
+}
+function fp_9 (th, S) {
+const target = S.target;
+const h0 = g1;
+let v0 = h0.value;
+let a0, a1, a2, a3, q936_0 = 0, q936_1 = 0, q937_0 = 0, q938_0 = 0, q938_1 = 0, q939_0 = 0, q940_0 = 0, q940_1 = 0, q941_0 = 0, q942_0 = 0, q942_1 = 0, q943_0 = 0;
+(a0 = fp_8(th, S, 123, 1), v0 = h0.value, a0);
+q936_0 = ((v0 || 0) === 1);
+q936_1 = "index of 1 in 123 is 1";
+inl936: {
+if (!q936_0) {
+q937_0 = q936_1;
+inl937: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); throw RETIRE;
+}
+}
+}
+(a1 = fp_8(th, S, 123, 2), v0 = h0.value, a1);
+q938_0 = ((v0 || 0) === 2);
+q938_1 = "index of 2 in 123 is 2";
+inl938: {
+if (!q938_0) {
+q939_0 = q938_1;
+inl939: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); throw RETIRE;
+}
+}
+}
+(a2 = fp_8(th, S, 123, 3), v0 = h0.value, a2);
+q940_0 = ((v0 || 0) === 3);
+q940_1 = "index of 3 in 123 is 3";
+inl940: {
+if (!q940_0) {
+q941_0 = q940_1;
+inl941: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); throw RETIRE;
+}
+}
+}
+(a3 = fp_8(th, S, 123, "aaaa"), v0 = h0.value, a3);
+q942_0 = ((v0 || 0) === -1);
+q942_1 = "index of aaaa in 123 is -1";
+inl942: {
+if (!q942_0) {
+q943_0 = q942_1;
+inl943: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); throw RETIRE;
+}
+}
+}
+return "";
+}
+function fp_10 (th, S) {
+const target = S.target;
+return "";
+}
+function fp_11 (th, S, p0, p1, p2) {
+const target = S.target;
+const h0 = g1;
+const h1 = g0;
+const L0 = gl0;
+const L1 = gl1;
+let v0 = h0.value, v1 = h1.value;
+if (typeof v1 !== "number" || v1 !== v1) return fp_11$g(th, S, p0, p1, p2);
+let n0 = 0, n1 = 0, n2 = 0, n3 = 0, n4 = 0, a0, a1, a2, a3, a4;
+L0.clear();
+L1.clear();
+v0 = "";
+v1 = 0;
+a0 = {v0: v0, v1: v1, c: ("" + p0).length, k: 1, r: ""};
+while ((n0 = fp_11$c0(th, S, p0, p1, p2, a0)) === 1);
+v0 = a0.v0;
+v1 = a0.v1;
+if (n0 === 2) {
+a4 = a0.r;
+h0.value = v0;
+h1.value = v1;
+L0.upToDate = false;
+L1.upToDate = false;
+return a4;
+}
+v0 = (v0 + L1.contents());
+h0.value = v0;
+h1.value = v1;
+L0.upToDate = false;
+L1.upToDate = false;
+return "";
+}
+function fp_11$c0 (th, S, p0, p1, p2, B) {
+const target = S.target;
+const h0 = g1;
+const h1 = g0;
+const L0 = gl0;
+const L1 = gl1;
+let n0 = 0, n1 = 0, n2 = 0, n3 = 0, n4 = 0, a0, a1, a2, a3, a4;
+let v0 = B.v0, v1 = B.v1;
+n2 = B.k; if (B.k < 4096) B.k *= 2;
+for (n1 = B.c; n1 > 0; n1--) {
+if (n2-- === 0) { B.c = n1; B.v0 = v0; B.v1 = v1; return 1; }
+v1 = (v1 + 1);
+a1 = ((("" + p0))[v1 - 1] || "");
+if (typeof a1 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a1; else L0.pushSlow(a1);
+if ((L0.len > ("" + p1).length)) {
+L0.deleteSlow(1);
+}
+a2 = ((("" + p0))[v1 - 1] || "");
+if (typeof a2 === "number" && L1.len < L1.f64.length && L1.objs.length === 0) L1.f64[L1.len++] = a2; else L1.pushSlow(a2);
+if ((a3 = L0.contents(), ((typeof a3 === "number" && a3 === a3) || a3 === p1) ? a3 === p1 : eqSlow(a3, p1))) {
+if (L1.objs.length === 0) {
+for (n3 = ("" + p1).length; n3 > 0; n3--) {
+L1.deleteSlow("last");
+}
+} else {
+for (n4 = ("" + p1).length; n4 > 0; n4--) {
+L1.deleteSlow("last");
+}
+}
+v0 = (v0 + L1.contents());
+v0 = (v0 + ("" + p2));
+L1.clear();
+}
+}
+B.v0 = v0;
+B.v1 = v1;
+return 0;
+}
+function fp_11$g (th, S, p0, p1, p2) {
+const target = S.target;
+const h0 = g1;
+const h1 = g0;
+const L0 = gl0;
+const L1 = gl1;
+let v0 = h0.value, v1 = h1.value;
+let n0 = 0, n1 = 0, n2 = 0, n3 = 0, n4 = 0, a0, a1, a2, a3, a4;
+L0.clear();
+L1.clear();
+v0 = "";
+v1 = 0;
+a0 = {v0: v0, v1: v1, c: ("" + p0).length, k: 1, r: ""};
+while ((n0 = fp_11$g$c0(th, S, p0, p1, p2, a0)) === 1);
+v0 = a0.v0;
+v1 = a0.v1;
+if (n0 === 2) {
+a4 = a0.r;
+h0.value = v0;
+h1.value = v1;
+L0.upToDate = false;
+L1.upToDate = false;
+return a4;
+}
+v0 = (v0 + L1.contents());
+h0.value = v0;
+h1.value = v1;
+L0.upToDate = false;
+L1.upToDate = false;
+return "";
+}
+function fp_11$g$c0 (th, S, p0, p1, p2, B) {
+const target = S.target;
+const h0 = g1;
+const h1 = g0;
+const L0 = gl0;
+const L1 = gl1;
+let n0 = 0, n1 = 0, n2 = 0, n3 = 0, n4 = 0, a0, a1, a2, a3, a4;
+let v0 = B.v0, v1 = B.v1;
+n2 = B.k; if (B.k < 4096) B.k *= 2;
+for (n1 = B.c; n1 > 0; n1--) {
+if (n2-- === 0) { B.c = n1; B.v0 = v0; B.v1 = v1; return 1; }
+v1 = (v1 + 1);
+a1 = ((("" + p0))[v1 - 1] || "");
+if (typeof a1 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a1; else L0.pushSlow(a1);
+if ((L0.len > ("" + p1).length)) {
+L0.deleteSlow(1);
+}
+a2 = ((("" + p0))[v1 - 1] || "");
+if (typeof a2 === "number" && L1.len < L1.f64.length && L1.objs.length === 0) L1.f64[L1.len++] = a2; else L1.pushSlow(a2);
+if ((a3 = L0.contents(), ((typeof a3 === "number" && a3 === a3) || a3 === p1) ? a3 === p1 : eqSlow(a3, p1))) {
+if (L1.objs.length === 0) {
+for (n3 = ("" + p1).length; n3 > 0; n3--) {
+L1.deleteSlow("last");
+}
+} else {
+for (n4 = ("" + p1).length; n4 > 0; n4--) {
+L1.deleteSlow("last");
+}
+}
+v0 = (v0 + L1.contents());
+v0 = (v0 + ("" + p2));
+L1.clear();
+}
+}
+B.v0 = v0;
+B.v1 = v1;
+return 0;
+}
+function fp_12 (th, S) {
+const target = S.target;
+const h0 = g1;
+let v0 = h0.value;
+let n0 = 0, n1 = 0, a0, a1, a2, q944_0 = 0, q944_1 = 0, q945_0 = 0, q946_0 = 0, q946_1 = 0, q947_0 = 0, q948_0 = 0, q948_1 = 0, q949_0 = 0;
+(a0 = fp_11(th, S, 123456, 345, "a"), v0 = h0.value, a0);
+q944_0 = (v0.toLowerCase() === "12a6".toLowerCase());
+q944_1 = "replace expected 12a6";
+inl944: {
+if (!q944_0) {
+q945_0 = q944_1;
+inl945: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); throw RETIRE;
+}
+}
+}
+(a1 = fp_11(th, S, 123, 123, 456), v0 = h0.value, a1);
+q946_0 = (((n0 = +v0) === n0 ? n0 : 0) === 456);
+q946_1 = "replace expected 456";
+inl946: {
+if (!q946_0) {
+q947_0 = q946_1;
+inl947: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); throw RETIRE;
+}
+}
+}
+(a2 = fp_11(th, S, 123, 1234, 456), v0 = h0.value, a2);
+q948_0 = (((n1 = +v0) === n1 ? n1 : 0) === 123);
+q948_1 = "replace expected 123";
+inl948: {
+if (!q948_0) {
+q949_0 = q948_1;
+inl949: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); throw RETIRE;
+}
+}
+}
+return "";
+}
+function fp_13 (th, S) {
+const target = S.target;
+return "";
+}
+function fp_14 (th, S, p0) {
+const target = S.target;
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("pass " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); throw RETIRE;
+return "";
+}
+function fs_15 (th, S) {
+const target = S.target;
+const h0 = g1;
+let v0 = h0.value;
+let n0 = 0, n1 = 0, a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19, a20, a21, a22, a23, a24, a25, a26, a27, a28, a29, q951_0 = 0, q951_1 = 0, q952_0 = 0, q953_0 = 0, q953_1 = 0, q954_0 = 0, q955_0 = 0, q955_1 = 0, q956_0 = 0, q957_0 = 0, q957_1 = 0, q958_0 = 0, q959_0 = 0, q959_1 = 0, q960_0 = 0, q961_0 = 0, q961_1 = 0, q962_0 = 0, q964_0 = 0, q964_1 = 0, q965_0 = 0, q966_0 = 0, q966_1 = 0, q967_0 = 0, q968_0 = 0, q968_1 = 0, q969_0 = 0, q970_0 = 0, q970_1 = 0, q971_0 = 0, q972_0 = 0, q972_1 = 0, q973_0 = 0, q974_0 = 0, q974_1 = 0, q975_0 = 0, q976_0 = 0, q976_1 = 0, q977_0 = 0, q979_0 = 0, q979_1 = 0, q980_0 = 0, q981_0 = 0, q981_1 = 0, q982_0 = 0, q983_0 = 0, q983_1 = 0, q984_0 = 0, q985_0 = 0, q985_1 = 0, q986_0 = 0, q987_0 = 0, q987_1 = 0, q988_0 = 0, q989_0 = 0, q989_1 = 0, q990_0 = 0, q991_0 = 0, q991_1 = 0, q992_0 = 0, q993_0 = 0, q993_1 = 0, q994_0 = 0, q995_0 = 0, q995_1 = 0, q996_0 = 0, q998_0 = 0, q998_1 = 0, q999_0 = 0, q1000_0 = 0, q1000_1 = 0, q1001_0 = 0, q1002_0 = 0, q1002_1 = 0, q1003_0 = 0, q1004_0 = 0, q1004_1 = 0, q1005_0 = 0, q1007_0 = 0, q1007_1 = 0, q1008_0 = 0, q1009_0 = 0, q1009_1 = 0, q1010_0 = 0, q1011_0 = 0, q1011_1 = 0, q1012_0 = 0, q1013_0 = 0;
+inl950: {
+(a0 = fp_0(th, S, 12333, 333), v0 = h0.value, a0);
+q951_0 = (("" + v0).toLowerCase() === "true".toLowerCase());
+q951_1 = "12333 must end with 333";
+inl951: {
+if (!q951_0) {
+q952_0 = q951_1;
+inl952: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return;
+}
+}
+}
+(a1 = fp_0(th, S, 12333, 33), v0 = h0.value, a1);
+q953_0 = (("" + v0).toLowerCase() === "true".toLowerCase());
+q953_1 = "12333 must end with 33";
+inl953: {
+if (!q953_0) {
+q954_0 = q953_1;
+inl954: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return;
+}
+}
+}
+(a2 = fp_0(th, S, 12333, ""), v0 = h0.value, a2);
+q955_0 = (("" + v0).toLowerCase() === "true".toLowerCase());
+q955_1 = "12333 must end with empty string";
+inl955: {
+if (!q955_0) {
+q956_0 = q955_1;
+inl956: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return;
+}
+}
+}
+(a3 = fp_0(th, S, 12333, 4), v0 = h0.value, a3);
+q957_0 = (("" + v0).toLowerCase() === "false".toLowerCase());
+q957_1 = "12333 must not end with 4";
+inl957: {
+if (!q957_0) {
+q958_0 = q957_1;
+inl958: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return;
+}
+}
+}
+(a4 = fp_0(th, S, 12333, 123334), v0 = h0.value, a4);
+q959_0 = (("" + v0).toLowerCase() === "false".toLowerCase());
+q959_1 = "12333 must not end with 123334";
+inl959: {
+if (!q959_0) {
+q960_0 = q959_1;
+inl960: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return;
+}
+}
+}
+(a5 = fp_0(th, S, 12333, 12333), v0 = h0.value, a5);
+q961_0 = (("" + v0).toLowerCase() === "true".toLowerCase());
+q961_1 = "12333 must end with itself";
+inl961: {
+if (!q961_0) {
+q962_0 = q961_1;
+inl962: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return;
+}
+}
+}
+(a6 = fp_3(th, S, "abc", ""), v0 = h0.value, a6);
+}
+inl963: {
+(a7 = fp_5(th, S, 12333, 12333), v0 = h0.value, a7);
+q964_0 = (("" + v0).toLowerCase() === "true".toLowerCase());
+q964_1 = "12333 must start with 12333";
+inl964: {
+if (!q964_0) {
+q965_0 = q964_1;
+inl965: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return;
+}
+}
+}
+(a8 = fp_5(th, S, 12333, 1233), v0 = h0.value, a8);
+q966_0 = (("" + v0).toLowerCase() === "true".toLowerCase());
+q966_1 = "12333 must start with 1233";
+inl966: {
+if (!q966_0) {
+q967_0 = q966_1;
+inl967: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return;
+}
+}
+}
+(a9 = fp_5(th, S, 12333, 123), v0 = h0.value, a9);
+q968_0 = (("" + v0).toLowerCase() === "true".toLowerCase());
+q968_1 = "12333 must start with 123";
+inl968: {
+if (!q968_0) {
+q969_0 = q968_1;
+inl969: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return;
+}
+}
+}
+(a10 = fp_5(th, S, 12333, 12), v0 = h0.value, a10);
+q970_0 = (("" + v0).toLowerCase() === "true".toLowerCase());
+q970_1 = "12333 must start with 12";
+inl970: {
+if (!q970_0) {
+q971_0 = q970_1;
+inl971: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return;
+}
+}
+}
+(a11 = fp_5(th, S, 12333, 1), v0 = h0.value, a11);
+q972_0 = (("" + v0).toLowerCase() === "true".toLowerCase());
+q972_1 = "12333 must start with 1";
+inl972: {
+if (!q972_0) {
+q973_0 = q972_1;
+inl973: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return;
+}
+}
+}
+(a12 = fp_5(th, S, 12333, ""), v0 = h0.value, a12);
+q974_0 = (("" + v0).toLowerCase() === "true".toLowerCase());
+q974_1 = "12333 must start with empty string";
+inl974: {
+if (!q974_0) {
+q975_0 = q974_1;
+inl975: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return;
+}
+}
+}
+(a13 = fp_5(th, S, 12333, 33), v0 = h0.value, a13);
+q976_0 = (("" + v0).toLowerCase() === "false".toLowerCase());
+q976_1 = "12333 must not start with 33";
+inl976: {
+if (!q976_0) {
+q977_0 = q976_1;
+inl977: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return;
+}
+}
+}
+}
+inl978: {
+(a14 = fp_3(th, S, "abc", ""), v0 = h0.value, a14);
+q979_0 = (v0.toLowerCase() === "true".toLowerCase());
+q979_1 = "abc must include empty string";
+inl979: {
+if (!q979_0) {
+q980_0 = q979_1;
+inl980: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return;
+}
+}
+}
+(a15 = fp_3(th, S, "", ""), v0 = h0.value, a15);
+q981_0 = (v0.toLowerCase() === "true".toLowerCase());
+q981_1 = "empty string must include empty string";
+inl981: {
+if (!q981_0) {
+q982_0 = q981_1;
+inl982: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return;
+}
+}
+}
+(a16 = fp_3(th, S, "abc", "abc"), v0 = h0.value, a16);
+q983_0 = (v0.toLowerCase() === "true".toLowerCase());
+q983_1 = "abc must include abc";
+inl983: {
+if (!q983_0) {
+q984_0 = q983_1;
+inl984: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return;
+}
+}
+}
+(a17 = fp_3(th, S, "abc", "a"), v0 = h0.value, a17);
+q985_0 = (v0.toLowerCase() === "true".toLowerCase());
+q985_1 = "abc must include a";
+inl985: {
+if (!q985_0) {
+q986_0 = q985_1;
+inl986: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return;
+}
+}
+}
+(a18 = fp_3(th, S, "abc", "b"), v0 = h0.value, a18);
+q987_0 = (v0.toLowerCase() === "true".toLowerCase());
+q987_1 = "abc must include b";
+inl987: {
+if (!q987_0) {
+q988_0 = q987_1;
+inl988: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return;
+}
+}
+}
+(a19 = fp_3(th, S, "abc", "c"), v0 = h0.value, a19);
+q989_0 = (v0.toLowerCase() === "true".toLowerCase());
+q989_1 = "abc must include c";
+inl989: {
+if (!q989_0) {
+q990_0 = q989_1;
+inl990: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return;
+}
+}
+}
+(a20 = fp_3(th, S, "abc", "ab"), v0 = h0.value, a20);
+q991_0 = (v0.toLowerCase() === "true".toLowerCase());
+q991_1 = "abc must include ab";
+inl991: {
+if (!q991_0) {
+q992_0 = q991_1;
+inl992: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return;
+}
+}
+}
+(a21 = fp_3(th, S, "abc", "bc"), v0 = h0.value, a21);
+q993_0 = (v0.toLowerCase() === "true".toLowerCase());
+q993_1 = "abc must include bc";
+inl993: {
+if (!q993_0) {
+q994_0 = q993_1;
+inl994: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return;
+}
+}
+}
+(a22 = fp_3(th, S, "abc", "aa"), v0 = h0.value, a22);
+q995_0 = (v0.toLowerCase() === "false".toLowerCase());
+q995_1 = "abc must not include aa";
+inl995: {
+if (!q995_0) {
+q996_0 = q995_1;
+inl996: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return;
+}
+}
+}
+}
+inl997: {
+(a23 = fp_8(th, S, 123, 1), v0 = h0.value, a23);
+q998_0 = ((v0 || 0) === 1);
+q998_1 = "index of 1 in 123 is 1";
+inl998: {
+if (!q998_0) {
+q999_0 = q998_1;
+inl999: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return;
+}
+}
+}
+(a24 = fp_8(th, S, 123, 2), v0 = h0.value, a24);
+q1000_0 = ((v0 || 0) === 2);
+q1000_1 = "index of 2 in 123 is 2";
+inl1000: {
+if (!q1000_0) {
+q1001_0 = q1000_1;
+inl1001: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return;
+}
+}
+}
+(a25 = fp_8(th, S, 123, 3), v0 = h0.value, a25);
+q1002_0 = ((v0 || 0) === 3);
+q1002_1 = "index of 3 in 123 is 3";
+inl1002: {
+if (!q1002_0) {
+q1003_0 = q1002_1;
+inl1003: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return;
+}
+}
+}
+(a26 = fp_8(th, S, 123, "aaaa"), v0 = h0.value, a26);
+q1004_0 = ((v0 || 0) === -1);
+q1004_1 = "index of aaaa in 123 is -1";
+inl1004: {
+if (!q1004_0) {
+q1005_0 = q1004_1;
+inl1005: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return;
+}
+}
+}
+}
+inl1006: {
+(a27 = fp_11(th, S, 123456, 345, "a"), v0 = h0.value, a27);
+q1007_0 = (v0.toLowerCase() === "12a6".toLowerCase());
+q1007_1 = "replace expected 12a6";
+inl1007: {
+if (!q1007_0) {
+q1008_0 = q1007_1;
+inl1008: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return;
+}
+}
+}
+(a28 = fp_11(th, S, 123, 123, 456), v0 = h0.value, a28);
+q1009_0 = (((n0 = +v0) === n0 ? n0 : 0) === 456);
+q1009_1 = "replace expected 456";
+inl1009: {
+if (!q1009_0) {
+q1010_0 = q1009_1;
+inl1010: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return;
+}
+}
+}
+(a29 = fp_11(th, S, 123, 1234, 456), v0 = h0.value, a29);
+q1011_0 = (((n1 = +v0) === n1 ? n1 : 0) === 123);
+q1011_1 = "replace expected 123";
+inl1011: {
+if (!q1011_0) {
+q1012_0 = q1011_1;
+inl1012: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return;
+}
+}
+}
+}
+q1013_0 = (("" + runtime.ioDevices.clock.projectTimer()) + " seconds");
+inl1013: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("pass " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return;
+}
+}
+return {Self, scripts: {
+"dR": {index: 0, native: fs_15, step: null, Frame: null, executableHat: false},
+}};
+})

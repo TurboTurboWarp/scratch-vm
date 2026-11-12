@@ -1,4 +1,32 @@
 const Cast = require('../util/cast');
+const {TList} = require('../ttw/rt/tlist');
+
+/**
+ * ttw: get the TList behind a list variable (synced).
+ * Plain objects of the form {value: []} (used by some callers and tests) are wrapped.
+ * @param {*} list list variable
+ * @returns {TList} list storage
+ */
+const tlistOf = list => {
+    const tl = list._tl;
+    if (tl) {
+        if (tl.ext !== null) tl.sync();
+        return tl;
+    }
+    return TList.from(list.value);
+};
+
+/**
+ * Write back changes made to a wrapped plain list object.
+ * @param {*} list list variable
+ * @param {TList} tl list storage
+ */
+const commit = (list, tl) => {
+    if (list._tl !== tl) {
+        list.value = tl.toArrayRaw();
+        list._monitorUpToDate = false;
+    }
+};
 
 class Scratch3DataBlocks {
     constructor (runtime) {
@@ -93,108 +121,108 @@ class Scratch3DataBlocks {
     getListContents (args, util) {
         const list = util.target.lookupOrCreateList(
             args.LIST.id, args.LIST.name);
+        const tl = tlistOf(list);
 
         // If block is running for monitors, return copy of list as an array if changed.
         if (util.thread.updateMonitor) {
-            // Return original list value if up-to-date, which doesn't trigger monitor update.
-            if (list._monitorUpToDate) return list.value;
-            // If value changed, reset the flag and return a copy to trigger monitor update.
+            // ttw: the monitor keeps the last array it was given; only build a new one when changed.
             // MonitorState only detects updates when the object changes.
-            list._monitorUpToDate = true;
-            return list.value.slice();
+            if (tl.upToDate && tl.monitorArray) return tl.monitorArray;
+            tl.upToDate = true;
+            tl.monitorArray = tl.toArrayRaw();
+            return tl.monitorArray;
         }
 
-        // Determine if the list is all single letters.
-        // If it is, report contents joined together with no separator.
-        // If it's not, report contents joined together with a space.
-        let allSingleLetters = true;
-        for (let i = 0; i < list.value.length; i++) {
-            const listItem = list.value[i];
-            if (!((typeof listItem === 'string') &&
-                  (listItem.length === 1))) {
-                allSingleLetters = false;
-                break;
-            }
-        }
-        if (allSingleLetters) {
-            return list.value.join('');
-        }
-        return list.value.join(' ');
-
+        // ttw: same rule as the TW compiler's listContents: an item counts as a single letter when its
+        // string form has length 1, regardless of type. Scratch checks `typeof item === 'string'`, but that
+        // would make the result depend on load-time numeric string normalization (spec 03 §6).
+        return tl.contents();
     }
 
     addToList (args, util) {
         const list = util.target.lookupOrCreateList(
             args.LIST.id, args.LIST.name);
-        list.value.push(args.ITEM);
-        list._monitorUpToDate = false;
+        const tl = tlistOf(list);
+        tl.pushSlow(args.ITEM);
+        commit(list, tl);
     }
 
     deleteOfList (args, util) {
         const list = util.target.lookupOrCreateList(
             args.LIST.id, args.LIST.name);
-        const index = Cast.toListIndex(args.INDEX, list.value.length, true);
+        const tl = tlistOf(list);
+        const index = Cast.toListIndex(args.INDEX, tl.len, true);
         if (index === Cast.LIST_INVALID) {
             return;
         } else if (index === Cast.LIST_ALL) {
-            list.value = [];
+            tl.clear();
+            commit(list, tl);
             return;
         }
-        list.value.splice(index - 1, 1);
-        list._monitorUpToDate = false;
+        tl.deleteAt(index - 1);
+        tl.upToDate = false;
+        commit(list, tl);
     }
 
     deleteAllOfList (args, util) {
         const list = util.target.lookupOrCreateList(
             args.LIST.id, args.LIST.name);
-        list.value = [];
-        return;
+        const tl = tlistOf(list);
+        tl.clear();
+        commit(list, tl);
     }
 
     insertAtList (args, util) {
         const item = args.ITEM;
         const list = util.target.lookupOrCreateList(
             args.LIST.id, args.LIST.name);
-        const index = Cast.toListIndex(args.INDEX, list.value.length + 1, false);
+        const tl = tlistOf(list);
+        const index = Cast.toListIndex(args.INDEX, tl.len + 1, false);
         if (index === Cast.LIST_INVALID) {
             return;
         }
-        list.value.splice(index - 1, 0, item);
-        list._monitorUpToDate = false;
+        tl.insertAt(index - 1, item);
+        tl.upToDate = false;
+        commit(list, tl);
     }
 
     replaceItemOfList (args, util) {
         const item = args.ITEM;
         const list = util.target.lookupOrCreateList(
             args.LIST.id, args.LIST.name);
-        const index = Cast.toListIndex(args.INDEX, list.value.length, false);
+        const tl = tlistOf(list);
+        const index = Cast.toListIndex(args.INDEX, tl.len, false);
         if (index === Cast.LIST_INVALID) {
             return;
         }
-        list.value[index - 1] = item;
-        list._monitorUpToDate = false;
+        tl.storeAt(index - 1, item);
+        tl.upToDate = false;
+        commit(list, tl);
     }
 
     getItemOfList (args, util) {
         const list = util.target.lookupOrCreateList(
             args.LIST.id, args.LIST.name);
-        const index = Cast.toListIndex(args.INDEX, list.value.length, false);
+        const tl = tlistOf(list);
+        const index = Cast.toListIndex(args.INDEX, tl.len, false);
         if (index === Cast.LIST_INVALID) {
             return '';
         }
-        return list.value[index - 1];
+        return tl.getRaw(index - 1);
     }
 
     getItemNumOfList (args, util) {
         const item = args.ITEM;
         const list = util.target.lookupOrCreateList(
             args.LIST.id, args.LIST.name);
+        const tl = tlistOf(list);
 
         // Go through the list items one-by-one using Cast.compare. This is for
         // cases like checking if 123 is contained in a list [4, 7, '123'] --
         // Scratch considers 123 and '123' to be equal.
-        for (let i = 0; i < list.value.length; i++) {
-            if (Cast.compare(list.value[i], item) === 0) {
+        const len = tl.len;
+        for (let i = 0; i < len; i++) {
+            if (Cast.compare(tl.getRaw(i), item) === 0) {
                 return i + 1;
             }
         }
@@ -216,20 +244,24 @@ class Scratch3DataBlocks {
     lengthOfList (args, util) {
         const list = util.target.lookupOrCreateList(
             args.LIST.id, args.LIST.name);
-        return list.value.length;
+        const tl = tlistOf(list);
+        return tl.len;
     }
 
     listContainsItem (args, util) {
         const item = args.ITEM;
         const list = util.target.lookupOrCreateList(
             args.LIST.id, args.LIST.name);
-        if (list.value.indexOf(item) >= 0) {
-            return true;
+        const tl = tlistOf(list);
+        const len = tl.len;
+        // Strict equality first (Array.prototype.indexOf semantics), then Scratch comparison.
+        for (let i = 0; i < len; i++) {
+            if (tl.getRaw(i) === item) return true;
         }
         // Try using Scratch comparison operator on each item.
         // (Scratch considers the string '123' equal to the number 123).
-        for (let i = 0; i < list.value.length; i++) {
-            if (Cast.compare(list.value[i], item) === 0) {
+        for (let i = 0; i < len; i++) {
+            if (Cast.compare(tl.getRaw(i), item) === 0) {
                 return true;
             }
         }

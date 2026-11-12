@@ -503,7 +503,7 @@ const serializeVariables = function (variables) {
             continue;
         }
         if (v.type === Variable.LIST_TYPE) {
-            obj.lists[varId] = [v.name, v.value];
+            obj.lists[varId] = [v.name, v._tl.toArray()];
             continue;
         }
 
@@ -1257,7 +1257,7 @@ const parseScratchObject = function (object, runtime, extensions, zip, assets) {
                 Variable.LIST_TYPE,
                 false
             );
-            newList.value = list[1];
+            newList._tl.replaceAll(Array.isArray(list[1]) ? list[1] : []);
             target.variables[newList.id] = newList;
         }
     }

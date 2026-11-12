@@ -1,0 +1,75 @@
+// TW Snapshot
+// Input SHA-256: 7d3b421806b70889174ed7454bedd065adf050092da975c836ebe8655f709d4a
+
+// Sprite1 module
+(function ttw$Sprite1_N (R, G) {
+"use strict";
+const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, makeStuck, RETIRE} = R;
+const runtime = G.runtime;
+const stage = G.stage;
+const CONTINUE = {};
+const g0 = stage.variables["indexvar"];
+const gl0 = stage.variables["listid"]._tl;
+class Self {
+constructor (target) {
+this.target = target;
+}
+}
+function fs_0 (th, S) {
+const target = S.target;
+const h0 = g0;
+const L0 = gl0;
+let v0 = h0.value;
+let n0 = 0, n1 = 0, n2 = 0, n3 = 0, n4 = 0, n5 = 0, n6 = 0, n7 = 0, n8 = 0, n9 = 0, n10 = 0, n11 = 0, n12 = 0, n13 = 0, n14 = 0, n15 = 0, n16 = 0, n17 = 0, a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12;
+runtime.ext_scratch3_looks._say("plan 13", target);
+if (((L0.indexOf("banana") + 1) === 2)) {
+runtime.ext_scratch3_looks._say("pass item # of is case insensitive", target);
+}
+if (((L0.indexOf(3) + 1) === 3)) {
+runtime.ext_scratch3_looks._say("pass item # of numeric string finds number", target);
+}
+if (((L0.indexOf("4.0") + 1) === 4)) {
+runtime.ext_scratch3_looks._say("pass item # of compares numerically", target);
+}
+if (((L0.indexOf("pear") + 1) === 0)) {
+runtime.ext_scratch3_looks._say("pass item # of missing item", target);
+}
+if (((L0.indexOf("") + 1) === 5)) {
+runtime.ext_scratch3_looks._say("pass item # of empty string", target);
+}
+if (L0.contains("APPLE")) {
+runtime.ext_scratch3_looks._say("pass contains APPLE", target);
+}
+if (L0.contains("3.00")) {
+runtime.ext_scratch3_looks._say("pass contains 3.00", target);
+}
+v0 = 2;
+if ((a1 = ((n2 = v0) >= 1 && n2 <= L0.len ? (n1 = (n2 | 0) - 1, ((n0 = L0.f64[n1]) === n0 ? n0 : ((a0 = L0.objs[n1]) === undefined ? NaN : a0))) : ""), typeof a1 === "number" ? false : ("" + a1).toLowerCase() === "banana")) {
+runtime.ext_scratch3_looks._say("pass item of string index", target);
+}
+v0 = 2.9;
+if ((a3 = ((n5 = v0) >= 1 && n5 <= L0.len ? (n4 = (n5 | 0) - 1, ((n3 = L0.f64[n4]) === n3 ? n3 : ((a2 = L0.objs[n4]) === undefined ? NaN : a2))) : ""), typeof a3 === "number" ? false : ("" + a3).toLowerCase() === "banana")) {
+runtime.ext_scratch3_looks._say("pass item of fractional index", target);
+}
+v0 = 0;
+if ((a5 = ((n8 = v0) >= 1 && n8 <= L0.len ? (n7 = (n8 | 0) - 1, ((n6 = L0.f64[n7]) === n6 ? n6 : ((a4 = L0.objs[n7]) === undefined ? NaN : a4))) : ""), typeof a5 === "number" ? false : ("" + a5).toLowerCase() === "")) {
+runtime.ext_scratch3_looks._say("pass item of index 0", target);
+}
+v0 = 7;
+if ((a7 = ((n11 = v0) >= 1 && n11 <= L0.len ? (n10 = (n11 | 0) - 1, ((n9 = L0.f64[n10]) === n9 ? n9 : ((a6 = L0.objs[n10]) === undefined ? NaN : a6))) : ""), typeof a7 === "number" ? false : ("" + a7).toLowerCase() === "")) {
+runtime.ext_scratch3_looks._say("pass item of index past end", target);
+}
+v0 = "last";
+if ((a10 = (typeof (a9 = v0) === "number" ? (a9 >= 1 && a9 <= L0.len ? (n13 = (a9 | 0) - 1, ((n12 = L0.f64[n13]) === n12 ? n12 : ((a8 = L0.objs[n13]) === undefined ? NaN : a8))) : "") : L0.getSlow(a9)), typeof a10 === "number" ? false : ("" + a10).toLowerCase() === "last")) {
+runtime.ext_scratch3_looks._say("pass item of last", target);
+}
+if (((typeof (a11 = ((n17 = 3) >= 1 && n17 <= L0.len ? (n16 = (n17 | 0) - 1, ((n15 = L0.f64[n16]) === n15 ? n15 : ((a12 = L0.objs[n16]) === undefined ? NaN : a12))) : "")) === "number" && a11 >= 1 && a11 <= L0.len && (n14 = L0.f64[(a11 | 0) - 1]) === n14 ? n14 : L0.numSlow(a11)) === 3)) {
+runtime.ext_scratch3_looks._say("pass item of unknown number index", target);
+}
+runtime.ext_scratch3_looks._say("end", target);
+h0.value = v0;
+}
+return {Self, scripts: {
+"k1": {index: 0, native: fs_0, step: null, Frame: null, executableHat: false},
+}};
+})

@@ -1,0 +1,92 @@
+// TW Snapshot
+// Input SHA-256: 392c8fcd9ce3e05cfb9ec1f39713073fca6c3a702fbd49697e2e496376e6b4f6
+
+// Sprite1 module
+(function ttw$Sprite1_N (R, G) {
+"use strict";
+const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, makeStuck, RETIRE} = R;
+const runtime = G.runtime;
+const stage = G.stage;
+const CONTINUE = {};
+class Self {
+constructor (target) {
+this.target = target;
+}
+}
+function fp_0 (th, S, p0) {
+const target = S.target;
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + p0), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); throw RETIRE;
+return "";
+}
+function fp_1 (th, S, p0, p1) {
+const target = S.target;
+let q377_0 = 0;
+if (!p0) {
+q377_0 = p1;
+inl377: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + q377_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); throw RETIRE;
+}
+}
+return "";
+}
+function fp_2 (th, S, p0) {
+const target = S.target;
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("pass " + p0), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); throw RETIRE;
+return "";
+}
+function fs_3 (th, S) {
+const target = S.target;
+let q378_0 = 0, q378_1 = 0, q379_0 = 0, q380_0 = 0, q380_1 = 0, q381_0 = 0, q382_0 = 0;
+q378_0 = ((1 / 0) === Infinity);
+q378_1 = "1/0";
+inl378: {
+if (!q378_0) {
+q379_0 = q378_1;
+inl379: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + q379_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return;
+}
+}
+}
+q380_0 = ((1 / -0) === -Infinity);
+q380_1 = "1/-0";
+inl380: {
+if (!q380_0) {
+q381_0 = q380_1;
+inl381: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + q381_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return;
+}
+}
+}
+q382_0 = "ok";
+inl382: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("pass " + q382_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return;
+}
+}
+return {Self, scripts: {
+"D": {index: 0, native: fs_3, step: null, Frame: null, executableHat: false},
+}};
+})

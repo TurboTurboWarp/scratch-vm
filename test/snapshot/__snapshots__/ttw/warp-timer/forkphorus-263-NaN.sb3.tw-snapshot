@@ -1,0 +1,208 @@
+// TW Snapshot
+// Input SHA-256: 67ab3b26c771f54d4181fa85a76430fdb4603a171c36a918cce1374c89bf9c23
+
+// Sprite1 module
+(function ttw$Sprite1_N (R, G) {
+"use strict";
+const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, makeStuck, RETIRE} = R;
+const runtime = G.runtime;
+const stage = G.stage;
+const CONTINUE = {};
+const g0 = stage.variables["rL_u6{W`ET;GKBRHZrag"];
+class Self {
+constructor (target) {
+this.target = target;
+}
+}
+function fp_0 (th, S, p0) {
+const target = S.target;
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + p0), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); throw RETIRE;
+return "";
+}
+function fp_1 (th, S, p0, p1) {
+const target = S.target;
+let q43_0 = 0;
+if (!p0) {
+q43_0 = p1;
+inl43: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + q43_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); throw RETIRE;
+}
+}
+return "";
+}
+function fp_2 (th, S, p0) {
+const target = S.target;
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("pass " + p0), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); throw RETIRE;
+return "";
+}
+function fs_3 (th, S) {
+const target = S.target;
+const h0 = g0;
+let v0 = h0.value;
+if (typeof v0 !== "number") return fs_3$g(th, S);
+let q44_0 = 0, q44_1 = 0, q45_0 = 0, q46_0 = 0, q46_1 = 0, q47_0 = 0, q48_0 = 0, q48_1 = 0, q49_0 = 0, q50_0 = 0, q50_1 = 0, q51_0 = 0, q52_0 = 0;
+q44_0 = (("" + (0 / 0)).toLowerCase() === "NaN".toLowerCase());
+q44_1 = "0/0";
+inl44: {
+if (!q44_0) {
+q45_0 = q44_1;
+inl45: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + q45_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+h0.value = v0;
+runtime.stopAll();
+retire(th); return;
+}
+}
+}
+q46_0 = (("" + (0 / 0)).toLowerCase() === ("" + (0 / 0)).toLowerCase());
+q46_1 = "NaN == NaN";
+inl46: {
+if (!q46_0) {
+q47_0 = q46_1;
+inl47: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + q47_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+h0.value = v0;
+runtime.stopAll();
+retire(th); return;
+}
+}
+}
+q48_0 = (("" + Math.sqrt(-100)).toLowerCase() === ("" + (0 / 0)).toLowerCase());
+q48_1 = "sqrt negative";
+inl48: {
+if (!q48_0) {
+q49_0 = q48_1;
+inl49: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + q49_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+h0.value = v0;
+runtime.stopAll();
+retire(th); return;
+}
+}
+}
+v0 = (0 / 0);
+q50_0 = (("" + v0).toLowerCase() === "NaN".toLowerCase());
+q50_1 = "NaN storable in variables";
+inl50: {
+if (!q50_0) {
+q51_0 = q50_1;
+inl51: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + q51_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+h0.value = v0;
+runtime.stopAll();
+retire(th); return;
+}
+}
+}
+q52_0 = "";
+inl52: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("pass " + q52_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+h0.value = v0;
+runtime.stopAll();
+retire(th); return;
+}
+h0.value = v0;
+}
+function fs_3$g (th, S) {
+const target = S.target;
+const h0 = g0;
+let v0 = h0.value;
+let q53_0 = 0, q53_1 = 0, q54_0 = 0, q55_0 = 0, q55_1 = 0, q56_0 = 0, q57_0 = 0, q57_1 = 0, q58_0 = 0, q59_0 = 0, q59_1 = 0, q60_0 = 0, q61_0 = 0;
+q53_0 = (("" + (0 / 0)).toLowerCase() === "NaN".toLowerCase());
+q53_1 = "0/0";
+inl53: {
+if (!q53_0) {
+q54_0 = q53_1;
+inl54: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + q54_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+h0.value = v0;
+runtime.stopAll();
+retire(th); return;
+}
+}
+}
+q55_0 = (("" + (0 / 0)).toLowerCase() === ("" + (0 / 0)).toLowerCase());
+q55_1 = "NaN == NaN";
+inl55: {
+if (!q55_0) {
+q56_0 = q55_1;
+inl56: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + q56_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+h0.value = v0;
+runtime.stopAll();
+retire(th); return;
+}
+}
+}
+q57_0 = (("" + Math.sqrt(-100)).toLowerCase() === ("" + (0 / 0)).toLowerCase());
+q57_1 = "sqrt negative";
+inl57: {
+if (!q57_0) {
+q58_0 = q57_1;
+inl58: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + q58_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+h0.value = v0;
+runtime.stopAll();
+retire(th); return;
+}
+}
+}
+v0 = (0 / 0);
+q59_0 = (("" + v0).toLowerCase() === "NaN".toLowerCase());
+q59_1 = "NaN storable in variables";
+inl59: {
+if (!q59_0) {
+q60_0 = q59_1;
+inl60: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + q60_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+h0.value = v0;
+runtime.stopAll();
+retire(th); return;
+}
+}
+}
+q61_0 = "";
+inl61: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("pass " + q61_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+h0.value = v0;
+runtime.stopAll();
+retire(th); return;
+}
+h0.value = v0;
+}
+return {Self, scripts: {
+"H": {index: 0, native: fs_3, step: null, Frame: null, executableHat: false},
+}};
+})

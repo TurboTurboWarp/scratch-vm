@@ -5,17 +5,16 @@
 (function factoryXYZ(thread) { const target = thread.target; const runtime = target.runtime; const stage = runtime.getTargetForStage();
 const b0 = stage.variables["$h5KnZ-ePA3NOi=];]FX"];
 return function funXYZ () {
-b0.value = [];
-b0.value.unshift("a");
-b0._monitorUpToDate = false;
-listInsert(b0, 2, "b");
-listInsert(b0, 3, "c");
-thread.procedures["ZassertTrue %b %s"]((b0.value.length === 3),"length is 3");
-thread.procedures["ZassertTrue %b %s"]((("" + (b0.value[1 - 1] ?? "")).toLowerCase() === "a".toLowerCase()),"1=a");
-thread.procedures["ZassertTrue %b %s"]((("" + (b0.value[2 - 1] ?? "")).toLowerCase() === "b".toLowerCase()),"2=b");
-thread.procedures["ZassertTrue %b %s"]((("" + (b0.value[3 - 1] ?? "")).toLowerCase() === "c".toLowerCase()),"3=c");
-b0.value = [];
-thread.procedures["ZassertTrue %b %s"]((b0.value.length === 0),"length is 0");
+b0._tl.clear();
+b0._tl.insertSlow(1, "a");
+b0._tl.insertSlow(2, "b");
+b0._tl.insertSlow(3, "c");
+thread.procedures["ZassertTrue %b %s"]((b0._tl.getLength() === 3),"length is 3");
+thread.procedures["ZassertTrue %b %s"]((("" + b0._tl.getSlow(1)).toLowerCase() === "a".toLowerCase()),"1=a");
+thread.procedures["ZassertTrue %b %s"]((("" + b0._tl.getSlow(2)).toLowerCase() === "b".toLowerCase()),"2=b");
+thread.procedures["ZassertTrue %b %s"]((("" + b0._tl.getSlow(3)).toLowerCase() === "c".toLowerCase()),"3=c");
+b0._tl.clear();
+thread.procedures["ZassertTrue %b %s"]((b0._tl.getLength() === 0),"length is 0");
 thread.procedures["ZOK %s"]("");
 retire(); return;
 }; })

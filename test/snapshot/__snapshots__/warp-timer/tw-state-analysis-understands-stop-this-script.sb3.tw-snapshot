@@ -8,7 +8,7 @@ const b1 = stage.variables["`jEk@4|i[#Fk?(8x)AV.-my variable"];
 return function funXYZ () {
 runtime.ext_scratch3_looks._say("plan 1", target);
 thread.procedures["Wtest"]();
-if ((("" + listGet(b0.value, b1.value)).toLowerCase() === "thing".toLowerCase())) {
+if ((("" + b0._tl.getSlow(b1.value)).toLowerCase() === "thing".toLowerCase())) {
 runtime.ext_scratch3_looks._say("pass", target);
 }
 runtime.ext_scratch3_looks._say("end", target);

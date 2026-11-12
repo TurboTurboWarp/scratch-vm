@@ -1,0 +1,220 @@
+// TW Snapshot
+// Input SHA-256: 58dd6f369897907ea46fffbb8210d8bc15db59f26ce117ff4211035afff17f23
+
+// Sprite1 module
+(function ttw$Sprite1_N (R, G) {
+"use strict";
+const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, makeStuck, RETIRE} = R;
+const runtime = G.runtime;
+const stage = G.stage;
+const CONTINUE = {};
+const g0 = stage.variables["`jEk@4|i[#Fk?(8x)AV.-my variable"];
+const o0 = runtime.getOpcodeFunction("sensing_userid");
+const o1 = runtime.getOpcodeFunction("motion_xscroll");
+const o2 = runtime.getOpcodeFunction("motion_yscroll");
+const o3 = runtime.getOpcodeFunction("motion_scroll_right");
+const o4 = runtime.getOpcodeFunction("motion_scroll_up");
+const o5 = runtime.getOpcodeFunction("motion_align_scene");
+const o6 = runtime.getOpcodeFunction("looks_setstretchto");
+const o7 = runtime.getOpcodeFunction("looks_changestretchby");
+const o8 = runtime.getOpcodeFunction("looks_hideallsprites");
+class Self {
+constructor (target) {
+this.target = target;
+}
+}
+class Fs_0 {
+constructor (parent) {
+this.parent = parent;
+this.pc = 0;
+this.s0 = undefined;
+this.s1 = undefined;
+this.s2 = undefined;
+this.s3 = undefined;
+this.s4 = undefined;
+this.s5 = undefined;
+this.s6 = undefined;
+this.s7 = undefined;
+this.s8 = undefined;
+this.s9 = undefined;
+this.s10 = undefined;
+this.s11 = undefined;
+this.s12 = undefined;
+this.s13 = undefined;
+this.s14 = undefined;
+this.s15 = undefined;
+this.s16 = undefined;
+this.s17 = undefined;
+this.s18 = undefined;
+this.s19 = undefined;
+this.s20 = undefined;
+this.s21 = undefined;
+this.s22 = undefined;
+this.s23 = undefined;
+this.s24 = undefined;
+this.s25 = undefined;
+this.s26 = undefined;
+this.s27 = undefined;
+this.s28 = undefined;
+this.s29 = undefined;
+this.s30 = undefined;
+this.s31 = undefined;
+this.s32 = undefined;
+this.s33 = undefined;
+this.s34 = undefined;
+this.s35 = undefined;
+}
+}
+function rs_0 (th, fr) {
+const S = th.self;
+const target = S.target;
+const h0 = g0;
+for (;;) switch (fr.pc) {
+case 0:
+runtime.ext_scratch3_looks._say("plan 1", target);
+fr.s1 = {};
+fr.s2 = {};
+fr.s3 = false;
+case 1:
+switch (compatCall(th, fr.s1, fr.s2, o0, null, "X[|X;C.(v[|^i|@0Eqy4", null, fr.s3)) {
+case 1: fr.s3 = true; fr.pc = 1; return 0;
+case 3: fr.s3 = true; fr.pc = 1; continue;
+case 2: fr.pc = 2; return 0;
+}
+case 2:
+fr.s0 = compatResume(th, null);
+fr.s1 = null; fr.s2 = null;
+h0.value = fr.s0;
+fr.s5 = {};
+fr.s6 = {};
+fr.s7 = false;
+case 3:
+switch (compatCall(th, fr.s5, fr.s6, o1, null, "z;H$hVK7X;MZSyO9U/#1", null, fr.s7)) {
+case 1: fr.s7 = true; fr.pc = 3; return 0;
+case 3: fr.s7 = true; fr.pc = 3; continue;
+case 2: fr.pc = 4; return 0;
+}
+case 4:
+fr.s4 = compatResume(th, null);
+fr.s5 = null; fr.s6 = null;
+h0.value = fr.s4;
+fr.s9 = {};
+fr.s10 = {};
+fr.s11 = false;
+case 5:
+switch (compatCall(th, fr.s9, fr.s10, o2, null, ";Q94_J}Jv36TqTll;ji*", null, fr.s11)) {
+case 1: fr.s11 = true; fr.pc = 5; return 0;
+case 3: fr.s11 = true; fr.pc = 5; continue;
+case 2: fr.pc = 6; return 0;
+}
+case 6:
+fr.s8 = compatResume(th, null);
+fr.s9 = null; fr.s10 = null;
+h0.value = fr.s8;
+fr.s12 = {"DISTANCE":10,};
+fr.s13 = {};
+fr.s14 = false;
+case 7:
+switch (compatCall(th, fr.s12, fr.s13, o3, null, "_TLJeW5hG9gAtYO2c*D9", null, fr.s14)) {
+case 1: fr.s14 = true; fr.pc = 7; return 0;
+case 3: fr.s14 = true; fr.pc = 7; continue;
+case 2: fr.pc = 8; return 0;
+}
+case 8:
+compatResume(th, null);
+fr.s12 = null; fr.s13 = null;
+fr.s15 = {"DISTANCE":10,};
+fr.s16 = {};
+fr.s17 = false;
+case 9:
+switch (compatCall(th, fr.s15, fr.s16, o4, null, "o=l#1WJR!L37RN`q:`8E", null, fr.s17)) {
+case 1: fr.s17 = true; fr.pc = 9; return 0;
+case 3: fr.s17 = true; fr.pc = 9; continue;
+case 2: fr.pc = 10; return 0;
+}
+case 10:
+compatResume(th, null);
+fr.s15 = null; fr.s16 = null;
+fr.s18 = {"ALIGNMENT":"bottom-left",};
+fr.s19 = {};
+fr.s20 = false;
+case 11:
+switch (compatCall(th, fr.s18, fr.s19, o5, null, "idkZ9I+=Q:@xXm;N-2Oy", null, fr.s20)) {
+case 1: fr.s20 = true; fr.pc = 11; return 0;
+case 3: fr.s20 = true; fr.pc = 11; continue;
+case 2: fr.pc = 12; return 0;
+}
+case 12:
+compatResume(th, null);
+fr.s18 = null; fr.s19 = null;
+fr.s21 = {"STRETCH":100,};
+fr.s22 = {};
+fr.s23 = false;
+case 13:
+switch (compatCall(th, fr.s21, fr.s22, o6, null, "AMs-%pRGK*v6a[.XifN1", null, fr.s23)) {
+case 1: fr.s23 = true; fr.pc = 13; return 0;
+case 3: fr.s23 = true; fr.pc = 13; continue;
+case 2: fr.pc = 14; return 0;
+}
+case 14:
+compatResume(th, null);
+fr.s21 = null; fr.s22 = null;
+fr.s24 = {"STRETCH":100,};
+fr.s25 = {};
+fr.s26 = false;
+case 15:
+switch (compatCall(th, fr.s24, fr.s25, o6, null, "g+bBVCHp+A[-X2E7-7#|", null, fr.s26)) {
+case 1: fr.s26 = true; fr.pc = 15; return 0;
+case 3: fr.s26 = true; fr.pc = 15; continue;
+case 2: fr.pc = 16; return 0;
+}
+case 16:
+compatResume(th, null);
+fr.s24 = null; fr.s25 = null;
+fr.s27 = {"CHANGE":10,};
+fr.s28 = {};
+fr.s29 = false;
+case 17:
+switch (compatCall(th, fr.s27, fr.s28, o7, null, "ZN24~,cX56Dc2k4vt}HB", null, fr.s29)) {
+case 1: fr.s29 = true; fr.pc = 17; return 0;
+case 3: fr.s29 = true; fr.pc = 17; continue;
+case 2: fr.pc = 18; return 0;
+}
+case 18:
+compatResume(th, null);
+fr.s27 = null; fr.s28 = null;
+fr.s30 = {"CHANGE":10,};
+fr.s31 = {};
+fr.s32 = false;
+case 19:
+switch (compatCall(th, fr.s30, fr.s31, o7, null, "Zjds+5Is*:nb7wnX{rYN", null, fr.s32)) {
+case 1: fr.s32 = true; fr.pc = 19; return 0;
+case 3: fr.s32 = true; fr.pc = 19; continue;
+case 2: fr.pc = 20; return 0;
+}
+case 20:
+compatResume(th, null);
+fr.s30 = null; fr.s31 = null;
+fr.s33 = {};
+fr.s34 = {};
+fr.s35 = false;
+case 21:
+switch (compatCall(th, fr.s33, fr.s34, o8, null, "8X_d`@6,B7%wzr7.xE}t", null, fr.s35)) {
+case 1: fr.s35 = true; fr.pc = 21; return 0;
+case 3: fr.s35 = true; fr.pc = 21; continue;
+case 2: fr.pc = 22; return 0;
+}
+case 22:
+compatResume(th, null);
+fr.s33 = null; fr.s34 = null;
+runtime.ext_scratch3_looks._say("pass", target);
+runtime.ext_scratch3_looks._say("end", target);
+return 2;
+default: throw new Error("TTW: bad pc " + fr.pc);
+}
+}
+Fs_0.prototype.fnRef = rs_0;
+return {Self, scripts: {
+"f,Ju^%:CQ1-zvKf*00fq": {index: 0, native: null, step: rs_0, Frame: Fs_0, executableHat: false},
+}};
+})

@@ -1,0 +1,56 @@
+// TW Snapshot
+// Input SHA-256: d293b52c4330db5d33eddb66742496017b5c96baacc41654961cfa97d08668d8
+
+// Sprite1 module
+(function ttw$Sprite1_N (R, G) {
+"use strict";
+const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, makeStuck, RETIRE} = R;
+const runtime = G.runtime;
+const stage = G.stage;
+const CONTINUE = {};
+const g0 = stage.variables["`jEk@4|i[#Fk?(8x)AV.-my variable"];
+class Self {
+constructor (target) {
+this.target = target;
+}
+}
+function fp_0 (th, S) {
+const target = S.target;
+return 40;
+return "";
+}
+class Fs_1 {
+constructor (parent) {
+this.parent = parent;
+this.pc = 0;
+this.s0 = undefined;
+}
+}
+function rs_1 (th, fr) {
+const S = th.self;
+const target = S.target;
+const h0 = g0;
+let n0 = 0, n1 = 0, n2 = 0;
+for (;;) switch (fr.pc) {
+case 0:
+runtime.ext_scratch3_looks._say("plan 1", target);
+h0.value = 0;
+fr.s0 = fp_0(th, S);
+case 1:
+for (n0 = fr.s0; n0 > 0; n0--) {
+h0.value = (((n1 = +h0.value) === n1 ? n1 : 0) + 1);
+fr.s0 = n0 - 1; fr.pc = 1; return 0;
+}
+if ((((n2 = +h0.value) === n2 ? n2 : 0) === 40)) {
+runtime.ext_scratch3_looks._say("pass", target);
+}
+runtime.ext_scratch3_looks._say("end", target);
+return 2;
+default: throw new Error("TTW: bad pc " + fr.pc);
+}
+}
+Fs_1.prototype.fnRef = rs_1;
+return {Self, scripts: {
+"k": {index: 0, native: null, step: rs_1, Frame: Fs_1, executableHat: false},
+}};
+})

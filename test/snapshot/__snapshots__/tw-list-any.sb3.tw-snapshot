@@ -6,30 +6,30 @@
 const b0 = stage.variables["eFlmP1{XC+I1:h0Yln.K"];
 return function funXYZ () {
 runtime.ext_scratch3_looks._say("plan 7", target);
-b0.value = [];
-listInsert(b0, "any", "a");
-listInsert(b0, "any", "b");
-listInsert(b0, "any", "c");
-if ((b0.value.length === 3)) {
+b0._tl.clear();
+b0._tl.insertSlow("any", "a");
+b0._tl.insertSlow("any", "b");
+b0._tl.insertSlow("any", "c");
+if ((b0._tl.getLength() === 3)) {
 runtime.ext_scratch3_looks._say("pass", target);
 }
-if (listContains(b0, "a")) {
+if (b0._tl.contains("a")) {
 runtime.ext_scratch3_looks._say("pass", target);
 }
-if (listContains(b0, "b")) {
+if (b0._tl.contains("b")) {
 runtime.ext_scratch3_looks._say("pass", target);
 }
-if (listContains(b0, "c")) {
+if (b0._tl.contains("c")) {
 runtime.ext_scratch3_looks._say("pass", target);
 }
-if (listContains(b0, listGet(b0.value, "any"))) {
+if (b0._tl.contains(b0._tl.getSlow("any"))) {
 runtime.ext_scratch3_looks._say("pass", target);
 }
-listDelete(b0, "any");
-if ((b0.value.length === 2)) {
+b0._tl.deleteSlow("any");
+if ((b0._tl.getLength() === 2)) {
 runtime.ext_scratch3_looks._say("pass", target);
 }
-if ((("" + listGet(b0.value, "*")).toLowerCase() === "".toLowerCase())) {
+if ((("" + b0._tl.getSlow("*")).toLowerCase() === "".toLowerCase())) {
 runtime.ext_scratch3_looks._say("pass", target);
 }
 runtime.ext_scratch3_looks._say("end", target);

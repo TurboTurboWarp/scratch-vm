@@ -1,0 +1,71 @@
+// TW Snapshot
+// Input SHA-256: 99bb22ac4fb2542ce3c21fa7d2025f03d15392a33850585a4d12f4ec558663ac
+
+// Sprite1 module
+(function ttw$Sprite1_N (R, G) {
+"use strict";
+const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, makeStuck, RETIRE} = R;
+const runtime = G.runtime;
+const stage = G.stage;
+const CONTINUE = {};
+const g0 = stage.variables["`jEk@4|i[#Fk?(8x)AV.-my variable"];
+const g1 = stage.variables[")|GMR5fz;%F_H,c0wGVM"];
+class Self {
+constructor (target) {
+this.target = target;
+}
+}
+class Fs_0 {
+constructor (parent) {
+this.parent = parent;
+this.pc = 0;
+this.s0 = undefined;
+this.s1 = undefined;
+}
+}
+function rs_0 (th, fr) {
+const S = th.self;
+const target = S.target;
+const h0 = g0;
+const h1 = g1;
+for (;;) switch (fr.pc) {
+case 0:
+runtime.ext_scratch3_looks._say("plan 2", target);
+h0.value = 1;
+h1.value = 2;
+fr.s0 = broadcast(runtime, "check 1");
+case 1:
+if (waitThreads(th, fr.s0)) { fr.pc = 1; return 0; }
+fr.s0 = null;
+fr.s1 = broadcast(runtime, "check 2");
+case 2:
+if (waitThreads(th, fr.s1)) { fr.pc = 2; return 0; }
+fr.s1 = null;
+runtime.ext_scratch3_looks._say("end", target);
+return 2;
+default: throw new Error("TTW: bad pc " + fr.pc);
+}
+}
+Fs_0.prototype.fnRef = rs_0;
+function fs_1 (th, S) {
+const target = S.target;
+const h0 = g0;
+let n0 = 0;
+if ((((n0 = +h0.value) === n0 ? n0 : 0) === 1)) {
+runtime.ext_scratch3_looks._say("pass variable 1", target);
+}
+}
+function fs_2 (th, S) {
+const target = S.target;
+const h0 = g1;
+let n0 = 0;
+if ((((n0 = +h0.value) === n0 ? n0 : 0) === 2)) {
+runtime.ext_scratch3_looks._say("pass variable 2", target);
+}
+}
+return {Self, scripts: {
+"h": {index: 0, native: null, step: rs_0, Frame: Fs_0, executableHat: false},
+"l": {index: 1, native: fs_1, step: null, Frame: null, executableHat: false},
+"o": {index: 2, native: fs_2, step: null, Frame: null, executableHat: false},
+}};
+})

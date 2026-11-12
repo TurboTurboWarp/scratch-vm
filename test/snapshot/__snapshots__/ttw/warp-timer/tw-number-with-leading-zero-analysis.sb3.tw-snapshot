@@ -1,0 +1,37 @@
+// TW Snapshot
+// Input SHA-256: ff3f94918126b2fa08ca13548c5c19ffa1e5db90b6f68825fad8a6eff248a11b
+
+// Sprite1 module
+(function ttw$Sprite1_N (R, G) {
+"use strict";
+const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, makeStuck, RETIRE} = R;
+const runtime = G.runtime;
+const stage = G.stage;
+const CONTINUE = {};
+const g0 = stage.variables["`jEk@4|i[#Fk?(8x)AV.-my variable"];
+class Self {
+constructor (target) {
+this.target = target;
+}
+}
+function fs_0 (th, S) {
+const target = S.target;
+const h0 = g0;
+let v0 = h0.value;
+let n0 = 0, n1 = 0, n2 = 0;
+runtime.ext_scratch3_looks._say("plan 1", target);
+v0 = " 0";
+if ((0 === 1)) {
+v0 = 1;
+}
+n0 = ((n1 = +v0) === n1 ? n1 : 0);
+if (((((n2 = (0 / n0)) === n2 ? n2 : 0) + 0) === 0)) {
+runtime.ext_scratch3_looks._say("pass", target);
+}
+runtime.ext_scratch3_looks._say("end", target);
+h0.value = v0;
+}
+return {Self, scripts: {
+"h": {index: 0, native: fs_0, step: null, Frame: null, executableHat: false},
+}};
+})

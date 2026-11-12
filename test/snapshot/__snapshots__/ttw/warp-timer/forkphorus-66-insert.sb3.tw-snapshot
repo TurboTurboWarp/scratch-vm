@@ -1,0 +1,141 @@
+// TW Snapshot
+// Input SHA-256: 6bac3cd99997a7deae133a560824b5dc3801b8e7e41ff3f9daab8fd6282f890f
+
+// Sprite1 module
+(function ttw$Sprite1_N (R, G) {
+"use strict";
+const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, makeStuck, RETIRE} = R;
+const runtime = G.runtime;
+const stage = G.stage;
+const CONTINUE = {};
+const gl0 = stage.variables["$h5KnZ-ePA3NOi=];]FX"]._tl;
+class Self {
+constructor (target) {
+this.target = target;
+}
+}
+function fp_0 (th, S, p0) {
+const target = S.target;
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + p0), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); throw RETIRE;
+return "";
+}
+function fp_1 (th, S, p0, p1) {
+const target = S.target;
+let q190_0 = 0;
+if (!p0) {
+q190_0 = p1;
+inl190: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + q190_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); throw RETIRE;
+}
+}
+return "";
+}
+function fp_2 (th, S, p0) {
+const target = S.target;
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("pass " + p0), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); throw RETIRE;
+return "";
+}
+function fs_3 (th, S) {
+const target = S.target;
+const L0 = gl0;
+let n0 = 0, n1 = 0, n2 = 0, n3 = 0, n4 = 0, n5 = 0, n6 = 0, n7 = 0, n8 = 0, a0, a1, a2, a3, a4, a5, q191_0 = 0, q191_1 = 0, q192_0 = 0, q193_0 = 0, q193_1 = 0, q194_0 = 0, q195_0 = 0, q195_1 = 0, q196_0 = 0, q197_0 = 0, q197_1 = 0, q198_0 = 0, q199_0 = 0, q199_1 = 0, q200_0 = 0, q201_0 = 0;
+L0.clear();
+L0.insertSlow(1, "a");
+L0.insertSlow(2, "b");
+L0.insertSlow(3, "c");
+q191_0 = (L0.len === 3);
+q191_1 = "length is 3";
+inl191: {
+if (!q191_0) {
+q192_0 = q191_1;
+inl192: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + q192_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return;
+}
+}
+}
+q193_0 = (a1 = ((n2 = 1) >= 1 && n2 <= L0.len ? (n1 = (n2 | 0) - 1, ((n0 = L0.f64[n1]) === n0 ? n0 : ((a0 = L0.objs[n1]) === undefined ? NaN : a0))) : ""), typeof a1 === "number" ? false : ("" + a1).toLowerCase() === "a");
+q193_1 = "1=a";
+inl193: {
+if (!q193_0) {
+q194_0 = q193_1;
+inl194: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + q194_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return;
+}
+}
+}
+q195_0 = (a3 = ((n5 = 2) >= 1 && n5 <= L0.len ? (n4 = (n5 | 0) - 1, ((n3 = L0.f64[n4]) === n3 ? n3 : ((a2 = L0.objs[n4]) === undefined ? NaN : a2))) : ""), typeof a3 === "number" ? false : ("" + a3).toLowerCase() === "b");
+q195_1 = "2=b";
+inl195: {
+if (!q195_0) {
+q196_0 = q195_1;
+inl196: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + q196_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return;
+}
+}
+}
+q197_0 = (a5 = ((n8 = 3) >= 1 && n8 <= L0.len ? (n7 = (n8 | 0) - 1, ((n6 = L0.f64[n7]) === n6 ? n6 : ((a4 = L0.objs[n7]) === undefined ? NaN : a4))) : ""), typeof a5 === "number" ? false : ("" + a5).toLowerCase() === "c");
+q197_1 = "3=c";
+inl197: {
+if (!q197_0) {
+q198_0 = q197_1;
+inl198: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + q198_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return;
+}
+}
+}
+L0.clear();
+q199_0 = (L0.len === 0);
+q199_1 = "length is 0";
+inl199: {
+if (!q199_0) {
+q200_0 = q199_1;
+inl200: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + q200_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return;
+}
+}
+}
+q201_0 = "";
+inl201: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("pass " + q201_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return;
+}
+}
+return {Self, scripts: {
+"O": {index: 0, native: fs_3, step: null, Frame: null, executableHat: false},
+}};
+})

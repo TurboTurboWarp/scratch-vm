@@ -1,0 +1,1762 @@
+// TW Snapshot
+// Input SHA-256: 1142c0dcd16b015bae6b8df3e70e1e4572decc653e0c5f4af57a9a7313e8d458
+
+// Sprite1 module
+(function ttw$Sprite1_N (R, G) {
+"use strict";
+const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, makeStuck, RETIRE} = R;
+const runtime = G.runtime;
+const stage = G.stage;
+const CONTINUE = {};
+class Self {
+constructor (target) {
+this.target = target;
+}
+}
+function fp_0 (th, S, p0) {
+const target = S.target;
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); throw RETIRE;
+return "";
+}
+function fp_1 (th, S, p0, p1) {
+const target = S.target;
+let q625_0 = 0;
+if (!p0) {
+q625_0 = p1;
+inl625: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); throw RETIRE;
+}
+}
+return "";
+}
+function fp_2 (th, S) {
+const target = S.target;
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("pass " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); throw RETIRE;
+return "";
+}
+class Fs_3 {
+constructor (parent) {
+this.parent = parent;
+this.pc = 0;
+this.s0 = undefined;
+}
+}
+function rs_3 (th, fr) {
+const S = th.self;
+const target = S.target;
+let n0 = 0, n1 = 0, n2 = 0, n3 = 0, n4 = 0, n5 = 0, n6 = 0, n7 = 0, n8 = 0, n9 = 0, n10 = 0, n11 = 0, n12 = 0, n13 = 0, n14 = 0, n15 = 0, n16 = 0, n17 = 0, n18 = 0, n19 = 0, n20 = 0, n21 = 0, n22 = 0, n23 = 0, n24 = 0, n25 = 0, n26 = 0, n27 = 0, n28 = 0, n29 = 0, n30 = 0, n31 = 0, n32 = 0, n33 = 0, n34 = 0, n35 = 0, n36 = 0, n37 = 0, n38 = 0, n39 = 0, n40 = 0, n41 = 0, n42 = 0, n43 = 0, n44 = 0, n45 = 0, n46 = 0, n47 = 0, n48 = 0, n49 = 0, n50 = 0, n51 = 0, n52 = 0, n53 = 0, n54 = 0, n55 = 0, n56 = 0, n57 = 0, n58 = 0, n59 = 0, n60 = 0, n61 = 0, n62 = 0, n63 = 0, n64 = 0, n65 = 0, n66 = 0, n67 = 0, n68 = 0, n69 = 0, a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19, a20, q626_0 = 0, q626_1 = 0, q627_0 = 0, q628_0 = 0, q628_1 = 0, q629_0 = 0, q630_0 = 0, q630_1 = 0, q631_0 = 0, q632_0 = 0, q632_1 = 0, q633_0 = 0, q634_0 = 0, q634_1 = 0, q635_0 = 0, q636_0 = 0, q636_1 = 0, q637_0 = 0, q638_0 = 0, q638_1 = 0, q639_0 = 0, q640_0 = 0, q640_1 = 0, q641_0 = 0, q642_0 = 0, q642_1 = 0, q643_0 = 0, q644_0 = 0, q644_1 = 0, q645_0 = 0, q646_0 = 0, q646_1 = 0, q647_0 = 0, q648_0 = 0, q648_1 = 0, q649_0 = 0, q650_0 = 0, q650_1 = 0, q651_0 = 0, q652_0 = 0, q652_1 = 0, q653_0 = 0, q654_0 = 0, q654_1 = 0, q655_0 = 0, q656_0 = 0, q656_1 = 0, q657_0 = 0, q658_0 = 0, q658_1 = 0, q659_0 = 0, q660_0 = 0, q660_1 = 0, q661_0 = 0, q662_0 = 0, q662_1 = 0, q663_0 = 0, q664_0 = 0, q664_1 = 0, q665_0 = 0, q666_0 = 0, q666_1 = 0, q667_0 = 0, q668_0 = 0, q668_1 = 0, q669_0 = 0, q670_0 = 0, q670_1 = 0, q671_0 = 0, q672_0 = 0, q672_1 = 0, q673_0 = 0, q674_0 = 0, q674_1 = 0, q675_0 = 0, q676_0 = 0, q676_1 = 0, q677_0 = 0, q678_0 = 0, q678_1 = 0, q679_0 = 0, q680_0 = 0, q680_1 = 0, q681_0 = 0, q682_0 = 0, q682_1 = 0, q683_0 = 0, q684_0 = 0, q684_1 = 0, q685_0 = 0, q686_0 = 0, q686_1 = 0, q687_0 = 0, q688_0 = 0, q688_1 = 0, q689_0 = 0, q690_0 = 0, q690_1 = 0, q691_0 = 0, q692_0 = 0, q692_1 = 0, q693_0 = 0, q694_0 = 0, q694_1 = 0, q695_0 = 0, q696_0 = 0, q696_1 = 0, q697_0 = 0, q698_0 = 0, q698_1 = 0, q699_0 = 0, q700_0 = 0, q700_1 = 0, q701_0 = 0, q702_0 = 0, q702_1 = 0, q703_0 = 0, q704_0 = 0, q704_1 = 0, q705_0 = 0, q706_0 = 0, q706_1 = 0, q707_0 = 0, q708_0 = 0, q708_1 = 0, q709_0 = 0, q710_0 = 0, q710_1 = 0, q711_0 = 0, q712_0 = 0, q712_1 = 0, q713_0 = 0, q714_0 = 0, q714_1 = 0, q715_0 = 0, q716_0 = 0, q716_1 = 0, q717_0 = 0, q718_0 = 0, q718_1 = 0, q719_0 = 0, q720_0 = 0, q720_1 = 0, q721_0 = 0, q722_0 = 0, q722_1 = 0, q723_0 = 0, q724_0 = 0, q724_1 = 0, q725_0 = 0, q726_0 = 0, q726_1 = 0, q727_0 = 0, q728_0 = 0, q728_1 = 0, q729_0 = 0, q730_0 = 0, q730_1 = 0, q731_0 = 0, q732_0 = 0, q732_1 = 0, q733_0 = 0, q734_0 = 0, q734_1 = 0, q735_0 = 0, q736_0 = 0, q736_1 = 0, q737_0 = 0, q738_0 = 0, q738_1 = 0, q739_0 = 0, q740_0 = 0, q740_1 = 0, q741_0 = 0, q742_0 = 0, q742_1 = 0, q743_0 = 0, q744_0 = 0, q744_1 = 0, q745_0 = 0, q746_0 = 0, q746_1 = 0, q747_0 = 0, q748_0 = 0, q748_1 = 0, q749_0 = 0, q750_0 = 0, q750_1 = 0, q751_0 = 0, q752_0 = 0, q752_1 = 0, q753_0 = 0, q754_0 = 0, q754_1 = 0, q755_0 = 0, q756_0 = 0, q756_1 = 0, q757_0 = 0, q758_0 = 0, q758_1 = 0, q759_0 = 0, q760_0 = 0, q760_1 = 0, q761_0 = 0, q762_0 = 0, q762_1 = 0, q763_0 = 0, q764_0 = 0, q764_1 = 0, q765_0 = 0, q766_0 = 0, q766_1 = 0, q767_0 = 0, q768_0 = 0, q768_1 = 0, q769_0 = 0, q770_0 = 0, q770_1 = 0, q771_0 = 0, q772_0 = 0, q772_1 = 0, q773_0 = 0, q774_0 = 0, q774_1 = 0, q775_0 = 0, q776_0 = 0, q776_1 = 0, q777_0 = 0, q778_0 = 0, q778_1 = 0, q779_0 = 0, q780_0 = 0, q780_1 = 0, q781_0 = 0, q782_0 = 0, q782_1 = 0, q783_0 = 0, q784_0 = 0, q784_1 = 0, q785_0 = 0, q786_0 = 0, q786_1 = 0, q787_0 = 0, q788_0 = 0, q788_1 = 0, q789_0 = 0, q790_0 = 0, q790_1 = 0, q791_0 = 0, q792_0 = 0, q792_1 = 0, q793_0 = 0, q794_0 = 0, q794_1 = 0, q795_0 = 0, q796_0 = 0, q796_1 = 0, q797_0 = 0, q798_0 = 0, q798_1 = 0, q799_0 = 0, q800_0 = 0, q800_1 = 0, q801_0 = 0, q802_0 = 0, q802_1 = 0, q803_0 = 0, q804_0 = 0, q804_1 = 0, q805_0 = 0, q806_0 = 0, q806_1 = 0, q807_0 = 0, q808_0 = 0, q808_1 = 0, q809_0 = 0, q810_0 = 0, q810_1 = 0, q811_0 = 0, q812_0 = 0, q812_1 = 0, q813_0 = 0, q814_0 = 0, q814_1 = 0, q815_0 = 0, q816_0 = 0, q816_1 = 0, q817_0 = 0, q818_0 = 0, q818_1 = 0, q819_0 = 0, q820_0 = 0, q820_1 = 0, q821_0 = 0, q822_0 = 0, q822_1 = 0, q823_0 = 0, q824_0 = 0, q824_1 = 0, q825_0 = 0, q826_0 = 0, q826_1 = 0, q827_0 = 0, q828_0 = 0, q828_1 = 0, q829_0 = 0, q830_0 = 0, q830_1 = 0, q831_0 = 0, q832_0 = 0, q832_1 = 0, q833_0 = 0, q834_0 = 0, q834_1 = 0, q835_0 = 0, q836_0 = 0, q836_1 = 0, q837_0 = 0, q838_0 = 0, q838_1 = 0, q839_0 = 0, q840_0 = 0, q840_1 = 0, q841_0 = 0, q842_0 = 0, q842_1 = 0, q843_0 = 0, q844_0 = 0, q844_1 = 0, q845_0 = 0, q846_0 = 0, q846_1 = 0, q847_0 = 0, q848_0 = 0, q848_1 = 0, q849_0 = 0, q850_0 = 0, q850_1 = 0, q851_0 = 0, q852_0 = 0, q852_1 = 0, q853_0 = 0, q854_0 = 0, q854_1 = 0, q855_0 = 0, q856_0 = 0, q856_1 = 0, q857_0 = 0, q858_0 = 0, q858_1 = 0, q859_0 = 0, q860_0 = 0, q860_1 = 0, q861_0 = 0, q862_0 = 0, q862_1 = 0, q863_0 = 0, q864_0 = 0, q864_1 = 0, q865_0 = 0;
+for (;;) switch (fr.pc) {
+case 0:
+q626_0 = ((0.1 + 0.2) === 0.30000000000000004);
+q626_1 = "adding must work w/ floating point errors";
+inl626: {
+if (!q626_0) {
+q627_0 = q626_1;
+inl627: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q628_0 = ((0.2 - -0.1) === 0.30000000000000004);
+q628_1 = "subtraction must work w/ floating point errors";
+inl628: {
+if (!q628_0) {
+q629_0 = q628_1;
+inl629: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q630_0 = ((0 - 5) === -5);
+q630_1 = "substraction should invert with empty right side";
+inl630: {
+if (!q630_0) {
+q631_0 = q630_1;
+inl631: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q632_0 = ((222 * 2) === 444);
+q632_1 = "multiplication must work";
+inl632: {
+if (!q632_0) {
+q633_0 = q632_1;
+inl633: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q634_0 = ((222 / 2) === 111);
+q634_1 = "division must work";
+inl634: {
+if (!q634_0) {
+q635_0 = q634_1;
+inl635: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q636_0 = ((100 / 0) === Infinity);
+q636_1 = "100/0 must equal Infinity";
+inl636: {
+if (!q636_0) {
+q637_0 = q636_1;
+inl637: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+fr.s0 = 5;
+case 1:
+for (n0 = fr.s0; n0 > 0; n0--) {
+q638_0 = !(randomInt(1, 10) < 1);
+q638_1 = "pick random should have a lower bound (inclusive)";
+inl638: {
+if (!q638_0) {
+q639_0 = q638_1;
+inl639: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q640_0 = !(randomInt(1, 10) > 10);
+q640_1 = "pick random should have an upper bound (inclusive)";
+inl640: {
+if (!q640_0) {
+q641_0 = q640_1;
+inl641: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q642_0 = (1 === 1);
+q642_1 = "pick random of range 0 should return either bound";
+inl642: {
+if (!q642_0) {
+q643_0 = q642_1;
+inl643: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q644_0 = !(a0 = ((n1 = ((n3 = randomFloat(1, 2)) === n3 ? n3 : 0)) >= 0 && (n1 | 0) === n1 ? n1 % 1 : n1 >= 1 && n1 <= 4503599627370496 && n1 === Math.floor(n1) ? ((n2 = n1 - Math.floor(n1 / 1) * 1) < 0 ? n2 + 1 : (n2 >= 1 ? n2 - 1 : n2)) : (n2 = n1 % 1, n2 / 1 < 0 ? n2 + 1 : n2)), ((a0 === a0) || a0 === 0) ? a0 === 0 : eqSlow(a0, 0));
+q644_1 = "pick random w/ decimal bounds should return decimals";
+inl644: {
+if (!q644_0) {
+q645_0 = q644_1;
+inl645: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q646_0 = !(a1 = ((n4 = ((n6 = randomFloat(1, 2)) === n6 ? n6 : 0)) >= 0 && (n4 | 0) === n4 ? n4 % 1 : n4 >= 1 && n4 <= 4503599627370496 && n4 === Math.floor(n4) ? ((n5 = n4 - Math.floor(n4 / 1) * 1) < 0 ? n5 + 1 : (n5 >= 1 ? n5 - 1 : n5)) : (n5 = n4 % 1, n5 / 1 < 0 ? n5 + 1 : n5)), ((a1 === a1) || a1 === 0) ? a1 === 0 : eqSlow(a1, 0));
+q646_1 = "pick random w/ decimal (.0) bounds should return decimals";
+inl646: {
+if (!q646_0) {
+q647_0 = q646_1;
+inl647: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q648_0 = !(a2 = ((n7 = ((n9 = randomFloat(1, 2)) === n9 ? n9 : 0)) >= 0 && (n7 | 0) === n7 ? n7 % 1 : n7 >= 1 && n7 <= 4503599627370496 && n7 === Math.floor(n7) ? ((n8 = n7 - Math.floor(n7 / 1) * 1) < 0 ? n8 + 1 : (n8 >= 1 ? n8 - 1 : n8)) : (n8 = n7 % 1, n8 / 1 < 0 ? n8 + 1 : n8)), ((a2 === a2) || a2 === 0) ? a2 === 0 : eqSlow(a2, 0));
+q648_1 = "pick random w/ decimal (.0) bounds should return decimals";
+inl648: {
+if (!q648_0) {
+q649_0 = q648_1;
+inl649: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q650_0 = !(a3 = ((n10 = ((n12 = randomFloat(1.1, 2)) === n12 ? n12 : 0)) >= 0 && (n10 | 0) === n10 ? n10 % 1 : n10 >= 1 && n10 <= 4503599627370496 && n10 === Math.floor(n10) ? ((n11 = n10 - Math.floor(n10 / 1) * 1) < 0 ? n11 + 1 : (n11 >= 1 ? n11 - 1 : n11)) : (n11 = n10 % 1, n11 / 1 < 0 ? n11 + 1 : n11)), ((a3 === a3) || a3 === 0) ? a3 === 0 : eqSlow(a3, 0));
+q650_1 = "pick random w/ decimal bounds should return decimals";
+inl650: {
+if (!q650_0) {
+q651_0 = q650_1;
+inl651: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q652_0 = !(a4 = ((n13 = ((n15 = randomFloat(1, 2.1)) === n15 ? n15 : 0)) >= 0 && (n13 | 0) === n13 ? n13 % 1 : n13 >= 1 && n13 <= 4503599627370496 && n13 === Math.floor(n13) ? ((n14 = n13 - Math.floor(n13 / 1) * 1) < 0 ? n14 + 1 : (n14 >= 1 ? n14 - 1 : n14)) : (n14 = n13 % 1, n14 / 1 < 0 ? n14 + 1 : n14)), ((a4 === a4) || a4 === 0) ? a4 === 0 : eqSlow(a4, 0));
+q652_1 = "pick random w/ decimal bounds should return decimals";
+inl652: {
+if (!q652_0) {
+q653_0 = q652_1;
+inl653: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+fr.s0 = n0 - 1; fr.pc = 1; return 0;
+}
+q654_0 = (1 > 0);
+q654_1 = "1 must be greater than 0";
+inl654: {
+if (!q654_0) {
+q655_0 = q654_1;
+inl655: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q656_0 = !(0 > 1);
+q656_1 = "0 must not be greater than 1";
+inl656: {
+if (!q656_0) {
+q657_0 = q656_1;
+inl657: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q658_0 = (0 < 1);
+q658_1 = "0 must  be less than 1";
+inl658: {
+if (!q658_0) {
+q659_0 = q658_1;
+inl659: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q660_0 = !(1 < 0);
+q660_1 = "1 must not be greater than 1";
+inl660: {
+if (!q660_0) {
+q661_0 = q660_1;
+inl661: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q662_0 = (1 === 1);
+q662_1 = "1 must equal 1";
+inl662: {
+if (!q662_0) {
+q663_0 = q662_1;
+inl663: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q664_0 = !("hello".toLowerCase() === "world".toLowerCase());
+q664_1 = "hello must not equal world";
+inl664: {
+if (!q664_0) {
+q665_0 = q664_1;
+inl665: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q666_0 = ("hello".toLowerCase() === "hello".toLowerCase());
+q666_1 = "hello must equal hello";
+inl666: {
+if (!q666_0) {
+q667_0 = q666_1;
+inl667: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q668_0 = ("".toLowerCase() === "".toLowerCase());
+q668_1 = "empty must equal empty";
+inl668: {
+if (!q668_0) {
+q669_0 = q668_1;
+inl669: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q670_0 = !(" ".toLowerCase() === "".toLowerCase());
+q670_1 = "spaces must not be ignored in equal";
+inl670: {
+if (!q670_0) {
+q671_0 = q670_1;
+inl671: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q672_0 = ("👌".toLowerCase() === "👌".toLowerCase());
+q672_1 = "equal should support emoji";
+inl672: {
+if (!q672_0) {
+q673_0 = q672_1;
+inl673: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q674_0 = !(0.30000000000000004 === 0.3);
+q674_1 = "number comparison must be precise";
+inl674: {
+if (!q674_0) {
+q675_0 = q674_1;
+inl675: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q676_0 = (0.1 === 0.1);
+q676_1 = "number comparison should disregard following zeros";
+inl676: {
+if (!q676_0) {
+q677_0 = q676_1;
+inl677: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q678_0 = (0.1 === 0.1);
+q678_1 = "number comparison should disregard leading zeros";
+inl678: {
+if (!q678_0) {
+q679_0 = q678_1;
+inl679: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q680_0 = (("" + (0 / 0)).toLowerCase() === ("" + (0 / 0)).toLowerCase());
+q680_1 = "number NaN must equal number NaN";
+inl680: {
+if (!q680_0) {
+q681_0 = q680_1;
+inl681: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q682_0 = !false;
+q682_1 = "empty negate must be true";
+inl682: {
+if (!q682_0) {
+q683_0 = q682_1;
+inl683: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q684_0 = !!!false;
+q684_1 = "negate true must be false";
+inl684: {
+if (!q684_0) {
+q685_0 = q684_1;
+inl685: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q686_0 = !!!!!!!false;
+q686_1 = "negates must be stackable to the moon";
+inl686: {
+if (!q686_0) {
+q687_0 = q686_1;
+inl687: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q688_0 = (("apple " + "banana").toLowerCase() === "apple banana".toLowerCase());
+q688_1 = "join must join strings";
+inl688: {
+if (!q688_0) {
+q689_0 = q688_1;
+inl689: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q690_0 = ((("apple")[1 - 1] || "").toLowerCase() === "a".toLowerCase());
+q690_1 = "letter 1 of apple must be apple";
+inl690: {
+if (!q690_0) {
+q691_0 = q690_1;
+inl691: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q692_0 = ((("apple")[0 - 1] || "").toLowerCase() === "".toLowerCase());
+q692_1 = "letter 0 of apple must be empty";
+inl692: {
+if (!q692_0) {
+q693_0 = q692_1;
+inl693: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q694_0 = ((("apple")[(0 - 1) - 1] || "").toLowerCase() === "".toLowerCase());
+q694_1 = "letter -1 of apple must be empty";
+inl694: {
+if (!q694_0) {
+q695_0 = q694_1;
+inl695: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q696_0 = ((("apple")[9999 - 1] || "").toLowerCase() === "".toLowerCase());
+q696_1 = "letter 9999 of apple must be empty";
+inl696: {
+if (!q696_0) {
+q697_0 = q696_1;
+inl697: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q698_0 = ("apple".length === 5);
+q698_1 = "length of apple must be 5";
+inl698: {
+if (!q698_0) {
+q699_0 = q698_1;
+inl699: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q700_0 = ("".length === 0);
+q700_1 = "length of empty string must be 0";
+inl700: {
+if (!q700_0) {
+q701_0 = q700_1;
+inl701: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q702_0 = ("apple".toLowerCase().indexOf("a".toLowerCase()) !== -1);
+q702_1 = "apple must contain a";
+inl702: {
+if (!q702_0) {
+q703_0 = q702_1;
+inl703: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q704_0 = !("apple".toLowerCase().indexOf("b".toLowerCase()) !== -1);
+q704_1 = "apple must not contain b";
+inl704: {
+if (!q704_0) {
+q705_0 = q704_1;
+inl705: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q706_0 = !("👌".toLowerCase().indexOf("👏".toLowerCase()) !== -1);
+q706_1 = "👌 must not contain 👏";
+inl706: {
+if (!q706_0) {
+q707_0 = q706_1;
+inl707: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q708_0 = ("👌👌".toLowerCase().indexOf("👌".toLowerCase()) !== -1);
+q708_1 = "👌👌 must contain 👌";
+inl708: {
+if (!q708_0) {
+q709_0 = q708_1;
+inl709: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q710_0 = (((n16 = ((n17 = 3) >= 0 && (n17 | 0) === n17 ? n17 % 4 : n17 >= 1 && n17 <= 4503599627370496 && n17 === Math.floor(n17) ? ((n18 = n17 - Math.floor(n17 / 4) * 4) < 0 ? n18 + 4 : (n18 >= 4 ? n18 - 4 : n18)) : (n18 = n17 % 4, n18 / 4 < 0 ? n18 + 4 : n18))) === n16 ? n16 : 0) === 3);
+q710_1 = "3 mod 4 must be 3";
+inl710: {
+if (!q710_0) {
+q711_0 = q710_1;
+inl711: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q712_0 = (((n19 = (n20 = 3, n21 = -4, n22 = n20 % n21, n22 / n21 < 0 ? n22 + n21 : n22)) === n19 ? n19 : 0) === -1);
+q712_1 = "3 mod -4 must be -1";
+inl712: {
+if (!q712_0) {
+q713_0 = q712_1;
+inl713: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q714_0 = (((n23 = ((n24 = -3) >= 0 && (n24 | 0) === n24 ? n24 % 4 : n24 >= 1 && n24 <= 4503599627370496 && n24 === Math.floor(n24) ? ((n25 = n24 - Math.floor(n24 / 4) * 4) < 0 ? n25 + 4 : (n25 >= 4 ? n25 - 4 : n25)) : (n25 = n24 % 4, n25 / 4 < 0 ? n25 + 4 : n25))) === n23 ? n23 : 0) === 1);
+q714_1 = "-3 mod 4 must be 1";
+inl714: {
+if (!q714_0) {
+q715_0 = q714_1;
+inl715: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q716_0 = (a5 = ((n26 = 3) >= 0 && (n26 | 0) === n26 ? n26 % 3 : n26 >= 1 && n26 <= 4503599627370496 && n26 === Math.floor(n26) ? ((n27 = n26 - Math.floor(n26 / 3) * 3) < 0 ? n27 + 3 : (n27 >= 3 ? n27 - 3 : n27)) : (n27 = n26 % 3, n27 / 3 < 0 ? n27 + 3 : n27)), ((a5 === a5) || a5 === 0) ? a5 === 0 : eqSlow(a5, 0));
+q716_1 = "a number mod itself must be 0";
+inl716: {
+if (!q716_0) {
+q717_0 = q716_1;
+inl717: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q718_0 = (a6 = ((n28 = -3) >= 0 && (n28 | 0) === n28 ? n28 % 3 : n28 >= 1 && n28 <= 4503599627370496 && n28 === Math.floor(n28) ? ((n29 = n28 - Math.floor(n28 / 3) * 3) < 0 ? n29 + 3 : (n29 >= 3 ? n29 - 3 : n29)) : (n29 = n28 % 3, n29 / 3 < 0 ? n29 + 3 : n29)), ((a6 === a6) || a6 === 0) ? a6 === 0 : eqSlow(a6, 0));
+q718_1 = "a number mod it's positive inverse must be 0";
+inl718: {
+if (!q718_0) {
+q719_0 = q718_1;
+inl719: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q720_0 = (a7 = (n30 = 3, n31 = -3, n32 = n30 % n31, n32 / n31 < 0 ? n32 + n31 : n32), ((a7 === a7) || a7 === 0) ? a7 === 0 : eqSlow(a7, 0));
+q720_1 = "a number mod it's negative inverse must be 0";
+inl720: {
+if (!q720_0) {
+q721_0 = q720_1;
+inl721: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q722_0 = (("" + (n33 = 3, n34 = 0, n35 = n33 % n34, n35 / n34 < 0 ? n35 + n34 : n35)).toLowerCase() === "NaN".toLowerCase());
+q722_1 = "any number mod 0 must be NaN";
+inl722: {
+if (!q722_0) {
+q723_0 = q722_1;
+inl723: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q724_0 = (((n36 = ((n37 = 1.5) >= 0 && (n37 | 0) === n37 ? n37 % 1 : n37 >= 1 && n37 <= 4503599627370496 && n37 === Math.floor(n37) ? ((n38 = n37 - Math.floor(n37 / 1) * 1) < 0 ? n38 + 1 : (n38 >= 1 ? n38 - 1 : n38)) : (n38 = n37 % 1, n38 / 1 < 0 ? n38 + 1 : n38))) === n36 ? n36 : 0) === 0.5);
+q724_1 = "mod 1 must result in only decimal part";
+inl724: {
+if (!q724_0) {
+q725_0 = q724_1;
+inl725: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q726_0 = (((n39 = ((n40 = 3.3) >= 0 && (n40 | 0) === n40 ? n40 % 1 : n40 >= 1 && n40 <= 4503599627370496 && n40 === Math.floor(n40) ? ((n41 = n40 - Math.floor(n40 / 1) * 1) < 0 ? n41 + 1 : (n41 >= 1 ? n41 - 1 : n41)) : (n41 = n40 % 1, n41 / 1 < 0 ? n41 + 1 : n41))) === n39 ? n39 : 0) === 0.2999999999999998);
+q726_1 = "3.3 mod 1 must have floating point errors";
+inl726: {
+if (!q726_0) {
+q727_0 = q726_1;
+inl727: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q728_0 = (Math.round(0) === 0);
+q728_1 = "rounding 0 must be 0";
+inl728: {
+if (!q728_0) {
+q729_0 = q728_1;
+inl729: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q730_0 = (Math.round(0.1) === 0);
+q730_1 = "rounding .1 must be 0";
+inl730: {
+if (!q730_0) {
+q731_0 = q730_1;
+inl731: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q732_0 = (Math.round(0.9) === 1);
+q732_1 = "rounding .9 must be 1";
+inl732: {
+if (!q732_0) {
+q733_0 = q732_1;
+inl733: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q734_0 = (Math.round(-0.5) === 0);
+q734_1 = "rounding -.5 must be 0";
+inl734: {
+if (!q734_0) {
+q735_0 = q734_1;
+inl735: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q736_0 = (Math.round(-0.1) === 0);
+q736_1 = "roudning -.1 must be 0";
+inl736: {
+if (!q736_0) {
+q737_0 = q736_1;
+inl737: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q738_0 = (Math.round(-0.51) === -1);
+q738_1 = "roudning -.51 must be -1";
+inl738: {
+if (!q738_0) {
+q739_0 = q738_1;
+inl739: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q740_0 = ((+!false) === 1);
+q740_1 = "true must equal 1";
+inl740: {
+if (!q740_0) {
+q741_0 = q740_1;
+inl741: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q742_0 = ((+!!false) === 0);
+q742_1 = "false must equal 0";
+inl742: {
+if (!q742_0) {
+q743_0 = q742_1;
+inl743: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q744_0 = ((9007199254740992 + 1) === 9007199254740992);
+q744_1 = "math should start breaking after 9007199254740991";
+inl744: {
+if (!q744_0) {
+q745_0 = q744_1;
+inl745: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q746_0 = (Math.abs(5) === 5);
+q746_1 = "absolute value of a position number should be itself";
+inl746: {
+if (!q746_0) {
+q747_0 = q746_1;
+inl747: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q748_0 = (Math.abs(-5) === 5);
+q748_1 = "absolute value of a negative number should be its inverse";
+inl748: {
+if (!q748_0) {
+q749_0 = q748_1;
+inl749: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q750_0 = (Math.floor(5.9) === 5);
+q750_1 = "floor of a number should round it down";
+inl750: {
+if (!q750_0) {
+q751_0 = q750_1;
+inl751: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q752_0 = (Math.ceil(5.9) === 6);
+q752_1 = "ceiling of a number should round it up";
+inl752: {
+if (!q752_0) {
+q753_0 = q752_1;
+inl753: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q754_0 = (((n42 = Math.sqrt(4)) === n42 ? n42 : 0) === 2);
+q754_1 = "sqrt of 4 must be 2";
+inl754: {
+if (!q754_0) {
+q755_0 = q754_1;
+inl755: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q756_0 = (((n43 = Math.sqrt(2)) === n43 ? n43 : 0) === 1.4142135623730951);
+q756_1 = "sqrt of 2 must be 1.4142135623730951";
+inl756: {
+if (!q756_0) {
+q757_0 = q756_1;
+inl757: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q758_0 = (Math.round(((n44 = ((Math.asin(0.5) * 180) / Math.PI)) === n44 ? n44 : 0)) === 30);
+q758_1 = "asin of .5 must be roughly 30";
+inl758: {
+if (!q758_0) {
+q759_0 = q758_1;
+inl759: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q760_0 = (a8 = Math.log(1), ((a8 === a8) || a8 === 0) ? a8 === 0 : eqSlow(a8, 0));
+q760_1 = "ln 1 must be 0";
+inl760: {
+if (!q760_0) {
+q761_0 = q760_1;
+inl761: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q762_0 = (((n45 = Math.log(2)) === n45 ? n45 : 0) === 0.6931471805599453);
+q762_1 = "ln 2 must be 0.69314...";
+inl762: {
+if (!q762_0) {
+q763_0 = q762_1;
+inl763: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q764_0 = (((n46 = Math.log(2.718281828459045)) === n46 ? n46 : 0) === 1);
+q764_1 = "ln e must be 1";
+inl764: {
+if (!q764_0) {
+q765_0 = q764_1;
+inl765: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q766_0 = (((n47 = Math.log(Math.exp(2))) === n47 ? n47 : 0) === 2);
+q766_1 = "ln e^2 must be 2";
+inl766: {
+if (!q766_0) {
+q767_0 = q766_1;
+inl767: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q768_0 = (a9 = (Math.log(1) / Math.LN10), ((a9 === a9) || a9 === 0) ? a9 === 0 : eqSlow(a9, 0));
+q768_1 = "log 1 must be 0";
+inl768: {
+if (!q768_0) {
+q769_0 = q768_1;
+inl769: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q770_0 = (((n48 = (Math.log(2) / Math.LN10)) === n48 ? n48 : 0) === 0.30102999566398114);
+q770_1 = "log 2 must be 0.3010...";
+inl770: {
+if (!q770_0) {
+q771_0 = q770_1;
+inl771: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q772_0 = (((n49 = (Math.log(10) / Math.LN10)) === n49 ? n49 : 0) === 1);
+q772_1 = "log 10 must be 1";
+inl772: {
+if (!q772_0) {
+q773_0 = q772_1;
+inl773: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q774_0 = (((n50 = (Math.log(100) / Math.LN10)) === n50 ? n50 : 0) === 2);
+q774_1 = "log 100 must be 2";
+inl774: {
+if (!q774_0) {
+q775_0 = q774_1;
+inl775: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q776_0 = (Math.exp(1) === 2.718281828459045);
+q776_1 = "e ^ 1 must be 2.718281828459045";
+inl776: {
+if (!q776_0) {
+q777_0 = q776_1;
+inl777: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q778_0 = (Math.exp(0) === 1);
+q778_1 = "e ^ 0 must be 1";
+inl778: {
+if (!q778_0) {
+q779_0 = q778_1;
+inl779: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q780_0 = ((10 ** 1) === 10);
+q780_1 = "10 ^ 1 must be 10";
+inl780: {
+if (!q780_0) {
+q781_0 = q780_1;
+inl781: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q782_0 = ((10 ** 0) === 1);
+q782_1 = "10 ^ 0 must be 1";
+inl782: {
+if (!q782_0) {
+q783_0 = q782_1;
+inl783: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q784_0 = ((10 ** 2) === 100);
+q784_1 = "10 ^ 2 must be 100";
+inl784: {
+if (!q784_0) {
+q785_0 = q784_1;
+inl785: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q786_0 = ((+(typeof 50 === "number" ? false : "" === ("" + 50).toLowerCase())) === (+(typeof 50 === "number" ? false : "" === ("" + 50).toLowerCase())));
+q786_1 = "real false = real false";
+inl786: {
+if (!q786_0) {
+q787_0 = q786_1;
+inl787: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q788_0 = ((+("".toLowerCase() === "".toLowerCase())) === (+("".toLowerCase() === "".toLowerCase())));
+q788_1 = "real true = real true";
+inl788: {
+if (!q788_0) {
+q789_0 = q788_1;
+inl789: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q790_0 = ("true".toLowerCase() === ("" + ("".toLowerCase() === "".toLowerCase())).toLowerCase());
+q790_1 = "string true = real true";
+inl790: {
+if (!q790_0) {
+q791_0 = q790_1;
+inl791: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q792_0 = ("false".toLowerCase() === ("" + (typeof 50 === "number" ? false : "" === ("" + 50).toLowerCase())).toLowerCase());
+q792_1 = "string false = real false";
+inl792: {
+if (!q792_0) {
+q793_0 = q792_1;
+inl793: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q794_0 = (("" + ("".toLowerCase() === "".toLowerCase())).toLowerCase() === "true".toLowerCase());
+q794_1 = "real true = string true";
+inl794: {
+if (!q794_0) {
+q795_0 = q794_1;
+inl795: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q796_0 = (("" + (typeof 50 === "number" ? false : "" === ("" + 50).toLowerCase())).toLowerCase() === "false".toLowerCase());
+q796_1 = "real false = string false";
+inl796: {
+if (!q796_0) {
+q797_0 = q796_1;
+inl797: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q798_0 = ((+(0 === 1)) === 0);
+q798_1 = "real false = string 0";
+inl798: {
+if (!q798_0) {
+q799_0 = q798_1;
+inl799: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q800_0 = ((+(0 === 0)) === 1);
+q800_1 = "real true = string 1";
+inl800: {
+if (!q800_0) {
+q801_0 = q800_1;
+inl801: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q802_0 = ((+(0 === 1)) === (0 + 0));
+q802_1 = "real false = number 0";
+inl802: {
+if (!q802_0) {
+q803_0 = q802_1;
+inl803: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q804_0 = ((+(0 === 0)) === (1 + 0));
+q804_1 = "real true = number 1";
+inl804: {
+if (!q804_0) {
+q805_0 = q804_1;
+inl805: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q806_0 = ((((n51 = +("0x" + "12f3")) === n51 ? n51 : 0) + 0) === 4851);
+q806_1 = "positive hex";
+inl806: {
+if (!q806_0) {
+q807_0 = q806_1;
+inl807: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q808_0 = ((((n52 = +("0o" + "127")) === n52 ? n52 : 0) + 0) === 87);
+q808_1 = "positive octal";
+inl808: {
+if (!q808_0) {
+q809_0 = q808_1;
+inl809: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q810_0 = ((((n53 = +("0b" + "1010101")) === n53 ? n53 : 0) + 0) === 85);
+q810_1 = "positive binary";
+inl810: {
+if (!q810_0) {
+q811_0 = q810_1;
+inl811: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q812_0 = ((((n54 = +("-0x" + "123")) === n54 ? n54 : 0) + 0) === 0);
+q812_1 = "negative hex is 0";
+inl812: {
+if (!q812_0) {
+q813_0 = q812_1;
+inl813: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q814_0 = ((((n55 = +("-0o" + "123")) === n55 ? n55 : 0) + 0) === 0);
+q814_1 = "negative octal is 0";
+inl814: {
+if (!q814_0) {
+q815_0 = q814_1;
+inl815: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q816_0 = ((((n56 = +("-0b" + "10101")) === n56 ? n56 : 0) + 0) === 0);
+q816_1 = "negative binary is 0";
+inl816: {
+if (!q816_0) {
+q817_0 = q816_1;
+inl817: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q818_0 = (((n57 = (Math.round(Math.sin((Math.PI * 57.7) / 180) * 1e10) / 1e10)) === n57 ? n57 : 0) === 0.8452618332);
+q818_1 = "sin 57.7";
+inl818: {
+if (!q818_0) {
+q819_0 = q818_1;
+inl819: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q820_0 = (a10 = (Math.round(Math.sin((Math.PI * 0) / 180) * 1e10) / 1e10), ((a10 === a10) || a10 === 0) ? a10 === 0 : eqSlow(a10, 0));
+q820_1 = "sin 0";
+inl820: {
+if (!q820_0) {
+q821_0 = q820_1;
+inl821: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q822_0 = (((n58 = (Math.round(Math.sin((Math.PI * 90) / 180) * 1e10) / 1e10)) === n58 ? n58 : 0) === 1);
+q822_1 = "sin 90";
+inl822: {
+if (!q822_0) {
+q823_0 = q822_1;
+inl823: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q824_0 = (a11 = (Math.round(Math.sin((Math.PI * 180) / 180) * 1e10) / 1e10), ((a11 === a11) || a11 === 0) ? a11 === 0 : eqSlow(a11, 0));
+q824_1 = "sin 180";
+inl824: {
+if (!q824_0) {
+q825_0 = q824_1;
+inl825: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q826_0 = (((n59 = (Math.round(Math.sin((Math.PI * 270) / 180) * 1e10) / 1e10)) === n59 ? n59 : 0) === -1);
+q826_1 = "sin 270";
+inl826: {
+if (!q826_0) {
+q827_0 = q826_1;
+inl827: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q828_0 = (a12 = (Math.round(Math.sin((Math.PI * 360) / 180) * 1e10) / 1e10), ((a12 === a12) || a12 === 0) ? a12 === 0 : eqSlow(a12, 0));
+q828_1 = "sin 360";
+inl828: {
+if (!q828_0) {
+q829_0 = q828_1;
+inl829: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q830_0 = (((n60 = (Math.round(Math.sin((Math.PI * 450) / 180) * 1e10) / 1e10)) === n60 ? n60 : 0) === 1);
+q830_1 = "sin 450";
+inl830: {
+if (!q830_0) {
+q831_0 = q830_1;
+inl831: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q832_0 = (((n61 = (Math.round(Math.sin((Math.PI * -90) / 180) * 1e10) / 1e10)) === n61 ? n61 : 0) === -1);
+q832_1 = "sin -90";
+inl832: {
+if (!q832_0) {
+q833_0 = q832_1;
+inl833: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q834_0 = (a13 = (Math.round(Math.sin((Math.PI * -180) / 180) * 1e10) / 1e10), ((a13 === a13) || a13 === 0) ? a13 === 0 : eqSlow(a13, 0));
+q834_1 = "sin -180";
+inl834: {
+if (!q834_0) {
+q835_0 = q834_1;
+inl835: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q836_0 = (((n62 = (Math.round(Math.sin((Math.PI * -270) / 180) * 1e10) / 1e10)) === n62 ? n62 : 0) === 1);
+q836_1 = "sin -270";
+inl836: {
+if (!q836_0) {
+q837_0 = q836_1;
+inl837: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q838_0 = (a14 = (Math.round(Math.sin((Math.PI * -360) / 180) * 1e10) / 1e10), ((a14 === a14) || a14 === 0) ? a14 === 0 : eqSlow(a14, 0));
+q838_1 = "sin -360";
+inl838: {
+if (!q838_0) {
+q839_0 = q838_1;
+inl839: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q840_0 = (((n63 = (Math.round(Math.sin((Math.PI * -450) / 180) * 1e10) / 1e10)) === n63 ? n63 : 0) === -1);
+q840_1 = "sin -450";
+inl840: {
+if (!q840_0) {
+q841_0 = q840_1;
+inl841: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q842_0 = (((n64 = (Math.round(Math.cos((Math.PI * 57.7) / 180) * 1e10) / 1e10)) === n64 ? n64 : 0) === 0.5343523494);
+q842_1 = "cos 57.7";
+inl842: {
+if (!q842_0) {
+q843_0 = q842_1;
+inl843: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q844_0 = (((n65 = (Math.round(Math.cos((Math.PI * 0) / 180) * 1e10) / 1e10)) === n65 ? n65 : 0) === 1);
+q844_1 = "cos 0";
+inl844: {
+if (!q844_0) {
+q845_0 = q844_1;
+inl845: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q846_0 = (a15 = (Math.round(Math.cos((Math.PI * 90) / 180) * 1e10) / 1e10), ((a15 === a15) || a15 === 0) ? a15 === 0 : eqSlow(a15, 0));
+q846_1 = "cos 90";
+inl846: {
+if (!q846_0) {
+q847_0 = q846_1;
+inl847: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q848_0 = (((n66 = (Math.round(Math.cos((Math.PI * 180) / 180) * 1e10) / 1e10)) === n66 ? n66 : 0) === -1);
+q848_1 = "cos 180";
+inl848: {
+if (!q848_0) {
+q849_0 = q848_1;
+inl849: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q850_0 = (a16 = (Math.round(Math.cos((Math.PI * 270) / 180) * 1e10) / 1e10), ((a16 === a16) || a16 === 0) ? a16 === 0 : eqSlow(a16, 0));
+q850_1 = "cos 270";
+inl850: {
+if (!q850_0) {
+q851_0 = q850_1;
+inl851: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q852_0 = (((n67 = (Math.round(Math.cos((Math.PI * 360) / 180) * 1e10) / 1e10)) === n67 ? n67 : 0) === 1);
+q852_1 = "cos 360";
+inl852: {
+if (!q852_0) {
+q853_0 = q852_1;
+inl853: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q854_0 = (a17 = (Math.round(Math.cos((Math.PI * 450) / 180) * 1e10) / 1e10), ((a17 === a17) || a17 === 0) ? a17 === 0 : eqSlow(a17, 0));
+q854_1 = "cos 450";
+inl854: {
+if (!q854_0) {
+q855_0 = q854_1;
+inl855: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q856_0 = (a18 = (Math.round(Math.cos((Math.PI * -90) / 180) * 1e10) / 1e10), ((a18 === a18) || a18 === 0) ? a18 === 0 : eqSlow(a18, 0));
+q856_1 = "cos -90";
+inl856: {
+if (!q856_0) {
+q857_0 = q856_1;
+inl857: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q858_0 = (((n68 = (Math.round(Math.cos((Math.PI * -180) / 180) * 1e10) / 1e10)) === n68 ? n68 : 0) === -1);
+q858_1 = "cos -180";
+inl858: {
+if (!q858_0) {
+q859_0 = q858_1;
+inl859: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q860_0 = (a19 = (Math.round(Math.cos((Math.PI * -270) / 180) * 1e10) / 1e10), ((a19 === a19) || a19 === 0) ? a19 === 0 : eqSlow(a19, 0));
+q860_1 = "cos -270";
+inl860: {
+if (!q860_0) {
+q861_0 = q860_1;
+inl861: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q862_0 = (((n69 = (Math.round(Math.cos((Math.PI * -360) / 180) * 1e10) / 1e10)) === n69 ? n69 : 0) === 1);
+q862_1 = "cos -360";
+inl862: {
+if (!q862_0) {
+q863_0 = q862_1;
+inl863: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+q864_0 = (a20 = (Math.round(Math.cos((Math.PI * -450) / 180) * 1e10) / 1e10), ((a20 === a20) || a20 === 0) ? a20 === 0 : eqSlow(a20, 0));
+q864_1 = "cos -450";
+inl864: {
+if (!q864_0) {
+q865_0 = q864_1;
+inl865: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+inl866: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("pass " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+return 2;
+default: throw new Error("TTW: bad pc " + fr.pc);
+}
+}
+Fs_3.prototype.fnRef = rs_3;
+return {Self, scripts: {
+"cT": {index: 0, native: null, step: rs_3, Frame: Fs_3, executableHat: false},
+}};
+})

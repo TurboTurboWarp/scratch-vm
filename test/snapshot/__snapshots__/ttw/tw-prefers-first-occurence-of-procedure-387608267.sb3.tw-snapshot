@@ -1,0 +1,32 @@
+// TW Snapshot
+// Input SHA-256: 5b964fa791468016b188af74e50cadad73d482be066b104bb22faff7e4a156dc
+
+// Player module
+(function ttw$Player_N (R, G) {
+"use strict";
+const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, makeStuck, RETIRE} = R;
+const runtime = G.runtime;
+const stage = G.stage;
+const CONTINUE = {};
+class Self {
+constructor (target) {
+this.target = target;
+}
+}
+function fp_0 (th, S) {
+const target = S.target;
+runtime.ext_scratch3_looks._say("pass", target);
+return "";
+}
+function fs_1 (th, S) {
+const target = S.target;
+runtime.ext_scratch3_looks._say("plan 1", target);
+inl1083: {
+runtime.ext_scratch3_looks._say("pass", target);
+}
+runtime.ext_scratch3_looks._say("end", target);
+}
+return {Self, scripts: {
+"[b!~xob(.Y5{?4gJ_QKm": {index: 0, native: fs_1, step: null, Frame: null, executableHat: false},
+}};
+})

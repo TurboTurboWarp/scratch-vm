@@ -1,0 +1,100 @@
+// TW Snapshot
+// Input SHA-256: e6a6f5ea252886949eab2f4b5608526dc3686160d65f6e07c2d864c82db24326
+
+// Sprite1 module
+(function ttw$Sprite1_N (R, G) {
+"use strict";
+const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, makeStuck, RETIRE} = R;
+const runtime = G.runtime;
+const stage = G.stage;
+const CONTINUE = {};
+const g0 = stage.variables["uEt-Ix{%|r3`}-W%+kdm"];
+const g1 = stage.variables["PJl9-2GypE.OstQk*B_*"];
+const g2 = stage.variables["`jEk@4|i[#Fk?(8x)AV.-my variable"];
+class Self {
+constructor (target) {
+this.target = target;
+}
+}
+const stk1 = makeStuck(runtime);
+class Fp_0 {
+constructor (parent) {
+this.parent = parent;
+this.pc = 0;
+this.s0 = undefined;
+}
+}
+function rp_0 (th, fr) {
+const S = th.self;
+const target = S.target;
+const h0 = g0;
+const h1 = g1;
+const h2 = g2;
+let n0 = 0, n1 = 0, n2 = 0, n3 = 0, v0 = 0, v2 = 0, v1 = 0;
+for (;;) switch (fr.pc) {
+case 0:
+h0.value = "ababa";
+h1.value = "";
+h2.value = 1;
+fr.s0 = h0.value.length;
+case 1:
+if ((n3 = rp_0$l0(th, fr)) !== -1) { if (n3 === -2) continue; return n3; }
+th.ret = ""; th.frame = fr.parent; th.fn = fr.parent.fnRef; return 1;
+default: throw new Error("TTW: bad pc " + fr.pc);
+}
+}
+Fp_0.prototype.fnRef = rp_0;
+function rp_0$l0 (th, fr) {
+const S = th.self;
+const target = S.target;
+const h0 = g0;
+const h1 = g1;
+const h2 = g2;
+let n0 = 0, n1 = 0, n2 = 0, n3 = 0, v0 = 0, v2 = 0, v1 = 0;
+n1 = 4096;
+v0 = h0.value;
+v2 = h2.value;
+v1 = h1.value;
+for (n0 = fr.s0; n0 > 0; n0--) {
+if ((((("" + v0))[((+v2) | 0) - 1] || "").toLowerCase() === "a".toLowerCase())) {
+v1 = (("" + v1) + "b");
+} else {
+v1 = (("" + v1) + "a");
+}
+v2 = (((n2 = +v2) === n2 ? n2 : 0) + 1);
+if (stk1()) { fr.s0 = n0 - 1; h2.value = v2; h1.value = v1; fr.pc = 1; return 0; }
+if (--n1 === 0) { fr.s0 = n0 - 1; h2.value = v2; h1.value = v1; fr.pc = 1; return -2; }
+}
+h2.value = v2; h1.value = v1; 
+return -1;
+}
+class Fs_2 {
+constructor (parent) {
+this.parent = parent;
+this.pc = 0;
+}
+}
+function rs_2 (th, fr) {
+const S = th.self;
+const target = S.target;
+const h0 = g1;
+let a0;
+for (;;) switch (fr.pc) {
+case 0:
+runtime.ext_scratch3_looks._say("plan 1", target);
+{ const nf = new Fp_0(fr); th.frame = nf; th.fn = rp_0; }
+fr.pc = 1; return 1;
+case 1:
+if ((a0 = h0.value, typeof a0 === "number" ? false : ("" + a0).toLowerCase() === "babab")) {
+runtime.ext_scratch3_looks._say("pass", target);
+}
+runtime.ext_scratch3_looks._say("end", target);
+return 2;
+default: throw new Error("TTW: bad pc " + fr.pc);
+}
+}
+Fs_2.prototype.fnRef = rs_2;
+return {Self, scripts: {
+"m": {index: 0, native: null, step: rs_2, Frame: Fs_2, executableHat: false},
+}};
+})

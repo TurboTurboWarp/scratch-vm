@@ -1,0 +1,115 @@
+// TW Snapshot
+// Input SHA-256: f8c5c7c3ba1afbd140646e67d9987964cdcdf0cb30b53a0f6276b11f460e7d25
+
+// Sprite1 module
+(function ttw$Sprite1_N (R, G) {
+"use strict";
+const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, makeStuck, RETIRE} = R;
+const runtime = G.runtime;
+const stage = G.stage;
+const CONTINUE = {};
+const g0 = stage.variables["JbF5exWEi*m?-UEmkASS"];
+const g1 = stage.variables["[G/@.KGc-4y[(GZ(bt7o"];
+const o0 = runtime.getOpcodeFunction("sound_seteffectto");
+class Self {
+constructor (target) {
+this.target = target;
+}
+}
+class Fs_0 {
+constructor (parent) {
+this.parent = parent;
+this.pc = 0;
+this.s0 = undefined;
+this.s1 = undefined;
+this.s2 = undefined;
+}
+}
+function rs_0 (th, fr) {
+const S = th.self;
+const target = S.target;
+const h0 = g0;
+const h1 = g1;
+let a0, a1;
+for (;;) switch (fr.pc) {
+case 0:
+case 1:
+if (!true) { fr.pc = 2; continue; }
+if (!(a0 = h0.value, a1 = h1.value, ((typeof a0 === "number" && typeof a1 === "number" && a0 === a0 && a1 === a1) || a0 === a1) ? a0 === a1 : eqSlow(a0, a1))) { fr.pc = 3; continue; }
+fr.pc = 4; continue;
+case 3:
+runtime.ext_scratch3_looks._say("pass", target);
+h1.value = h0.value;
+fr.s0 = {"VALUE":h0.value,"EFFECT":"pitch",};
+fr.s1 = {};
+fr.s2 = false;
+case 5:
+switch (compatCall(th, fr.s0, fr.s1, o0, null, "*=8r,g4Pzvxo?aSMcpfX", null, fr.s2)) {
+case 1: fr.s2 = true; fr.pc = 5; return 0;
+case 3: fr.s2 = true; fr.pc = 5; continue;
+case 2: fr.pc = 6; return 0;
+}
+case 6:
+compatResume(th, null);
+fr.s0 = null; fr.s1 = null;
+if (th.fromPromise) { th.fromPromise = false; fr.pc = 1; continue; }
+case 4:
+fr.pc = 1; return 0;
+case 2:
+return 2;
+default: throw new Error("TTW: bad pc " + fr.pc);
+}
+}
+Fs_0.prototype.fnRef = rs_0;
+class Fs_1 {
+constructor (parent) {
+this.parent = parent;
+this.pc = 0;
+this.s0 = undefined;
+this.s1 = undefined;
+this.s2 = undefined;
+}
+}
+function rs_1 (th, fr) {
+const S = th.self;
+const target = S.target;
+const h0 = g1;
+const h1 = g0;
+let n0 = 0;
+for (;;) switch (fr.pc) {
+case 0:
+h0.value = 0;
+runtime.ext_scratch3_looks._say("plan 15", target);
+fr.s0 = 15;
+case 1:
+if (!(fr.s0 > 0)) { fr.pc = 2; continue; }
+fr.s0--;
+if ((((n0 = +h1.value) === n0 ? n0 : 0) === 200)) {
+h1.value = 50;
+} else {
+h1.value = 200;
+}
+fr.s1 = timer(runtime);
+fr.s2 = Math.max(0, 1000 * 0);
+runtime.requestRedraw();
+fr.pc = 3; return 0;
+case 3:
+while (fr.s1.timeElapsed() < fr.s2) {
+fr.pc = 3; return 0;
+}
+fr.s1 = null;
+fr.pc = 1; return 0;
+case 2:
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+return 2;
+default: throw new Error("TTW: bad pc " + fr.pc);
+}
+}
+Fs_1.prototype.fnRef = rs_1;
+return {Self, scripts: {
+"1@X(7{Sl|cO^ZNo`uc(0": {index: 0, native: null, step: rs_0, Frame: Fs_0, executableHat: false},
+"4~Hr)/F$59=~}SL%vWBg": {index: 1, native: null, step: rs_1, Frame: Fs_1, executableHat: false},
+}};
+})

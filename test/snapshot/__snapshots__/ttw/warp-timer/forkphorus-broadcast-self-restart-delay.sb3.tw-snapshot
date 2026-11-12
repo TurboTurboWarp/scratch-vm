@@ -1,0 +1,147 @@
+// TW Snapshot
+// Input SHA-256: a018442bac20400dc82b159894be4f188118b41c2f85528416cdbe2eb221b01f
+
+// Sprite1 module
+(function ttw$Sprite1_N (R, G) {
+"use strict";
+const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, makeStuck, RETIRE} = R;
+const runtime = G.runtime;
+const stage = G.stage;
+const CONTINUE = {};
+const g0 = stage.variables["`jEk@4|i[#Fk?(8x)AV.-my variable"];
+const g1 = stage.variables["XpJYYJ:ZH%1jU!x!l(ZP"];
+class Self {
+constructor (target) {
+this.target = target;
+}
+}
+class Fs_0 {
+constructor (parent) {
+this.parent = parent;
+this.pc = 0;
+}
+}
+function rs_0 (th, fr) {
+const S = th.self;
+const target = S.target;
+const h0 = g0;
+const h1 = g1;
+for (;;) switch (fr.pc) {
+case 0:
+h0.value = 0;
+h1.value = 0;
+broadcast(runtime, "message1");
+case 1:
+while (true) {
+h1.value = 0;
+fr.pc = 1; return 0;
+}
+return 2;
+default: throw new Error("TTW: bad pc " + fr.pc);
+}
+}
+Fs_0.prototype.fnRef = rs_0;
+function fp_1 (th, S, p0) {
+const target = S.target;
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("pass " + p0), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); throw RETIRE;
+return "";
+}
+function fp_2 (th, S, p0) {
+const target = S.target;
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + p0), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); throw RETIRE;
+return "";
+}
+function fs_3 (th, S) {
+const target = S.target;
+const h0 = g0;
+const h1 = g1;
+let v0 = h0.value, v1 = h1.value;
+if (typeof v0 !== "number" || v0 !== v0 || typeof v1 !== "number" || v1 !== v1) return fs_3$g(th, S);
+let q271_0 = 0, q272_0 = 0;
+if ((v0 > 3)) {
+if ((v1 < v0)) {
+q271_0 = "";
+inl271: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("pass " + q271_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+h0.value = v0;
+h1.value = v1;
+runtime.stopAll();
+retire(th); return;
+}
+} else {
+q272_0 = "";
+inl272: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + q272_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+h0.value = v0;
+h1.value = v1;
+runtime.stopAll();
+retire(th); return;
+}
+}
+} else {
+target.setCostume(target.currentCostume + 1);
+v0 = (v0 + 1);
+v1 = (v1 + 1);
+broadcast(runtime, "message1");
+}
+h0.value = v0;
+h1.value = v1;
+}
+function fs_3$g (th, S) {
+const target = S.target;
+const h0 = g0;
+const h1 = g1;
+let v0 = h0.value, v1 = h1.value;
+let n0 = 0, n1 = 0, n2 = 0, n3 = 0, q273_0 = 0, q274_0 = 0;
+if ((((typeof v0 === "number" && v0 === v0)) ? v0 > 3 : gtSlow(v0, 3))) {
+if ((((typeof v1 === "number" && typeof v0 === "number" && v0 === v0)) ? v1 < v0 : ltSlow(v1, v0))) {
+q273_0 = "";
+inl273: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("pass " + q273_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+h0.value = v0;
+h1.value = v1;
+runtime.stopAll();
+retire(th); return;
+}
+} else {
+q274_0 = "";
+inl274: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + q274_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+h0.value = v0;
+h1.value = v1;
+runtime.stopAll();
+retire(th); return;
+}
+}
+} else {
+target.setCostume(target.currentCostume + 1);
+n0 = ((n1 = +v0) === n1 ? n1 : 0);
+v0 = (n0 + 1);
+n2 = ((n3 = +v1) === n3 ? n3 : 0);
+v1 = (n2 + 1);
+broadcast(runtime, "message1");
+}
+h0.value = v0;
+h1.value = v1;
+}
+return {Self, scripts: {
+"B": {index: 0, native: null, step: rs_0, Frame: Fs_0, executableHat: false},
+"D": {index: 1, native: fs_3, step: null, Frame: null, executableHat: false},
+}};
+})

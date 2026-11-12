@@ -1,0 +1,64 @@
+// TW Snapshot
+// Input SHA-256: 1d02d01ddcd53c67e093bda79912f19683829f86fd23e1f77cbfc0aef03dc0f3
+
+// Sprite1 module
+(function ttw$Sprite1_N (R, G) {
+"use strict";
+const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, makeStuck, RETIRE} = R;
+const runtime = G.runtime;
+const stage = G.stage;
+const CONTINUE = {};
+class Self {
+constructor (target) {
+this.target = target;
+this.v0 = target.variables["gTtSj;o_E;Snkn620KF."];
+this.l0 = target.variables["zShM`!CD?d_|Z,]5X}N6"]._tl;
+}
+}
+function fs_0 (th, S) {
+const target = S.target;
+const h0 = S.v0;
+const L0 = S.l0;
+let v0 = h0.value;
+if (typeof v0 !== "number" || v0 !== v0) return fs_0$g(th, S);
+let n0 = 0, n1 = 0, n2 = 0;
+runtime.ext_scratch3_looks._say("plan 2", target);
+v0 = 2;
+if ((v0 === 2)) {
+runtime.ext_scratch3_looks._say("pass variable", target);
+}
+L0.clear();
+n0 = 3;
+if (L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = n0; else L0.pushSlow(n0);
+if ((((n2 = 1) >= 1 && n2 <= L0.len && (n1 = L0.f64[(n2 | 0) - 1]) === n1 ? n1 : L0.numSlow(n2)) === 3)) {
+runtime.ext_scratch3_looks._say("pass list", target);
+}
+runtime.ext_scratch3_looks._say("end", target);
+h0.value = v0;
+L0.upToDate = false;
+}
+function fs_0$g (th, S) {
+const target = S.target;
+const h0 = S.v0;
+const L0 = S.l0;
+let v0 = h0.value;
+let n0 = 0, n1 = 0, n2 = 0;
+runtime.ext_scratch3_looks._say("plan 2", target);
+v0 = 2;
+if ((v0 === 2)) {
+runtime.ext_scratch3_looks._say("pass variable", target);
+}
+L0.clear();
+n0 = 3;
+if (L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = n0; else L0.pushSlow(n0);
+if ((((n2 = 1) >= 1 && n2 <= L0.len && (n1 = L0.f64[(n2 | 0) - 1]) === n1 ? n1 : L0.numSlow(n2)) === 3)) {
+runtime.ext_scratch3_looks._say("pass list", target);
+}
+runtime.ext_scratch3_looks._say("end", target);
+h0.value = v0;
+L0.upToDate = false;
+}
+return {Self, scripts: {
+"i": {index: 0, native: fs_0, step: null, Frame: null, executableHat: false},
+}};
+})

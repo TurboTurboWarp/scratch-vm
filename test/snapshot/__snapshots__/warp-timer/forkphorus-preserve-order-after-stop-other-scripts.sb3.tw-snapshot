@@ -10,7 +10,7 @@ startHats("event_whenbroadcastreceived", { BROADCAST_OPTION: "3" });
 startHats("event_whenbroadcastreceived", { BROADCAST_OPTION: "1" });
 startHats("event_whenbroadcastreceived", { BROADCAST_OPTION: "2" });
 runtime.stopForTarget(target, thread);
-b0.value = [];
+b0._tl.clear();
 startHats("event_whenbroadcastreceived", { BROADCAST_OPTION: "1" });
 startHats("event_whenbroadcastreceived", { BROADCAST_OPTION: "2" });
 startHats("event_whenbroadcastreceived", { BROADCAST_OPTION: "3" });
@@ -22,7 +22,7 @@ while (thread.timer.timeElapsed() < a0) {
 yield;
 }
 thread.timer = null;
-if ((((t = +listContents(b0)) === t ? t : 0) === 312)) {
+if ((((t = +b0._tl.contents()) === t ? t : 0) === 312)) {
 thread.procedures["ZOK %s"]("");
 } else {
 thread.procedures["ZFAIL %s"]("");
@@ -56,8 +56,7 @@ return "";
 (function factoryXYZ(thread) { const target = thread.target; const runtime = target.runtime; const stage = runtime.getTargetForStage();
 const b0 = stage.variables["C7VGwqE9rvJgpw(oV^?E"];
 return function funXYZ () {
-b0.value.push(1);
-b0._monitorUpToDate = false;
+b0._tl.pushSlow(1);
 retire(); return;
 }; })
 
@@ -65,8 +64,7 @@ retire(); return;
 (function factoryXYZ(thread) { const target = thread.target; const runtime = target.runtime; const stage = runtime.getTargetForStage();
 const b0 = stage.variables["C7VGwqE9rvJgpw(oV^?E"];
 return function funXYZ () {
-b0.value.push(2);
-b0._monitorUpToDate = false;
+b0._tl.pushSlow(2);
 retire(); return;
 }; })
 
@@ -74,7 +72,6 @@ retire(); return;
 (function factoryXYZ(thread) { const target = thread.target; const runtime = target.runtime; const stage = runtime.getTargetForStage();
 const b0 = stage.variables["C7VGwqE9rvJgpw(oV^?E"];
 return function funXYZ () {
-b0.value.push(3);
-b0._monitorUpToDate = false;
+b0._tl.pushSlow(3);
 retire(); return;
 }; })

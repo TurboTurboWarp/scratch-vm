@@ -1,0 +1,68 @@
+// TW Snapshot
+// Input SHA-256: 1fa5a314682ce218a097be41607e4eb456a2b046a47ca46d01a1033323afa544
+
+// Sprite1 module
+(function ttw$Sprite1_N (R, G) {
+"use strict";
+const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, makeStuck, RETIRE} = R;
+const runtime = G.runtime;
+const stage = G.stage;
+const CONTINUE = {};
+const o0 = runtime.getOpcodeFunction("motion_pointtowards");
+class Self {
+constructor (target) {
+this.target = target;
+}
+}
+class Fs_0 {
+constructor (parent) {
+this.parent = parent;
+this.pc = 0;
+this.s0 = undefined;
+this.s1 = undefined;
+this.s2 = undefined;
+}
+}
+function rs_0 (th, fr) {
+const S = th.self;
+const target = S.target;
+for (;;) switch (fr.pc) {
+case 0:
+runtime.ext_scratch3_looks._say("plan 4", target);
+target.setDirection(95);
+if ((target.direction === 95)) {
+runtime.ext_scratch3_looks._say("pass 1", target);
+}
+target.setDirection((1 / 0));
+if ((target.direction === 95)) {
+runtime.ext_scratch3_looks._say("pass 2", target);
+}
+target.setDirection(((0 / 0) || 0));
+if ((target.direction === 0)) {
+runtime.ext_scratch3_looks._say("pass 3", target);
+}
+fr.s0 = {"TOWARDS":"Sprite2",};
+fr.s1 = {};
+fr.s2 = false;
+case 1:
+switch (compatCall(th, fr.s0, fr.s1, o0, null, "g", null, fr.s2)) {
+case 1: fr.s2 = true; fr.pc = 1; return 0;
+case 3: fr.s2 = true; fr.pc = 1; continue;
+case 2: fr.pc = 2; return 0;
+}
+case 2:
+compatResume(th, null);
+fr.s0 = null; fr.s1 = null;
+if ((target.direction === 90)) {
+runtime.ext_scratch3_looks._say("pass 4", target);
+}
+runtime.ext_scratch3_looks._say("end", target);
+return 2;
+default: throw new Error("TTW: bad pc " + fr.pc);
+}
+}
+Fs_0.prototype.fnRef = rs_0;
+return {Self, scripts: {
+"n": {index: 0, native: null, step: rs_0, Frame: Fs_0, executableHat: false},
+}};
+})

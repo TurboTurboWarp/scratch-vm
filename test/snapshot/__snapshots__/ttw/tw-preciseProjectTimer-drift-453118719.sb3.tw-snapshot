@@ -1,0 +1,108 @@
+// TW Snapshot
+// Input SHA-256: 19e0b3f9dcac763041039a8ffe87b6732eb744f9ebb136e8d61a53ccf19118e3
+
+// Sprite1 module
+(function ttw$Sprite1_N (R, G) {
+"use strict";
+const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, makeStuck, RETIRE} = R;
+const runtime = G.runtime;
+const stage = G.stage;
+const CONTINUE = {};
+const g0 = stage.variables["PsY$$vp$IVH;dDAr[q2h"];
+const g1 = stage.variables["l^q!%fq]Bv;72dlGf}^Z"];
+const o0 = runtime.getOpcodeFunction("event_whengreaterthan");
+class Self {
+constructor (target) {
+this.target = target;
+}
+}
+class Fs_0 {
+constructor (parent) {
+this.parent = parent;
+this.pc = 0;
+this.s0 = undefined;
+this.s1 = undefined;
+this.s2 = undefined;
+}
+}
+function rs_0 (th, fr) {
+const S = th.self;
+const target = S.target;
+const h0 = g0;
+const h1 = g1;
+for (;;) switch (fr.pc) {
+case 0:
+h0.value = 0;
+runtime.ext_scratch3_looks._say("plan 0", target);
+fr.s0 = 30;
+case 1:
+if (!(fr.s0 > 0)) { fr.pc = 2; continue; }
+fr.s0--;
+h1.value = runtime.ioDevices.clock.projectTimer();
+fr.s1 = timer(runtime);
+fr.s2 = Math.max(0, 1000 * 0);
+runtime.requestRedraw();
+fr.pc = 3; return 0;
+case 3:
+while (fr.s1.timeElapsed() < fr.s2) {
+fr.pc = 3; return 0;
+}
+fr.s1 = null;
+fr.pc = 1; return 0;
+case 2:
+h0.value = 1;
+runtime.ext_scratch3_looks._say("end", target);
+return 2;
+default: throw new Error("TTW: bad pc " + fr.pc);
+}
+}
+Fs_0.prototype.fnRef = rs_0;
+class Fs_1 {
+constructor (parent) {
+this.parent = parent;
+this.pc = 0;
+this.s0 = undefined;
+this.s1 = undefined;
+this.s2 = undefined;
+this.s3 = undefined;
+}
+}
+function rs_1 (th, fr) {
+const S = th.self;
+const target = S.target;
+const h0 = g1;
+const h1 = g0;
+let a0, a1, a2, a3;
+for (;;) switch (fr.pc) {
+case 0:
+fr.s1 = {"VALUE":h0.value,"WHENGREATERTHANMENU":"TIMER",};
+fr.s2 = {};
+fr.s3 = false;
+case 1:
+switch (compatCall(th, fr.s1, fr.s2, o0, null, "iNmua~6veGey6O-_UB9.", null, fr.s3)) {
+case 1: fr.s3 = true; fr.pc = 1; return 0;
+case 3: fr.s3 = true; fr.pc = 1; continue;
+case 2: fr.pc = 2; return 0;
+}
+case 2:
+fr.s0 = compatResume(th, null);
+fr.s1 = null; fr.s2 = null;
+a0 = toBoolean(fr.s0);
+a1 = target.hasEdgeActivatedValue("iNmua~6veGey6O-_UB9.");
+a2 = target.updateEdgeActivatedValue("iNmua~6veGey6O-_UB9.", a0);
+if (!(a1 ? (!a2 && a0) : a0)) return 2;
+fr.pc = 3; return 0;
+case 3:
+if ((a3 = h1.value, ((typeof a3 === "number" && a3 === a3) || a3 === 0) ? a3 === 0 : eqSlow(a3, 0))) {
+runtime.ext_scratch3_looks._say("fail", target);
+}
+return 2;
+default: throw new Error("TTW: bad pc " + fr.pc);
+}
+}
+Fs_1.prototype.fnRef = rs_1;
+return {Self, scripts: {
+"]0V{zXEC-(fsa9A}vBSq": {index: 0, native: null, step: rs_0, Frame: Fs_0, executableHat: false},
+"iNmua~6veGey6O-_UB9.": {index: 1, native: null, step: rs_1, Frame: Fs_1, executableHat: true},
+}};
+})

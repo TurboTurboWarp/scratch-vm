@@ -5,6 +5,7 @@
 
 const uid = require('../util/uid');
 const xmlEscape = require('../util/xml-escape');
+const {TList} = require('../ttw/rt/tlist');
 
 class Variable {
     /**
@@ -16,6 +17,12 @@ class Variable {
      * @constructor
      */
     constructor (id, name, type, isCloud) {
+        // eslint-disable-next-line no-use-before-define
+        if (type === Variable.LIST_TYPE && !(this instanceof ListSpecializedVariable)) {
+            // ttw: lists must use the ListVariable class so that `value` is an accessor backed by a TList.
+            // eslint-disable-next-line no-use-before-define, no-constructor-return
+            return new ListSpecializedVariable(id, name, type, isCloud);
+        }
         /** @type {string} */
         this.id = id || uid();
         this.name = name;
@@ -26,8 +33,11 @@ class Variable {
             this.value = 0;
             break;
         case Variable.LIST_TYPE:
-            this.value = [];
-            this._monitorUpToDate = false;
+            /**
+             * ttw: the real storage of a list. `value` is an accessor that externalizes it.
+             * @type {TList}
+             */
+            this._tl = new TList();
             break;
         case Variable.BROADCAST_MESSAGE_TYPE:
             this.value = this.name;
@@ -113,7 +123,28 @@ class Variable {
 
 /**
  * See Variable.create()
+ * ttw: list variables keep their contents in a TList (`_tl`, spec 03 §3). The `value` accessor hands out
+ * a plain JS array to outside code; changes to that array are merged back at the next safepoint.
+ * The array reference is only valid until the project next operates on the list.
  */
-class ListSpecializedVariable extends Variable {}
+class ListSpecializedVariable extends Variable {
+    get value () {
+        return this._tl.externalize();
+    }
+
+    set value (array) {
+        this._tl.assignExternal(array);
+    }
+
+    get _monitorUpToDate () {
+        return this._tl.upToDate;
+    }
+
+    set _monitorUpToDate (upToDate) {
+        this._tl.upToDate = upToDate;
+    }
+}
+
+Variable.ListVariable = ListSpecializedVariable;
 
 module.exports = Variable;

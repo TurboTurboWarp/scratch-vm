@@ -1,0 +1,119 @@
+// TW Snapshot
+// Input SHA-256: badd564b5bce22a82223511c91ba701da5314e5ad83e46a08ea5f401a4338b20
+
+// Sprite2 module
+(function ttw$Sprite2_N (R, G) {
+"use strict";
+const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, makeStuck, RETIRE} = R;
+const runtime = G.runtime;
+const stage = G.stage;
+const CONTINUE = {};
+const g0 = stage.variables[",OktMIwz{~bdgWnPEa8u"];
+const g1 = stage.variables["yfy(G`K5K^fJcXAfiN4i"];
+class Self {
+constructor (target) {
+this.target = target;
+}
+}
+class Fs_0 {
+constructor (parent) {
+this.parent = parent;
+this.pc = 0;
+this.s0 = undefined;
+this.s1 = undefined;
+}
+}
+function rs_0 (th, fr) {
+const S = th.self;
+const target = S.target;
+const h0 = g0;
+const h1 = g1;
+let n0 = 0, n1 = 0, n2 = 0, n3 = 0, n4 = 0, n5 = 0, n6 = 0, n7 = 0, n8 = 0, n9 = 0, n10 = 0;
+for (;;) switch (fr.pc) {
+case 0:
+runtime.ext_scratch3_looks._say("plan 14", target);
+if ((10 === 10)) {
+runtime.ext_scratch3_looks._say("pass 1", target);
+}
+if ((10 === 10)) {
+runtime.ext_scratch3_looks._say("pass 2", target);
+}
+h0.value = 10;
+if ((h0.value === 10)) {
+runtime.ext_scratch3_looks._say("pass 3", target);
+}
+if ((h0.value === 10)) {
+runtime.ext_scratch3_looks._say("pass 4", target);
+}
+if ((h0.value === 10)) {
+runtime.ext_scratch3_looks._say("pass 5", target);
+}
+fr.s0 = 1;
+case 1:
+for (n0 = fr.s0; n0 > 0; n0--) {
+if ((((n1 = +h0.value) === n1 ? n1 : 0) === 10)) {
+runtime.ext_scratch3_looks._say("pass 6", target);
+}
+if ((((n2 = +h0.value) === n2 ? n2 : 0) === 10)) {
+runtime.ext_scratch3_looks._say("pass 7", target);
+}
+if ((((n3 = +h0.value) === n3 ? n3 : 0) === 10)) {
+runtime.ext_scratch3_looks._say("pass 8", target);
+}
+fr.s0 = n0 - 1; fr.pc = 1; return 0;
+}
+h1.value = "010";
+if ((((n4 = +h1.value) === n4 ? n4 : 0) === 10)) {
+runtime.ext_scratch3_looks._say("pass 9", target);
+}
+if ((((n5 = +h1.value) === n5 ? n5 : 0) === 10)) {
+runtime.ext_scratch3_looks._say("pass 10", target);
+}
+if ((((n6 = +h1.value) === n6 ? n6 : 0) === 10)) {
+runtime.ext_scratch3_looks._say("pass 11", target);
+}
+fr.s1 = 1;
+case 2:
+for (n7 = fr.s1; n7 > 0; n7--) {
+if ((((n8 = +h1.value) === n8 ? n8 : 0) === 10)) {
+runtime.ext_scratch3_looks._say("pass 12", target);
+}
+if ((((n9 = +h1.value) === n9 ? n9 : 0) === 10)) {
+runtime.ext_scratch3_looks._say("pass 13", target);
+}
+if ((((n10 = +h1.value) === n10 ? n10 : 0) === 10)) {
+runtime.ext_scratch3_looks._say("pass 14", target);
+}
+fr.s1 = n7 - 1; fr.pc = 2; return 0;
+}
+if ((typeof 1 === "number" ? false : "" === ("" + 1).toLowerCase())) {
+runtime.ext_scratch3_looks._say("fail", target);
+}
+if ((typeof 1 === "number" ? false : ("" + 1).toLowerCase() === "")) {
+runtime.ext_scratch3_looks._say("fail", target);
+}
+if ((typeof 1 === "number" ? false : " " === ("" + 1).toLowerCase())) {
+runtime.ext_scratch3_looks._say("fail", target);
+}
+if ((typeof 0 === "number" ? false : " " === ("" + 0).toLowerCase())) {
+runtime.ext_scratch3_looks._say("fail", target);
+}
+if ((typeof 0 === "number" ? false : ("" + 0).toLowerCase() === " ")) {
+runtime.ext_scratch3_looks._say("fail", target);
+}
+if ((typeof 0 === "number" ? false : "" === ("" + 0).toLowerCase())) {
+runtime.ext_scratch3_looks._say("fail", target);
+}
+if ((typeof 0 === "number" ? false : ("" + 0).toLowerCase() === "")) {
+runtime.ext_scratch3_looks._say("fail", target);
+}
+runtime.ext_scratch3_looks._say("end", target);
+return 2;
+default: throw new Error("TTW: bad pc " + fr.pc);
+}
+}
+Fs_0.prototype.fnRef = rs_0;
+return {Self, scripts: {
+"tf!_Mddlt{T3NH|Jiu#o": {index: 0, native: null, step: rs_0, Frame: Fs_0, executableHat: false},
+}};
+})

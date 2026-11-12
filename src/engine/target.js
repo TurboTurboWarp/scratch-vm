@@ -75,6 +75,12 @@ class Target extends EventEmitter {
          * @type {Object.<string, object>}
          */
         this.extensionStorage = {};
+
+        /**
+         * ttw: per-target state of the sprite's TurboTurboWarp module (variable/list references).
+         * @type {object|null}
+         */
+        this._ttwSelf = null;
     }
 
     /**
@@ -269,6 +275,7 @@ class Target extends EventEmitter {
      * Additional checks are made that the variable can be created as a cloud variable.
      */
     createVariable (id, name, type, isCloud) {
+        if (this.runtime && this.runtime.ttw) this.runtime.ttw.invalidate();
         if (!Object.prototype.hasOwnProperty.call(this.variables, id)) {
             const newVariable = Variable.create(id, name, type, false);
             if (isCloud && this.isStage && this.runtime.canAddCloudVariable()) {
@@ -316,6 +323,7 @@ class Target extends EventEmitter {
      * @param {string} newName New name for the variable.
      */
     renameVariable (id, newName) {
+        if (this.runtime && this.runtime.ttw) this.runtime.ttw.invalidate();
         if (Object.prototype.hasOwnProperty.call(this.variables, id)) {
             const variable = this.variables[id];
             if (variable.id === id) {
@@ -367,6 +375,7 @@ class Target extends EventEmitter {
      * @param {string} id Id of variable to delete.
      */
     deleteVariable (id) {
+        if (this.runtime && this.runtime.ttw) this.runtime.ttw.invalidate();
         if (Object.prototype.hasOwnProperty.call(this.variables, id)) {
             // Get info about the variable before deleting it
             const deletedVariableName = this.variables[id].name;
@@ -423,7 +432,7 @@ class Target extends EventEmitter {
                 originalVariable.isCloud
             );
             if (newVariable.type === Variable.LIST_TYPE) {
-                newVariable.value = originalVariable.value.slice(0);
+                newVariable._tl = originalVariable._tl.clone();
             } else {
                 newVariable.value = originalVariable.value;
             }

@@ -1,0 +1,70 @@
+// TW Snapshot
+// Input SHA-256: 289d73b9be2b60f501e57768410029798d2dec7d971e5935e5f19fb2a9988169
+
+// Sprite1 module
+(function ttw$Sprite1_N (R, G) {
+"use strict";
+const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, makeStuck, RETIRE} = R;
+const runtime = G.runtime;
+const stage = G.stage;
+const CONTINUE = {};
+const g0 = stage.variables["k|@-`:^^Mo+E}$({|2/P"];
+const g1 = stage.variables["t2m05.oW;5f0=GL30@pV"];
+class Self {
+constructor (target) {
+this.target = target;
+}
+}
+function fs_0 (th, S) {
+const target = S.target;
+const h0 = g0;
+const h1 = g1;
+let v0 = h0.value, v1 = h1.value;
+if (typeof v0 !== "number" || v0 !== v0 || typeof v1 !== "number" || v1 !== v1) return fs_0$g(th, S);
+runtime.ext_scratch3_looks._say("plan 4", target);
+v0 = (1 / 0);
+v1 = (-1 / 0);
+if ((("" + (v0 + v1)).toLowerCase() === "NaN".toLowerCase())) {
+runtime.ext_scratch3_looks._say("pass 1", target);
+}
+if ((("" + (v0 - v0)).toLowerCase() === "NaN".toLowerCase())) {
+runtime.ext_scratch3_looks._say("pass 1", target);
+}
+if ((("" + (v0 * 0)).toLowerCase() === "NaN".toLowerCase())) {
+runtime.ext_scratch3_looks._say("pass 1", target);
+}
+if ((("" + (0 / 0)).toLowerCase() === "NaN".toLowerCase())) {
+runtime.ext_scratch3_looks._say("pass 1", target);
+}
+runtime.ext_scratch3_looks._say("end", target);
+h0.value = v0;
+h1.value = v1;
+}
+function fs_0$g (th, S) {
+const target = S.target;
+const h0 = g0;
+const h1 = g1;
+let v0 = h0.value, v1 = h1.value;
+runtime.ext_scratch3_looks._say("plan 4", target);
+v0 = (1 / 0);
+v1 = (-1 / 0);
+if ((("" + (v0 + v1)).toLowerCase() === "NaN".toLowerCase())) {
+runtime.ext_scratch3_looks._say("pass 1", target);
+}
+if ((("" + (v0 - v0)).toLowerCase() === "NaN".toLowerCase())) {
+runtime.ext_scratch3_looks._say("pass 1", target);
+}
+if ((("" + (v0 * 0)).toLowerCase() === "NaN".toLowerCase())) {
+runtime.ext_scratch3_looks._say("pass 1", target);
+}
+if ((("" + (0 / 0)).toLowerCase() === "NaN".toLowerCase())) {
+runtime.ext_scratch3_looks._say("pass 1", target);
+}
+runtime.ext_scratch3_looks._say("end", target);
+h0.value = v0;
+h1.value = v1;
+}
+return {Self, scripts: {
+"l": {index: 0, native: fs_0, step: null, Frame: null, executableHat: false},
+}};
+})

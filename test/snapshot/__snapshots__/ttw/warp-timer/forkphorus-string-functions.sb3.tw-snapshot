@@ -1,0 +1,983 @@
+// TW Snapshot
+// Input SHA-256: 0d7c7d4a267a29ff249f9314e87a7a7170870dc48175ffdba5a12fa48e8ba0a2
+
+// Sprite1 module
+(function ttw$Sprite1_N (R, G) {
+"use strict";
+const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, makeStuck, RETIRE} = R;
+const runtime = G.runtime;
+const stage = G.stage;
+const CONTINUE = {};
+const g0 = stage.variables["aBQ}o|vZt_fHtB~ZyHPZ-sutils:iterator-"];
+const g1 = stage.variables["aBQ}o|vZt_fHtB~ZyHPZ-@return-"];
+const gl0 = stage.variables["aBQ}o|vZt_fHtB~ZyHPZ-sutils:bufferl-list"]._tl;
+const gl1 = stage.variables["aBQ}o|vZt_fHtB~ZyHPZ-sutils:templ-list"]._tl;
+class Self {
+constructor (target) {
+this.target = target;
+}
+}
+const stk1 = makeStuck(runtime);
+class Fp_0 {
+constructor (parent) {
+this.parent = parent;
+this.pc = 0;
+this.s0 = undefined;
+this.s1 = undefined;
+this.s2 = undefined;
+}
+}
+function rp_0 (th, fr) {
+const S = th.self;
+const target = S.target;
+const h0 = g0;
+const h1 = g1;
+const L0 = gl0;
+let n0 = 0, n1 = 0, n2 = 0, n3 = 0, a0, v0 = 0;
+for (;;) switch (fr.pc) {
+case 0:
+L0.clear();
+h0.value = ("" + fr.s0).length;
+fr.s2 = ("" + fr.s1).length;
+case 1:
+if ((n3 = rp_0$l0(th, fr)) !== -1) { if (n3 === -2) continue; return n3; }
+h1.value = (a0 = L0.contents(), ((typeof a0 === "number" && typeof fr.s1 === "number" && a0 === a0 && fr.s1 === fr.s1) || a0 === fr.s1) ? a0 === fr.s1 : eqSlow(a0, fr.s1));
+th.ret = ""; th.frame = fr.parent; th.fn = fr.parent.fnRef; return 1;
+default: throw new Error("TTW: bad pc " + fr.pc);
+}
+}
+Fp_0.prototype.fnRef = rp_0;
+function rp_0$l0 (th, fr) {
+const S = th.self;
+const target = S.target;
+const h0 = g0;
+const h1 = g1;
+const L0 = gl0;
+let n0 = 0, n1 = 0, n2 = 0, n3 = 0, a0, v0 = 0;
+n1 = 4096;
+v0 = h0.value;
+for (n0 = fr.s2; n0 > 0; n0--) {
+L0.insertSlow(1, ((("" + fr.s0))[((+v0) | 0) - 1] || ""));
+v0 = (((n2 = +v0) === n2 ? n2 : 0) + -1);
+if (stk1()) { fr.s2 = n0 - 1; h0.value = v0; fr.pc = 1; return 0; }
+if (--n1 === 0) { fr.s2 = n0 - 1; h0.value = v0; fr.pc = 1; return -2; }
+}
+h0.value = v0; 
+return -1;
+}
+function fp_2 (th, S, p0) {
+const target = S.target;
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); throw RETIRE;
+return "";
+}
+function fp_3 (th, S, p0, p1) {
+const target = S.target;
+let q1014_0 = 0;
+if (!p0) {
+q1014_0 = p1;
+inl1014: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); throw RETIRE;
+}
+}
+return "";
+}
+const stk5 = makeStuck(runtime);
+class Fp_4 {
+constructor (parent) {
+this.parent = parent;
+this.pc = 0;
+this.s0 = undefined;
+this.s1 = undefined;
+this.s2 = undefined;
+}
+}
+function rp_4 (th, fr) {
+const S = th.self;
+const target = S.target;
+const h0 = g1;
+const h1 = g0;
+const L0 = gl0;
+let n0 = 0, n1 = 0, n2 = 0, n3 = 0, a0, a1, v1 = 0, v0 = 0;
+for (;;) switch (fr.pc) {
+case 0:
+if ((fr.s1.length === 0)) {
+h0.value = "true";
+th.ret = ""; th.frame = fr.parent; th.fn = fr.parent.fnRef; return 1;
+}
+L0.clear();
+h0.value = "false";
+h1.value = 0;
+fr.s2 = fr.s0.length;
+case 1:
+if ((n3 = rp_4$l0(th, fr)) !== -1) { if (n3 === -2) continue; return n3; }
+th.ret = ""; th.frame = fr.parent; th.fn = fr.parent.fnRef; return 1;
+default: throw new Error("TTW: bad pc " + fr.pc);
+}
+}
+Fp_4.prototype.fnRef = rp_4;
+function rp_4$l0 (th, fr) {
+const S = th.self;
+const target = S.target;
+const h0 = g1;
+const h1 = g0;
+const L0 = gl0;
+let n0 = 0, n1 = 0, n2 = 0, n3 = 0, a0, a1, v1 = 0, v0 = 0;
+n1 = 4096;
+v1 = h1.value;
+v0 = h0.value;
+for (n0 = fr.s2; n0 > 0; n0--) {
+v1 = (((n2 = +v1) === n2 ? n2 : 0) + 1);
+a0 = ((fr.s0)[(v1 | 0) - 1] || "");
+if (typeof a0 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a0; else L0.pushSlow(a0);
+L0.upToDate = false;
+if ((L0.len > fr.s1.length)) {
+L0.deleteSlow(1);
+}
+if ((L0.contents().toLowerCase() === fr.s1.toLowerCase())) {
+v0 = "true";
+a1 = ""; h1.value = v1; h0.value = v0; th.ret = a1; th.frame = fr.parent; th.fn = fr.parent.fnRef; return 1;
+}
+if (stk5()) { fr.s2 = n0 - 1; h1.value = v1; h0.value = v0; fr.pc = 1; return 0; }
+if (--n1 === 0) { fr.s2 = n0 - 1; h1.value = v1; h0.value = v0; fr.pc = 1; return -2; }
+}
+h1.value = v1; h0.value = v0; 
+return -1;
+}
+class Fp_6 {
+constructor (parent) {
+this.parent = parent;
+this.pc = 0;
+}
+}
+function rp_6 (th, fr) {
+const S = th.self;
+const target = S.target;
+const h0 = g1;
+let q1015_0 = 0, q1015_1 = 0, q1016_0 = 0, q1017_0 = 0, q1017_1 = 0, q1018_0 = 0, q1019_0 = 0, q1019_1 = 0, q1020_0 = 0, q1021_0 = 0, q1021_1 = 0, q1022_0 = 0, q1023_0 = 0, q1023_1 = 0, q1024_0 = 0, q1025_0 = 0, q1025_1 = 0, q1026_0 = 0;
+for (;;) switch (fr.pc) {
+case 0:
+{ const nf = new Fp_0(fr); nf.s0 = 12333; nf.s1 = 333; th.frame = nf; th.fn = rp_0; }
+fr.pc = 1; return 1;
+case 1:
+q1015_0 = (("" + h0.value).toLowerCase() === "true".toLowerCase());
+q1015_1 = "12333 must end with 333";
+inl1015: {
+if (!q1015_0) {
+q1016_0 = q1015_1;
+inl1016: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+{ const nf = new Fp_0(fr); nf.s0 = 12333; nf.s1 = 33; th.frame = nf; th.fn = rp_0; }
+fr.pc = 2; return 1;
+case 2:
+q1017_0 = (("" + h0.value).toLowerCase() === "true".toLowerCase());
+q1017_1 = "12333 must end with 33";
+inl1017: {
+if (!q1017_0) {
+q1018_0 = q1017_1;
+inl1018: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+{ const nf = new Fp_0(fr); nf.s0 = 12333; nf.s1 = ""; th.frame = nf; th.fn = rp_0; }
+fr.pc = 3; return 1;
+case 3:
+q1019_0 = (("" + h0.value).toLowerCase() === "true".toLowerCase());
+q1019_1 = "12333 must end with empty string";
+inl1019: {
+if (!q1019_0) {
+q1020_0 = q1019_1;
+inl1020: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+{ const nf = new Fp_0(fr); nf.s0 = 12333; nf.s1 = 4; th.frame = nf; th.fn = rp_0; }
+fr.pc = 4; return 1;
+case 4:
+q1021_0 = (("" + h0.value).toLowerCase() === "false".toLowerCase());
+q1021_1 = "12333 must not end with 4";
+inl1021: {
+if (!q1021_0) {
+q1022_0 = q1021_1;
+inl1022: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+{ const nf = new Fp_0(fr); nf.s0 = 12333; nf.s1 = 123334; th.frame = nf; th.fn = rp_0; }
+fr.pc = 5; return 1;
+case 5:
+q1023_0 = (("" + h0.value).toLowerCase() === "false".toLowerCase());
+q1023_1 = "12333 must not end with 123334";
+inl1023: {
+if (!q1023_0) {
+q1024_0 = q1023_1;
+inl1024: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+{ const nf = new Fp_0(fr); nf.s0 = 12333; nf.s1 = 12333; th.frame = nf; th.fn = rp_0; }
+fr.pc = 6; return 1;
+case 6:
+q1025_0 = (("" + h0.value).toLowerCase() === "true".toLowerCase());
+q1025_1 = "12333 must end with itself";
+inl1025: {
+if (!q1025_0) {
+q1026_0 = q1025_1;
+inl1026: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+{ const nf = new Fp_4(fr); nf.s0 = "abc"; nf.s1 = ""; th.frame = nf; th.fn = rp_4; }
+fr.pc = 7; return 1;
+case 7:
+th.ret = ""; th.frame = fr.parent; th.fn = fr.parent.fnRef; return 1;
+default: throw new Error("TTW: bad pc " + fr.pc);
+}
+}
+Fp_6.prototype.fnRef = rp_6;
+const stk8 = makeStuck(runtime);
+class Fp_7 {
+constructor (parent) {
+this.parent = parent;
+this.pc = 0;
+this.s0 = undefined;
+this.s1 = undefined;
+this.s2 = undefined;
+}
+}
+function rp_7 (th, fr) {
+const S = th.self;
+const target = S.target;
+const h0 = g0;
+const h1 = g1;
+const L0 = gl0;
+let n0 = 0, n1 = 0, n2 = 0, n3 = 0, a0, a1, v0 = 0;
+for (;;) switch (fr.pc) {
+case 0:
+L0.clear();
+h0.value = 0;
+fr.s2 = ("" + fr.s1).length;
+case 1:
+if ((n3 = rp_7$l0(th, fr)) !== -1) { if (n3 === -2) continue; return n3; }
+h1.value = (a1 = L0.contents(), ((typeof a1 === "number" && typeof fr.s1 === "number" && a1 === a1 && fr.s1 === fr.s1) || a1 === fr.s1) ? a1 === fr.s1 : eqSlow(a1, fr.s1));
+th.ret = ""; th.frame = fr.parent; th.fn = fr.parent.fnRef; return 1;
+default: throw new Error("TTW: bad pc " + fr.pc);
+}
+}
+Fp_7.prototype.fnRef = rp_7;
+function rp_7$l0 (th, fr) {
+const S = th.self;
+const target = S.target;
+const h0 = g0;
+const h1 = g1;
+const L0 = gl0;
+let n0 = 0, n1 = 0, n2 = 0, n3 = 0, a0, a1, v0 = 0;
+n1 = 4096;
+v0 = h0.value;
+for (n0 = fr.s2; n0 > 0; n0--) {
+v0 = (((n2 = +v0) === n2 ? n2 : 0) + 1);
+a0 = ((("" + fr.s0))[(v0 | 0) - 1] || "");
+if (typeof a0 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a0; else L0.pushSlow(a0);
+L0.upToDate = false;
+if (stk8()) { fr.s2 = n0 - 1; h0.value = v0; fr.pc = 1; return 0; }
+if (--n1 === 0) { fr.s2 = n0 - 1; h0.value = v0; fr.pc = 1; return -2; }
+}
+h0.value = v0; 
+return -1;
+}
+class Fp_9 {
+constructor (parent) {
+this.parent = parent;
+this.pc = 0;
+}
+}
+function rp_9 (th, fr) {
+const S = th.self;
+const target = S.target;
+const h0 = g1;
+let q1027_0 = 0, q1027_1 = 0, q1028_0 = 0, q1029_0 = 0, q1029_1 = 0, q1030_0 = 0, q1031_0 = 0, q1031_1 = 0, q1032_0 = 0, q1033_0 = 0, q1033_1 = 0, q1034_0 = 0, q1035_0 = 0, q1035_1 = 0, q1036_0 = 0, q1037_0 = 0, q1037_1 = 0, q1038_0 = 0, q1039_0 = 0, q1039_1 = 0, q1040_0 = 0;
+for (;;) switch (fr.pc) {
+case 0:
+{ const nf = new Fp_7(fr); nf.s0 = 12333; nf.s1 = 12333; th.frame = nf; th.fn = rp_7; }
+fr.pc = 1; return 1;
+case 1:
+q1027_0 = (("" + h0.value).toLowerCase() === "true".toLowerCase());
+q1027_1 = "12333 must start with 12333";
+inl1027: {
+if (!q1027_0) {
+q1028_0 = q1027_1;
+inl1028: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+{ const nf = new Fp_7(fr); nf.s0 = 12333; nf.s1 = 1233; th.frame = nf; th.fn = rp_7; }
+fr.pc = 2; return 1;
+case 2:
+q1029_0 = (("" + h0.value).toLowerCase() === "true".toLowerCase());
+q1029_1 = "12333 must start with 1233";
+inl1029: {
+if (!q1029_0) {
+q1030_0 = q1029_1;
+inl1030: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+{ const nf = new Fp_7(fr); nf.s0 = 12333; nf.s1 = 123; th.frame = nf; th.fn = rp_7; }
+fr.pc = 3; return 1;
+case 3:
+q1031_0 = (("" + h0.value).toLowerCase() === "true".toLowerCase());
+q1031_1 = "12333 must start with 123";
+inl1031: {
+if (!q1031_0) {
+q1032_0 = q1031_1;
+inl1032: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+{ const nf = new Fp_7(fr); nf.s0 = 12333; nf.s1 = 12; th.frame = nf; th.fn = rp_7; }
+fr.pc = 4; return 1;
+case 4:
+q1033_0 = (("" + h0.value).toLowerCase() === "true".toLowerCase());
+q1033_1 = "12333 must start with 12";
+inl1033: {
+if (!q1033_0) {
+q1034_0 = q1033_1;
+inl1034: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+{ const nf = new Fp_7(fr); nf.s0 = 12333; nf.s1 = 1; th.frame = nf; th.fn = rp_7; }
+fr.pc = 5; return 1;
+case 5:
+q1035_0 = (("" + h0.value).toLowerCase() === "true".toLowerCase());
+q1035_1 = "12333 must start with 1";
+inl1035: {
+if (!q1035_0) {
+q1036_0 = q1035_1;
+inl1036: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+{ const nf = new Fp_7(fr); nf.s0 = 12333; nf.s1 = ""; th.frame = nf; th.fn = rp_7; }
+fr.pc = 6; return 1;
+case 6:
+q1037_0 = (("" + h0.value).toLowerCase() === "true".toLowerCase());
+q1037_1 = "12333 must start with empty string";
+inl1037: {
+if (!q1037_0) {
+q1038_0 = q1037_1;
+inl1038: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+{ const nf = new Fp_7(fr); nf.s0 = 12333; nf.s1 = 33; th.frame = nf; th.fn = rp_7; }
+fr.pc = 7; return 1;
+case 7:
+q1039_0 = (("" + h0.value).toLowerCase() === "false".toLowerCase());
+q1039_1 = "12333 must not start with 33";
+inl1039: {
+if (!q1039_0) {
+q1040_0 = q1039_1;
+inl1040: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+th.ret = ""; th.frame = fr.parent; th.fn = fr.parent.fnRef; return 1;
+default: throw new Error("TTW: bad pc " + fr.pc);
+}
+}
+Fp_9.prototype.fnRef = rp_9;
+class Fp_10 {
+constructor (parent) {
+this.parent = parent;
+this.pc = 0;
+}
+}
+function rp_10 (th, fr) {
+const S = th.self;
+const target = S.target;
+const h0 = g1;
+let a0, a1, a2, a3, a4, a5, a6, a7, a8, q1041_0 = 0, q1041_1 = 0, q1042_0 = 0, q1043_0 = 0, q1043_1 = 0, q1044_0 = 0, q1045_0 = 0, q1045_1 = 0, q1046_0 = 0, q1047_0 = 0, q1047_1 = 0, q1048_0 = 0, q1049_0 = 0, q1049_1 = 0, q1050_0 = 0, q1051_0 = 0, q1051_1 = 0, q1052_0 = 0, q1053_0 = 0, q1053_1 = 0, q1054_0 = 0, q1055_0 = 0, q1055_1 = 0, q1056_0 = 0, q1057_0 = 0, q1057_1 = 0, q1058_0 = 0;
+for (;;) switch (fr.pc) {
+case 0:
+{ const nf = new Fp_4(fr); nf.s0 = "abc"; nf.s1 = ""; th.frame = nf; th.fn = rp_4; }
+fr.pc = 1; return 1;
+case 1:
+q1041_0 = (a0 = h0.value, typeof a0 === "number" ? false : ("" + a0).toLowerCase() === "true");
+q1041_1 = "abc must include empty string";
+inl1041: {
+if (!q1041_0) {
+q1042_0 = q1041_1;
+inl1042: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+{ const nf = new Fp_4(fr); nf.s0 = ""; nf.s1 = ""; th.frame = nf; th.fn = rp_4; }
+fr.pc = 2; return 1;
+case 2:
+q1043_0 = (a1 = h0.value, typeof a1 === "number" ? false : ("" + a1).toLowerCase() === "true");
+q1043_1 = "empty string must include empty string";
+inl1043: {
+if (!q1043_0) {
+q1044_0 = q1043_1;
+inl1044: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+{ const nf = new Fp_4(fr); nf.s0 = "abc"; nf.s1 = "abc"; th.frame = nf; th.fn = rp_4; }
+fr.pc = 3; return 1;
+case 3:
+q1045_0 = (a2 = h0.value, typeof a2 === "number" ? false : ("" + a2).toLowerCase() === "true");
+q1045_1 = "abc must include abc";
+inl1045: {
+if (!q1045_0) {
+q1046_0 = q1045_1;
+inl1046: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+{ const nf = new Fp_4(fr); nf.s0 = "abc"; nf.s1 = "a"; th.frame = nf; th.fn = rp_4; }
+fr.pc = 4; return 1;
+case 4:
+q1047_0 = (a3 = h0.value, typeof a3 === "number" ? false : ("" + a3).toLowerCase() === "true");
+q1047_1 = "abc must include a";
+inl1047: {
+if (!q1047_0) {
+q1048_0 = q1047_1;
+inl1048: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+{ const nf = new Fp_4(fr); nf.s0 = "abc"; nf.s1 = "b"; th.frame = nf; th.fn = rp_4; }
+fr.pc = 5; return 1;
+case 5:
+q1049_0 = (a4 = h0.value, typeof a4 === "number" ? false : ("" + a4).toLowerCase() === "true");
+q1049_1 = "abc must include b";
+inl1049: {
+if (!q1049_0) {
+q1050_0 = q1049_1;
+inl1050: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+{ const nf = new Fp_4(fr); nf.s0 = "abc"; nf.s1 = "c"; th.frame = nf; th.fn = rp_4; }
+fr.pc = 6; return 1;
+case 6:
+q1051_0 = (a5 = h0.value, typeof a5 === "number" ? false : ("" + a5).toLowerCase() === "true");
+q1051_1 = "abc must include c";
+inl1051: {
+if (!q1051_0) {
+q1052_0 = q1051_1;
+inl1052: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+{ const nf = new Fp_4(fr); nf.s0 = "abc"; nf.s1 = "ab"; th.frame = nf; th.fn = rp_4; }
+fr.pc = 7; return 1;
+case 7:
+q1053_0 = (a6 = h0.value, typeof a6 === "number" ? false : ("" + a6).toLowerCase() === "true");
+q1053_1 = "abc must include ab";
+inl1053: {
+if (!q1053_0) {
+q1054_0 = q1053_1;
+inl1054: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+{ const nf = new Fp_4(fr); nf.s0 = "abc"; nf.s1 = "bc"; th.frame = nf; th.fn = rp_4; }
+fr.pc = 8; return 1;
+case 8:
+q1055_0 = (a7 = h0.value, typeof a7 === "number" ? false : ("" + a7).toLowerCase() === "true");
+q1055_1 = "abc must include bc";
+inl1055: {
+if (!q1055_0) {
+q1056_0 = q1055_1;
+inl1056: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+{ const nf = new Fp_4(fr); nf.s0 = "abc"; nf.s1 = "aa"; th.frame = nf; th.fn = rp_4; }
+fr.pc = 9; return 1;
+case 9:
+q1057_0 = (a8 = h0.value, typeof a8 === "number" ? false : ("" + a8).toLowerCase() === "false");
+q1057_1 = "abc must not include aa";
+inl1057: {
+if (!q1057_0) {
+q1058_0 = q1057_1;
+inl1058: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+th.ret = ""; th.frame = fr.parent; th.fn = fr.parent.fnRef; return 1;
+default: throw new Error("TTW: bad pc " + fr.pc);
+}
+}
+Fp_10.prototype.fnRef = rp_10;
+const stk12 = makeStuck(runtime);
+class Fp_11 {
+constructor (parent) {
+this.parent = parent;
+this.pc = 0;
+this.s0 = undefined;
+this.s1 = undefined;
+this.s2 = undefined;
+}
+}
+function rp_11 (th, fr) {
+const S = th.self;
+const target = S.target;
+const h0 = g1;
+const h1 = g0;
+const L0 = gl0;
+let n0 = 0, n1 = 0, n2 = 0, n3 = 0, a0, a1, a2, v1 = 0, v0 = 0;
+for (;;) switch (fr.pc) {
+case 0:
+L0.clear();
+h0.value = -1;
+h1.value = 0;
+fr.s2 = ("" + fr.s0).length;
+case 1:
+if ((n3 = rp_11$l0(th, fr)) !== -1) { if (n3 === -2) continue; return n3; }
+th.ret = ""; th.frame = fr.parent; th.fn = fr.parent.fnRef; return 1;
+default: throw new Error("TTW: bad pc " + fr.pc);
+}
+}
+Fp_11.prototype.fnRef = rp_11;
+function rp_11$l0 (th, fr) {
+const S = th.self;
+const target = S.target;
+const h0 = g1;
+const h1 = g0;
+const L0 = gl0;
+let n0 = 0, n1 = 0, n2 = 0, n3 = 0, a0, a1, a2, v1 = 0, v0 = 0;
+n1 = 4096;
+v1 = h1.value;
+v0 = h0.value;
+for (n0 = fr.s2; n0 > 0; n0--) {
+v1 = (((n2 = +v1) === n2 ? n2 : 0) + 1);
+a0 = ((("" + fr.s0))[(v1 | 0) - 1] || "");
+if (typeof a0 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a0; else L0.pushSlow(a0);
+L0.upToDate = false;
+if ((L0.len > ("" + fr.s1).length)) {
+L0.deleteSlow(1);
+}
+if ((a1 = L0.contents(), ((typeof a1 === "number" && typeof fr.s1 === "number" && a1 === a1 && fr.s1 === fr.s1) || a1 === fr.s1) ? a1 === fr.s1 : eqSlow(a1, fr.s1))) {
+v0 = (v1 - (("" + fr.s1).length - 1));
+a2 = ""; h1.value = v1; h0.value = v0; th.ret = a2; th.frame = fr.parent; th.fn = fr.parent.fnRef; return 1;
+}
+if (stk12()) { fr.s2 = n0 - 1; h1.value = v1; h0.value = v0; fr.pc = 1; return 0; }
+if (--n1 === 0) { fr.s2 = n0 - 1; h1.value = v1; h0.value = v0; fr.pc = 1; return -2; }
+}
+h1.value = v1; h0.value = v0; 
+return -1;
+}
+class Fp_13 {
+constructor (parent) {
+this.parent = parent;
+this.pc = 0;
+}
+}
+function rp_13 (th, fr) {
+const S = th.self;
+const target = S.target;
+const h0 = g1;
+let n0 = 0, n1 = 0, n2 = 0, n3 = 0, q1059_0 = 0, q1059_1 = 0, q1060_0 = 0, q1061_0 = 0, q1061_1 = 0, q1062_0 = 0, q1063_0 = 0, q1063_1 = 0, q1064_0 = 0, q1065_0 = 0, q1065_1 = 0, q1066_0 = 0;
+for (;;) switch (fr.pc) {
+case 0:
+{ const nf = new Fp_11(fr); nf.s0 = 123; nf.s1 = 1; th.frame = nf; th.fn = rp_11; }
+fr.pc = 1; return 1;
+case 1:
+q1059_0 = (((n0 = +h0.value) === n0 ? n0 : 0) === 1);
+q1059_1 = "index of 1 in 123 is 1";
+inl1059: {
+if (!q1059_0) {
+q1060_0 = q1059_1;
+inl1060: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+{ const nf = new Fp_11(fr); nf.s0 = 123; nf.s1 = 2; th.frame = nf; th.fn = rp_11; }
+fr.pc = 2; return 1;
+case 2:
+q1061_0 = (((n1 = +h0.value) === n1 ? n1 : 0) === 2);
+q1061_1 = "index of 2 in 123 is 2";
+inl1061: {
+if (!q1061_0) {
+q1062_0 = q1061_1;
+inl1062: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+{ const nf = new Fp_11(fr); nf.s0 = 123; nf.s1 = 3; th.frame = nf; th.fn = rp_11; }
+fr.pc = 3; return 1;
+case 3:
+q1063_0 = (((n2 = +h0.value) === n2 ? n2 : 0) === 3);
+q1063_1 = "index of 3 in 123 is 3";
+inl1063: {
+if (!q1063_0) {
+q1064_0 = q1063_1;
+inl1064: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+{ const nf = new Fp_11(fr); nf.s0 = 123; nf.s1 = "aaaa"; th.frame = nf; th.fn = rp_11; }
+fr.pc = 4; return 1;
+case 4:
+q1065_0 = (((n3 = +h0.value) === n3 ? n3 : 0) === -1);
+q1065_1 = "index of aaaa in 123 is -1";
+inl1065: {
+if (!q1065_0) {
+q1066_0 = q1065_1;
+inl1066: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+th.ret = ""; th.frame = fr.parent; th.fn = fr.parent.fnRef; return 1;
+default: throw new Error("TTW: bad pc " + fr.pc);
+}
+}
+Fp_13.prototype.fnRef = rp_13;
+function fp_14 (th, S) {
+const target = S.target;
+return "";
+}
+const stk16 = makeStuck(runtime);
+class Fp_15 {
+constructor (parent) {
+this.parent = parent;
+this.pc = 0;
+this.s0 = undefined;
+this.s1 = undefined;
+this.s2 = undefined;
+this.s3 = undefined;
+this.s4 = undefined;
+}
+}
+function rp_15 (th, fr) {
+const S = th.self;
+const target = S.target;
+const h0 = g1;
+const h1 = g0;
+const L0 = gl0;
+const L1 = gl1;
+let n0 = 0, n1 = 0, n2 = 0, n3 = 0, a0, a1, a2;
+for (;;) switch (fr.pc) {
+case 0:
+L0.clear();
+L1.clear();
+h0.value = "";
+h1.value = 0;
+fr.s3 = ("" + fr.s0).length;
+case 1:
+if (!(fr.s3 > 0)) { fr.pc = 2; continue; }
+fr.s3--;
+h1.value = (((n0 = +h1.value) === n0 ? n0 : 0) + 1);
+a0 = ((("" + fr.s0))[(h1.value | 0) - 1] || "");
+if (typeof a0 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a0; else L0.pushSlow(a0);
+L0.upToDate = false;
+if ((L0.len > ("" + fr.s1).length)) {
+L0.deleteSlow(1);
+}
+a1 = ((("" + fr.s0))[(h1.value | 0) - 1] || "");
+if (typeof a1 === "number" && L1.len < L1.f64.length && L1.objs.length === 0) L1.f64[L1.len++] = a1; else L1.pushSlow(a1);
+L1.upToDate = false;
+if (!(a2 = L0.contents(), ((typeof a2 === "number" && a2 === a2) || a2 === fr.s1) ? a2 === fr.s1 : eqSlow(a2, fr.s1))) { fr.pc = 3; continue; }
+fr.s4 = ("" + fr.s1).length;
+case 5:
+if ((n3 = rp_15$l0(th, fr)) !== -1) { if (n3 === -2) continue; return n3; }
+h0.value = (("" + h0.value) + L1.contents());
+h0.value = (h0.value + ("" + fr.s2));
+L1.clear();
+fr.pc = 4; continue;
+case 3:
+case 4:
+if (stk16()) { fr.pc = 1; return 0; }
+fr.pc = 1; continue;
+case 2:
+h0.value = (("" + h0.value) + L1.contents());
+th.ret = ""; th.frame = fr.parent; th.fn = fr.parent.fnRef; return 1;
+default: throw new Error("TTW: bad pc " + fr.pc);
+}
+}
+Fp_15.prototype.fnRef = rp_15;
+function rp_15$l0 (th, fr) {
+const S = th.self;
+const target = S.target;
+const h0 = g1;
+const h1 = g0;
+const L0 = gl0;
+const L1 = gl1;
+let n0 = 0, n1 = 0, n2 = 0, n3 = 0, a0, a1, a2;
+n2 = 4096;
+for (n1 = fr.s4; n1 > 0; n1--) {
+L1.deleteSlow("last");
+if (stk16()) { fr.s4 = n1 - 1; fr.pc = 5; return 0; }
+if (--n2 === 0) { fr.s4 = n1 - 1; fr.pc = 5; return -2; }
+}
+return -1;
+}
+class Fp_17 {
+constructor (parent) {
+this.parent = parent;
+this.pc = 0;
+}
+}
+function rp_17 (th, fr) {
+const S = th.self;
+const target = S.target;
+const h0 = g1;
+let n0 = 0, n1 = 0, q1067_0 = 0, q1067_1 = 0, q1068_0 = 0, q1069_0 = 0, q1069_1 = 0, q1070_0 = 0, q1071_0 = 0, q1071_1 = 0, q1072_0 = 0;
+for (;;) switch (fr.pc) {
+case 0:
+{ const nf = new Fp_15(fr); nf.s0 = 123456; nf.s1 = 345; nf.s2 = "a"; th.frame = nf; th.fn = rp_15; }
+fr.pc = 1; return 1;
+case 1:
+q1067_0 = (h0.value.toLowerCase() === "12a6".toLowerCase());
+q1067_1 = "replace expected 12a6";
+inl1067: {
+if (!q1067_0) {
+q1068_0 = q1067_1;
+inl1068: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+{ const nf = new Fp_15(fr); nf.s0 = 123; nf.s1 = 123; nf.s2 = 456; th.frame = nf; th.fn = rp_15; }
+fr.pc = 2; return 1;
+case 2:
+q1069_0 = (((n0 = +h0.value) === n0 ? n0 : 0) === 456);
+q1069_1 = "replace expected 456";
+inl1069: {
+if (!q1069_0) {
+q1070_0 = q1069_1;
+inl1070: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+{ const nf = new Fp_15(fr); nf.s0 = 123; nf.s1 = 1234; nf.s2 = 456; th.frame = nf; th.fn = rp_15; }
+fr.pc = 3; return 1;
+case 3:
+q1071_0 = (((n1 = +h0.value) === n1 ? n1 : 0) === 123);
+q1071_1 = "replace expected 123";
+inl1071: {
+if (!q1071_0) {
+q1072_0 = q1071_1;
+inl1072: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+}
+}
+th.ret = ""; th.frame = fr.parent; th.fn = fr.parent.fnRef; return 1;
+default: throw new Error("TTW: bad pc " + fr.pc);
+}
+}
+Fp_17.prototype.fnRef = rp_17;
+function fp_18 (th, S) {
+const target = S.target;
+return "";
+}
+function fp_19 (th, S, p0) {
+const target = S.target;
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("pass " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); throw RETIRE;
+return "";
+}
+class Fs_20 {
+constructor (parent) {
+this.parent = parent;
+this.pc = 0;
+}
+}
+function rs_20 (th, fr) {
+const S = th.self;
+const target = S.target;
+let q1073_0 = 0;
+for (;;) switch (fr.pc) {
+case 0:
+{ const nf = new Fp_6(fr); th.frame = nf; th.fn = rp_6; }
+fr.pc = 1; return 1;
+case 1:
+{ const nf = new Fp_9(fr); th.frame = nf; th.fn = rp_9; }
+fr.pc = 2; return 1;
+case 2:
+{ const nf = new Fp_10(fr); th.frame = nf; th.fn = rp_10; }
+fr.pc = 3; return 1;
+case 3:
+{ const nf = new Fp_13(fr); th.frame = nf; th.fn = rp_13; }
+fr.pc = 4; return 1;
+case 4:
+{ const nf = new Fp_17(fr); th.frame = nf; th.fn = rp_17; }
+fr.pc = 5; return 1;
+case 5:
+q1073_0 = (("" + runtime.ioDevices.clock.projectTimer()) + " seconds");
+inl1073: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("pass " + "0"), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return 2;
+}
+return 2;
+default: throw new Error("TTW: bad pc " + fr.pc);
+}
+}
+Fs_20.prototype.fnRef = rs_20;
+return {Self, scripts: {
+"dR": {index: 0, native: null, step: rs_20, Frame: Fs_20, executableHat: false},
+}};
+})

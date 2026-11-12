@@ -1,0 +1,42 @@
+// TW Snapshot
+// Input SHA-256: 7bc7268ef7d0d00b445b003aa683b39bcdb3c4c1d4bb7ae03679f553ad22f5a6
+
+// Sprite1 module
+(function ttw$Sprite1_N (R, G) {
+"use strict";
+const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, makeStuck, RETIRE} = R;
+const runtime = G.runtime;
+const stage = G.stage;
+const CONTINUE = {};
+const gl0 = stage.variables["q9l+ZDG${I3p$=:TPs`3"]._tl;
+class Self {
+constructor (target) {
+this.target = target;
+}
+}
+function fs_0 (th, S) {
+const target = S.target;
+const L0 = gl0;
+let n0 = 0, n1 = 0, n2 = 0, n3 = 0, n4 = 0, n5 = 0, n6 = 0, n7 = 0, n8 = 0, n9 = 0, n10 = 0, n11 = 0, n12 = 0, n13 = 0, n14 = 0, a0, a1, a2, a3, a4;
+runtime.ext_scratch3_looks._say("plan 3", target);
+if ((("_" + ("" + (toBoolean(((n2 = 2) >= 1 && n2 <= L0.len ? (n1 = (n2 | 0) - 1, ((n0 = L0.f64[n1]) === n0 ? n0 : ((a0 = L0.objs[n1]) === undefined ? NaN : a0))) : "")) && toBoolean(((n5 = 2) >= 1 && n5 <= L0.len ? (n4 = (n5 | 0) - 1, ((n3 = L0.f64[n4]) === n3 ? n3 : ((a1 = L0.objs[n4]) === undefined ? NaN : a1))) : ""))))).toLowerCase() === "_true".toLowerCase())) {
+runtime.ext_scratch3_looks._say("pass", target);
+} else {
+runtime.ext_scratch3_looks._say("fail", target);
+}
+if ((("_" + ("" + (toBoolean(((n8 = 1) >= 1 && n8 <= L0.len ? (n7 = (n8 | 0) - 1, ((n6 = L0.f64[n7]) === n6 ? n6 : ((a2 = L0.objs[n7]) === undefined ? NaN : a2))) : "")) || toBoolean(((n11 = 2) >= 1 && n11 <= L0.len ? (n10 = (n11 | 0) - 1, ((n9 = L0.f64[n10]) === n9 ? n9 : ((a3 = L0.objs[n10]) === undefined ? NaN : a3))) : ""))))).toLowerCase() === "_true".toLowerCase())) {
+runtime.ext_scratch3_looks._say("pass", target);
+} else {
+runtime.ext_scratch3_looks._say("fail", target);
+}
+if (!toBoolean(((n14 = 1) >= 1 && n14 <= L0.len ? (n13 = (n14 | 0) - 1, ((n12 = L0.f64[n13]) === n12 ? n12 : ((a4 = L0.objs[n13]) === undefined ? NaN : a4))) : ""))) {
+runtime.ext_scratch3_looks._say("pass", target);
+} else {
+runtime.ext_scratch3_looks._say("fail", target);
+}
+runtime.ext_scratch3_looks._say("end", target);
+}
+return {Self, scripts: {
+"l": {index: 0, native: fs_0, step: null, Frame: null, executableHat: false},
+}};
+})

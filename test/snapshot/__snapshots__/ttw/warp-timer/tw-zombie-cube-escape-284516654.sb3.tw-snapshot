@@ -1,0 +1,75 @@
+// TW Snapshot
+// Input SHA-256: 6fe809479042e5ba09d66bffbd62d5a38d2265c98818e937d63137d2dcdc2fec
+
+// Sprite2 module
+(function ttw$Sprite2_N (R, G) {
+"use strict";
+const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, makeStuck, RETIRE} = R;
+const runtime = G.runtime;
+const stage = G.stage;
+const CONTINUE = {};
+const g0 = stage.variables["7qur6!bGgvC9I(Nd5.HP"];
+const g1 = stage.variables["sUOp@-6J4y0PqwiXit4!"];
+class Self {
+constructor (target) {
+this.target = target;
+}
+}
+class Fs_0 {
+constructor (parent) {
+this.parent = parent;
+this.pc = 0;
+}
+}
+function rs_0 (th, fr) {
+const S = th.self;
+const target = S.target;
+const h0 = g0;
+const h1 = g1;
+for (;;) switch (fr.pc) {
+case 0:
+runtime.ext_scratch3_looks._say("plan 1", target);
+h0.value = 0;
+h1.value = "";
+case 1:
+while (!(("" + h1.value).toLowerCase() > "".toLowerCase())) {
+broadcast(runtime, "step");
+fr.pc = 1; return 0;
+}
+runtime.ext_scratch3_looks._say("pass", target);
+runtime.ext_scratch3_looks._say("end", target);
+return 2;
+default: throw new Error("TTW: bad pc " + fr.pc);
+}
+}
+Fs_0.prototype.fnRef = rs_0;
+function fs_1 (th, S) {
+const target = S.target;
+const h0 = g0;
+const h1 = g1;
+let v0 = h0.value;
+if (typeof v0 !== "number" || v0 !== v0) return fs_1$g(th, S);
+v0 = (v0 + 1);
+if ((v0 === 5)) {
+h1.value = "end";
+}
+h0.value = v0;
+}
+function fs_1$g (th, S) {
+const target = S.target;
+const h0 = g0;
+const h1 = g1;
+let v0 = h0.value;
+let n0 = 0, n1 = 0;
+n0 = ((n1 = +v0) === n1 ? n1 : 0);
+v0 = (n0 + 1);
+if ((v0 === 5)) {
+h1.value = "end";
+}
+h0.value = v0;
+}
+return {Self, scripts: {
+"hi],-TdhPv4T3p2OT`f{": {index: 0, native: null, step: rs_0, Frame: Fs_0, executableHat: false},
+")YS$XI([:%~B@V@NCLrQ": {index: 1, native: fs_1, step: null, Frame: null, executableHat: false},
+}};
+})

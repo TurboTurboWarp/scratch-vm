@@ -1,0 +1,134 @@
+// TW Snapshot
+// Input SHA-256: 930b81005746fcf09490be69206cf92f6b882a8d4d66ef9cfa19139090131aad
+
+// Sprite1 module
+(function ttw$Sprite1_N (R, G) {
+"use strict";
+const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, makeStuck, RETIRE} = R;
+const runtime = G.runtime;
+const stage = G.stage;
+const CONTINUE = {};
+class Self {
+constructor (target) {
+this.target = target;
+}
+}
+function fp_0 (th, S, p0) {
+const target = S.target;
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + ("" + p0)), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); throw RETIRE;
+return "";
+}
+function fp_1 (th, S, p0, p1) {
+const target = S.target;
+let q150_0 = 0;
+if (!p0) {
+q150_0 = p1;
+inl150: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + ("" + q150_0)), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); throw RETIRE;
+}
+}
+return "";
+}
+function fp_2 (th, S, p0) {
+const target = S.target;
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("pass " + p0), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); throw RETIRE;
+return "";
+}
+function fs_3 (th, S) {
+const target = S.target;
+let n0 = 0, n1 = 0, n2 = 0, n3 = 0, n4 = 0, q151_0 = 0, q151_1 = 0, q152_0 = 0, q153_0 = 0, q153_1 = 0, q154_0 = 0, q155_0 = 0, q155_1 = 0, q156_0 = 0, q157_0 = 0, q157_1 = 0, q158_0 = 0, q159_0 = 0, q159_1 = 0, q160_0 = 0, q161_0 = 0;
+q151_0 = ((5 + ((n0 = +("" + "+")) === n0 ? n0 : 0)) === 5);
+q151_1 = 1;
+inl151: {
+if (!q151_0) {
+q152_0 = q151_1;
+inl152: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + ("" + q152_0)), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return;
+}
+}
+}
+q153_0 = ((5 + ((n1 = +("" + "-")) === n1 ? n1 : 0)) === 5);
+q153_1 = 2;
+inl153: {
+if (!q153_0) {
+q154_0 = q153_1;
+inl154: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + ("" + q154_0)), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return;
+}
+}
+}
+q155_0 = ((5 + ((n2 = +("" + "x")) === n2 ? n2 : 0)) === 5);
+q155_1 = 3;
+inl155: {
+if (!q155_0) {
+q156_0 = q155_1;
+inl156: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + ("" + q156_0)), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return;
+}
+}
+}
+q157_0 = ((5 + ((n3 = +("" + "-=-2398749")) === n3 ? n3 : 0)) === 5);
+q157_1 = 4;
+inl157: {
+if (!q157_0) {
+q158_0 = q157_1;
+inl158: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + ("" + q158_0)), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return;
+}
+}
+}
+q159_0 = ((5 + ((n4 = +("" + "")) === n4 ? n4 : 0)) === 5);
+q159_1 = 5;
+inl159: {
+if (!q159_0) {
+q160_0 = q159_1;
+inl160: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("fail " + ("" + q160_0)), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return;
+}
+}
+}
+q161_0 = "";
+inl161: {
+runtime.ext_scratch3_looks._say("plan 1", target);
+runtime.ext_scratch3_looks._say(("pass " + q161_0), target);
+runtime.ext_scratch3_looks._say("end", target);
+runtime.stopAll();
+retire(th); return;
+}
+}
+return {Self, scripts: {
+"M": {index: 0, native: fs_3, step: null, Frame: null, executableHat: false},
+}};
+})

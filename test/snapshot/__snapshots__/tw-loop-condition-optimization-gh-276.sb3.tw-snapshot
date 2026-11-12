@@ -21,7 +21,7 @@ const b1 = stage.variables["t)]?yi[*8XU73qhMqOa8"];
 return function funXYZ_test_ (p0) {
 let t;
 b0.value = p0;
-while (!(("" + listGet(b1.value, b0.value)).toLowerCase() === "something".toLowerCase())) {
+while (!(("" + b1._tl.getSlow(b0.value)).toLowerCase() === "something".toLowerCase())) {
 b0.value = (((t = +b0.value) === t ? t : 0) + 1);
 }
 return "";

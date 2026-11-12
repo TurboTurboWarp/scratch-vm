@@ -1,0 +1,37 @@
+// TW Snapshot
+// Input SHA-256: fd48053df5e75de0ec56ac106699076335b2bd46266f8da4e4d81d52e29f5c29
+
+// Sprite1 module
+(function ttw$Sprite1_N (R, G) {
+"use strict";
+const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, makeStuck, RETIRE} = R;
+const runtime = G.runtime;
+const stage = G.stage;
+const CONTINUE = {};
+class Self {
+constructor (target) {
+this.target = target;
+}
+}
+function fs_0 (th, S) {
+const target = S.target;
+let a0, a1, a2, a3;
+runtime.ext_scratch3_looks._say("plan 4", target);
+if ((a0 = ("something".toLowerCase() === "something".toLowerCase()), a1 = ("0" + ""), ((typeof a0 === "number" && typeof a1 === "number" && a0 === a0)) ? a0 > a1 : gtSlow(a0, a1))) {
+runtime.ext_scratch3_looks._say("pass", target);
+}
+if ((a2 = ("something".toLowerCase() === "else".toLowerCase()), a3 = ("1" + ""), ((typeof a2 === "number" && typeof a3 === "number" && a3 === a3)) ? a2 < a3 : ltSlow(a2, a3))) {
+runtime.ext_scratch3_looks._say("pass", target);
+}
+if (((+("something".toLowerCase() === "something".toLowerCase())) > (0 + 0))) {
+runtime.ext_scratch3_looks._say("pass", target);
+}
+if (((+("something".toLowerCase() === "else".toLowerCase())) < (1 + 0))) {
+runtime.ext_scratch3_looks._say("pass", target);
+}
+runtime.ext_scratch3_looks._say("end", target);
+}
+return {Self, scripts: {
+"j": {index: 0, native: fs_0, step: null, Frame: null, executableHat: false},
+}};
+})

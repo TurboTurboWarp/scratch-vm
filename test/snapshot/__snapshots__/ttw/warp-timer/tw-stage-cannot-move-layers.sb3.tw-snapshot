@@ -1,0 +1,92 @@
+// TW Snapshot
+// Input SHA-256: 5592b1a64924003352fa3d2d9157c797689a702f55ba39c73a5e0bc862f57e59
+
+// Sprite1 module
+(function ttw$Sprite1_N (R, G) {
+"use strict";
+const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, makeStuck, RETIRE} = R;
+const runtime = G.runtime;
+const stage = G.stage;
+const CONTINUE = {};
+const g0 = stage.variables["`jEk@4|i[#Fk?(8x)AV.-my variable"];
+class Self {
+constructor (target) {
+this.target = target;
+}
+}
+class Fs_0 {
+constructor (parent) {
+this.parent = parent;
+this.pc = 0;
+this.s0 = undefined;
+this.s1 = undefined;
+this.s2 = undefined;
+}
+}
+function rs_0 (th, fr) {
+const S = th.self;
+const target = S.target;
+const h0 = g0;
+for (;;) switch (fr.pc) {
+case 0:
+runtime.ext_scratch3_looks._say("plan 1", target);
+h0.value = "Initial";
+fr.s0 = timer(runtime);
+fr.s1 = Math.max(0, 1000 * 0);
+runtime.requestRedraw();
+fr.pc = 1; return 0;
+case 1:
+while (fr.s0.timeElapsed() < fr.s1) {
+fr.pc = 1; return 0;
+}
+fr.s0 = null;
+fr.s2 = broadcast(runtime, "Test 1");
+case 2:
+if (waitThreads(th, fr.s2)) { fr.pc = 2; return 0; }
+fr.s2 = null;
+runtime.ext_scratch3_looks._say("end", target);
+return 2;
+default: throw new Error("TTW: bad pc " + fr.pc);
+}
+}
+Fs_0.prototype.fnRef = rs_0;
+function fs_1 (th, S) {
+const target = S.target;
+const h0 = g0;
+let a0;
+if ((a0 = h0.value, typeof a0 === "number" ? false : ("" + a0).toLowerCase() === "initial")) {
+runtime.ext_scratch3_looks._say("pass", target);
+}
+}
+return {Self, scripts: {
+"~j!#,P35$l,8vmF`l^r2": {index: 0, native: null, step: rs_0, Frame: Fs_0, executableHat: false},
+"DYK(B#pZk1X7q}s[fj}C": {index: 1, native: fs_1, step: null, Frame: null, executableHat: false},
+}};
+})
+
+// Stage module
+(function ttw$Stage_N (R, G) {
+"use strict";
+const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, makeStuck, RETIRE} = R;
+const runtime = G.runtime;
+const stage = G.stage;
+const CONTINUE = {};
+const g0 = stage.variables["`jEk@4|i[#Fk?(8x)AV.-my variable"];
+class Self {
+constructor (target) {
+this.target = target;
+}
+}
+function fs_0 (th, S) {
+const target = S.target;
+}
+function fs_1 (th, S) {
+const target = S.target;
+const h0 = g0;
+h0.value = "Stage callback";
+}
+return {Self, scripts: {
+"*TWyMkS:_%%G*dNYzgXT": {index: 0, native: fs_0, step: null, Frame: null, executableHat: false},
+"#?hlxXZTz1xW7J_-GMnZ": {index: 1, native: fs_1, step: null, Frame: null, executableHat: false},
+}};
+})

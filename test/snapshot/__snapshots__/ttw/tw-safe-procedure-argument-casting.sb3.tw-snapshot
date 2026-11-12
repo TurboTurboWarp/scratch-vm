@@ -1,0 +1,44 @@
+// TW Snapshot
+// Input SHA-256: 89920bf89edf85596d13e7781c1ea5de2fea61c0adf78ecdd41e4a7ab824aebe
+
+// Sprite1 module
+(function ttw$Sprite1_N (R, G) {
+"use strict";
+const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, makeStuck, RETIRE} = R;
+const runtime = G.runtime;
+const stage = G.stage;
+const CONTINUE = {};
+class Self {
+constructor (target) {
+this.target = target;
+}
+}
+function fp_0 (th, S, p0) {
+const target = S.target;
+runtime.ext_scratch3_looks._setCostume(target, p0);
+return "";
+}
+function fs_1 (th, S) {
+const target = S.target;
+let n0 = 0, n1 = 0, q1113_0 = 0, q1114_0 = 0;
+runtime.ext_scratch3_looks._say("plan 2", target);
+q1113_0 = "1";
+inl1113: {
+runtime.ext_scratch3_looks._setCostume(target, q1113_0);
+}
+if ((((target.currentCostume + 1) === 2) && (((n0 = +target.getCostumes()[target.currentCostume].name) === n0 ? n0 : 0) === 1))) {
+runtime.ext_scratch3_looks._say("pass", target);
+}
+q1114_0 = "2";
+inl1114: {
+runtime.ext_scratch3_looks._setCostume(target, q1114_0);
+}
+if ((((target.currentCostume + 1) === 1) && (((n1 = +target.getCostumes()[target.currentCostume].name) === n1 ? n1 : 0) === 2))) {
+runtime.ext_scratch3_looks._say("pass", target);
+}
+runtime.ext_scratch3_looks._say("end", target);
+}
+return {Self, scripts: {
+"UVU2vWh$lRSM^=N6%i#j": {index: 0, native: fs_1, step: null, Frame: null, executableHat: false},
+}};
+})

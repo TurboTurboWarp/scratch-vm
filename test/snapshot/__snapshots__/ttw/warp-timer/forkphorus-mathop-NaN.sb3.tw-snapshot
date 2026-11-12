@@ -1,0 +1,89 @@
+// TW Snapshot
+// Input SHA-256: 082b59a5b772f80c84bc6a846d9ea5023863d8f90c5b85e599b53fed7a9d6a46
+
+// Sprite1 module
+(function ttw$Sprite1_N (R, G) {
+"use strict";
+const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, makeStuck, RETIRE} = R;
+const runtime = G.runtime;
+const stage = G.stage;
+const CONTINUE = {};
+const g0 = stage.variables["`jEk@4|i[#Fk?(8x)AV.-my variable"];
+class Self {
+constructor (target) {
+this.target = target;
+}
+}
+function fs_0 (th, S) {
+const target = S.target;
+const h0 = g0;
+let v0 = h0.value;
+if (typeof v0 !== "number" || v0 !== v0) return fs_0$g(th, S);
+let n0 = 0, n1 = 0, n2 = 0, n3 = 0, n4 = 0, n5 = 0, n6 = 0, n7 = 0;
+runtime.ext_scratch3_looks._say("plan 8", target);
+v0 = (1 / 0);
+if (((10 + ((n0 = Math.sqrt(-1)) === n0 ? n0 : 0)) === 10)) {
+runtime.ext_scratch3_looks._say("pass", target);
+}
+if (((10 + ((n1 = (Math.round(Math.sin((Math.PI * v0) / 180) * 1e10) / 1e10)) === n1 ? n1 : 0)) === 10)) {
+runtime.ext_scratch3_looks._say("pass", target);
+}
+if (((10 + ((n2 = (Math.round(Math.cos((Math.PI * v0) / 180) * 1e10) / 1e10)) === n2 ? n2 : 0)) === 10)) {
+runtime.ext_scratch3_looks._say("pass", target);
+}
+if (((10 + ((n3 = tan(v0)) === n3 ? n3 : 0)) === 10)) {
+runtime.ext_scratch3_looks._say("pass", target);
+}
+if (((10 + ((n4 = ((Math.asin(2) * 180) / Math.PI)) === n4 ? n4 : 0)) === 10)) {
+runtime.ext_scratch3_looks._say("pass", target);
+}
+if (((10 + ((n5 = ((Math.acos(2) * 180) / Math.PI)) === n5 ? n5 : 0)) === 10)) {
+runtime.ext_scratch3_looks._say("pass", target);
+}
+if (((10 + ((n6 = Math.log(-1)) === n6 ? n6 : 0)) === 10)) {
+runtime.ext_scratch3_looks._say("pass", target);
+}
+if (((10 + ((n7 = (Math.log(-1) / Math.LN10)) === n7 ? n7 : 0)) === 10)) {
+runtime.ext_scratch3_looks._say("pass", target);
+}
+runtime.ext_scratch3_looks._say("end", target);
+h0.value = v0;
+}
+function fs_0$g (th, S) {
+const target = S.target;
+const h0 = g0;
+let v0 = h0.value;
+let n0 = 0, n1 = 0, n2 = 0, n3 = 0, n4 = 0, n5 = 0, n6 = 0, n7 = 0;
+runtime.ext_scratch3_looks._say("plan 8", target);
+v0 = (1 / 0);
+if (((10 + ((n0 = Math.sqrt(-1)) === n0 ? n0 : 0)) === 10)) {
+runtime.ext_scratch3_looks._say("pass", target);
+}
+if (((10 + ((n1 = (Math.round(Math.sin((Math.PI * v0) / 180) * 1e10) / 1e10)) === n1 ? n1 : 0)) === 10)) {
+runtime.ext_scratch3_looks._say("pass", target);
+}
+if (((10 + ((n2 = (Math.round(Math.cos((Math.PI * v0) / 180) * 1e10) / 1e10)) === n2 ? n2 : 0)) === 10)) {
+runtime.ext_scratch3_looks._say("pass", target);
+}
+if (((10 + ((n3 = tan(v0)) === n3 ? n3 : 0)) === 10)) {
+runtime.ext_scratch3_looks._say("pass", target);
+}
+if (((10 + ((n4 = ((Math.asin(2) * 180) / Math.PI)) === n4 ? n4 : 0)) === 10)) {
+runtime.ext_scratch3_looks._say("pass", target);
+}
+if (((10 + ((n5 = ((Math.acos(2) * 180) / Math.PI)) === n5 ? n5 : 0)) === 10)) {
+runtime.ext_scratch3_looks._say("pass", target);
+}
+if (((10 + ((n6 = Math.log(-1)) === n6 ? n6 : 0)) === 10)) {
+runtime.ext_scratch3_looks._say("pass", target);
+}
+if (((10 + ((n7 = (Math.log(-1) / Math.LN10)) === n7 ? n7 : 0)) === 10)) {
+runtime.ext_scratch3_looks._say("pass", target);
+}
+runtime.ext_scratch3_looks._say("end", target);
+h0.value = v0;
+}
+return {Self, scripts: {
+"Q": {index: 0, native: fs_0, step: null, Frame: null, executableHat: false},
+}};
+})

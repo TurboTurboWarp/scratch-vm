@@ -3,6 +3,7 @@ const fs = require('fs');
 const crypto = require('crypto');
 const VM = require('../../src/virtual-machine');
 const JSGenerator = require('../../src/compiler/jsgen');
+const {TTWRuntime} = require('../../src/ttw/index');
 
 const executeDir = path.resolve(__dirname, '../fixtures/execute');
 // sb2 project loading results in random IDs each time, so for now we only snapshot sb3 files
@@ -25,6 +26,7 @@ const testCases = testFiles.map(file => ([
         id: file,
         file: file,
         compilerOptions: {
+            backend: 'tw',
             warpTimer: false
         }
     },
@@ -32,6 +34,24 @@ const testCases = testFiles.map(file => ([
         id: `warp-timer/${file}`,
         file: file,
         compilerOptions: {
+            backend: 'tw',
+            warpTimer: true
+        }
+    },
+    // ttw: TurboTurboWarp modules (spec 08 T7)
+    {
+        id: `ttw/${file}`,
+        file: file,
+        compilerOptions: {
+            backend: 'ttw',
+            warpTimer: false
+        }
+    },
+    {
+        id: `ttw/warp-timer/${file}`,
+        file: file,
+        compilerOptions: {
+            backend: 'ttw',
             warpTimer: true
         }
     }
@@ -40,6 +60,7 @@ const testCases = testFiles.map(file => ([
 const snapshotDir = path.resolve(__dirname, '__snapshots__');
 fs.mkdirSync(snapshotDir, {recursive: true});
 fs.mkdirSync(path.join(snapshotDir, 'warp-timer'), {recursive: true});
+fs.mkdirSync(path.join(snapshotDir, 'ttw', 'warp-timer'), {recursive: true});
 
 /**
  * @param {TestCase} testCase From testCases.
@@ -93,6 +114,13 @@ const generateActualSnapshot = async testCase => {
         .replace(/return function fun\d+/, 'return function funXYZ');
 
     const generatedJS = [];
+    TTWRuntime.testingApparatus = {
+        report: (target, moduleSource) => {
+            // Module names contain an indeterministic counter.
+            const js = moduleSource.replace(/^\(function (ttw\$\w*?)_\d+ \(/, '(function $1_N (');
+            generatedJS.push(`// ${target.getName()} module\n${js}`);
+        }
+    };
     JSGenerator.testingApparatus = {
         report: (jsgen, factorySource) => {
             const targetName = jsgen.target.getName();
@@ -119,6 +147,11 @@ const generateActualSnapshot = async testCase => {
     }
     result += generatedJS.join('\n\n');
     result += '\n';
+    TTWRuntime.testingApparatus = null;
+    if (vm.runtime.ttw && vm.runtime.ttw.errors.length) {
+        result += '// TTW fallbacks:\n';
+        result += vm.runtime.ttw.errors.map(e => `// ${e}\n`).join('');
+    }
     return result;
 };
 

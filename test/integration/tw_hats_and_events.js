@@ -21,7 +21,9 @@ compilerAndInterpreter('hats and events', async co => {
     const vm = new VM();
     vm.setCompilerOptions(co);
 
-    let log = [];
+    // ttw: list.value references are only valid until the project next operates on the list
+    // (spec 03 §3), so always read the current array.
+    let getLog = () => [];
     let hatReturns = false;
     class TestExtension {
         getInfo () {
@@ -78,18 +80,18 @@ compilerAndInterpreter('hats and events', async co => {
             };
         }
         event () {
-            log.push('this should never run');
+            getLog().push('this should never run');
         }
         hat () {
-            log.push(`hat ${hatReturns}`);
+            getLog().push(`hat ${hatReturns}`);
             return hatReturns;
         }
         complexhat ({INPUT}) {
-            log.push(`complex hat ${INPUT}`);
+            getLog().push(`complex hat ${INPUT}`);
             return !!INPUT;
         }
         clickme () {
-            log.push('clickme');
+            getLog().push('clickme');
             return Promise.resolve(false);
         }
     }
@@ -100,99 +102,100 @@ compilerAndInterpreter('hats and events', async co => {
     });
 
     await vm.loadProject(fixture);
-    log = vm.runtime.getTargetForStage().lookupVariableByNameAndType('log', 'list').value;
-    assert.deepEqual(log, [], 'sanity check - log starts empty');
+    const logList = vm.runtime.getTargetForStage().lookupVariableByNameAndType('log', 'list');
+    getLog = () => logList.value;
+    assert.deepEqual(getLog(), [], 'sanity check - log starts empty');
 
     // Let it run for a bit. Nothing should happen on its own.
     for (let i = 0; i < 5; i++) {
         vm.runtime._step();
     }
-    assert.deepEqual(log, [], 'nothing happens initially');
+    assert.deepEqual(getLog(), [], 'nothing happens initially');
 
     // See if events work
     vm.runtime.startHats('testpredicate_event');
-    assert.deepEqual(log, [], 'event function does not get called, even if it exists');
+    assert.deepEqual(getLog(), [], 'event function does not get called, even if it exists');
     vm.runtime._step();
-    assert.deepEqual(log, ['event'], 'ran event script');
+    assert.deepEqual(getLog(), ['event'], 'ran event script');
 
-    log.length = 0;
+    getLog().length = 0;
 
     // Test hat that returns false
     hatReturns = false;
     vm.runtime.startHats('testpredicate_hat');
-    assert.deepEqual(log, ['hat false'], 'ran hat function');
+    assert.deepEqual(getLog(), ['hat false'], 'ran hat function');
     vm.runtime._step();
-    assert.deepEqual(log, ['hat false'], 'did not run hat script');
+    assert.deepEqual(getLog(), ['hat false'], 'did not run hat script');
 
     // Test hat that returns true
     hatReturns = true;
     vm.runtime.startHats('testpredicate_hat');
-    assert.deepEqual(log, [
+    assert.deepEqual(getLog(), [
         'hat false',
         'hat true'
     ], 'ran hat function');
     vm.runtime._step();
-    assert.deepEqual(log, [
+    assert.deepEqual(getLog(), [
         'hat false',
         'hat true',
         'hat'
     ], 'ran hat script');
 
-    log.length = 0;
+    getLog().length = 0;
 
     // Test hat that returns false in a Promise
     hatReturns = Promise.resolve(false);
     vm.runtime.startHats('testpredicate_hat');
-    assert.deepEqual(log, ['hat [object Promise]'], 'ran hat function');
+    assert.deepEqual(getLog(), ['hat [object Promise]'], 'ran hat function');
     vm.runtime._step();
-    assert.deepEqual(log, ['hat [object Promise]'], 'hat script does not run before promise finishes');
+    assert.deepEqual(getLog(), ['hat [object Promise]'], 'hat script does not run before promise finishes');
     await Promise.resolve(); // Allow promise to be processed
     vm.runtime._step();
-    assert.deepEqual(log, ['hat [object Promise]'], 'hat script still does not run');
+    assert.deepEqual(getLog(), ['hat [object Promise]'], 'hat script still does not run');
 
-    log.length = 0;
+    getLog().length = 0;
 
     // Test hat that returns true in a Promise
     hatReturns = Promise.resolve(true);
     vm.runtime.startHats('testpredicate_hat');
-    assert.deepEqual(log, ['hat [object Promise]'], 'ran hat function');
+    assert.deepEqual(getLog(), ['hat [object Promise]'], 'ran hat function');
     vm.runtime._step();
-    assert.deepEqual(log, ['hat [object Promise]'], 'hat script does not run before promise finishes');
+    assert.deepEqual(getLog(), ['hat [object Promise]'], 'hat script does not run before promise finishes');
     await Promise.resolve();
     vm.runtime._step();
-    assert.deepEqual(log, ['hat [object Promise]', 'hat'], 'hat script runs after promise finishes');
+    assert.deepEqual(getLog(), ['hat [object Promise]', 'hat'], 'hat script runs after promise finishes');
 
-    log.length = 0;
+    getLog().length = 0;
 
     // Test complex hat
     vm.runtime.startHats('testpredicate_complexhat', {
         MENU: 'a'
     });
-    assert.deepEqual(log, [
+    assert.deepEqual(getLog(), [
         'complex hat ',
         'complex hat 1'
     ], 'ran complex hat functions');
     vm.runtime._step();
-    assert.deepEqual(log, [
+    assert.deepEqual(getLog(), [
         'complex hat ',
         'complex hat 1',
         'complex hat a 2'
     ], 'ran complex hat script');
 
-    log.length = 0;
+    getLog().length = 0;
 
     // Test complex hat with a complex input
     vm.runtime.startHats('testpredicate_complexhat', {
         MENU: 'b'
     });
-    assert.deepEqual(log, [], 'control flow in complex inputs is not run immediately');
+    assert.deepEqual(getLog(), [], 'control flow in complex inputs is not run immediately');
     vm.runtime._step();
-    assert.deepEqual(log, [
+    assert.deepEqual(getLog(), [
         'evaluated block ',
         'evaluated block 1'
     ], 'evaluated complex inputs but not hat function');
     vm.runtime._step();
-    assert.deepEqual(log, [
+    assert.deepEqual(getLog(), [
         'evaluated block ',
         'evaluated block 1',
         'complex hat ',
@@ -200,7 +203,7 @@ compilerAndInterpreter('hats and events', async co => {
         'complex hat b 2'
     ], 'evaluated complex hat functions and scripts');
 
-    log.length = 0;
+    getLog().length = 0;
 
     // Test that in stackClick mode, the hat block still gets run, but the result is ignored
     const sprite = vm.runtime.targets[1];
@@ -209,12 +212,12 @@ compilerAndInterpreter('hats and events', async co => {
     vm.runtime._pushThread(clickBlockId, sprite, {
         stackClick: true
     });
-    assert.deepEqual(log, [], 'stackClick does not run anything immediately');
+    assert.deepEqual(getLog(), [], 'stackClick does not run anything immediately');
     vm.runtime._step();
-    assert.deepEqual(log, ['evaluated block something'], 'stackClick hat ran input');
+    assert.deepEqual(getLog(), ['evaluated block something'], 'stackClick hat ran input');
     vm.runtime._step();
-    assert.deepEqual(log, ['evaluated block something', 'clickme'], 'stackClick hat input evaluated');
+    assert.deepEqual(getLog(), ['evaluated block something', 'clickme'], 'stackClick hat input evaluated');
     await Promise.resolve(); // Allow promise to be processed
     vm.runtime._step();
-    assert.deepEqual(log, ['evaluated block something', 'clickme', 'stack click'], 'stackClick hat script ran');
+    assert.deepEqual(getLog(), ['evaluated block something', 'clickme', 'stack click'], 'stackClick hat script ran');
 });

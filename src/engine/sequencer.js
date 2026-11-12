@@ -373,6 +373,8 @@ class Sequencer {
             thread.procedures = null;
             thread.generator = null;
             thread.compiledFunction = null;
+            thread.fn = null;
+            thread.frame = null;
         }
     }
 }

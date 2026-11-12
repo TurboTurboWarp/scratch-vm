@@ -718,7 +718,7 @@ const parseScratchObject = function (object, runtime, extensions, topLevel, zip,
                 Variable.LIST_TYPE,
                 false
             );
-            newVariable.value = list.contents;
+            newVariable._tl.replaceAll(Array.isArray(list.contents) ? list.contents : []);
             target.variables[newVariable.id] = newVariable;
         }
     }

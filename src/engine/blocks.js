@@ -95,6 +95,12 @@ class Blocks {
             compiledProcedures: {},
 
             /**
+             * ttw: compiled TurboTurboWarp module of this sprite.
+             * @type {import('../ttw/index').TTWModule|null}
+             */
+            ttwModule: null,
+
+            /**
              * tw: Whether populateProcedureCache has been run
              */
             proceduresPopulated: false
@@ -623,6 +629,11 @@ class Blocks {
         this._cache.compiledScripts = {};
         this._cache.compiledProcedures = {};
         this._cache.proceduresPopulated = false;
+        this._cache.ttwModule = null;
+        // ttw: anything that changes a sprite's scripts can change whole-program analysis results.
+        if (!this.forceNoGlow && this.runtime && this.runtime.ttw) {
+            this.runtime.ttw.invalidate();
+        }
     }
 
     /**

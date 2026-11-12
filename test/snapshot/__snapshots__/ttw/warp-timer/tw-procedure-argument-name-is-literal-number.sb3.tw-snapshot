@@ -1,0 +1,61 @@
+// TW Snapshot
+// Input SHA-256: a5dce1a400e6f3db5f89451bef4b0c23e2233349e261e4f1e498136b1d43e2ce
+
+// Sprite1 module
+(function ttw$Sprite1_N (R, G) {
+"use strict";
+const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, makeStuck, RETIRE} = R;
+const runtime = G.runtime;
+const stage = G.stage;
+const CONTINUE = {};
+const g0 = stage.variables["`jEk@4|i[#Fk?(8x)AV.-my variable"];
+class Self {
+constructor (target) {
+this.target = target;
+}
+}
+function fp_0 (th, S, p0) {
+const target = S.target;
+const h0 = g0;
+h0.value = p0;
+return "";
+}
+function fs_1 (th, S) {
+const target = S.target;
+const h0 = g0;
+let v0 = h0.value;
+if (typeof v0 !== "number" || v0 !== v0) return fs_1$g(th, S);
+let q1087_0 = 0;
+runtime.ext_scratch3_looks._say("plan 1", target);
+v0 = 5;
+q1087_0 = 10;
+inl1087: {
+v0 = q1087_0;
+}
+if ((v0 === 10)) {
+runtime.ext_scratch3_looks._say("pass", target);
+}
+runtime.ext_scratch3_looks._say("end", target);
+h0.value = v0;
+}
+function fs_1$g (th, S) {
+const target = S.target;
+const h0 = g0;
+let v0 = h0.value;
+let q1088_0 = 0;
+runtime.ext_scratch3_looks._say("plan 1", target);
+v0 = 5;
+q1088_0 = 10;
+inl1088: {
+v0 = q1088_0;
+}
+if ((v0 === 10)) {
+runtime.ext_scratch3_looks._say("pass", target);
+}
+runtime.ext_scratch3_looks._say("end", target);
+h0.value = v0;
+}
+return {Self, scripts: {
+"j": {index: 0, native: fs_1, step: null, Frame: null, executableHat: false},
+}};
+})

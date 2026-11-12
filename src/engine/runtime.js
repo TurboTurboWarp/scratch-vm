@@ -2601,7 +2601,7 @@ class Runtime extends EventEmitter {
         // flag will still indicate that a script ran.
         this._emitProjectRunStatus(
             this.threads.length + doneThreads.length -
-                this._getMonitorThreadCount([...this.threads, ...doneThreads]));
+                this._getMonitorThreadCount(this.threads) - this._getMonitorThreadCount(doneThreads));
         // Store threads that completed this iteration for testing and other
         // internal purposes.
         this._lastStepDoneThreads = doneThreads;
@@ -3030,10 +3030,28 @@ class Runtime extends EventEmitter {
      * @param {Array.<Thread>=} optExtraThreads Optional list of inactive threads.
      */
     _updateGlows (optExtraThreads) {
+        // ttw: only threads of the editing target matter; don't copy the (possibly huge) lists with spread.
+        // Consecutive finished threads of one script (e.g. a broadcast receiver started thousands of times
+        // in a turbo mode step) request the same glow, so only the first of each run is kept.
         const searchThreads = [];
-        searchThreads.push(...this.threads);
+        const editingTarget = this._editingTarget;
+        for (let i = 0; i < this.threads.length; i++) {
+            if (this.threads[i].target === editingTarget) searchThreads.push(this.threads[i]);
+        }
         if (optExtraThreads) {
-            searchThreads.push(...optExtraThreads);
+            let previous = null;
+            for (let i = 0; i < optExtraThreads.length; i++) {
+                const thread = optExtraThreads[i];
+                if (thread.target !== editingTarget) continue;
+                if (
+                    previous !== null &&
+                    previous.blockGlowInFrame === thread.blockGlowInFrame &&
+                    previous.requestScriptGlowInFrame === thread.requestScriptGlowInFrame &&
+                    previous.stackClick === thread.stackClick
+                ) continue;
+                searchThreads.push(thread);
+                previous = thread;
+            }
         }
         // Set of scripts that request a glow this frame.
         const requestedGlowsThisFrame = [];

@@ -4,11 +4,12 @@
 // Sprite1 module
 (function ttw$Sprite1_N (R, G) {
 "use strict";
-const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, makeStuck, RETIRE} = R;
+const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, broadcastH, makeStuck, RETIRE} = R;
 const runtime = G.runtime;
 const stage = G.stage;
 const CONTINUE = {};
 const g0 = stage.variables["`jEk@4|i[#Fk?(8x)AV.-my variable"];
+const bc0 = G.broadcastHandle("MESSAGE1");
 class Self {
 constructor (target) {
 this.target = target;
@@ -31,7 +32,7 @@ for (;;) switch (fr.pc) {
 case 0:
 runtime.ext_scratch3_looks._say("plan 1", target);
 h0.value = 0;
-broadcast(runtime, "message1");
+broadcastH(bc0);
 runtime.stopForTarget(target, th);
 fr.s0 = timer(runtime);
 fr.s1 = Math.max(0, 1000 * 0);

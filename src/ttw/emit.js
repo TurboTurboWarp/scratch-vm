@@ -167,6 +167,8 @@ class ModuleBuilder {
         this.selfLists = new Map();
         /** @type {Map<string, string>} opcode -> module const */
         this.opcodeFunctions = new Map();
+        /** @type {Map<string, string>} constant broadcast name -> module const holding its handle */
+        this.broadcastHandles = new Map();
         /** @type {Map<import('./program').Unit, {fn: string, frame: string|null}>} */
         this.unitNames = new Map();
         this.counter = 0;
@@ -250,6 +252,21 @@ class ModuleBuilder {
     }
 
     /**
+     * @param {*} input broadcast name input
+     * @returns {string|null} module const holding the broadcast handle, or null if the name is not constant
+     */
+    broadcastHandle (input) {
+        if (input.opcode !== InputOpcode.CONSTANT) return null;
+        const upper = String(input.inputs.value).toUpperCase();
+        let name = this.broadcastHandles.get(upper);
+        if (!name) {
+            name = `bc${this.broadcastHandles.size}`;
+            this.broadcastHandles.set(upper, name);
+        }
+        return name;
+    }
+
+    /**
      * @returns {string} module prologue
      */
     prologue () {
@@ -262,6 +279,9 @@ class ModuleBuilder {
         }
         for (const [opcode, name] of this.opcodeFunctions) {
             src += `const ${name} = runtime.getOpcodeFunction(${str(opcode)});\n`;
+        }
+        for (const [upper, name] of this.broadcastHandles) {
+            src += `const ${name} = G.broadcastHandle(${str(upper)});\n`;
         }
         if (this.sampler) {
             src += 'const pc = runtime.sampler.pc;\n';
@@ -1740,7 +1760,11 @@ class UnitEmitter {
             break;
 
         case StackOpcode.EVENT_BROADCAST:
-            this.src += `broadcast(runtime, ${this.descendInput(node.broadcast)});\n`;
+            {
+                const handle = this.m.broadcastHandle(node.broadcast);
+                if (handle === null) this.src += `broadcast(runtime, ${this.descendInput(node.broadcast)});\n`;
+                else this.src += `broadcastH(${handle});\n`;
+            }
             break;
 
         case StackOpcode.LIST_ADD:
@@ -2394,8 +2418,13 @@ class UnitEmitter {
         }
         case StackOpcode.EVENT_BROADCAST_AND_WAIT: {
             const threads = this.slot();
-            const name = this.descendInput(this.spill(node.broadcast));
-            this.src += `${threads} = broadcast(runtime, ${name});\n`;
+            const handle = this.m.broadcastHandle(node.broadcast);
+            if (handle === null) {
+                const name = this.descendInput(this.spill(node.broadcast));
+                this.src += `${threads} = broadcast(runtime, ${name});\n`;
+            } else {
+                this.src += `${threads} = broadcastH(${handle});\n`;
+            }
             const wait = this.label();
             this.src += `case ${wait}:\nif (waitThreads(th, ${threads})) { fr.pc = ${wait}; return 0; }\n${threads} = null;\n`;
             break;

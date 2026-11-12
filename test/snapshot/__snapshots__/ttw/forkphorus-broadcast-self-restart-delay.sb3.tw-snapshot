@@ -4,12 +4,13 @@
 // Sprite1 module
 (function ttw$Sprite1_N (R, G) {
 "use strict";
-const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, makeStuck, RETIRE} = R;
+const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, broadcastH, makeStuck, RETIRE} = R;
 const runtime = G.runtime;
 const stage = G.stage;
 const CONTINUE = {};
 const g0 = stage.variables["`jEk@4|i[#Fk?(8x)AV.-my variable"];
 const g1 = stage.variables["XpJYYJ:ZH%1jU!x!l(ZP"];
+const bc0 = G.broadcastHandle("MESSAGE1");
 class Self {
 constructor (target) {
 this.target = target;
@@ -30,7 +31,7 @@ for (;;) switch (fr.pc) {
 case 0:
 h0.value = 0;
 h1.value = 0;
-broadcast(runtime, "message1");
+broadcastH(bc0);
 case 1:
 while (true) {
 h1.value = 0;
@@ -94,7 +95,7 @@ retire(th); return;
 target.setCostume(target.currentCostume + 1);
 v0 = (v0 + 1);
 v1 = (v1 + 1);
-broadcast(runtime, "message1");
+broadcastH(bc0);
 }
 h0.value = v0;
 h1.value = v1;
@@ -135,7 +136,7 @@ n0 = ((n1 = +v0) === n1 ? n1 : 0);
 v0 = (n0 + 1);
 n2 = ((n3 = +v1) === n3 ? n3 : 0);
 v1 = (n2 + 1);
-broadcast(runtime, "message1");
+broadcastH(bc0);
 }
 h0.value = v0;
 h1.value = v1;

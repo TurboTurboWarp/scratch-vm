@@ -4,12 +4,13 @@
 // Sprite1 module
 (function ttw$Sprite1_N (R, G) {
 "use strict";
-const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, makeStuck, RETIRE} = R;
+const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, broadcastH, makeStuck, RETIRE} = R;
 const runtime = G.runtime;
 const stage = G.stage;
 const CONTINUE = {};
 const g0 = stage.variables[")Vp94b3HO|$4At]V7XiJ"];
 const g1 = stage.variables["`NuUx`@:w=|8`D7S4l-t"];
+const bc0 = G.broadcastHandle("MESSAGE1");
 class Self {
 constructor (target) {
 this.target = target;
@@ -21,7 +22,7 @@ const h0 = g0;
 const h1 = g1;
 h0.value = 0;
 h1.value = 0;
-broadcast(runtime, "message1");
+broadcastH(bc0);
 }
 function fp_1 (th, S, p0) {
 const target = S.target;
@@ -50,7 +51,7 @@ if (typeof v0 !== "number" || v0 !== v0 || typeof v1 !== "number" || v1 !== v1) 
 let q881_0 = 0, q882_0 = 0;
 if ((v0 === 0)) {
 v0 = 1;
-broadcast(runtime, "message1");
+broadcastH(bc0);
 v1 = 1;
 } else {
 if ((v1 === 1)) {
@@ -88,7 +89,7 @@ let v0 = h0.value, v1 = h1.value;
 let n0 = 0, q883_0 = 0, q884_0 = 0;
 if ((((typeof v0 === "number" && v0 === v0) || v0 === 0) ? v0 === 0 : eqSlow(v0, 0))) {
 v0 = 1;
-broadcast(runtime, "message1");
+broadcastH(bc0);
 v1 = 1;
 } else {
 if ((((n0 = +v1) === n0 ? n0 : 0) === 1)) {

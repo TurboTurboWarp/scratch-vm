@@ -4,7 +4,7 @@
 // Sprite3 module
 (function ttw$Sprite3_N (R, G) {
 "use strict";
-const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, makeStuck, RETIRE} = R;
+const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, broadcastH, makeStuck, RETIRE} = R;
 const runtime = G.runtime;
 const stage = G.stage;
 const CONTINUE = {};
@@ -75,7 +75,7 @@ return {Self, scripts: {
 // Sprite1 module
 (function ttw$Sprite1_N (R, G) {
 "use strict";
-const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, makeStuck, RETIRE} = R;
+const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, broadcastH, makeStuck, RETIRE} = R;
 const runtime = G.runtime;
 const stage = G.stage;
 const CONTINUE = {};
@@ -131,7 +131,7 @@ return {Self, scripts: {
 // Sprite2 module
 (function ttw$Sprite2_N (R, G) {
 "use strict";
-const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, makeStuck, RETIRE} = R;
+const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, broadcastH, makeStuck, RETIRE} = R;
 const runtime = G.runtime;
 const stage = G.stage;
 const CONTINUE = {};

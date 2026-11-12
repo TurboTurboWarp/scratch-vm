@@ -4,12 +4,17 @@
 // Sprite1 module
 (function ttw$Sprite1_N (R, G) {
 "use strict";
-const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, makeStuck, RETIRE} = R;
+const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, broadcastH, makeStuck, RETIRE} = R;
 const runtime = G.runtime;
 const stage = G.stage;
 const CONTINUE = {};
 const g0 = stage.variables["5*)/o6gQzEw)31Ah!j:j"];
 const g1 = stage.variables["sYUvu8`..xuGcWX3!B1k"];
+const bc0 = G.broadcastHandle("3LOOP");
+const bc1 = G.broadcastHandle("1");
+const bc2 = G.broadcastHandle("2");
+const bc3 = G.broadcastHandle("3");
+const bc4 = G.broadcastHandle("1LOOP");
 class Self {
 constructor (target) {
 this.target = target;
@@ -17,7 +22,7 @@ this.target = target;
 }
 function fs_0 (th, S) {
 const target = S.target;
-broadcast(runtime, "3loop");
+broadcastH(bc0);
 }
 function fp_1 (th, S, p0) {
 const target = S.target;
@@ -97,9 +102,9 @@ const h0 = g1;
 const h1 = g0;
 h0.value = 0;
 h1.value = 0;
-broadcast(runtime, "1");
-broadcast(runtime, "2");
-broadcast(runtime, "3");
+broadcastH(bc1);
+broadcastH(bc2);
+broadcastH(bc3);
 }
 function fs_5 (th, S) {
 const target = S.target;
@@ -108,7 +113,7 @@ retire(th); return;
 }
 function fs_6 (th, S) {
 const target = S.target;
-broadcast(runtime, "1loop");
+broadcastH(bc4);
 }
 class Fs_7 {
 constructor (parent) {

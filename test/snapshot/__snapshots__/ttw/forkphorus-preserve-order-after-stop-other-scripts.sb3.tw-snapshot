@@ -4,11 +4,14 @@
 // Sprite1 module
 (function ttw$Sprite1_N (R, G) {
 "use strict";
-const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, makeStuck, RETIRE} = R;
+const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, broadcastH, makeStuck, RETIRE} = R;
 const runtime = G.runtime;
 const stage = G.stage;
 const CONTINUE = {};
 const gl0 = stage.variables["C7VGwqE9rvJgpw(oV^?E"]._tl;
+const bc0 = G.broadcastHandle("3");
+const bc1 = G.broadcastHandle("1");
+const bc2 = G.broadcastHandle("2");
 class Self {
 constructor (target) {
 this.target = target;
@@ -47,14 +50,14 @@ const L0 = gl0;
 let n0 = 0, q867_0 = 0, q868_0 = 0;
 for (;;) switch (fr.pc) {
 case 0:
-broadcast(runtime, "3");
-broadcast(runtime, "1");
-broadcast(runtime, "2");
+broadcastH(bc0);
+broadcastH(bc1);
+broadcastH(bc2);
 runtime.stopForTarget(target, th);
 L0.clear();
-broadcast(runtime, "1");
-broadcast(runtime, "2");
-broadcast(runtime, "3");
+broadcastH(bc1);
+broadcastH(bc2);
+broadcastH(bc0);
 fr.s0 = timer(runtime);
 fr.s1 = Math.max(0, 1000 * 0);
 runtime.requestRedraw();

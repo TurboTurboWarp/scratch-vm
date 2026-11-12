@@ -4,7 +4,7 @@
 // 2 module
 (function ttw$2_N (R, G) {
 "use strict";
-const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, makeStuck, RETIRE} = R;
+const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, broadcastH, makeStuck, RETIRE} = R;
 const runtime = G.runtime;
 const stage = G.stage;
 const CONTINUE = {};
@@ -28,10 +28,11 @@ return {Self, scripts: {
 // 1 module
 (function ttw$1_N (R, G) {
 "use strict";
-const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, makeStuck, RETIRE} = R;
+const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, broadcastH, makeStuck, RETIRE} = R;
 const runtime = G.runtime;
 const stage = G.stage;
 const CONTINUE = {};
+const bc0 = G.broadcastHandle("CHECK GLOBALNESS");
 class Self {
 constructor (target) {
 this.target = target;
@@ -72,7 +73,7 @@ for (n0 = fr.s0; n0 > 0; n0--) {
 runtime.ext_scratch3_control._counter++;
 fr.s0 = n0 - 1; fr.pc = 1; return 0;
 }
-broadcast(runtime, "check globalness");
+broadcastH(bc0);
 return 2;
 default: throw new Error("TTW: bad pc " + fr.pc);
 }

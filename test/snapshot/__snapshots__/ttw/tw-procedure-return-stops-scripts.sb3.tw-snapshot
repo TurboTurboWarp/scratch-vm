@@ -4,11 +4,12 @@
 // Sprite1 module
 (function ttw$Sprite1_N (R, G) {
 "use strict";
-const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, makeStuck, RETIRE} = R;
+const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, broadcastH, makeStuck, RETIRE} = R;
 const runtime = G.runtime;
 const stage = G.stage;
 const CONTINUE = {};
 const g0 = stage.variables["PsAI*C{QHI3*4?O8p#TM"];
+const bc0 = G.broadcastHandle("TEST RETURN OUTSIDE OF CUSTOM BLOCK");
 class Self {
 constructor (target) {
 this.target = target;
@@ -68,7 +69,7 @@ fp_0(th, S);
 if ((h0.value === 25)) {
 runtime.ext_scratch3_looks._say("pass return stopped the script immediately", target);
 }
-fr.s0 = broadcast(runtime, "Test return outside of custom block");
+fr.s0 = broadcastH(bc0);
 case 1:
 if (waitThreads(th, fr.s0)) { fr.pc = 1; return 0; }
 fr.s0 = null;

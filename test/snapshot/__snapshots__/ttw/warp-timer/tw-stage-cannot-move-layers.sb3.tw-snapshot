@@ -4,11 +4,12 @@
 // Sprite1 module
 (function ttw$Sprite1_N (R, G) {
 "use strict";
-const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, makeStuck, RETIRE} = R;
+const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, broadcastH, makeStuck, RETIRE} = R;
 const runtime = G.runtime;
 const stage = G.stage;
 const CONTINUE = {};
 const g0 = stage.variables["`jEk@4|i[#Fk?(8x)AV.-my variable"];
+const bc0 = G.broadcastHandle("TEST 1");
 class Self {
 constructor (target) {
 this.target = target;
@@ -40,7 +41,7 @@ while (fr.s0.timeElapsed() < fr.s1) {
 fr.pc = 1; return 0;
 }
 fr.s0 = null;
-fr.s2 = broadcast(runtime, "Test 1");
+fr.s2 = broadcastH(bc0);
 case 2:
 if (waitThreads(th, fr.s2)) { fr.pc = 2; return 0; }
 fr.s2 = null;
@@ -67,7 +68,7 @@ return {Self, scripts: {
 // Stage module
 (function ttw$Stage_N (R, G) {
 "use strict";
-const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, makeStuck, RETIRE} = R;
+const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, broadcastH, makeStuck, RETIRE} = R;
 const runtime = G.runtime;
 const stage = G.stage;
 const CONTINUE = {};

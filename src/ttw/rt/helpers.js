@@ -12,6 +12,7 @@ const Timer = require('../../util/timer');
 const Cast = require('../../util/cast');
 const log = require('../../util/log');
 const blockUtility = require('../../compiler/compat-block-utility');
+const StackFrame = require('../../engine/thread')._StackFrame;
 const {TList, EMPTY_OBJS, extDirty, syncLists, isNotActuallyZero} = require('./tlist');
 
 /**
@@ -170,7 +171,17 @@ const timer = runtime => {
  * @param {*} thread thread
  */
 const retire = thread => {
-    thread.target.runtime.sequencer.retireThread(thread);
+    // Same result as Sequencer.retireThread, but stack frames go back to the pool and no arrays are allocated.
+    const frames = thread.stackFrames;
+    while (frames.length !== 0) StackFrame.release(frames.pop());
+    thread.stack.length = 0;
+    thread.requestScriptGlowInFrame = false;
+    thread.status = STATUS_DONE;
+    thread.procedures = null;
+    thread.generator = null;
+    thread.compiledFunction = null;
+    thread.fn = null;
+    thread.frame = null;
 };
 
 /**
@@ -311,6 +322,13 @@ const compatResume = (thread, branchInfo) => {
 const broadcast = (runtime, name) => runtime.ttw.broadcast(name);
 
 /**
+ * Broadcast through a handle for a constant name (see sched.BroadcastHandle).
+ * @param {*} handle broadcast handle
+ * @returns {Array<*>} started threads
+ */
+const broadcastH = handle => handle.start();
+
+/**
  * @param {*} variable list variable
  * @returns {TList} list storage
  */
@@ -348,6 +366,7 @@ module.exports = {
     compatCall,
     compatResume,
     broadcast,
+    broadcastH,
     listOf,
     syncLists,
     extDirty,

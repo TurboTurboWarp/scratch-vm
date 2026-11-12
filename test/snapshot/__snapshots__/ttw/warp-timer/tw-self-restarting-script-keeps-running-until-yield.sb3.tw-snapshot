@@ -4,12 +4,13 @@
 // Sprite1 module
 (function ttw$Sprite1_N (R, G) {
 "use strict";
-const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, makeStuck, RETIRE} = R;
+const {toNum, toBoolean, limitPrecision, eqSlow, gtSlow, ltSlow, modSlow, randomInt, randomFloat, tan, daysSince2000, colorToList, distance, timer, retire, waitThreads, createBranchInfo, compatCall, compatResume, broadcast, broadcastH, makeStuck, RETIRE} = R;
 const runtime = G.runtime;
 const stage = G.stage;
 const CONTINUE = {};
 const g0 = stage.variables["G{NQ*NXG*qzywe1Q3?FM"];
 const g1 = stage.variables["`jEk@4|i[#Fk?(8x)AV.-my variable"];
+const bc0 = G.broadcastHandle("MESSAGE1");
 class Self {
 constructor (target) {
 this.target = target;
@@ -22,7 +23,7 @@ const h1 = g1;
 runtime.ext_scratch3_looks._say("plan 1", target);
 h0.value = 0;
 h1.value = 0;
-broadcast(runtime, "message1");
+broadcastH(bc0);
 }
 class Fs_1 {
 constructor (parent) {
@@ -41,7 +42,7 @@ for (;;) switch (fr.pc) {
 case 0:
 if (!(a0 = h0.value, ((typeof a0 === "number" && a0 === a0) || a0 === 0) ? a0 === 0 : eqSlow(a0, 0))) { fr.pc = 1; continue; }
 h0.value = 1;
-broadcast(runtime, "message1");
+broadcastH(bc0);
 h1.value = 1;
 fr.s0 = 1;
 case 3:

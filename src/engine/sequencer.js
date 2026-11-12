@@ -5,6 +5,12 @@ const compilerExecute = require('../compiler/jsexecute');
 const Sampler = require('./tw-sampler');
 
 /**
+ * ttw: the most ticks of stepThreads that may run without reading the clock.
+ * @const {number}
+ */
+const MAX_CLOCK_SKIPS = 3;
+
+/**
  * Profiler frame name for stepping a single thread.
  * @const {string}
  */
@@ -70,14 +76,18 @@ class Sequencer {
      * @return {Array.<!Thread>} List of inactive threads after stepping.
      */
     stepThreads () {
+        // ttw: same algorithm as before, with `this.runtime` and friends kept in locals. `runtime.threads`
+        // is still re-read on every tick because primitives may replace the array.
+        const runtime = this.runtime;
+        const timer = this.timer;
         // Work time is 75% of the thread stepping interval.
-        const WORK_TIME = 0.75 * this.runtime.currentStepTime;
+        const WORK_TIME = 0.75 * runtime.currentStepTime;
         // For compatibility with Scatch 2, update the millisecond clock
         // on the Runtime once per step (see Interpreter.as in Scratch 2
         // for original use of `currentMSecs`)
-        this.runtime.updateCurrentMSecs();
+        runtime.updateCurrentMSecs();
         // Start counting toward WORK_TIME.
-        this.timer.start();
+        timer.start();
         // Count of active threads.
         let numActiveThreads = Infinity;
         // Whether `stepThreads` has run through a full single tick.
@@ -87,56 +97,80 @@ class Sequencer {
         // 1. We must have threads in the list, and some must be active.
         // 2. Time elapsed must be less than WORK_TIME.
         // 3. Either turbo mode, or no redraw has been requested by a primitive.
-        while (this.runtime.threads.length > 0 &&
-               numActiveThreads > 0 &&
-               this.timer.timeElapsed() < WORK_TIME &&
-               (this.runtime.turboMode || !this.runtime.redrawRequested)) {
-            if (this.runtime.profiler !== null) {
-                if (stepThreadsInnerProfilerId === -1) {
-                    stepThreadsInnerProfilerId = this.runtime.profiler.idByName(stepThreadsInnerProfilerFrame);
+        //
+        // ttw: reading the clock costs about as much as a whole tick of a few cheap threads. While
+        // consecutive readings return the same value (ticks are far shorter than the clock's 1ms
+        // resolution), up to MAX_CLOCK_SKIPS ticks run between readings. As soon as a reading differs
+        // from the previous one the clock is read before every tick again.
+        let lastElapsed = 0;
+        let allowedSkips = 0;
+        let clockSkips = 0;
+        for (;;) {
+            if (!(runtime.threads.length > 0 && numActiveThreads > 0)) break;
+            if (clockSkips > 0) {
+                clockSkips--;
+            } else {
+                const elapsed = timer.timeElapsed();
+                if (!(elapsed < WORK_TIME)) break;
+                if (elapsed === lastElapsed) {
+                    if (allowedSkips < MAX_CLOCK_SKIPS) allowedSkips++;
+                    clockSkips = allowedSkips;
+                } else {
+                    lastElapsed = elapsed;
+                    allowedSkips = 0;
                 }
-                this.runtime.profiler.start(stepThreadsInnerProfilerId);
+            }
+            if (!(runtime.turboMode || !runtime.redrawRequested)) break;
+
+            const profiler = runtime.profiler;
+            if (profiler !== null) {
+                if (stepThreadsInnerProfilerId === -1) {
+                    stepThreadsInnerProfilerId = profiler.idByName(stepThreadsInnerProfilerFrame);
+                }
+                profiler.start(stepThreadsInnerProfilerId);
             }
 
             numActiveThreads = 0;
             let stoppedThread = false;
             // Attempt to run each thread one time.
-            const threads = this.runtime.threads;
+            const threads = runtime.threads;
             for (let i = 0; i < threads.length; i++) {
                 const activeThread = this.activeThread = threads[i];
+                let status = activeThread.status;
                 // Check if the thread is done so it is not executed.
                 if (activeThread.stack.length === 0 ||
-                    activeThread.status === Thread.STATUS_DONE) {
+                    status === Thread.STATUS_DONE) {
                     // Finished with this thread.
                     stoppedThread = true;
                     continue;
                 }
-                if (activeThread.status === Thread.STATUS_YIELD_TICK &&
+                if (status === Thread.STATUS_YIELD_TICK &&
                     !ranFirstTick) {
                     // Clear single-tick yield from the last call of `stepThreads`.
-                    activeThread.status = Thread.STATUS_RUNNING;
+                    status = activeThread.status = Thread.STATUS_RUNNING;
                 }
-                if (activeThread.status === Thread.STATUS_RUNNING ||
-                    activeThread.status === Thread.STATUS_YIELD) {
+                if (status === Thread.STATUS_RUNNING ||
+                    status === Thread.STATUS_YIELD) {
                     // Normal-mode thread: step.
-                    if (this.runtime.profiler !== null) {
+                    if (profiler !== null) {
                         if (stepThreadProfilerId === -1) {
-                            stepThreadProfilerId = this.runtime.profiler.idByName(stepThreadProfilerFrame);
+                            stepThreadProfilerId = profiler.idByName(stepThreadProfilerFrame);
                         }
 
                         // Increment the number of times stepThread is called.
-                        this.runtime.profiler.increment(stepThreadProfilerId);
+                        profiler.increment(stepThreadProfilerId);
                     }
                     this.stepThread(activeThread);
                     activeThread.warpTimer = null;
+                    status = activeThread.status;
                 }
-                if (activeThread.status === Thread.STATUS_RUNNING) {
+                if (status === Thread.STATUS_RUNNING) {
                     numActiveThreads++;
                 }
                 // Check if the thread completed while it just stepped to make
                 // sure we remove it before the next iteration of all threads.
                 if (activeThread.stack.length === 0 ||
-                    activeThread.status === Thread.STATUS_DONE) {
+                    status === Thread.STATUS_DONE) {
                     // Finished with this thread.
                     stoppedThread = true;
                 }
@@ -145,25 +179,27 @@ class Sequencer {
             // threads on the next tick.
             ranFirstTick = true;
 
-            if (this.runtime.profiler !== null) {
-                this.runtime.profiler.stop();
+            if (profiler !== null) {
+                profiler.stop();
             }
 
             // Filter inactive threads from `this.runtime.threads`.
             if (stoppedThread) {
+                const allThreads = runtime.threads;
+                const threadMap = runtime.threadMap;
                 let nextActiveThread = 0;
-                for (let i = 0; i < this.runtime.threads.length; i++) {
-                    const thread = this.runtime.threads[i];
+                for (let i = 0; i < allThreads.length; i++) {
+                    const thread = allThreads[i];
                     if (thread.stack.length !== 0 &&
                         thread.status !== Thread.STATUS_DONE) {
-                        this.runtime.threads[nextActiveThread] = thread;
+                        allThreads[nextActiveThread] = thread;
                         nextActiveThread++;
                     } else {
-                        this.runtime.threadMap.delete(thread.getId());
+                        threadMap.delete(thread.getId());
                         doneThreads.push(thread);
                     }
                 }
-                this.runtime.threads.length = nextActiveThread;
+                allThreads.length = nextActiveThread;
             }
         }
 

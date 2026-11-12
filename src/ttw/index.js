@@ -25,7 +25,7 @@ const sched = require('./sched');
 const R_NAMES = [
     'toNum', 'toBoolean', 'limitPrecision', 'eqSlow', 'gtSlow', 'ltSlow', 'modSlow', 'randomInt',
     'randomFloat', 'tan', 'daysSince2000', 'colorToList', 'distance', 'timer', 'retire', 'waitThreads',
-    'createBranchInfo', 'compatCall', 'compatResume', 'broadcast', 'makeStuck', 'RETIRE'
+    'createBranchInfo', 'compatCall', 'compatResume', 'broadcast', 'broadcastH', 'makeStuck', 'RETIRE'
 ];
 
 let moduleCounter = 0;
@@ -191,7 +191,8 @@ const compileSprite = (runtime, program, sprite) => {
         const factory = new Function(`return ${src}`)();
         const exports = factory(R, {
             runtime,
-            stage: runtime.getTargetForStage()
+            stage: runtime.getTargetForStage(),
+            broadcastHandle: broadcastName => runtime.ttw.broadcasts.handle(broadcastName)
         });
         result.Self = exports.Self;
         for (const topBlockId of Object.keys(exports.scripts)) {

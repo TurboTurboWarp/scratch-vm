@@ -153,6 +153,15 @@ class Thread {
          */
         this.stackFrames = [];
 
+        // ttw: Sequencer.retireThread assigns `stackFrame` (sic). Declare it so retired threads keep one shape.
+        this.stackFrame = null;
+
+        /**
+         * ttw: cached result of getId().
+         * @type {?string}
+         */
+        this._id = null;
+
         /**
          * Status of the thread, one of three states (below)
          * @type {number}
@@ -295,7 +304,10 @@ class Thread {
     }
 
     getId () {
-        return Thread.getIdFromTargetAndBlock(this.target, this.topBlock);
+        // ttw: target and topBlock never change once a thread is running, so the ID is computed once.
+        const id = this._id;
+        if (id !== null) return id;
+        return (this._id = Thread.getIdFromTargetAndBlock(this.target, this.topBlock));
     }
 
     /**
@@ -307,8 +319,9 @@ class Thread {
         // Push an empty stack frame, if we need one.
         // Might not, if we just popped the stack.
         if (this.stack.length > this.stackFrames.length) {
-            const parent = this.stackFrames[this.stackFrames.length - 1];
-            this.stackFrames.push(_StackFrame.create(typeof parent !== 'undefined' && parent.warpMode));
+            // ttw: don't read index -1 of an empty array (a slow out-of-bounds property lookup)
+            const length = this.stackFrames.length;
+            this.stackFrames.push(_StackFrame.create(length !== 0 && this.stackFrames[length - 1].warpMode));
         }
     }
 

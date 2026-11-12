@@ -51,7 +51,7 @@ function fs_3 (th, S) {
 const target = S.target;
 const h0 = g0;
 let v0 = h0.value;
-let n0 = 0, n1 = 0, n2 = 0, n3 = 0, q97_0 = 0, q97_1 = 0, q98_0 = 0, q99_0 = 0, q99_1 = 0, q100_0 = 0, q101_0 = 0, q101_1 = 0, q102_0 = 0, q103_0 = 0, q103_1 = 0, q104_0 = 0, q105_0 = 0, q105_1 = 0, q106_0 = 0, q107_0 = 0, q107_1 = 0, q108_0 = 0, q109_0 = 0, q109_1 = 0, q110_0 = 0, q111_0 = 0, q111_1 = 0, q112_0 = 0, q113_0 = 0, q113_1 = 0, q114_0 = 0, q115_0 = 0, q115_1 = 0, q116_0 = 0, q117_0 = 0, q117_1 = 0, q118_0 = 0, q119_0 = 0, q119_1 = 0, q120_0 = 0, q121_0 = 0, q121_1 = 0, q122_0 = 0, q123_0 = 0, q123_1 = 0, q124_0 = 0, q125_0 = 0, q125_1 = 0, q126_0 = 0, q127_0 = 0, q127_1 = 0, q128_0 = 0, q129_0 = 0;
+let n0 = 0, n1 = 0, n2 = 0, n3 = 0, a0, a1, a2, a3, q97_0 = 0, q97_1 = 0, q98_0 = 0, q99_0 = 0, q99_1 = 0, q100_0 = 0, q101_0 = 0, q101_1 = 0, q102_0 = 0, q103_0 = 0, q103_1 = 0, q104_0 = 0, q105_0 = 0, q105_1 = 0, q106_0 = 0, q107_0 = 0, q107_1 = 0, q108_0 = 0, q109_0 = 0, q109_1 = 0, q110_0 = 0, q111_0 = 0, q111_1 = 0, q112_0 = 0, q113_0 = 0, q113_1 = 0, q114_0 = 0, q115_0 = 0, q115_1 = 0, q116_0 = 0, q117_0 = 0, q117_1 = 0, q118_0 = 0, q119_0 = 0, q119_1 = 0, q120_0 = 0, q121_0 = 0, q121_1 = 0, q122_0 = 0, q123_0 = 0, q123_1 = 0, q124_0 = 0, q125_0 = 0, q125_1 = 0, q126_0 = 0, q127_0 = 0, q127_1 = 0, q128_0 = 0, q129_0 = 0;
 v0 = "4";
 runtime.ext_scratch3_looks._setCostume(target, v0);
 q97_0 = (((n0 = +target.getCostumes()[target.currentCostume].name) === n0 ? n0 : 0) === 4);
@@ -86,7 +86,7 @@ retire(th); return;
 }
 v0 = 3;
 runtime.ext_scratch3_looks._setCostume(target, v0);
-q101_0 = (target.getCostumes()[target.currentCostume].name.toLowerCase() === "costume3".toLowerCase());
+q101_0 = (a0 = target.getCostumes()[target.currentCostume].name, (a0.length === 8 && (a0 === "costume3" || a0.toLowerCase() === "costume3")));
 q101_1 = "cn=costume3";
 inl101: {
 if (!q101_0) {
@@ -150,7 +150,7 @@ retire(th); return;
 }
 v0 = (4 * 1);
 runtime.ext_scratch3_looks._setCostume(target, v0);
-q109_0 = (target.getCostumes()[target.currentCostume].name.toLowerCase() === "costume4".toLowerCase());
+q109_0 = (a1 = target.getCostumes()[target.currentCostume].name, (a1.length === 8 && (a1 === "costume4" || a1.toLowerCase() === "costume4")));
 q109_1 = "cn=costume4";
 inl109: {
 if (!q109_0) {
@@ -214,7 +214,7 @@ retire(th); return;
 }
 v0 = 3;
 runtime.ext_scratch3_looks._setBackdrop(stage, v0);
-q117_0 = (stage.getCostumes()[stage.currentCostume].name.toLowerCase() === "backdrop3".toLowerCase());
+q117_0 = (a2 = stage.getCostumes()[stage.currentCostume].name, (a2.length === 9 && (a2 === "backdrop3" || a2.toLowerCase() === "backdrop3")));
 q117_1 = "cn=backdrop3";
 inl117: {
 if (!q117_0) {
@@ -278,7 +278,7 @@ retire(th); return;
 }
 v0 = (4 * 1);
 runtime.ext_scratch3_looks._setBackdrop(stage, v0);
-q125_0 = (stage.getCostumes()[stage.currentCostume].name.toLowerCase() === "backdrop4".toLowerCase());
+q125_0 = (a3 = stage.getCostumes()[stage.currentCostume].name, (a3.length === 9 && (a3 === "backdrop4" || a3.toLowerCase() === "backdrop4")));
 q125_1 = "bn=backdrop4";
 inl125: {
 if (!q125_0) {

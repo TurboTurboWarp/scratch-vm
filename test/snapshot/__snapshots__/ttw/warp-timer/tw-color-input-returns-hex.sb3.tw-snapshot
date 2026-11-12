@@ -18,9 +18,10 @@ function fs_0 (th, S) {
 const target = S.target;
 const h0 = g0;
 let v0 = h0.value;
+let a0;
 runtime.ext_scratch3_looks._say("plan 1", target);
 v0 = "#22388a";
-if ((v0.toLowerCase() === "#22388a".toLowerCase())) {
+if ((a0 = v0, (a0.length === 7 && (a0 === "#22388a" || a0.toLowerCase() === "#22388a")))) {
 runtime.ext_scratch3_looks._say("pass", target);
 }
 runtime.ext_scratch3_looks._say("end", target);

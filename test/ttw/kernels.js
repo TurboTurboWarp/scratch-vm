@@ -225,6 +225,32 @@ programs.compareNaN = () => {
     return p;
 };
 
+// Case insensitive string equality with constants, including characters with unusual case mappings
+// (U+212A KELVIN SIGN lower-cases to "k", U+0130 lower-cases to two characters).
+programs.stringEquals = () => {
+    const p = new Proj();
+    const [i, w] = ['i', 'w'].map(v => p.v(v));
+    const S = p.l('S', ['k', 'K', '\u212a', 'c', 'C', 'apple', 'APPLE', 'aPPle', 'apples', '', ' ', 'i\u0307', '\u0130', 'I', 'stra\u00dfe', 'STRASSE', '\u00c9', '\u00e9', 'true', 12, 0, 'kk', '\ud83d\ude00']);
+    const O = p.l('O');
+    const flags = x => [
+        eq(x, 'k'), eq('K', x), eq(x, 'c'), eq(x, 'apple'), eq(x, 'Apple'), eq(x, ''), eq(x, ' '), eq(x, 'i\u0307'),
+        eq(x, '\u0130'), eq(x, 'stra\u00dfe'), eq(x, '\u00e9'), eq(x, '\u00c9'), eq(x, 'true'), eq(x, '\ud83d\ude00'), eq(x, 'i')
+    ].reduce((acc, e, n) => add(acc, mul(e, Math.pow(2, n))), 0);
+    p.define('run', [], true, [
+        set(i, 1),
+        repeat(llen(S), [
+            set(w, join(item(S, get(i)), '')),
+            push(O, flags(item(S, get(i)))),
+            push(O, flags(get(w))),
+            push(O, flags(join(get(w), ''))),
+            push(O, flags(H.letter(1, get(w)))),
+            chg(i, 1)
+        ])
+    ]);
+    p.flag([call(p, 'run', [])]);
+    return p;
+};
+
 // x * x where x is a huge number, zero or NaN-producing.
 programs.squares = () => {
     const p = new Proj();

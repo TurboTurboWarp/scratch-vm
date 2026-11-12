@@ -28,7 +28,7 @@ const S = th.self;
 const target = S.target;
 const h0 = g0;
 const h1 = g1;
-let n0 = 0, n1 = 0, n2 = 0, n3 = 0, n4 = 0, n5 = 0, n6 = 0, n7 = 0, n8 = 0, n9 = 0, n10 = 0;
+let n0 = 0, n1 = 0, n2 = 0, n3 = 0, n4 = 0, n5 = 0, n6 = 0, n7 = 0, n8 = 0, n9 = 0, n10 = 0, a0, a1, a2;
 for (;;) switch (fr.pc) {
 case 0:
 runtime.ext_scratch3_looks._say("plan 14", target);
@@ -92,13 +92,13 @@ runtime.ext_scratch3_looks._say("fail", target);
 if ((typeof 1 === "number" ? false : ("" + 1).length === 0)) {
 runtime.ext_scratch3_looks._say("fail", target);
 }
-if ((typeof 1 === "number" ? false : (1 === " " || ("" + 1).toLowerCase() === " "))) {
+if ((typeof 1 === "number" ? false : (a0 = "" + 1, (a0 === " ")))) {
 runtime.ext_scratch3_looks._say("fail", target);
 }
-if ((typeof 0 === "number" ? false : (0 === " " || ("" + 0).toLowerCase() === " "))) {
+if ((typeof 0 === "number" ? false : (a1 = "" + 0, (a1 === " ")))) {
 runtime.ext_scratch3_looks._say("fail", target);
 }
-if ((typeof 0 === "number" ? false : (0 === " " || ("" + 0).toLowerCase() === " "))) {
+if ((typeof 0 === "number" ? false : (a2 = "" + 0, (a2 === " ")))) {
 runtime.ext_scratch3_looks._say("fail", target);
 }
 if ((typeof 0 === "number" ? false : ("" + 0).length === 0)) {

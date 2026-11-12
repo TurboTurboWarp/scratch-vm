@@ -23,7 +23,7 @@ const h1 = g1;
 const L0 = gl0;
 let v0 = h0.value, v1 = h1.value;
 if (typeof v1 !== "number" || v1 !== v1) return fp_0$g(th, S);
-let n0 = 0, n1 = 0, n2 = 0, n3 = 0, n4 = 0, n5 = 0, n6 = 0, a0, a1, a2;
+let n0 = 0, n1 = 0, n2 = 0, n3 = 0, n4 = 0, n5 = 0, n6 = 0, a0, a1, a2, a3, a4;
 v0 = "";
 v1 = 1;
 a0 = {v0: v0, v1: v1, c: 0, k: 1, r: ""};
@@ -31,10 +31,10 @@ while ((n0 = fp_0$c0(th, S, a0)) === 1);
 v0 = a0.v0;
 v1 = a0.v1;
 if (n0 === 2) {
-a2 = a0.r;
+a4 = a0.r;
 h0.value = v0;
 h1.value = v1;
-return a2;
+return a4;
 }
 h0.value = v0;
 h1.value = v1;
@@ -45,13 +45,13 @@ const target = S.target;
 const h0 = g0;
 const h1 = g1;
 const L0 = gl0;
-let n0 = 0, n1 = 0, n2 = 0, n3 = 0, n4 = 0, n5 = 0, n6 = 0, a0, a1, a2;
+let n0 = 0, n1 = 0, n2 = 0, n3 = 0, n4 = 0, n5 = 0, n6 = 0, a0, a1, a2, a3, a4;
 let v0 = B.v0, v1 = B.v1;
 if (L0.objs.length === 0) {
 n1 = B.k; if (B.k < 4096) B.k *= 2;
 for (;;) {
 if (n1-- === 0) { B.v0 = v0; B.v1 = v1; return 1; }
-if (!!(typeof v0 === "number" ? false : (v0 === "final" || ("" + v0).toLowerCase() === "final"))) break;
+if (!!(typeof v0 === "number" ? false : (a1 = "" + v0, (a1.length === 5 && (a1 === "final" || a1.toLowerCase() === "final"))))) break;
 v0 = ((n2 = v1) >= 1 && n2 <= L0.len ? L0.f64[(n2 | 0) - 1] : "");
 v1 = (v1 + 1);
 }
@@ -59,8 +59,8 @@ v1 = (v1 + 1);
 n3 = B.k; if (B.k < 4096) B.k *= 2;
 for (;;) {
 if (n3-- === 0) { B.v0 = v0; B.v1 = v1; return 1; }
-if (!!(typeof v0 === "number" ? false : (v0 === "final" || ("" + v0).toLowerCase() === "final"))) break;
-v0 = ((n6 = v1) >= 1 && n6 <= L0.len ? (n5 = (n6 | 0) - 1, ((n4 = L0.f64[n5]) === n4 ? n4 : ((a1 = L0.objs[n5]) === undefined ? NaN : a1))) : "");
+if (!!(typeof v0 === "number" ? false : (a2 = "" + v0, (a2.length === 5 && (a2 === "final" || a2.toLowerCase() === "final"))))) break;
+v0 = ((n6 = v1) >= 1 && n6 <= L0.len ? (n5 = (n6 | 0) - 1, ((n4 = L0.f64[n5]) === n4 ? n4 : ((a3 = L0.objs[n5]) === undefined ? NaN : a3))) : "");
 v1 = (v1 + 1);
 }
 }
@@ -74,7 +74,7 @@ const h0 = g0;
 const h1 = g1;
 const L0 = gl0;
 let v0 = h0.value, v1 = h1.value;
-let n0 = 0, n1 = 0, n2 = 0, n3 = 0, n4 = 0, n5 = 0, n6 = 0, a0, a1, a2;
+let n0 = 0, n1 = 0, n2 = 0, n3 = 0, n4 = 0, n5 = 0, n6 = 0, a0, a1, a2, a3, a4;
 v0 = "";
 v1 = 1;
 a0 = {v0: v0, v1: v1, c: 0, k: 1, r: ""};
@@ -82,10 +82,10 @@ while ((n0 = fp_0$g$c0(th, S, a0)) === 1);
 v0 = a0.v0;
 v1 = a0.v1;
 if (n0 === 2) {
-a2 = a0.r;
+a4 = a0.r;
 h0.value = v0;
 h1.value = v1;
-return a2;
+return a4;
 }
 h0.value = v0;
 h1.value = v1;
@@ -96,13 +96,13 @@ const target = S.target;
 const h0 = g0;
 const h1 = g1;
 const L0 = gl0;
-let n0 = 0, n1 = 0, n2 = 0, n3 = 0, n4 = 0, n5 = 0, n6 = 0, a0, a1, a2;
+let n0 = 0, n1 = 0, n2 = 0, n3 = 0, n4 = 0, n5 = 0, n6 = 0, a0, a1, a2, a3, a4;
 let v0 = B.v0, v1 = B.v1;
 if (L0.objs.length === 0) {
 n1 = B.k; if (B.k < 4096) B.k *= 2;
 for (;;) {
 if (n1-- === 0) { B.v0 = v0; B.v1 = v1; return 1; }
-if (!!(typeof v0 === "number" ? false : (v0 === "final" || ("" + v0).toLowerCase() === "final"))) break;
+if (!!(typeof v0 === "number" ? false : (a1 = "" + v0, (a1.length === 5 && (a1 === "final" || a1.toLowerCase() === "final"))))) break;
 v0 = ((n2 = v1) >= 1 && n2 <= L0.len ? L0.f64[(n2 | 0) - 1] : "");
 v1 = (v1 + 1);
 }
@@ -110,8 +110,8 @@ v1 = (v1 + 1);
 n3 = B.k; if (B.k < 4096) B.k *= 2;
 for (;;) {
 if (n3-- === 0) { B.v0 = v0; B.v1 = v1; return 1; }
-if (!!(typeof v0 === "number" ? false : (v0 === "final" || ("" + v0).toLowerCase() === "final"))) break;
-v0 = ((n6 = v1) >= 1 && n6 <= L0.len ? (n5 = (n6 | 0) - 1, ((n4 = L0.f64[n5]) === n4 ? n4 : ((a1 = L0.objs[n5]) === undefined ? NaN : a1))) : "");
+if (!!(typeof v0 === "number" ? false : (a2 = "" + v0, (a2.length === 5 && (a2 === "final" || a2.toLowerCase() === "final"))))) break;
+v0 = ((n6 = v1) >= 1 && n6 <= L0.len ? (n5 = (n6 | 0) - 1, ((n4 = L0.f64[n5]) === n4 ? n4 : ((a3 = L0.objs[n5]) === undefined ? NaN : a3))) : "");
 v1 = (v1 + 1);
 }
 }

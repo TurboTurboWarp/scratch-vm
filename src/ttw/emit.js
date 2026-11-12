@@ -81,6 +81,55 @@ const nonNumericStringConstant = input => {
     return lower;
 };
 
+/** @type {Map<string, string[]>|null} ASCII character -> every UTF-16 code unit that lower-cases to it */
+let asciiLowerSources = null;
+
+/**
+ * @param {string} c one ASCII character (already lower case)
+ * @returns {string[]} all one code unit strings s with s.toLowerCase() === c
+ */
+const lowerSourcesOf = c => {
+    if (asciiLowerSources === null) {
+        asciiLowerSources = new Map();
+        for (let u = 0; u < 65536; u++) {
+            const source = String.fromCharCode(u);
+            const lower = source.toLowerCase();
+            if (lower.length === 1 && lower.charCodeAt(0) < 128) {
+                const list = asciiLowerSources.get(lower);
+                if (list) list.push(source);
+                else asciiLowerSources.set(lower, [source]);
+            }
+        }
+    }
+    return asciiLowerSources.get(c) || [];
+};
+
+/**
+ * Case insensitive equality of a string with a constant, as Scratch's string comparison does it
+ * (`s.toLowerCase() === constant.toLowerCase()`), without calling toLowerCase where it can't matter.
+ * Lower-casing never shortens a string and no character lower-cases to more than one ASCII character,
+ * so a string can only match an ASCII constant of the same length; for a single ASCII character the
+ * few strings that match are known exactly.
+ * @param {string} s simple JS expression (evaluated several times) that is a string
+ * @param {string} value the constant
+ * @returns {string} JS condition
+ */
+const equalsIgnoreCase = (s, value) => {
+    const lower = value.toLowerCase();
+    if (lower === '') return `${s}.length === 0`;
+    // eslint-disable-next-line no-control-regex
+    const ascii = /^[\x00-\x7f]*$/.test(lower);
+    if (ascii && lower.length === 1) {
+        const sources = lowerSourcesOf(lower);
+        if (sources.length > 0 && sources.length <= 4) {
+            return `(${sources.map(source => `${s} === ${str(source)}`).join(' || ')})`;
+        }
+    }
+    const exact = lower === value ? '' : `${s} === ${str(value)} || `;
+    const general = `(${exact}${s} === ${str(lower)} || ${s}.toLowerCase() === ${str(lower)})`;
+    return ascii ? `(${s}.length === ${lower.length} && ${general})` : general;
+};
+
 /**
  * @param {IntermediateInput} a input
  * @param {IntermediateInput} b input
@@ -1041,6 +1090,13 @@ class UnitEmitter {
                     const [pre, v] = this.once(this.descendInput(value), false);
                     return `(${pre}typeof ${v} === "number" ? false : ${this.equalsStringConstant(v, constant, c)})`;
                 }
+                // Two strings, one of them constant: compare without lower-casing where possible.
+                if (left.opcode === InputOpcode.CONSTANT || right.opcode === InputOpcode.CONSTANT) {
+                    const constantInput = right.opcode === InputOpcode.CONSTANT ? right : left;
+                    const otherInput = constantInput === right ? left : right;
+                    const t = this.anyTemp();
+                    return `(${t} = ${this.descendInput(otherInput.toType(InputType.STRING))}, ${equalsIgnoreCase(t, `${constantInput.inputs.value}`)})`;
+                }
                 return `(${this.descendInput(left.toType(InputType.STRING))}.toLowerCase() === ${this.descendInput(right.toType(InputType.STRING))}.toLowerCase())`;
             }
             // When both operands are known to be numbers, we can use ===
@@ -1873,8 +1929,8 @@ class UnitEmitter {
     equalsStringConstant (v, constant, lower) {
         // Nothing but the empty string converts to the empty string.
         if (lower === '') return `("" + ${v}).length === 0`;
-        // The exact constant is by far the most common match; it needs no case conversion.
-        return `(${v} === ${str(constant.inputs.value)} || ("" + ${v}).toLowerCase() === ${str(lower)})`;
+        const t = this.anyTemp();
+        return `(${t} = "" + ${v}, ${equalsIgnoreCase(t, constant.inputs.value)})`;
     }
 
     /**

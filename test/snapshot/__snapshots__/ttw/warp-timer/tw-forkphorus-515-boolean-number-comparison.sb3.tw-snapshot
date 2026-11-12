@@ -15,18 +15,18 @@ this.target = target;
 }
 function fs_0 (th, S) {
 const target = S.target;
-let a0, a1, a2, a3;
+let a0, a1, a2, a3, a4, a5, a6, a7;
 runtime.ext_scratch3_looks._say("plan 4", target);
-if ((a0 = ("something".toLowerCase() === "something".toLowerCase()), a1 = ("0" + ""), ((typeof a0 === "number" && typeof a1 === "number" && a0 === a0)) ? a0 > a1 : gtSlow(a0, a1))) {
+if ((a1 = (a0 = "something", (a0.length === 9 && (a0 === "something" || a0.toLowerCase() === "something"))), a2 = ("0" + ""), ((typeof a1 === "number" && typeof a2 === "number" && a1 === a1)) ? a1 > a2 : gtSlow(a1, a2))) {
 runtime.ext_scratch3_looks._say("pass", target);
 }
-if ((a2 = ("something".toLowerCase() === "else".toLowerCase()), a3 = ("1" + ""), ((typeof a2 === "number" && typeof a3 === "number" && a3 === a3)) ? a2 < a3 : ltSlow(a2, a3))) {
+if ((a4 = (a3 = "something", (a3.length === 4 && (a3 === "else" || a3.toLowerCase() === "else"))), a5 = ("1" + ""), ((typeof a4 === "number" && typeof a5 === "number" && a5 === a5)) ? a4 < a5 : ltSlow(a4, a5))) {
 runtime.ext_scratch3_looks._say("pass", target);
 }
-if (((+("something".toLowerCase() === "something".toLowerCase())) > (0 + 0))) {
+if (((+(a6 = "something", (a6.length === 9 && (a6 === "something" || a6.toLowerCase() === "something")))) > (0 + 0))) {
 runtime.ext_scratch3_looks._say("pass", target);
 }
-if (((+("something".toLowerCase() === "else".toLowerCase())) < (1 + 0))) {
+if (((+(a7 = "something", (a7.length === 4 && (a7 === "else" || a7.toLowerCase() === "else")))) < (1 + 0))) {
 runtime.ext_scratch3_looks._say("pass", target);
 }
 runtime.ext_scratch3_looks._say("end", target);

@@ -161,13 +161,13 @@ function rp_6 (th, fr) {
 const S = th.self;
 const target = S.target;
 const h0 = g1;
-let q1015_0 = 0, q1015_1 = 0, q1016_0 = 0, q1017_0 = 0, q1017_1 = 0, q1018_0 = 0, q1019_0 = 0, q1019_1 = 0, q1020_0 = 0, q1021_0 = 0, q1021_1 = 0, q1022_0 = 0, q1023_0 = 0, q1023_1 = 0, q1024_0 = 0, q1025_0 = 0, q1025_1 = 0, q1026_0 = 0;
+let a0, a1, a2, a3, a4, a5, q1015_0 = 0, q1015_1 = 0, q1016_0 = 0, q1017_0 = 0, q1017_1 = 0, q1018_0 = 0, q1019_0 = 0, q1019_1 = 0, q1020_0 = 0, q1021_0 = 0, q1021_1 = 0, q1022_0 = 0, q1023_0 = 0, q1023_1 = 0, q1024_0 = 0, q1025_0 = 0, q1025_1 = 0, q1026_0 = 0;
 for (;;) switch (fr.pc) {
 case 0:
 { const nf = new Fp_0(fr); nf.s0 = 12333; nf.s1 = 333; th.frame = nf; th.fn = rp_0; }
 fr.pc = 1; return 1;
 case 1:
-q1015_0 = (("" + h0.value).toLowerCase() === "true".toLowerCase());
+q1015_0 = (a0 = ("" + h0.value), (a0.length === 4 && (a0 === "true" || a0.toLowerCase() === "true")));
 q1015_1 = "12333 must end with 333";
 inl1015: {
 if (!q1015_0) {
@@ -184,7 +184,7 @@ retire(th); return 2;
 { const nf = new Fp_0(fr); nf.s0 = 12333; nf.s1 = 33; th.frame = nf; th.fn = rp_0; }
 fr.pc = 2; return 1;
 case 2:
-q1017_0 = (("" + h0.value).toLowerCase() === "true".toLowerCase());
+q1017_0 = (a1 = ("" + h0.value), (a1.length === 4 && (a1 === "true" || a1.toLowerCase() === "true")));
 q1017_1 = "12333 must end with 33";
 inl1017: {
 if (!q1017_0) {
@@ -201,7 +201,7 @@ retire(th); return 2;
 { const nf = new Fp_0(fr); nf.s0 = 12333; nf.s1 = ""; th.frame = nf; th.fn = rp_0; }
 fr.pc = 3; return 1;
 case 3:
-q1019_0 = (("" + h0.value).toLowerCase() === "true".toLowerCase());
+q1019_0 = (a2 = ("" + h0.value), (a2.length === 4 && (a2 === "true" || a2.toLowerCase() === "true")));
 q1019_1 = "12333 must end with empty string";
 inl1019: {
 if (!q1019_0) {
@@ -218,7 +218,7 @@ retire(th); return 2;
 { const nf = new Fp_0(fr); nf.s0 = 12333; nf.s1 = 4; th.frame = nf; th.fn = rp_0; }
 fr.pc = 4; return 1;
 case 4:
-q1021_0 = (("" + h0.value).toLowerCase() === "false".toLowerCase());
+q1021_0 = (a3 = ("" + h0.value), (a3.length === 5 && (a3 === "false" || a3.toLowerCase() === "false")));
 q1021_1 = "12333 must not end with 4";
 inl1021: {
 if (!q1021_0) {
@@ -235,7 +235,7 @@ retire(th); return 2;
 { const nf = new Fp_0(fr); nf.s0 = 12333; nf.s1 = 123334; th.frame = nf; th.fn = rp_0; }
 fr.pc = 5; return 1;
 case 5:
-q1023_0 = (("" + h0.value).toLowerCase() === "false".toLowerCase());
+q1023_0 = (a4 = ("" + h0.value), (a4.length === 5 && (a4 === "false" || a4.toLowerCase() === "false")));
 q1023_1 = "12333 must not end with 123334";
 inl1023: {
 if (!q1023_0) {
@@ -252,7 +252,7 @@ retire(th); return 2;
 { const nf = new Fp_0(fr); nf.s0 = 12333; nf.s1 = 12333; th.frame = nf; th.fn = rp_0; }
 fr.pc = 6; return 1;
 case 6:
-q1025_0 = (("" + h0.value).toLowerCase() === "true".toLowerCase());
+q1025_0 = (a5 = ("" + h0.value), (a5.length === 4 && (a5 === "true" || a5.toLowerCase() === "true")));
 q1025_1 = "12333 must end with itself";
 inl1025: {
 if (!q1025_0) {
@@ -334,13 +334,13 @@ function rp_9 (th, fr) {
 const S = th.self;
 const target = S.target;
 const h0 = g1;
-let q1027_0 = 0, q1027_1 = 0, q1028_0 = 0, q1029_0 = 0, q1029_1 = 0, q1030_0 = 0, q1031_0 = 0, q1031_1 = 0, q1032_0 = 0, q1033_0 = 0, q1033_1 = 0, q1034_0 = 0, q1035_0 = 0, q1035_1 = 0, q1036_0 = 0, q1037_0 = 0, q1037_1 = 0, q1038_0 = 0, q1039_0 = 0, q1039_1 = 0, q1040_0 = 0;
+let a0, a1, a2, a3, a4, a5, a6, q1027_0 = 0, q1027_1 = 0, q1028_0 = 0, q1029_0 = 0, q1029_1 = 0, q1030_0 = 0, q1031_0 = 0, q1031_1 = 0, q1032_0 = 0, q1033_0 = 0, q1033_1 = 0, q1034_0 = 0, q1035_0 = 0, q1035_1 = 0, q1036_0 = 0, q1037_0 = 0, q1037_1 = 0, q1038_0 = 0, q1039_0 = 0, q1039_1 = 0, q1040_0 = 0;
 for (;;) switch (fr.pc) {
 case 0:
 { const nf = new Fp_7(fr); nf.s0 = 12333; nf.s1 = 12333; th.frame = nf; th.fn = rp_7; }
 fr.pc = 1; return 1;
 case 1:
-q1027_0 = (("" + h0.value).toLowerCase() === "true".toLowerCase());
+q1027_0 = (a0 = ("" + h0.value), (a0.length === 4 && (a0 === "true" || a0.toLowerCase() === "true")));
 q1027_1 = "12333 must start with 12333";
 inl1027: {
 if (!q1027_0) {
@@ -357,7 +357,7 @@ retire(th); return 2;
 { const nf = new Fp_7(fr); nf.s0 = 12333; nf.s1 = 1233; th.frame = nf; th.fn = rp_7; }
 fr.pc = 2; return 1;
 case 2:
-q1029_0 = (("" + h0.value).toLowerCase() === "true".toLowerCase());
+q1029_0 = (a1 = ("" + h0.value), (a1.length === 4 && (a1 === "true" || a1.toLowerCase() === "true")));
 q1029_1 = "12333 must start with 1233";
 inl1029: {
 if (!q1029_0) {
@@ -374,7 +374,7 @@ retire(th); return 2;
 { const nf = new Fp_7(fr); nf.s0 = 12333; nf.s1 = 123; th.frame = nf; th.fn = rp_7; }
 fr.pc = 3; return 1;
 case 3:
-q1031_0 = (("" + h0.value).toLowerCase() === "true".toLowerCase());
+q1031_0 = (a2 = ("" + h0.value), (a2.length === 4 && (a2 === "true" || a2.toLowerCase() === "true")));
 q1031_1 = "12333 must start with 123";
 inl1031: {
 if (!q1031_0) {
@@ -391,7 +391,7 @@ retire(th); return 2;
 { const nf = new Fp_7(fr); nf.s0 = 12333; nf.s1 = 12; th.frame = nf; th.fn = rp_7; }
 fr.pc = 4; return 1;
 case 4:
-q1033_0 = (("" + h0.value).toLowerCase() === "true".toLowerCase());
+q1033_0 = (a3 = ("" + h0.value), (a3.length === 4 && (a3 === "true" || a3.toLowerCase() === "true")));
 q1033_1 = "12333 must start with 12";
 inl1033: {
 if (!q1033_0) {
@@ -408,7 +408,7 @@ retire(th); return 2;
 { const nf = new Fp_7(fr); nf.s0 = 12333; nf.s1 = 1; th.frame = nf; th.fn = rp_7; }
 fr.pc = 5; return 1;
 case 5:
-q1035_0 = (("" + h0.value).toLowerCase() === "true".toLowerCase());
+q1035_0 = (a4 = ("" + h0.value), (a4.length === 4 && (a4 === "true" || a4.toLowerCase() === "true")));
 q1035_1 = "12333 must start with 1";
 inl1035: {
 if (!q1035_0) {
@@ -425,7 +425,7 @@ retire(th); return 2;
 { const nf = new Fp_7(fr); nf.s0 = 12333; nf.s1 = ""; th.frame = nf; th.fn = rp_7; }
 fr.pc = 6; return 1;
 case 6:
-q1037_0 = (("" + h0.value).toLowerCase() === "true".toLowerCase());
+q1037_0 = (a5 = ("" + h0.value), (a5.length === 4 && (a5 === "true" || a5.toLowerCase() === "true")));
 q1037_1 = "12333 must start with empty string";
 inl1037: {
 if (!q1037_0) {
@@ -442,7 +442,7 @@ retire(th); return 2;
 { const nf = new Fp_7(fr); nf.s0 = 12333; nf.s1 = 33; th.frame = nf; th.fn = rp_7; }
 fr.pc = 7; return 1;
 case 7:
-q1039_0 = (("" + h0.value).toLowerCase() === "false".toLowerCase());
+q1039_0 = (a6 = ("" + h0.value), (a6.length === 5 && (a6 === "false" || a6.toLowerCase() === "false")));
 q1039_1 = "12333 must not start with 33";
 inl1039: {
 if (!q1039_0) {
@@ -471,13 +471,13 @@ function rp_10 (th, fr) {
 const S = th.self;
 const target = S.target;
 const h0 = g1;
-let a0, a1, a2, a3, a4, a5, a6, a7, a8, q1041_0 = 0, q1041_1 = 0, q1042_0 = 0, q1043_0 = 0, q1043_1 = 0, q1044_0 = 0, q1045_0 = 0, q1045_1 = 0, q1046_0 = 0, q1047_0 = 0, q1047_1 = 0, q1048_0 = 0, q1049_0 = 0, q1049_1 = 0, q1050_0 = 0, q1051_0 = 0, q1051_1 = 0, q1052_0 = 0, q1053_0 = 0, q1053_1 = 0, q1054_0 = 0, q1055_0 = 0, q1055_1 = 0, q1056_0 = 0, q1057_0 = 0, q1057_1 = 0, q1058_0 = 0;
+let a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, q1041_0 = 0, q1041_1 = 0, q1042_0 = 0, q1043_0 = 0, q1043_1 = 0, q1044_0 = 0, q1045_0 = 0, q1045_1 = 0, q1046_0 = 0, q1047_0 = 0, q1047_1 = 0, q1048_0 = 0, q1049_0 = 0, q1049_1 = 0, q1050_0 = 0, q1051_0 = 0, q1051_1 = 0, q1052_0 = 0, q1053_0 = 0, q1053_1 = 0, q1054_0 = 0, q1055_0 = 0, q1055_1 = 0, q1056_0 = 0, q1057_0 = 0, q1057_1 = 0, q1058_0 = 0;
 for (;;) switch (fr.pc) {
 case 0:
 { const nf = new Fp_4(fr); nf.s0 = "abc"; nf.s1 = ""; th.frame = nf; th.fn = rp_4; }
 fr.pc = 1; return 1;
 case 1:
-q1041_0 = (a0 = h0.value, typeof a0 === "number" ? false : (a0 === "true" || ("" + a0).toLowerCase() === "true"));
+q1041_0 = (a0 = h0.value, typeof a0 === "number" ? false : (a1 = "" + a0, (a1.length === 4 && (a1 === "true" || a1.toLowerCase() === "true"))));
 q1041_1 = "abc must include empty string";
 inl1041: {
 if (!q1041_0) {
@@ -494,7 +494,7 @@ retire(th); return 2;
 { const nf = new Fp_4(fr); nf.s0 = ""; nf.s1 = ""; th.frame = nf; th.fn = rp_4; }
 fr.pc = 2; return 1;
 case 2:
-q1043_0 = (a1 = h0.value, typeof a1 === "number" ? false : (a1 === "true" || ("" + a1).toLowerCase() === "true"));
+q1043_0 = (a2 = h0.value, typeof a2 === "number" ? false : (a3 = "" + a2, (a3.length === 4 && (a3 === "true" || a3.toLowerCase() === "true"))));
 q1043_1 = "empty string must include empty string";
 inl1043: {
 if (!q1043_0) {
@@ -511,7 +511,7 @@ retire(th); return 2;
 { const nf = new Fp_4(fr); nf.s0 = "abc"; nf.s1 = "abc"; th.frame = nf; th.fn = rp_4; }
 fr.pc = 3; return 1;
 case 3:
-q1045_0 = (a2 = h0.value, typeof a2 === "number" ? false : (a2 === "true" || ("" + a2).toLowerCase() === "true"));
+q1045_0 = (a4 = h0.value, typeof a4 === "number" ? false : (a5 = "" + a4, (a5.length === 4 && (a5 === "true" || a5.toLowerCase() === "true"))));
 q1045_1 = "abc must include abc";
 inl1045: {
 if (!q1045_0) {
@@ -528,7 +528,7 @@ retire(th); return 2;
 { const nf = new Fp_4(fr); nf.s0 = "abc"; nf.s1 = "a"; th.frame = nf; th.fn = rp_4; }
 fr.pc = 4; return 1;
 case 4:
-q1047_0 = (a3 = h0.value, typeof a3 === "number" ? false : (a3 === "true" || ("" + a3).toLowerCase() === "true"));
+q1047_0 = (a6 = h0.value, typeof a6 === "number" ? false : (a7 = "" + a6, (a7.length === 4 && (a7 === "true" || a7.toLowerCase() === "true"))));
 q1047_1 = "abc must include a";
 inl1047: {
 if (!q1047_0) {
@@ -545,7 +545,7 @@ retire(th); return 2;
 { const nf = new Fp_4(fr); nf.s0 = "abc"; nf.s1 = "b"; th.frame = nf; th.fn = rp_4; }
 fr.pc = 5; return 1;
 case 5:
-q1049_0 = (a4 = h0.value, typeof a4 === "number" ? false : (a4 === "true" || ("" + a4).toLowerCase() === "true"));
+q1049_0 = (a8 = h0.value, typeof a8 === "number" ? false : (a9 = "" + a8, (a9.length === 4 && (a9 === "true" || a9.toLowerCase() === "true"))));
 q1049_1 = "abc must include b";
 inl1049: {
 if (!q1049_0) {
@@ -562,7 +562,7 @@ retire(th); return 2;
 { const nf = new Fp_4(fr); nf.s0 = "abc"; nf.s1 = "c"; th.frame = nf; th.fn = rp_4; }
 fr.pc = 6; return 1;
 case 6:
-q1051_0 = (a5 = h0.value, typeof a5 === "number" ? false : (a5 === "true" || ("" + a5).toLowerCase() === "true"));
+q1051_0 = (a10 = h0.value, typeof a10 === "number" ? false : (a11 = "" + a10, (a11.length === 4 && (a11 === "true" || a11.toLowerCase() === "true"))));
 q1051_1 = "abc must include c";
 inl1051: {
 if (!q1051_0) {
@@ -579,7 +579,7 @@ retire(th); return 2;
 { const nf = new Fp_4(fr); nf.s0 = "abc"; nf.s1 = "ab"; th.frame = nf; th.fn = rp_4; }
 fr.pc = 7; return 1;
 case 7:
-q1053_0 = (a6 = h0.value, typeof a6 === "number" ? false : (a6 === "true" || ("" + a6).toLowerCase() === "true"));
+q1053_0 = (a12 = h0.value, typeof a12 === "number" ? false : (a13 = "" + a12, (a13.length === 4 && (a13 === "true" || a13.toLowerCase() === "true"))));
 q1053_1 = "abc must include ab";
 inl1053: {
 if (!q1053_0) {
@@ -596,7 +596,7 @@ retire(th); return 2;
 { const nf = new Fp_4(fr); nf.s0 = "abc"; nf.s1 = "bc"; th.frame = nf; th.fn = rp_4; }
 fr.pc = 8; return 1;
 case 8:
-q1055_0 = (a7 = h0.value, typeof a7 === "number" ? false : (a7 === "true" || ("" + a7).toLowerCase() === "true"));
+q1055_0 = (a14 = h0.value, typeof a14 === "number" ? false : (a15 = "" + a14, (a15.length === 4 && (a15 === "true" || a15.toLowerCase() === "true"))));
 q1055_1 = "abc must include bc";
 inl1055: {
 if (!q1055_0) {
@@ -613,7 +613,7 @@ retire(th); return 2;
 { const nf = new Fp_4(fr); nf.s0 = "abc"; nf.s1 = "aa"; th.frame = nf; th.fn = rp_4; }
 fr.pc = 9; return 1;
 case 9:
-q1057_0 = (a8 = h0.value, typeof a8 === "number" ? false : (a8 === "false" || ("" + a8).toLowerCase() === "false"));
+q1057_0 = (a16 = h0.value, typeof a16 === "number" ? false : (a17 = "" + a16, (a17.length === 5 && (a17 === "false" || a17.toLowerCase() === "false"))));
 q1057_1 = "abc must not include aa";
 inl1057: {
 if (!q1057_0) {
@@ -865,13 +865,13 @@ function rp_17 (th, fr) {
 const S = th.self;
 const target = S.target;
 const h0 = g1;
-let n0 = 0, n1 = 0, q1067_0 = 0, q1067_1 = 0, q1068_0 = 0, q1069_0 = 0, q1069_1 = 0, q1070_0 = 0, q1071_0 = 0, q1071_1 = 0, q1072_0 = 0;
+let n0 = 0, n1 = 0, a0, q1067_0 = 0, q1067_1 = 0, q1068_0 = 0, q1069_0 = 0, q1069_1 = 0, q1070_0 = 0, q1071_0 = 0, q1071_1 = 0, q1072_0 = 0;
 for (;;) switch (fr.pc) {
 case 0:
 { const nf = new Fp_15(fr); nf.s0 = 123456; nf.s1 = 345; nf.s2 = "a"; th.frame = nf; th.fn = rp_15; }
 fr.pc = 1; return 1;
 case 1:
-q1067_0 = (h0.value.toLowerCase() === "12a6".toLowerCase());
+q1067_0 = (a0 = h0.value, (a0.length === 4 && (a0 === "12a6" || a0.toLowerCase() === "12a6")));
 q1067_1 = "replace expected 12a6";
 inl1067: {
 if (!q1067_0) {

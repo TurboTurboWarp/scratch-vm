@@ -15,9 +15,9 @@ this.target = target;
 }
 function fs_0 (th, S) {
 const target = S.target;
-let a0, a1;
+let a0, a1, a2;
 runtime.ext_scratch3_looks._say("plan 0", target);
-if ((a1 = (a0 = runtime.getSpriteTargetByName("Sprite2"), a0 ? a0.getCostumes()[a0.currentCostume].name : 0), typeof a1 === "number" ? false : (a1 === "a" || ("" + a1).toLowerCase() === "a"))) {
+if ((a1 = (a0 = runtime.getSpriteTargetByName("Sprite2"), a0 ? a0.getCostumes()[a0.currentCostume].name : 0), typeof a1 === "number" ? false : (a2 = "" + a1, (a2 === "A" || a2 === "a")))) {
 }
 runtime.ext_scratch3_looks._say("end", target);
 }

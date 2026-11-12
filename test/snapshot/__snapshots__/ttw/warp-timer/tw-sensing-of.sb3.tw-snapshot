@@ -18,103 +18,103 @@ function fs_0 (th, S) {
 const target = S.target;
 const h0 = g0;
 let v0 = h0.value;
-let a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19, a20, a21, a22, a23, a24, a25, a26, a27, a28, a29, a30, a31, a32, a33, a34, a35, a36, a37;
+let a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19, a20, a21, a22, a23, a24, a25, a26, a27, a28, a29, a30, a31, a32, a33, a34, a35, a36, a37, a38, a39, a40, a41;
 runtime.ext_scratch3_looks._say("plan 32", target);
 if (((stage.currentCostume + 1) === 2)) {
 runtime.ext_scratch3_looks._say("pass backdrop #", target);
 }
-if ((stage.getCostumes()[stage.currentCostume].name.toLowerCase() === "Backdrop name test".toLowerCase())) {
+if ((a0 = stage.getCostumes()[stage.currentCostume].name, (a0.length === 18 && (a0 === "Backdrop name test" || a0 === "backdrop name test" || a0.toLowerCase() === "backdrop name test")))) {
 runtime.ext_scratch3_looks._say("pass backdrop name", target);
 }
 if (((stage ? stage.volume : 0) === 45)) {
 runtime.ext_scratch3_looks._say("pass stage volume", target);
 }
-if ((a3 = (h0.value = v0, (a2 = stage && stage.lookupVariableByNameAndType("Stage variable", "", true)) ? a2.value : 0), typeof a3 === "number" ? false : (a3 === "Variable in stage" || ("" + a3).toLowerCase() === "variable in stage"))) {
+if ((a4 = (h0.value = v0, (a3 = stage && stage.lookupVariableByNameAndType("Stage variable", "", true)) ? a3.value : 0), typeof a4 === "number" ? false : (a5 = "" + a4, (a5.length === 17 && (a5 === "Variable in stage" || a5 === "variable in stage" || a5.toLowerCase() === "variable in stage"))))) {
 runtime.ext_scratch3_looks._say("pass stage variable", target);
 }
-if (((a4 = runtime.getSpriteTargetByName("Test sprite"), a4 ? a4.x : 0) === 19)) {
+if (((a6 = runtime.getSpriteTargetByName("Test sprite"), a6 ? a6.x : 0) === 19)) {
 runtime.ext_scratch3_looks._say("pass x", target);
 }
-if (((a5 = runtime.getSpriteTargetByName("Test sprite"), a5 ? a5.y : 0) === 20)) {
+if (((a7 = runtime.getSpriteTargetByName("Test sprite"), a7 ? a7.y : 0) === 20)) {
 runtime.ext_scratch3_looks._say("pass y", target);
 }
-if (((a6 = runtime.getSpriteTargetByName("Test sprite"), a6 ? a6.direction : 0) === 89)) {
+if (((a8 = runtime.getSpriteTargetByName("Test sprite"), a8 ? a8.direction : 0) === 89)) {
 runtime.ext_scratch3_looks._say("pass direction", target);
 }
-if (((a7 = runtime.getSpriteTargetByName("Test sprite"), a7 ? a7.currentCostume + 1 : 0) === 3)) {
+if (((a9 = runtime.getSpriteTargetByName("Test sprite"), a9 ? a9.currentCostume + 1 : 0) === 3)) {
 runtime.ext_scratch3_looks._say("pass costume #", target);
 }
-if ((a9 = (a8 = runtime.getSpriteTargetByName("Test sprite"), a8 ? a8.getCostumes()[a8.currentCostume].name : 0), typeof a9 === "number" ? false : (a9 === "Costume name test" || ("" + a9).toLowerCase() === "costume name test"))) {
+if ((a11 = (a10 = runtime.getSpriteTargetByName("Test sprite"), a10 ? a10.getCostumes()[a10.currentCostume].name : 0), typeof a11 === "number" ? false : (a12 = "" + a11, (a12.length === 17 && (a12 === "Costume name test" || a12 === "costume name test" || a12.toLowerCase() === "costume name test"))))) {
 runtime.ext_scratch3_looks._say("pass costume name", target);
 }
-if (((a10 = runtime.getSpriteTargetByName("Test sprite"), a10 ? a10.size : 0) === 76.01)) {
+if (((a13 = runtime.getSpriteTargetByName("Test sprite"), a13 ? a13.size : 0) === 76.01)) {
 runtime.ext_scratch3_looks._say("pass size", target);
 }
-if (((a11 = runtime.getSpriteTargetByName("Test sprite"), a11 ? a11.volume : 0) === 14.3)) {
+if (((a14 = runtime.getSpriteTargetByName("Test sprite"), a14 ? a14.volume : 0) === 14.3)) {
 runtime.ext_scratch3_looks._say("pass volume", target);
 }
-if ((a14 = (h0.value = v0, a12 = runtime.getSpriteTargetByName("Test sprite"), (a13 = a12 && a12.lookupVariableByNameAndType("Private variable", "", true)) ? a13.value : 0), typeof a14 === "number" ? false : (a14 === "Private variable value" || ("" + a14).toLowerCase() === "private variable value"))) {
+if ((a17 = (h0.value = v0, a15 = runtime.getSpriteTargetByName("Test sprite"), (a16 = a15 && a15.lookupVariableByNameAndType("Private variable", "", true)) ? a16.value : 0), typeof a17 === "number" ? false : (a18 = "" + a17, (a18.length === 22 && (a18 === "Private variable value" || a18 === "private variable value" || a18.toLowerCase() === "private variable value"))))) {
 runtime.ext_scratch3_looks._say("pass private variable", target);
 }
-if ((a17 = (h0.value = v0, (a16 = stage && stage.lookupVariableByNameAndType("This variable used to exist", "", true)) ? a16.value : 0), ((typeof a17 === "number" && a17 === a17) || a17 === 0) ? a17 === 0 : eqSlow(a17, 0))) {
+if ((a21 = (h0.value = v0, (a20 = stage && stage.lookupVariableByNameAndType("This variable used to exist", "", true)) ? a20.value : 0), ((typeof a21 === "number" && a21 === a21) || a21 === 0) ? a21 === 0 : eqSlow(a21, 0))) {
 runtime.ext_scratch3_looks._say("pass non existent variable", target);
 }
 v0 = (("" + randomInt(1, 9)) + ("" + randomInt(1, 9)));
-if ((a18 = (h0.value = v0, runtime.ext_scratch3_sensing.getAttributeOf({OBJECT: v0, PROPERTY: "backdrop #" })), ((typeof a18 === "number" && a18 === a18) || a18 === 0) ? a18 === 0 : eqSlow(a18, 0))) {
+if ((a22 = (h0.value = v0, runtime.ext_scratch3_sensing.getAttributeOf({OBJECT: v0, PROPERTY: "backdrop #" })), ((typeof a22 === "number" && a22 === a22) || a22 === 0) ? a22 === 0 : eqSlow(a22, 0))) {
 runtime.ext_scratch3_looks._say("pass NE backdrop #", target);
 }
-if ((a19 = (h0.value = v0, runtime.ext_scratch3_sensing.getAttributeOf({OBJECT: v0, PROPERTY: "backdrop name" })), ((typeof a19 === "number" && a19 === a19) || a19 === 0) ? a19 === 0 : eqSlow(a19, 0))) {
+if ((a23 = (h0.value = v0, runtime.ext_scratch3_sensing.getAttributeOf({OBJECT: v0, PROPERTY: "backdrop name" })), ((typeof a23 === "number" && a23 === a23) || a23 === 0) ? a23 === 0 : eqSlow(a23, 0))) {
 runtime.ext_scratch3_looks._say("pass NE backdrop name", target);
 }
-if ((a20 = (h0.value = v0, runtime.ext_scratch3_sensing.getAttributeOf({OBJECT: v0, PROPERTY: "volume" })), ((typeof a20 === "number" && a20 === a20) || a20 === 0) ? a20 === 0 : eqSlow(a20, 0))) {
+if ((a24 = (h0.value = v0, runtime.ext_scratch3_sensing.getAttributeOf({OBJECT: v0, PROPERTY: "volume" })), ((typeof a24 === "number" && a24 === a24) || a24 === 0) ? a24 === 0 : eqSlow(a24, 0))) {
 runtime.ext_scratch3_looks._say("pass NE volume", target);
 }
-if ((a21 = (h0.value = v0, runtime.ext_scratch3_sensing.getAttributeOf({OBJECT: v0, PROPERTY: "Stage variable" })), ((typeof a21 === "number" && a21 === a21) || a21 === 0) ? a21 === 0 : eqSlow(a21, 0))) {
+if ((a25 = (h0.value = v0, runtime.ext_scratch3_sensing.getAttributeOf({OBJECT: v0, PROPERTY: "Stage variable" })), ((typeof a25 === "number" && a25 === a25) || a25 === 0) ? a25 === 0 : eqSlow(a25, 0))) {
 runtime.ext_scratch3_looks._say("pass NE stage variable", target);
 }
-if ((a22 = (h0.value = v0, runtime.ext_scratch3_sensing.getAttributeOf({OBJECT: v0, PROPERTY: "x position" })), ((typeof a22 === "number" && a22 === a22) || a22 === 0) ? a22 === 0 : eqSlow(a22, 0))) {
+if ((a26 = (h0.value = v0, runtime.ext_scratch3_sensing.getAttributeOf({OBJECT: v0, PROPERTY: "x position" })), ((typeof a26 === "number" && a26 === a26) || a26 === 0) ? a26 === 0 : eqSlow(a26, 0))) {
 runtime.ext_scratch3_looks._say("pass NE x", target);
 }
-if ((a23 = (h0.value = v0, runtime.ext_scratch3_sensing.getAttributeOf({OBJECT: v0, PROPERTY: "y position" })), ((typeof a23 === "number" && a23 === a23) || a23 === 0) ? a23 === 0 : eqSlow(a23, 0))) {
+if ((a27 = (h0.value = v0, runtime.ext_scratch3_sensing.getAttributeOf({OBJECT: v0, PROPERTY: "y position" })), ((typeof a27 === "number" && a27 === a27) || a27 === 0) ? a27 === 0 : eqSlow(a27, 0))) {
 runtime.ext_scratch3_looks._say("pass NE y", target);
 }
-if ((a24 = (h0.value = v0, runtime.ext_scratch3_sensing.getAttributeOf({OBJECT: v0, PROPERTY: "direction" })), ((typeof a24 === "number" && a24 === a24) || a24 === 0) ? a24 === 0 : eqSlow(a24, 0))) {
+if ((a28 = (h0.value = v0, runtime.ext_scratch3_sensing.getAttributeOf({OBJECT: v0, PROPERTY: "direction" })), ((typeof a28 === "number" && a28 === a28) || a28 === 0) ? a28 === 0 : eqSlow(a28, 0))) {
 runtime.ext_scratch3_looks._say("pass NE direction", target);
 }
-if ((a25 = (h0.value = v0, runtime.ext_scratch3_sensing.getAttributeOf({OBJECT: v0, PROPERTY: "costume #" })), ((typeof a25 === "number" && a25 === a25) || a25 === 0) ? a25 === 0 : eqSlow(a25, 0))) {
+if ((a29 = (h0.value = v0, runtime.ext_scratch3_sensing.getAttributeOf({OBJECT: v0, PROPERTY: "costume #" })), ((typeof a29 === "number" && a29 === a29) || a29 === 0) ? a29 === 0 : eqSlow(a29, 0))) {
 runtime.ext_scratch3_looks._say("pass NE costume #", target);
 }
-if ((a26 = (h0.value = v0, runtime.ext_scratch3_sensing.getAttributeOf({OBJECT: v0, PROPERTY: "costume name" })), ((typeof a26 === "number" && a26 === a26) || a26 === 0) ? a26 === 0 : eqSlow(a26, 0))) {
+if ((a30 = (h0.value = v0, runtime.ext_scratch3_sensing.getAttributeOf({OBJECT: v0, PROPERTY: "costume name" })), ((typeof a30 === "number" && a30 === a30) || a30 === 0) ? a30 === 0 : eqSlow(a30, 0))) {
 runtime.ext_scratch3_looks._say("pass NE costume name", target);
 }
-if ((a27 = (h0.value = v0, runtime.ext_scratch3_sensing.getAttributeOf({OBJECT: v0, PROPERTY: "size" })), ((typeof a27 === "number" && a27 === a27) || a27 === 0) ? a27 === 0 : eqSlow(a27, 0))) {
+if ((a31 = (h0.value = v0, runtime.ext_scratch3_sensing.getAttributeOf({OBJECT: v0, PROPERTY: "size" })), ((typeof a31 === "number" && a31 === a31) || a31 === 0) ? a31 === 0 : eqSlow(a31, 0))) {
 runtime.ext_scratch3_looks._say("pass NE size", target);
 }
-if ((a28 = (h0.value = v0, runtime.ext_scratch3_sensing.getAttributeOf({OBJECT: v0, PROPERTY: "volume" })), ((typeof a28 === "number" && a28 === a28) || a28 === 0) ? a28 === 0 : eqSlow(a28, 0))) {
+if ((a32 = (h0.value = v0, runtime.ext_scratch3_sensing.getAttributeOf({OBJECT: v0, PROPERTY: "volume" })), ((typeof a32 === "number" && a32 === a32) || a32 === 0) ? a32 === 0 : eqSlow(a32, 0))) {
 runtime.ext_scratch3_looks._say("pass NE volume", target);
 }
-if ((a29 = (h0.value = v0, runtime.ext_scratch3_sensing.getAttributeOf({OBJECT: v0, PROPERTY: "Private variable" })), ((typeof a29 === "number" && a29 === a29) || a29 === 0) ? a29 === 0 : eqSlow(a29, 0))) {
+if ((a33 = (h0.value = v0, runtime.ext_scratch3_sensing.getAttributeOf({OBJECT: v0, PROPERTY: "Private variable" })), ((typeof a33 === "number" && a33 === a33) || a33 === 0) ? a33 === 0 : eqSlow(a33, 0))) {
 runtime.ext_scratch3_looks._say("pass NE private variable", target);
 }
-if (((a30 = runtime.getSpriteTargetByName("Sprite that doesn't exist"), a30 ? a30.x : 0) === 0)) {
+if (((a34 = runtime.getSpriteTargetByName("Sprite that doesn't exist"), a34 ? a34.x : 0) === 0)) {
 runtime.ext_scratch3_looks._say("pass NE backdrop #", target);
 }
-if (((a31 = runtime.getSpriteTargetByName("Sprite that doesn't exist"), a31 ? a31.y : 0) === 0)) {
+if (((a35 = runtime.getSpriteTargetByName("Sprite that doesn't exist"), a35 ? a35.y : 0) === 0)) {
 runtime.ext_scratch3_looks._say("pass NE backdrop name", target);
 }
-if (((a32 = runtime.getSpriteTargetByName("Sprite that doesn't exist"), a32 ? a32.direction : 0) === 0)) {
+if (((a36 = runtime.getSpriteTargetByName("Sprite that doesn't exist"), a36 ? a36.direction : 0) === 0)) {
 runtime.ext_scratch3_looks._say("pass NE volume", target);
 }
-if (((a33 = runtime.getSpriteTargetByName("Sprite that doesn't exist"), a33 ? a33.currentCostume + 1 : 0) === 0)) {
+if (((a37 = runtime.getSpriteTargetByName("Sprite that doesn't exist"), a37 ? a37.currentCostume + 1 : 0) === 0)) {
 runtime.ext_scratch3_looks._say("pass NE stage variable", target);
 }
-if ((a35 = (a34 = runtime.getSpriteTargetByName("Sprite that doesn't exist"), a34 ? a34.getCostumes()[a34.currentCostume].name : 0), ((typeof a35 === "number" && a35 === a35) || a35 === 0) ? a35 === 0 : eqSlow(a35, 0))) {
+if ((a39 = (a38 = runtime.getSpriteTargetByName("Sprite that doesn't exist"), a38 ? a38.getCostumes()[a38.currentCostume].name : 0), ((typeof a39 === "number" && a39 === a39) || a39 === 0) ? a39 === 0 : eqSlow(a39, 0))) {
 runtime.ext_scratch3_looks._say("pass NE x", target);
 }
-if (((a36 = runtime.getSpriteTargetByName("Sprite that doesn't exist"), a36 ? a36.size : 0) === 0)) {
+if (((a40 = runtime.getSpriteTargetByName("Sprite that doesn't exist"), a40 ? a40.size : 0) === 0)) {
 runtime.ext_scratch3_looks._say("pass NE y", target);
 }
-if (((a37 = runtime.getSpriteTargetByName("Sprite that doesn't exist"), a37 ? a37.volume : 0) === 0)) {
+if (((a41 = runtime.getSpriteTargetByName("Sprite that doesn't exist"), a41 ? a41.volume : 0) === 0)) {
 runtime.ext_scratch3_looks._say("pass NE direction", target);
 }
 runtime.ext_scratch3_looks._say("end", target);

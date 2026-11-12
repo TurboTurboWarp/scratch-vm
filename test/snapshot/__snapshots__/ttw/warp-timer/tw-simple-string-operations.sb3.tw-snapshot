@@ -30,7 +30,7 @@ const target = S.target;
 const h0 = g0;
 const h1 = g1;
 const h2 = g2;
-let n0 = 0, n1 = 0, n2 = 0, n3 = 0, v0 = 0, v2 = 0, v1 = 0;
+let n0 = 0, n1 = 0, n2 = 0, n3 = 0, a0, v0 = 0, v2 = 0, v1 = 0;
 for (;;) switch (fr.pc) {
 case 0:
 h0.value = "ababa";
@@ -50,13 +50,13 @@ const target = S.target;
 const h0 = g0;
 const h1 = g1;
 const h2 = g2;
-let n0 = 0, n1 = 0, n2 = 0, n3 = 0, v0 = 0, v2 = 0, v1 = 0;
+let n0 = 0, n1 = 0, n2 = 0, n3 = 0, a0, v0 = 0, v2 = 0, v1 = 0;
 n1 = 4096;
 v0 = h0.value;
 v2 = h2.value;
 v1 = h1.value;
 for (n0 = fr.s0; n0 > 0; n0--) {
-if ((((("" + v0))[((+v2) | 0) - 1] || "").toLowerCase() === "a".toLowerCase())) {
+if ((a0 = ((("" + v0))[((+v2) | 0) - 1] || ""), (a0 === "A" || a0 === "a"))) {
 v1 = (("" + v1) + "b");
 } else {
 v1 = (("" + v1) + "a");
@@ -78,14 +78,14 @@ function rs_2 (th, fr) {
 const S = th.self;
 const target = S.target;
 const h0 = g1;
-let a0;
+let a0, a1;
 for (;;) switch (fr.pc) {
 case 0:
 runtime.ext_scratch3_looks._say("plan 1", target);
 { const nf = new Fp_0(fr); th.frame = nf; th.fn = rp_0; }
 fr.pc = 1; return 1;
 case 1:
-if ((a0 = h0.value, typeof a0 === "number" ? false : (a0 === "babab" || ("" + a0).toLowerCase() === "babab"))) {
+if ((a0 = h0.value, typeof a0 === "number" ? false : (a1 = "" + a0, (a1.length === 5 && (a1 === "babab" || a1.toLowerCase() === "babab"))))) {
 runtime.ext_scratch3_looks._say("pass", target);
 }
 runtime.ext_scratch3_looks._say("end", target);

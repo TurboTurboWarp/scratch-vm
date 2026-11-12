@@ -15,7 +15,8 @@ this.target = target;
 }
 function fp_0 (th, S, p0, p1) {
 const target = S.target;
-if ((p1.toLowerCase() === "ok".toLowerCase())) {
+let a0;
+if ((a0 = p1, (a0.length === 2 && (a0 === "ok" || a0.toLowerCase() === "ok")))) {
 runtime.ext_scratch3_looks._say("pass", target);
 }
 return "";
@@ -29,12 +30,12 @@ return "";
 }
 function fs_2 (th, S) {
 const target = S.target;
-let q1089_0 = 0, q1089_1 = 0, q1090_0 = 0, q1090_1 = 0;
+let a0, q1089_0 = 0, q1089_1 = 0, q1090_0 = 0, q1090_1 = 0;
 runtime.ext_scratch3_looks._say("plan 2", target);
 q1089_0 = "bad";
 q1089_1 = "ok";
 inl1089: {
-if ((q1089_1.toLowerCase() === "ok".toLowerCase())) {
+if ((a0 = q1089_1, (a0.length === 2 && (a0 === "ok" || a0.toLowerCase() === "ok")))) {
 runtime.ext_scratch3_looks._say("pass", target);
 }
 }

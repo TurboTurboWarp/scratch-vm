@@ -66,14 +66,14 @@ function rs_2 (th, fr) {
 const S = th.self;
 const target = S.target;
 const h0 = g0;
-let a0;
+let a0, a1;
 for (;;) switch (fr.pc) {
 case 0:
 runtime.ext_scratch3_looks._say("plan 1", target);
 { const nf = new Fp_0(fr); th.frame = nf; th.fn = rp_0; }
 fr.pc = 1; return 1;
 case 1:
-if ((a0 = h0.value, typeof a0 === "number" ? false : (a0 === "bwah" || ("" + a0).toLowerCase() === "bwah"))) {
+if ((a0 = h0.value, typeof a0 === "number" ? false : (a1 = "" + a0, (a1.length === 4 && (a1 === "bwah" || a1.toLowerCase() === "bwah"))))) {
 runtime.ext_scratch3_looks._say("pass", target);
 }
 runtime.ext_scratch3_looks._say("end", target);

@@ -23,7 +23,7 @@ const h1 = g1;
 const h2 = g2;
 let v0 = h0.value, v1 = h1.value, v2 = h2.value;
 if (typeof v2 !== "number" || v2 !== v2) return fp_0$g(th, S);
-let n0 = 0, n1 = 0, n2 = 0, a0, a1;
+let n0 = 0, n1 = 0, n2 = 0, a0, a1, a2;
 v0 = "ababa";
 v1 = "";
 v2 = 1;
@@ -33,11 +33,11 @@ v0 = a0.v0;
 v1 = a0.v1;
 v2 = a0.v2;
 if (n0 === 2) {
-a1 = a0.r;
+a2 = a0.r;
 h0.value = v0;
 h1.value = v1;
 h2.value = v2;
-return a1;
+return a2;
 }
 h0.value = v0;
 h1.value = v1;
@@ -49,13 +49,13 @@ const target = S.target;
 const h0 = g0;
 const h1 = g1;
 const h2 = g2;
-let n0 = 0, n1 = 0, n2 = 0, a0, a1;
+let n0 = 0, n1 = 0, n2 = 0, a0, a1, a2;
 let v0 = B.v0, v1 = B.v1, v2 = B.v2;
 n2 = B.k; if (B.k < 4096) B.k *= 2;
 n1 = B.c;
 for (; n1 > 0; n1--) {
 if (n2-- === 0) { B.c = n1; B.v0 = v0; B.v1 = v1; B.v2 = v2; return 1; }
-if ((((v0)[v2 - 1] || "").toLowerCase() === "a".toLowerCase())) {
+if ((a1 = ((v0)[v2 - 1] || ""), (a1 === "A" || a1 === "a"))) {
 v1 = (v1 + "b");
 } else {
 v1 = (v1 + "a");
@@ -73,7 +73,7 @@ const h0 = g0;
 const h1 = g1;
 const h2 = g2;
 let v0 = h0.value, v1 = h1.value, v2 = h2.value;
-let n0 = 0, n1 = 0, n2 = 0, a0, a1;
+let n0 = 0, n1 = 0, n2 = 0, a0, a1, a2;
 v0 = "ababa";
 v1 = "";
 v2 = 1;
@@ -83,11 +83,11 @@ v0 = a0.v0;
 v1 = a0.v1;
 v2 = a0.v2;
 if (n0 === 2) {
-a1 = a0.r;
+a2 = a0.r;
 h0.value = v0;
 h1.value = v1;
 h2.value = v2;
-return a1;
+return a2;
 }
 h0.value = v0;
 h1.value = v1;
@@ -99,13 +99,13 @@ const target = S.target;
 const h0 = g0;
 const h1 = g1;
 const h2 = g2;
-let n0 = 0, n1 = 0, n2 = 0, a0, a1;
+let n0 = 0, n1 = 0, n2 = 0, a0, a1, a2;
 let v0 = B.v0, v1 = B.v1, v2 = B.v2;
 n2 = B.k; if (B.k < 4096) B.k *= 2;
 n1 = B.c;
 for (; n1 > 0; n1--) {
 if (n2-- === 0) { B.c = n1; B.v0 = v0; B.v1 = v1; B.v2 = v2; return 1; }
-if ((((v0)[v2 - 1] || "").toLowerCase() === "a".toLowerCase())) {
+if ((a1 = ((v0)[v2 - 1] || ""), (a1 === "A" || a1 === "a"))) {
 v1 = (v1 + "b");
 } else {
 v1 = (v1 + "a");
@@ -120,9 +120,10 @@ return 0;
 function fs_1 (th, S) {
 const target = S.target;
 const h0 = g1;
+let a0;
 runtime.ext_scratch3_looks._say("plan 1", target);
 fp_0(th, S);
-if ((h0.value.toLowerCase() === "babab".toLowerCase())) {
+if ((a0 = h0.value, (a0.length === 5 && (a0 === "babab" || a0.toLowerCase() === "babab")))) {
 runtime.ext_scratch3_looks._say("pass", target);
 }
 runtime.ext_scratch3_looks._say("end", target);

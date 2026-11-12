@@ -241,9 +241,9 @@ function fp_4 (th, S) {
 const target = S.target;
 const h0 = g1;
 let v0 = h0.value;
-let a0, a1, a2, a3, a4, a5, a6, q892_0 = 0, q892_1 = 0, q893_0 = 0, q894_0 = 0, q894_1 = 0, q895_0 = 0, q896_0 = 0, q896_1 = 0, q897_0 = 0, q898_0 = 0, q898_1 = 0, q899_0 = 0, q900_0 = 0, q900_1 = 0, q901_0 = 0, q902_0 = 0, q902_1 = 0, q903_0 = 0;
+let a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, q892_0 = 0, q892_1 = 0, q893_0 = 0, q894_0 = 0, q894_1 = 0, q895_0 = 0, q896_0 = 0, q896_1 = 0, q897_0 = 0, q898_0 = 0, q898_1 = 0, q899_0 = 0, q900_0 = 0, q900_1 = 0, q901_0 = 0, q902_0 = 0, q902_1 = 0, q903_0 = 0;
 (a0 = fp_0(th, S, 12333, 333), v0 = h0.value, a0);
-q892_0 = (("" + v0).toLowerCase() === "true".toLowerCase());
+q892_0 = (a1 = ("" + v0), (a1.length === 4 && (a1 === "true" || a1.toLowerCase() === "true")));
 q892_1 = "12333 must end with 333";
 inl892: {
 if (!q892_0) {
@@ -257,8 +257,8 @@ retire(th); throw RETIRE;
 }
 }
 }
-(a1 = fp_0(th, S, 12333, 33), v0 = h0.value, a1);
-q894_0 = (("" + v0).toLowerCase() === "true".toLowerCase());
+(a2 = fp_0(th, S, 12333, 33), v0 = h0.value, a2);
+q894_0 = (a3 = ("" + v0), (a3.length === 4 && (a3 === "true" || a3.toLowerCase() === "true")));
 q894_1 = "12333 must end with 33";
 inl894: {
 if (!q894_0) {
@@ -272,8 +272,8 @@ retire(th); throw RETIRE;
 }
 }
 }
-(a2 = fp_0(th, S, 12333, ""), v0 = h0.value, a2);
-q896_0 = (("" + v0).toLowerCase() === "true".toLowerCase());
+(a4 = fp_0(th, S, 12333, ""), v0 = h0.value, a4);
+q896_0 = (a5 = ("" + v0), (a5.length === 4 && (a5 === "true" || a5.toLowerCase() === "true")));
 q896_1 = "12333 must end with empty string";
 inl896: {
 if (!q896_0) {
@@ -287,8 +287,8 @@ retire(th); throw RETIRE;
 }
 }
 }
-(a3 = fp_0(th, S, 12333, 4), v0 = h0.value, a3);
-q898_0 = (("" + v0).toLowerCase() === "false".toLowerCase());
+(a6 = fp_0(th, S, 12333, 4), v0 = h0.value, a6);
+q898_0 = (a7 = ("" + v0), (a7.length === 5 && (a7 === "false" || a7.toLowerCase() === "false")));
 q898_1 = "12333 must not end with 4";
 inl898: {
 if (!q898_0) {
@@ -302,8 +302,8 @@ retire(th); throw RETIRE;
 }
 }
 }
-(a4 = fp_0(th, S, 12333, 123334), v0 = h0.value, a4);
-q900_0 = (("" + v0).toLowerCase() === "false".toLowerCase());
+(a8 = fp_0(th, S, 12333, 123334), v0 = h0.value, a8);
+q900_0 = (a9 = ("" + v0), (a9.length === 5 && (a9 === "false" || a9.toLowerCase() === "false")));
 q900_1 = "12333 must not end with 123334";
 inl900: {
 if (!q900_0) {
@@ -317,8 +317,8 @@ retire(th); throw RETIRE;
 }
 }
 }
-(a5 = fp_0(th, S, 12333, 12333), v0 = h0.value, a5);
-q902_0 = (("" + v0).toLowerCase() === "true".toLowerCase());
+(a10 = fp_0(th, S, 12333, 12333), v0 = h0.value, a10);
+q902_0 = (a11 = ("" + v0), (a11.length === 4 && (a11 === "true" || a11.toLowerCase() === "true")));
 q902_1 = "12333 must end with itself";
 inl902: {
 if (!q902_0) {
@@ -332,7 +332,7 @@ retire(th); throw RETIRE;
 }
 }
 }
-(a6 = fp_3(th, S, "abc", ""), v0 = h0.value, a6);
+(a12 = fp_3(th, S, "abc", ""), v0 = h0.value, a12);
 return "";
 }
 function fp_5 (th, S, p0, p1) {
@@ -422,9 +422,9 @@ function fp_6 (th, S) {
 const target = S.target;
 const h0 = g1;
 let v0 = h0.value;
-let a0, a1, a2, a3, a4, a5, a6, q904_0 = 0, q904_1 = 0, q905_0 = 0, q906_0 = 0, q906_1 = 0, q907_0 = 0, q908_0 = 0, q908_1 = 0, q909_0 = 0, q910_0 = 0, q910_1 = 0, q911_0 = 0, q912_0 = 0, q912_1 = 0, q913_0 = 0, q914_0 = 0, q914_1 = 0, q915_0 = 0, q916_0 = 0, q916_1 = 0, q917_0 = 0;
+let a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, q904_0 = 0, q904_1 = 0, q905_0 = 0, q906_0 = 0, q906_1 = 0, q907_0 = 0, q908_0 = 0, q908_1 = 0, q909_0 = 0, q910_0 = 0, q910_1 = 0, q911_0 = 0, q912_0 = 0, q912_1 = 0, q913_0 = 0, q914_0 = 0, q914_1 = 0, q915_0 = 0, q916_0 = 0, q916_1 = 0, q917_0 = 0;
 (a0 = fp_5(th, S, 12333, 12333), v0 = h0.value, a0);
-q904_0 = (("" + v0).toLowerCase() === "true".toLowerCase());
+q904_0 = (a1 = ("" + v0), (a1.length === 4 && (a1 === "true" || a1.toLowerCase() === "true")));
 q904_1 = "12333 must start with 12333";
 inl904: {
 if (!q904_0) {
@@ -438,8 +438,8 @@ retire(th); throw RETIRE;
 }
 }
 }
-(a1 = fp_5(th, S, 12333, 1233), v0 = h0.value, a1);
-q906_0 = (("" + v0).toLowerCase() === "true".toLowerCase());
+(a2 = fp_5(th, S, 12333, 1233), v0 = h0.value, a2);
+q906_0 = (a3 = ("" + v0), (a3.length === 4 && (a3 === "true" || a3.toLowerCase() === "true")));
 q906_1 = "12333 must start with 1233";
 inl906: {
 if (!q906_0) {
@@ -453,8 +453,8 @@ retire(th); throw RETIRE;
 }
 }
 }
-(a2 = fp_5(th, S, 12333, 123), v0 = h0.value, a2);
-q908_0 = (("" + v0).toLowerCase() === "true".toLowerCase());
+(a4 = fp_5(th, S, 12333, 123), v0 = h0.value, a4);
+q908_0 = (a5 = ("" + v0), (a5.length === 4 && (a5 === "true" || a5.toLowerCase() === "true")));
 q908_1 = "12333 must start with 123";
 inl908: {
 if (!q908_0) {
@@ -468,8 +468,8 @@ retire(th); throw RETIRE;
 }
 }
 }
-(a3 = fp_5(th, S, 12333, 12), v0 = h0.value, a3);
-q910_0 = (("" + v0).toLowerCase() === "true".toLowerCase());
+(a6 = fp_5(th, S, 12333, 12), v0 = h0.value, a6);
+q910_0 = (a7 = ("" + v0), (a7.length === 4 && (a7 === "true" || a7.toLowerCase() === "true")));
 q910_1 = "12333 must start with 12";
 inl910: {
 if (!q910_0) {
@@ -483,8 +483,8 @@ retire(th); throw RETIRE;
 }
 }
 }
-(a4 = fp_5(th, S, 12333, 1), v0 = h0.value, a4);
-q912_0 = (("" + v0).toLowerCase() === "true".toLowerCase());
+(a8 = fp_5(th, S, 12333, 1), v0 = h0.value, a8);
+q912_0 = (a9 = ("" + v0), (a9.length === 4 && (a9 === "true" || a9.toLowerCase() === "true")));
 q912_1 = "12333 must start with 1";
 inl912: {
 if (!q912_0) {
@@ -498,8 +498,8 @@ retire(th); throw RETIRE;
 }
 }
 }
-(a5 = fp_5(th, S, 12333, ""), v0 = h0.value, a5);
-q914_0 = (("" + v0).toLowerCase() === "true".toLowerCase());
+(a10 = fp_5(th, S, 12333, ""), v0 = h0.value, a10);
+q914_0 = (a11 = ("" + v0), (a11.length === 4 && (a11 === "true" || a11.toLowerCase() === "true")));
 q914_1 = "12333 must start with empty string";
 inl914: {
 if (!q914_0) {
@@ -513,8 +513,8 @@ retire(th); throw RETIRE;
 }
 }
 }
-(a6 = fp_5(th, S, 12333, 33), v0 = h0.value, a6);
-q916_0 = (("" + v0).toLowerCase() === "false".toLowerCase());
+(a12 = fp_5(th, S, 12333, 33), v0 = h0.value, a12);
+q916_0 = (a13 = ("" + v0), (a13.length === 5 && (a13 === "false" || a13.toLowerCase() === "false")));
 q916_1 = "12333 must not start with 33";
 inl916: {
 if (!q916_0) {
@@ -534,9 +534,9 @@ function fp_7 (th, S) {
 const target = S.target;
 const h0 = g1;
 let v0 = h0.value;
-let a0, a1, a2, a3, a4, a5, a6, a7, a8, q918_0 = 0, q918_1 = 0, q919_0 = 0, q920_0 = 0, q920_1 = 0, q921_0 = 0, q922_0 = 0, q922_1 = 0, q923_0 = 0, q924_0 = 0, q924_1 = 0, q925_0 = 0, q926_0 = 0, q926_1 = 0, q927_0 = 0, q928_0 = 0, q928_1 = 0, q929_0 = 0, q930_0 = 0, q930_1 = 0, q931_0 = 0, q932_0 = 0, q932_1 = 0, q933_0 = 0, q934_0 = 0, q934_1 = 0, q935_0 = 0;
+let a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, q918_0 = 0, q918_1 = 0, q919_0 = 0, q920_0 = 0, q920_1 = 0, q921_0 = 0, q922_0 = 0, q922_1 = 0, q923_0 = 0, q924_0 = 0, q924_1 = 0, q925_0 = 0, q926_0 = 0, q926_1 = 0, q927_0 = 0, q928_0 = 0, q928_1 = 0, q929_0 = 0, q930_0 = 0, q930_1 = 0, q931_0 = 0, q932_0 = 0, q932_1 = 0, q933_0 = 0, q934_0 = 0, q934_1 = 0, q935_0 = 0;
 (a0 = fp_3(th, S, "abc", ""), v0 = h0.value, a0);
-q918_0 = (v0.toLowerCase() === "true".toLowerCase());
+q918_0 = (a1 = v0, (a1.length === 4 && (a1 === "true" || a1.toLowerCase() === "true")));
 q918_1 = "abc must include empty string";
 inl918: {
 if (!q918_0) {
@@ -550,8 +550,8 @@ retire(th); throw RETIRE;
 }
 }
 }
-(a1 = fp_3(th, S, "", ""), v0 = h0.value, a1);
-q920_0 = (v0.toLowerCase() === "true".toLowerCase());
+(a2 = fp_3(th, S, "", ""), v0 = h0.value, a2);
+q920_0 = (a3 = v0, (a3.length === 4 && (a3 === "true" || a3.toLowerCase() === "true")));
 q920_1 = "empty string must include empty string";
 inl920: {
 if (!q920_0) {
@@ -565,8 +565,8 @@ retire(th); throw RETIRE;
 }
 }
 }
-(a2 = fp_3(th, S, "abc", "abc"), v0 = h0.value, a2);
-q922_0 = (v0.toLowerCase() === "true".toLowerCase());
+(a4 = fp_3(th, S, "abc", "abc"), v0 = h0.value, a4);
+q922_0 = (a5 = v0, (a5.length === 4 && (a5 === "true" || a5.toLowerCase() === "true")));
 q922_1 = "abc must include abc";
 inl922: {
 if (!q922_0) {
@@ -580,8 +580,8 @@ retire(th); throw RETIRE;
 }
 }
 }
-(a3 = fp_3(th, S, "abc", "a"), v0 = h0.value, a3);
-q924_0 = (v0.toLowerCase() === "true".toLowerCase());
+(a6 = fp_3(th, S, "abc", "a"), v0 = h0.value, a6);
+q924_0 = (a7 = v0, (a7.length === 4 && (a7 === "true" || a7.toLowerCase() === "true")));
 q924_1 = "abc must include a";
 inl924: {
 if (!q924_0) {
@@ -595,8 +595,8 @@ retire(th); throw RETIRE;
 }
 }
 }
-(a4 = fp_3(th, S, "abc", "b"), v0 = h0.value, a4);
-q926_0 = (v0.toLowerCase() === "true".toLowerCase());
+(a8 = fp_3(th, S, "abc", "b"), v0 = h0.value, a8);
+q926_0 = (a9 = v0, (a9.length === 4 && (a9 === "true" || a9.toLowerCase() === "true")));
 q926_1 = "abc must include b";
 inl926: {
 if (!q926_0) {
@@ -610,8 +610,8 @@ retire(th); throw RETIRE;
 }
 }
 }
-(a5 = fp_3(th, S, "abc", "c"), v0 = h0.value, a5);
-q928_0 = (v0.toLowerCase() === "true".toLowerCase());
+(a10 = fp_3(th, S, "abc", "c"), v0 = h0.value, a10);
+q928_0 = (a11 = v0, (a11.length === 4 && (a11 === "true" || a11.toLowerCase() === "true")));
 q928_1 = "abc must include c";
 inl928: {
 if (!q928_0) {
@@ -625,8 +625,8 @@ retire(th); throw RETIRE;
 }
 }
 }
-(a6 = fp_3(th, S, "abc", "ab"), v0 = h0.value, a6);
-q930_0 = (v0.toLowerCase() === "true".toLowerCase());
+(a12 = fp_3(th, S, "abc", "ab"), v0 = h0.value, a12);
+q930_0 = (a13 = v0, (a13.length === 4 && (a13 === "true" || a13.toLowerCase() === "true")));
 q930_1 = "abc must include ab";
 inl930: {
 if (!q930_0) {
@@ -640,8 +640,8 @@ retire(th); throw RETIRE;
 }
 }
 }
-(a7 = fp_3(th, S, "abc", "bc"), v0 = h0.value, a7);
-q932_0 = (v0.toLowerCase() === "true".toLowerCase());
+(a14 = fp_3(th, S, "abc", "bc"), v0 = h0.value, a14);
+q932_0 = (a15 = v0, (a15.length === 4 && (a15 === "true" || a15.toLowerCase() === "true")));
 q932_1 = "abc must include bc";
 inl932: {
 if (!q932_0) {
@@ -655,8 +655,8 @@ retire(th); throw RETIRE;
 }
 }
 }
-(a8 = fp_3(th, S, "abc", "aa"), v0 = h0.value, a8);
-q934_0 = (v0.toLowerCase() === "false".toLowerCase());
+(a16 = fp_3(th, S, "abc", "aa"), v0 = h0.value, a16);
+q934_0 = (a17 = v0, (a17.length === 5 && (a17 === "false" || a17.toLowerCase() === "false")));
 q934_1 = "abc must not include aa";
 inl934: {
 if (!q934_0) {
@@ -997,9 +997,9 @@ function fp_12 (th, S) {
 const target = S.target;
 const h0 = g1;
 let v0 = h0.value;
-let n0 = 0, n1 = 0, a0, a1, a2, q944_0 = 0, q944_1 = 0, q945_0 = 0, q946_0 = 0, q946_1 = 0, q947_0 = 0, q948_0 = 0, q948_1 = 0, q949_0 = 0;
+let n0 = 0, n1 = 0, a0, a1, a2, a3, q944_0 = 0, q944_1 = 0, q945_0 = 0, q946_0 = 0, q946_1 = 0, q947_0 = 0, q948_0 = 0, q948_1 = 0, q949_0 = 0;
 (a0 = fp_11(th, S, 123456, 345, "a"), v0 = h0.value, a0);
-q944_0 = (v0.toLowerCase() === "12a6".toLowerCase());
+q944_0 = (a1 = v0, (a1.length === 4 && (a1 === "12a6" || a1.toLowerCase() === "12a6")));
 q944_1 = "replace expected 12a6";
 inl944: {
 if (!q944_0) {
@@ -1013,7 +1013,7 @@ retire(th); throw RETIRE;
 }
 }
 }
-(a1 = fp_11(th, S, 123, 123, 456), v0 = h0.value, a1);
+(a2 = fp_11(th, S, 123, 123, 456), v0 = h0.value, a2);
 q946_0 = (((n0 = +v0) === n0 ? n0 : 0) === 456);
 q946_1 = "replace expected 456";
 inl946: {
@@ -1028,7 +1028,7 @@ retire(th); throw RETIRE;
 }
 }
 }
-(a2 = fp_11(th, S, 123, 1234, 456), v0 = h0.value, a2);
+(a3 = fp_11(th, S, 123, 1234, 456), v0 = h0.value, a3);
 q948_0 = (((n1 = +v0) === n1 ? n1 : 0) === 123);
 q948_1 = "replace expected 123";
 inl948: {
@@ -1062,10 +1062,10 @@ function fs_15 (th, S) {
 const target = S.target;
 const h0 = g1;
 let v0 = h0.value;
-let n0 = 0, n1 = 0, a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19, a20, a21, a22, a23, a24, a25, a26, a27, a28, a29, q951_0 = 0, q951_1 = 0, q952_0 = 0, q953_0 = 0, q953_1 = 0, q954_0 = 0, q955_0 = 0, q955_1 = 0, q956_0 = 0, q957_0 = 0, q957_1 = 0, q958_0 = 0, q959_0 = 0, q959_1 = 0, q960_0 = 0, q961_0 = 0, q961_1 = 0, q962_0 = 0, q964_0 = 0, q964_1 = 0, q965_0 = 0, q966_0 = 0, q966_1 = 0, q967_0 = 0, q968_0 = 0, q968_1 = 0, q969_0 = 0, q970_0 = 0, q970_1 = 0, q971_0 = 0, q972_0 = 0, q972_1 = 0, q973_0 = 0, q974_0 = 0, q974_1 = 0, q975_0 = 0, q976_0 = 0, q976_1 = 0, q977_0 = 0, q979_0 = 0, q979_1 = 0, q980_0 = 0, q981_0 = 0, q981_1 = 0, q982_0 = 0, q983_0 = 0, q983_1 = 0, q984_0 = 0, q985_0 = 0, q985_1 = 0, q986_0 = 0, q987_0 = 0, q987_1 = 0, q988_0 = 0, q989_0 = 0, q989_1 = 0, q990_0 = 0, q991_0 = 0, q991_1 = 0, q992_0 = 0, q993_0 = 0, q993_1 = 0, q994_0 = 0, q995_0 = 0, q995_1 = 0, q996_0 = 0, q998_0 = 0, q998_1 = 0, q999_0 = 0, q1000_0 = 0, q1000_1 = 0, q1001_0 = 0, q1002_0 = 0, q1002_1 = 0, q1003_0 = 0, q1004_0 = 0, q1004_1 = 0, q1005_0 = 0, q1007_0 = 0, q1007_1 = 0, q1008_0 = 0, q1009_0 = 0, q1009_1 = 0, q1010_0 = 0, q1011_0 = 0, q1011_1 = 0, q1012_0 = 0, q1013_0 = 0;
+let n0 = 0, n1 = 0, a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19, a20, a21, a22, a23, a24, a25, a26, a27, a28, a29, a30, a31, a32, a33, a34, a35, a36, a37, a38, a39, a40, a41, a42, a43, a44, a45, a46, a47, a48, a49, a50, a51, a52, q951_0 = 0, q951_1 = 0, q952_0 = 0, q953_0 = 0, q953_1 = 0, q954_0 = 0, q955_0 = 0, q955_1 = 0, q956_0 = 0, q957_0 = 0, q957_1 = 0, q958_0 = 0, q959_0 = 0, q959_1 = 0, q960_0 = 0, q961_0 = 0, q961_1 = 0, q962_0 = 0, q964_0 = 0, q964_1 = 0, q965_0 = 0, q966_0 = 0, q966_1 = 0, q967_0 = 0, q968_0 = 0, q968_1 = 0, q969_0 = 0, q970_0 = 0, q970_1 = 0, q971_0 = 0, q972_0 = 0, q972_1 = 0, q973_0 = 0, q974_0 = 0, q974_1 = 0, q975_0 = 0, q976_0 = 0, q976_1 = 0, q977_0 = 0, q979_0 = 0, q979_1 = 0, q980_0 = 0, q981_0 = 0, q981_1 = 0, q982_0 = 0, q983_0 = 0, q983_1 = 0, q984_0 = 0, q985_0 = 0, q985_1 = 0, q986_0 = 0, q987_0 = 0, q987_1 = 0, q988_0 = 0, q989_0 = 0, q989_1 = 0, q990_0 = 0, q991_0 = 0, q991_1 = 0, q992_0 = 0, q993_0 = 0, q993_1 = 0, q994_0 = 0, q995_0 = 0, q995_1 = 0, q996_0 = 0, q998_0 = 0, q998_1 = 0, q999_0 = 0, q1000_0 = 0, q1000_1 = 0, q1001_0 = 0, q1002_0 = 0, q1002_1 = 0, q1003_0 = 0, q1004_0 = 0, q1004_1 = 0, q1005_0 = 0, q1007_0 = 0, q1007_1 = 0, q1008_0 = 0, q1009_0 = 0, q1009_1 = 0, q1010_0 = 0, q1011_0 = 0, q1011_1 = 0, q1012_0 = 0, q1013_0 = 0;
 inl950: {
 (a0 = fp_0(th, S, 12333, 333), v0 = h0.value, a0);
-q951_0 = (("" + v0).toLowerCase() === "true".toLowerCase());
+q951_0 = (a1 = ("" + v0), (a1.length === 4 && (a1 === "true" || a1.toLowerCase() === "true")));
 q951_1 = "12333 must end with 333";
 inl951: {
 if (!q951_0) {
@@ -1079,8 +1079,8 @@ retire(th); return;
 }
 }
 }
-(a1 = fp_0(th, S, 12333, 33), v0 = h0.value, a1);
-q953_0 = (("" + v0).toLowerCase() === "true".toLowerCase());
+(a2 = fp_0(th, S, 12333, 33), v0 = h0.value, a2);
+q953_0 = (a3 = ("" + v0), (a3.length === 4 && (a3 === "true" || a3.toLowerCase() === "true")));
 q953_1 = "12333 must end with 33";
 inl953: {
 if (!q953_0) {
@@ -1094,8 +1094,8 @@ retire(th); return;
 }
 }
 }
-(a2 = fp_0(th, S, 12333, ""), v0 = h0.value, a2);
-q955_0 = (("" + v0).toLowerCase() === "true".toLowerCase());
+(a4 = fp_0(th, S, 12333, ""), v0 = h0.value, a4);
+q955_0 = (a5 = ("" + v0), (a5.length === 4 && (a5 === "true" || a5.toLowerCase() === "true")));
 q955_1 = "12333 must end with empty string";
 inl955: {
 if (!q955_0) {
@@ -1109,8 +1109,8 @@ retire(th); return;
 }
 }
 }
-(a3 = fp_0(th, S, 12333, 4), v0 = h0.value, a3);
-q957_0 = (("" + v0).toLowerCase() === "false".toLowerCase());
+(a6 = fp_0(th, S, 12333, 4), v0 = h0.value, a6);
+q957_0 = (a7 = ("" + v0), (a7.length === 5 && (a7 === "false" || a7.toLowerCase() === "false")));
 q957_1 = "12333 must not end with 4";
 inl957: {
 if (!q957_0) {
@@ -1124,8 +1124,8 @@ retire(th); return;
 }
 }
 }
-(a4 = fp_0(th, S, 12333, 123334), v0 = h0.value, a4);
-q959_0 = (("" + v0).toLowerCase() === "false".toLowerCase());
+(a8 = fp_0(th, S, 12333, 123334), v0 = h0.value, a8);
+q959_0 = (a9 = ("" + v0), (a9.length === 5 && (a9 === "false" || a9.toLowerCase() === "false")));
 q959_1 = "12333 must not end with 123334";
 inl959: {
 if (!q959_0) {
@@ -1139,8 +1139,8 @@ retire(th); return;
 }
 }
 }
-(a5 = fp_0(th, S, 12333, 12333), v0 = h0.value, a5);
-q961_0 = (("" + v0).toLowerCase() === "true".toLowerCase());
+(a10 = fp_0(th, S, 12333, 12333), v0 = h0.value, a10);
+q961_0 = (a11 = ("" + v0), (a11.length === 4 && (a11 === "true" || a11.toLowerCase() === "true")));
 q961_1 = "12333 must end with itself";
 inl961: {
 if (!q961_0) {
@@ -1154,11 +1154,11 @@ retire(th); return;
 }
 }
 }
-(a6 = fp_3(th, S, "abc", ""), v0 = h0.value, a6);
+(a12 = fp_3(th, S, "abc", ""), v0 = h0.value, a12);
 }
 inl963: {
-(a7 = fp_5(th, S, 12333, 12333), v0 = h0.value, a7);
-q964_0 = (("" + v0).toLowerCase() === "true".toLowerCase());
+(a13 = fp_5(th, S, 12333, 12333), v0 = h0.value, a13);
+q964_0 = (a14 = ("" + v0), (a14.length === 4 && (a14 === "true" || a14.toLowerCase() === "true")));
 q964_1 = "12333 must start with 12333";
 inl964: {
 if (!q964_0) {
@@ -1172,8 +1172,8 @@ retire(th); return;
 }
 }
 }
-(a8 = fp_5(th, S, 12333, 1233), v0 = h0.value, a8);
-q966_0 = (("" + v0).toLowerCase() === "true".toLowerCase());
+(a15 = fp_5(th, S, 12333, 1233), v0 = h0.value, a15);
+q966_0 = (a16 = ("" + v0), (a16.length === 4 && (a16 === "true" || a16.toLowerCase() === "true")));
 q966_1 = "12333 must start with 1233";
 inl966: {
 if (!q966_0) {
@@ -1187,8 +1187,8 @@ retire(th); return;
 }
 }
 }
-(a9 = fp_5(th, S, 12333, 123), v0 = h0.value, a9);
-q968_0 = (("" + v0).toLowerCase() === "true".toLowerCase());
+(a17 = fp_5(th, S, 12333, 123), v0 = h0.value, a17);
+q968_0 = (a18 = ("" + v0), (a18.length === 4 && (a18 === "true" || a18.toLowerCase() === "true")));
 q968_1 = "12333 must start with 123";
 inl968: {
 if (!q968_0) {
@@ -1202,8 +1202,8 @@ retire(th); return;
 }
 }
 }
-(a10 = fp_5(th, S, 12333, 12), v0 = h0.value, a10);
-q970_0 = (("" + v0).toLowerCase() === "true".toLowerCase());
+(a19 = fp_5(th, S, 12333, 12), v0 = h0.value, a19);
+q970_0 = (a20 = ("" + v0), (a20.length === 4 && (a20 === "true" || a20.toLowerCase() === "true")));
 q970_1 = "12333 must start with 12";
 inl970: {
 if (!q970_0) {
@@ -1217,8 +1217,8 @@ retire(th); return;
 }
 }
 }
-(a11 = fp_5(th, S, 12333, 1), v0 = h0.value, a11);
-q972_0 = (("" + v0).toLowerCase() === "true".toLowerCase());
+(a21 = fp_5(th, S, 12333, 1), v0 = h0.value, a21);
+q972_0 = (a22 = ("" + v0), (a22.length === 4 && (a22 === "true" || a22.toLowerCase() === "true")));
 q972_1 = "12333 must start with 1";
 inl972: {
 if (!q972_0) {
@@ -1232,8 +1232,8 @@ retire(th); return;
 }
 }
 }
-(a12 = fp_5(th, S, 12333, ""), v0 = h0.value, a12);
-q974_0 = (("" + v0).toLowerCase() === "true".toLowerCase());
+(a23 = fp_5(th, S, 12333, ""), v0 = h0.value, a23);
+q974_0 = (a24 = ("" + v0), (a24.length === 4 && (a24 === "true" || a24.toLowerCase() === "true")));
 q974_1 = "12333 must start with empty string";
 inl974: {
 if (!q974_0) {
@@ -1247,8 +1247,8 @@ retire(th); return;
 }
 }
 }
-(a13 = fp_5(th, S, 12333, 33), v0 = h0.value, a13);
-q976_0 = (("" + v0).toLowerCase() === "false".toLowerCase());
+(a25 = fp_5(th, S, 12333, 33), v0 = h0.value, a25);
+q976_0 = (a26 = ("" + v0), (a26.length === 5 && (a26 === "false" || a26.toLowerCase() === "false")));
 q976_1 = "12333 must not start with 33";
 inl976: {
 if (!q976_0) {
@@ -1264,8 +1264,8 @@ retire(th); return;
 }
 }
 inl978: {
-(a14 = fp_3(th, S, "abc", ""), v0 = h0.value, a14);
-q979_0 = (v0.toLowerCase() === "true".toLowerCase());
+(a27 = fp_3(th, S, "abc", ""), v0 = h0.value, a27);
+q979_0 = (a28 = v0, (a28.length === 4 && (a28 === "true" || a28.toLowerCase() === "true")));
 q979_1 = "abc must include empty string";
 inl979: {
 if (!q979_0) {
@@ -1279,8 +1279,8 @@ retire(th); return;
 }
 }
 }
-(a15 = fp_3(th, S, "", ""), v0 = h0.value, a15);
-q981_0 = (v0.toLowerCase() === "true".toLowerCase());
+(a29 = fp_3(th, S, "", ""), v0 = h0.value, a29);
+q981_0 = (a30 = v0, (a30.length === 4 && (a30 === "true" || a30.toLowerCase() === "true")));
 q981_1 = "empty string must include empty string";
 inl981: {
 if (!q981_0) {
@@ -1294,8 +1294,8 @@ retire(th); return;
 }
 }
 }
-(a16 = fp_3(th, S, "abc", "abc"), v0 = h0.value, a16);
-q983_0 = (v0.toLowerCase() === "true".toLowerCase());
+(a31 = fp_3(th, S, "abc", "abc"), v0 = h0.value, a31);
+q983_0 = (a32 = v0, (a32.length === 4 && (a32 === "true" || a32.toLowerCase() === "true")));
 q983_1 = "abc must include abc";
 inl983: {
 if (!q983_0) {
@@ -1309,8 +1309,8 @@ retire(th); return;
 }
 }
 }
-(a17 = fp_3(th, S, "abc", "a"), v0 = h0.value, a17);
-q985_0 = (v0.toLowerCase() === "true".toLowerCase());
+(a33 = fp_3(th, S, "abc", "a"), v0 = h0.value, a33);
+q985_0 = (a34 = v0, (a34.length === 4 && (a34 === "true" || a34.toLowerCase() === "true")));
 q985_1 = "abc must include a";
 inl985: {
 if (!q985_0) {
@@ -1324,8 +1324,8 @@ retire(th); return;
 }
 }
 }
-(a18 = fp_3(th, S, "abc", "b"), v0 = h0.value, a18);
-q987_0 = (v0.toLowerCase() === "true".toLowerCase());
+(a35 = fp_3(th, S, "abc", "b"), v0 = h0.value, a35);
+q987_0 = (a36 = v0, (a36.length === 4 && (a36 === "true" || a36.toLowerCase() === "true")));
 q987_1 = "abc must include b";
 inl987: {
 if (!q987_0) {
@@ -1339,8 +1339,8 @@ retire(th); return;
 }
 }
 }
-(a19 = fp_3(th, S, "abc", "c"), v0 = h0.value, a19);
-q989_0 = (v0.toLowerCase() === "true".toLowerCase());
+(a37 = fp_3(th, S, "abc", "c"), v0 = h0.value, a37);
+q989_0 = (a38 = v0, (a38.length === 4 && (a38 === "true" || a38.toLowerCase() === "true")));
 q989_1 = "abc must include c";
 inl989: {
 if (!q989_0) {
@@ -1354,8 +1354,8 @@ retire(th); return;
 }
 }
 }
-(a20 = fp_3(th, S, "abc", "ab"), v0 = h0.value, a20);
-q991_0 = (v0.toLowerCase() === "true".toLowerCase());
+(a39 = fp_3(th, S, "abc", "ab"), v0 = h0.value, a39);
+q991_0 = (a40 = v0, (a40.length === 4 && (a40 === "true" || a40.toLowerCase() === "true")));
 q991_1 = "abc must include ab";
 inl991: {
 if (!q991_0) {
@@ -1369,8 +1369,8 @@ retire(th); return;
 }
 }
 }
-(a21 = fp_3(th, S, "abc", "bc"), v0 = h0.value, a21);
-q993_0 = (v0.toLowerCase() === "true".toLowerCase());
+(a41 = fp_3(th, S, "abc", "bc"), v0 = h0.value, a41);
+q993_0 = (a42 = v0, (a42.length === 4 && (a42 === "true" || a42.toLowerCase() === "true")));
 q993_1 = "abc must include bc";
 inl993: {
 if (!q993_0) {
@@ -1384,8 +1384,8 @@ retire(th); return;
 }
 }
 }
-(a22 = fp_3(th, S, "abc", "aa"), v0 = h0.value, a22);
-q995_0 = (v0.toLowerCase() === "false".toLowerCase());
+(a43 = fp_3(th, S, "abc", "aa"), v0 = h0.value, a43);
+q995_0 = (a44 = v0, (a44.length === 5 && (a44 === "false" || a44.toLowerCase() === "false")));
 q995_1 = "abc must not include aa";
 inl995: {
 if (!q995_0) {
@@ -1401,7 +1401,7 @@ retire(th); return;
 }
 }
 inl997: {
-(a23 = fp_8(th, S, 123, 1), v0 = h0.value, a23);
+(a45 = fp_8(th, S, 123, 1), v0 = h0.value, a45);
 q998_0 = ((v0 || 0) === 1);
 q998_1 = "index of 1 in 123 is 1";
 inl998: {
@@ -1416,7 +1416,7 @@ retire(th); return;
 }
 }
 }
-(a24 = fp_8(th, S, 123, 2), v0 = h0.value, a24);
+(a46 = fp_8(th, S, 123, 2), v0 = h0.value, a46);
 q1000_0 = ((v0 || 0) === 2);
 q1000_1 = "index of 2 in 123 is 2";
 inl1000: {
@@ -1431,7 +1431,7 @@ retire(th); return;
 }
 }
 }
-(a25 = fp_8(th, S, 123, 3), v0 = h0.value, a25);
+(a47 = fp_8(th, S, 123, 3), v0 = h0.value, a47);
 q1002_0 = ((v0 || 0) === 3);
 q1002_1 = "index of 3 in 123 is 3";
 inl1002: {
@@ -1446,7 +1446,7 @@ retire(th); return;
 }
 }
 }
-(a26 = fp_8(th, S, 123, "aaaa"), v0 = h0.value, a26);
+(a48 = fp_8(th, S, 123, "aaaa"), v0 = h0.value, a48);
 q1004_0 = ((v0 || 0) === -1);
 q1004_1 = "index of aaaa in 123 is -1";
 inl1004: {
@@ -1463,8 +1463,8 @@ retire(th); return;
 }
 }
 inl1006: {
-(a27 = fp_11(th, S, 123456, 345, "a"), v0 = h0.value, a27);
-q1007_0 = (v0.toLowerCase() === "12a6".toLowerCase());
+(a49 = fp_11(th, S, 123456, 345, "a"), v0 = h0.value, a49);
+q1007_0 = (a50 = v0, (a50.length === 4 && (a50 === "12a6" || a50.toLowerCase() === "12a6")));
 q1007_1 = "replace expected 12a6";
 inl1007: {
 if (!q1007_0) {
@@ -1478,7 +1478,7 @@ retire(th); return;
 }
 }
 }
-(a28 = fp_11(th, S, 123, 123, 456), v0 = h0.value, a28);
+(a51 = fp_11(th, S, 123, 123, 456), v0 = h0.value, a51);
 q1009_0 = (((n0 = +v0) === n0 ? n0 : 0) === 456);
 q1009_1 = "replace expected 456";
 inl1009: {
@@ -1493,7 +1493,7 @@ retire(th); return;
 }
 }
 }
-(a29 = fp_11(th, S, 123, 1234, 456), v0 = h0.value, a29);
+(a52 = fp_11(th, S, 123, 1234, 456), v0 = h0.value, a52);
 q1011_0 = (((n1 = +v0) === n1 ? n1 : 0) === 123);
 q1011_1 = "replace expected 123";
 inl1011: {

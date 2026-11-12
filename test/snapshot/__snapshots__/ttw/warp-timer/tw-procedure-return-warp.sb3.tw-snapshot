@@ -153,7 +153,7 @@ function rp_4 (th, fr) {
 const S = th.self;
 const target = S.target;
 const h0 = g0;
-let n0 = 0, n1 = 0;
+let n0 = 0, n1 = 0, a0;
 for (;;) switch (fr.pc) {
 case 0:
 h0.value = 0;
@@ -187,7 +187,7 @@ fr.s4 = th.ret;
 fr.pc = 6; return 1;
 case 6:
 fr.s5 = th.ret;
-if (!(fr.s5.toLowerCase() === "warp: non warp: warp: abc".toLowerCase())) { fr.pc = 7; continue; }
+if (!(a0 = fr.s5, (a0.length === 25 && (a0 === "warp: non warp: warp: abc" || a0.toLowerCase() === "warp: non warp: warp: abc")))) { fr.pc = 7; continue; }
 runtime.ext_scratch3_looks._say("pass non warp and warp mix", target);
 fr.pc = 8; continue;
 case 7:

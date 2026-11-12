@@ -21,19 +21,20 @@ const h0 = g0;
 const h1 = g1;
 let v0 = h0.value, v1 = h1.value;
 if (typeof v0 !== "number" || v0 !== v0 || typeof v1 !== "number" || v1 !== v1) return fs_0$g(th, S);
+let a0, a1, a2, a3;
 runtime.ext_scratch3_looks._say("plan 4", target);
 v0 = (1 / 0);
 v1 = (-1 / 0);
-if ((("" + (v0 + v1)).toLowerCase() === "NaN".toLowerCase())) {
+if ((a0 = ("" + (v0 + v1)), (a0.length === 3 && (a0 === "NaN" || a0 === "nan" || a0.toLowerCase() === "nan")))) {
 runtime.ext_scratch3_looks._say("pass 1", target);
 }
-if ((("" + (v0 - v0)).toLowerCase() === "NaN".toLowerCase())) {
+if ((a1 = ("" + (v0 - v0)), (a1.length === 3 && (a1 === "NaN" || a1 === "nan" || a1.toLowerCase() === "nan")))) {
 runtime.ext_scratch3_looks._say("pass 1", target);
 }
-if ((("" + (v0 * 0)).toLowerCase() === "NaN".toLowerCase())) {
+if ((a2 = ("" + (v0 * 0)), (a2.length === 3 && (a2 === "NaN" || a2 === "nan" || a2.toLowerCase() === "nan")))) {
 runtime.ext_scratch3_looks._say("pass 1", target);
 }
-if ((("" + (0 / 0)).toLowerCase() === "NaN".toLowerCase())) {
+if ((a3 = ("" + (0 / 0)), (a3.length === 3 && (a3 === "NaN" || a3 === "nan" || a3.toLowerCase() === "nan")))) {
 runtime.ext_scratch3_looks._say("pass 1", target);
 }
 runtime.ext_scratch3_looks._say("end", target);
@@ -45,19 +46,20 @@ const target = S.target;
 const h0 = g0;
 const h1 = g1;
 let v0 = h0.value, v1 = h1.value;
+let a0, a1, a2, a3;
 runtime.ext_scratch3_looks._say("plan 4", target);
 v0 = (1 / 0);
 v1 = (-1 / 0);
-if ((("" + (v0 + v1)).toLowerCase() === "NaN".toLowerCase())) {
+if ((a0 = ("" + (v0 + v1)), (a0.length === 3 && (a0 === "NaN" || a0 === "nan" || a0.toLowerCase() === "nan")))) {
 runtime.ext_scratch3_looks._say("pass 1", target);
 }
-if ((("" + (v0 - v0)).toLowerCase() === "NaN".toLowerCase())) {
+if ((a1 = ("" + (v0 - v0)), (a1.length === 3 && (a1 === "NaN" || a1 === "nan" || a1.toLowerCase() === "nan")))) {
 runtime.ext_scratch3_looks._say("pass 1", target);
 }
-if ((("" + (v0 * 0)).toLowerCase() === "NaN".toLowerCase())) {
+if ((a2 = ("" + (v0 * 0)), (a2.length === 3 && (a2 === "NaN" || a2 === "nan" || a2.toLowerCase() === "nan")))) {
 runtime.ext_scratch3_looks._say("pass 1", target);
 }
-if ((("" + (0 / 0)).toLowerCase() === "NaN".toLowerCase())) {
+if ((a3 = ("" + (0 / 0)), (a3.length === 3 && (a3 === "NaN" || a3 === "nan" || a3.toLowerCase() === "nan")))) {
 runtime.ext_scratch3_looks._say("pass 1", target);
 }
 runtime.ext_scratch3_looks._say("end", target);

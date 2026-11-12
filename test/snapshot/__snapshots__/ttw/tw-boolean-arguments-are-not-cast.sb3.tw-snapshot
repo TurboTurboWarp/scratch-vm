@@ -15,7 +15,8 @@ this.target = target;
 }
 function fp_0 (th, S, p0) {
 const target = S.target;
-if ((p0.toLowerCase() === "Hai!!!".toLowerCase())) {
+let a0;
+if ((a0 = p0, (a0.length === 6 && (a0 === "Hai!!!" || a0 === "hai!!!" || a0.toLowerCase() === "hai!!!")))) {
 runtime.ext_scratch3_looks._say("pass did not cast", target);
 } else {
 runtime.ext_scratch3_looks._say("fail was casted", target);
@@ -24,11 +25,11 @@ return "";
 }
 function fs_1 (th, S) {
 const target = S.target;
-let q1074_0 = 0;
+let a0, q1074_0 = 0;
 runtime.ext_scratch3_looks._say("plan 1", target);
 q1074_0 = "Hai!!!";
 inl1074: {
-if ((q1074_0.toLowerCase() === "Hai!!!".toLowerCase())) {
+if ((a0 = q1074_0, (a0.length === 6 && (a0 === "Hai!!!" || a0 === "hai!!!" || a0.toLowerCase() === "hai!!!")))) {
 runtime.ext_scratch3_looks._say("pass did not cast", target);
 } else {
 runtime.ext_scratch3_looks._say("fail was casted", target);

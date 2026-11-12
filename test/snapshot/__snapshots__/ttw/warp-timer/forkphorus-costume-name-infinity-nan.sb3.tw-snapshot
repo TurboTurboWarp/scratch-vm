@@ -15,10 +15,11 @@ this.target = target;
 }
 function fs_0 (th, S) {
 const target = S.target;
+let a0, a1, a2;
 runtime.ext_scratch3_looks._setCostume(target, "initial");
 runtime.ext_scratch3_looks._say("plan 6", target);
 runtime.ext_scratch3_looks._setCostume(target, (1 / 0));
-if ((target.getCostumes()[target.currentCostume].name.toLowerCase() === "good".toLowerCase())) {
+if ((a0 = target.getCostumes()[target.currentCostume].name, (a0.length === 4 && (a0 === "good" || a0.toLowerCase() === "good")))) {
 runtime.ext_scratch3_looks._say("pass infinity costume name", target);
 }
 if (((target.currentCostume + 1) === 1)) {
@@ -26,7 +27,7 @@ runtime.ext_scratch3_looks._say("pass infinity costume number", target);
 }
 runtime.ext_scratch3_looks._setCostume(target, "initial");
 runtime.ext_scratch3_looks._setCostume(target, (1 / -0));
-if ((target.getCostumes()[target.currentCostume].name.toLowerCase() === "good".toLowerCase())) {
+if ((a1 = target.getCostumes()[target.currentCostume].name, (a1.length === 4 && (a1 === "good" || a1.toLowerCase() === "good")))) {
 runtime.ext_scratch3_looks._say("pass -infinity costume name", target);
 }
 if (((target.currentCostume + 1) === 1)) {
@@ -34,7 +35,7 @@ runtime.ext_scratch3_looks._say("pass -infinity costume number", target);
 }
 runtime.ext_scratch3_looks._setCostume(target, "initial");
 runtime.ext_scratch3_looks._setCostume(target, (0 / 0));
-if ((target.getCostumes()[target.currentCostume].name.toLowerCase() === "good".toLowerCase())) {
+if ((a2 = target.getCostumes()[target.currentCostume].name, (a2.length === 4 && (a2 === "good" || a2.toLowerCase() === "good")))) {
 runtime.ext_scratch3_looks._say("pass nan costume name", target);
 }
 if (((target.currentCostume + 1) === 1)) {

@@ -2656,9 +2656,9 @@ class Runtime extends EventEmitter {
      */
     _getMonitorThreadCount (threads) {
         let count = 0;
-        threads.forEach(thread => {
-            if (thread.updateMonitor) count++;
-        });
+        for (let i = 0; i < threads.length; i++) {
+            if (threads[i].updateMonitor) count++;
+        }
         return count;
     }
 

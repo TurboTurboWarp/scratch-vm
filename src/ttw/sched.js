@@ -138,7 +138,8 @@ class BroadcastHandle {
         const ttw = runtime.ttw;
         const options = runtime.compilerOptions;
         const useTTW = options.enabled && options.backend !== 'tw';
-        const newThreads = new Array(n);
+        // (filled below; a packed array, not new Array(n))
+        const newThreads = [];
         let interpreted = false;
         for (let i = 0; i < n; i++) {
             const receiver = list[i];
@@ -146,7 +147,8 @@ class BroadcastHandle {
             // restartExistingThreads
             const existingThread = threadMap.get(key);
             if (existingThread !== undefined) {
-                const restarted = newThreads[i] = runtime._restartThread(existingThread);
+                const restarted = runtime._restartThread(existingThread);
+                newThreads.push(restarted);
                 if (!restarted.isCompiled) interpreted = true;
                 continue;
             }
@@ -157,9 +159,10 @@ class BroadcastHandle {
             thread.target = target;
             thread.blockContainer = blocks;
             thread._id = key;
-            // thread.pushStack() without its out-of-bounds read of the parent frame
-            thread.stack.push(receiver.topBlockId);
-            thread.stackFrames.push(StackFrame.create(false));
+            // Same state as after thread.pushStack(topBlockId). Array literals get an exact-size backing
+            // store; pushing to the constructor's empty arrays would allocate room for 17 elements each.
+            thread.stack = [receiver.topBlockId];
+            thread.stackFrames = [StackFrame.create(false)];
             threads.push(thread);
             threadMap.set(key, thread);
             const sc = receiver.sc;
@@ -175,7 +178,7 @@ class BroadcastHandle {
                 receiver.sc = thread.ttw;
                 if (!thread.isCompiled) interpreted = true;
             }
-            newThreads[i] = thread;
+            newThreads.push(thread);
         }
         if (interpreted) runInterpretedHats(runtime, newThreads);
         return newThreads;

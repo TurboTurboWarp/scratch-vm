@@ -52,8 +52,8 @@ const target = S.target;
 const h0 = g0;
 let v0 = h0.value;
 if (typeof v0 !== "number") return fs_3$g(th, S);
-let q25_0 = 0, q25_1 = 0, q26_0 = 0, q27_0 = 0, q27_1 = 0, q28_0 = 0, q29_0 = 0, q29_1 = 0, q30_0 = 0, q31_0 = 0, q31_1 = 0, q32_0 = 0, q33_0 = 0;
-q25_0 = (("" + (0 / 0)).toLowerCase() === "NaN".toLowerCase());
+let a0, a1, q25_0 = 0, q25_1 = 0, q26_0 = 0, q27_0 = 0, q27_1 = 0, q28_0 = 0, q29_0 = 0, q29_1 = 0, q30_0 = 0, q31_0 = 0, q31_1 = 0, q32_0 = 0, q33_0 = 0;
+q25_0 = (a0 = ("" + (0 / 0)), (a0.length === 3 && (a0 === "NaN" || a0 === "nan" || a0.toLowerCase() === "nan")));
 q25_1 = "0/0";
 inl25: {
 if (!q25_0) {
@@ -99,7 +99,7 @@ retire(th); return;
 }
 }
 v0 = (0 / 0);
-q31_0 = (("" + v0).toLowerCase() === "NaN".toLowerCase());
+q31_0 = (a1 = ("" + v0), (a1.length === 3 && (a1 === "NaN" || a1 === "nan" || a1.toLowerCase() === "nan")));
 q31_1 = "NaN storable in variables";
 inl31: {
 if (!q31_0) {
@@ -129,8 +129,8 @@ function fs_3$g (th, S) {
 const target = S.target;
 const h0 = g0;
 let v0 = h0.value;
-let q34_0 = 0, q34_1 = 0, q35_0 = 0, q36_0 = 0, q36_1 = 0, q37_0 = 0, q38_0 = 0, q38_1 = 0, q39_0 = 0, q40_0 = 0, q40_1 = 0, q41_0 = 0, q42_0 = 0;
-q34_0 = (("" + (0 / 0)).toLowerCase() === "NaN".toLowerCase());
+let a0, a1, q34_0 = 0, q34_1 = 0, q35_0 = 0, q36_0 = 0, q36_1 = 0, q37_0 = 0, q38_0 = 0, q38_1 = 0, q39_0 = 0, q40_0 = 0, q40_1 = 0, q41_0 = 0, q42_0 = 0;
+q34_0 = (a0 = ("" + (0 / 0)), (a0.length === 3 && (a0 === "NaN" || a0 === "nan" || a0.toLowerCase() === "nan")));
 q34_1 = "0/0";
 inl34: {
 if (!q34_0) {
@@ -176,7 +176,7 @@ retire(th); return;
 }
 }
 v0 = (0 / 0);
-q40_0 = (("" + v0).toLowerCase() === "NaN".toLowerCase());
+q40_0 = (a1 = ("" + v0), (a1.length === 3 && (a1 === "NaN" || a1 === "nan" || a1.toLowerCase() === "nan")));
 q40_1 = "NaN storable in variables";
 inl40: {
 if (!q40_0) {

@@ -70,7 +70,7 @@ const S = th.self;
 const target = S.target;
 const h0 = g0;
 const h1 = g1;
-let n0 = 0, n1 = 0, n2 = 0, n3 = 0, n4 = 0, n5 = 0, n6 = 0, n7 = 0, n8 = 0, n9 = 0, n10 = 0, n11 = 0, n12 = 0, n13 = 0, n14 = 0, n15 = 0, n16 = 0, n17 = 0, n18 = 0, n19 = 0, n20 = 0, n21 = 0, n22 = 0, n23 = 0, a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, q276_0 = 0, q276_1 = 0, q277_0 = 0, q278_0 = 0, q278_1 = 0, q279_0 = 0, q280_0 = 0, q280_1 = 0, q281_0 = 0, q282_0 = 0, q282_1 = 0, q283_0 = 0, q284_0 = 0, q284_1 = 0, q285_0 = 0, q286_0 = 0, q286_1 = 0, q287_0 = 0, q288_0 = 0, q288_1 = 0, q289_0 = 0, q290_0 = 0, q290_1 = 0, q291_0 = 0, q292_0 = 0, q292_1 = 0, q293_0 = 0, q294_0 = 0, q294_1 = 0, q295_0 = 0, q296_0 = 0, q296_1 = 0, q297_0 = 0, q298_0 = 0, q298_1 = 0, q299_0 = 0, q300_0 = 0, q300_1 = 0, q301_0 = 0, q302_0 = 0, q302_1 = 0, q303_0 = 0, q304_0 = 0, q304_1 = 0, q305_0 = 0, q306_0 = 0, q306_1 = 0, q307_0 = 0, q308_0 = 0, q308_1 = 0, q309_0 = 0, q310_0 = 0, q310_1 = 0, q311_0 = 0, q312_0 = 0, q312_1 = 0, q313_0 = 0, q314_0 = 0, q314_1 = 0, q315_0 = 0, q316_0 = 0, q316_1 = 0, q317_0 = 0, q318_0 = 0, q318_1 = 0, q319_0 = 0, q320_0 = 0, q320_1 = 0, q321_0 = 0, q322_0 = 0;
+let n0 = 0, n1 = 0, n2 = 0, n3 = 0, n4 = 0, n5 = 0, n6 = 0, n7 = 0, n8 = 0, n9 = 0, n10 = 0, n11 = 0, n12 = 0, n13 = 0, n14 = 0, n15 = 0, n16 = 0, n17 = 0, n18 = 0, n19 = 0, n20 = 0, n21 = 0, n22 = 0, n23 = 0, a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, q276_0 = 0, q276_1 = 0, q277_0 = 0, q278_0 = 0, q278_1 = 0, q279_0 = 0, q280_0 = 0, q280_1 = 0, q281_0 = 0, q282_0 = 0, q282_1 = 0, q283_0 = 0, q284_0 = 0, q284_1 = 0, q285_0 = 0, q286_0 = 0, q286_1 = 0, q287_0 = 0, q288_0 = 0, q288_1 = 0, q289_0 = 0, q290_0 = 0, q290_1 = 0, q291_0 = 0, q292_0 = 0, q292_1 = 0, q293_0 = 0, q294_0 = 0, q294_1 = 0, q295_0 = 0, q296_0 = 0, q296_1 = 0, q297_0 = 0, q298_0 = 0, q298_1 = 0, q299_0 = 0, q300_0 = 0, q300_1 = 0, q301_0 = 0, q302_0 = 0, q302_1 = 0, q303_0 = 0, q304_0 = 0, q304_1 = 0, q305_0 = 0, q306_0 = 0, q306_1 = 0, q307_0 = 0, q308_0 = 0, q308_1 = 0, q309_0 = 0, q310_0 = 0, q310_1 = 0, q311_0 = 0, q312_0 = 0, q312_1 = 0, q313_0 = 0, q314_0 = 0, q314_1 = 0, q315_0 = 0, q316_0 = 0, q316_1 = 0, q317_0 = 0, q318_0 = 0, q318_1 = 0, q319_0 = 0, q320_0 = 0, q320_1 = 0, q321_0 = 0, q322_0 = 0;
 for (;;) switch (fr.pc) {
 case 0:
 h0.value = "no change";
@@ -159,7 +159,7 @@ h0.value = fr.s2;
 h1.value = (((n6 = +h1.value) === n6 ? n6 : 0) + 1);
 fr.pc = 3; return 0;
 }
-q284_0 = (a0 = h0.value, typeof a0 === "number" ? false : (a0 === "no change" || ("" + a0).toLowerCase() === "no change"));
+q284_0 = (a0 = h0.value, typeof a0 === "number" ? false : (a1 = "" + a0, (a1.length === 9 && (a1 === "no change" || a1.toLowerCase() === "no change"))));
 q284_1 = "i = no change (each 0)";
 inl284: {
 if (!q284_0) {
@@ -173,7 +173,7 @@ retire(th); return 2;
 }
 }
 }
-q286_0 = (a1 = h1.value, ((typeof a1 === "number" && a1 === a1) || a1 === 0) ? a1 === 0 : eqSlow(a1, 0));
+q286_0 = (a2 = h1.value, ((typeof a2 === "number" && a2 === a2) || a2 === 0) ? a2 === 0 : eqSlow(a2, 0));
 q286_1 = "dummy = 0 (each 0)";
 inl286: {
 if (!q286_0) {
@@ -197,7 +197,7 @@ h0.value = fr.s3;
 h1.value = (((n7 = +h1.value) === n7 ? n7 : 0) + 1);
 fr.pc = 4; return 0;
 }
-q288_0 = (a2 = h0.value, typeof a2 === "number" ? false : (a2 === "no change" || ("" + a2).toLowerCase() === "no change"));
+q288_0 = (a3 = h0.value, typeof a3 === "number" ? false : (a4 = "" + a3, (a4.length === 9 && (a4 === "no change" || a4.toLowerCase() === "no change"))));
 q288_1 = "i = no change (each -5)";
 inl288: {
 if (!q288_0) {
@@ -211,7 +211,7 @@ retire(th); return 2;
 }
 }
 }
-q290_0 = (a3 = h1.value, ((typeof a3 === "number" && a3 === a3) || a3 === 0) ? a3 === 0 : eqSlow(a3, 0));
+q290_0 = (a5 = h1.value, ((typeof a5 === "number" && a5 === a5) || a5 === 0) ? a5 === 0 : eqSlow(a5, 0));
 q290_1 = "dummy = 0 (each -5)";
 inl290: {
 if (!q290_0) {
@@ -235,7 +235,7 @@ h0.value = fr.s4;
 h1.value = (((n8 = +h1.value) === n8 ? n8 : 0) + 1);
 fr.pc = 5; return 0;
 }
-q292_0 = (a4 = h0.value, typeof a4 === "number" ? false : (a4 === "no change" || ("" + a4).toLowerCase() === "no change"));
+q292_0 = (a6 = h0.value, typeof a6 === "number" ? false : (a7 = "" + a6, (a7.length === 9 && (a7 === "no change" || a7.toLowerCase() === "no change"))));
 q292_1 = "i = no change (each aaaaaa)";
 inl292: {
 if (!q292_0) {
@@ -249,7 +249,7 @@ retire(th); return 2;
 }
 }
 }
-q294_0 = (a5 = h1.value, ((typeof a5 === "number" && a5 === a5) || a5 === 0) ? a5 === 0 : eqSlow(a5, 0));
+q294_0 = (a8 = h1.value, ((typeof a8 === "number" && a8 === a8) || a8 === 0) ? a8 === 0 : eqSlow(a8, 0));
 q294_1 = "dummy = 0 (each aaaaaa)";
 inl294: {
 if (!q294_0) {
@@ -349,7 +349,7 @@ h0.value = fr.s7;
 h1.value = (((n15 = +h1.value) === n15 ? n15 : 0) + 1);
 fr.pc = 8; return 0;
 }
-q304_0 = (a6 = h0.value, typeof a6 === "number" ? false : (a6 === "no change" || ("" + a6).toLowerCase() === "no change"));
+q304_0 = (a9 = h0.value, typeof a9 === "number" ? false : (a10 = "" + a9, (a10.length === 9 && (a10 === "no change" || a10.toLowerCase() === "no change"))));
 q304_1 = "i = no change (each -0.1)";
 inl304: {
 if (!q304_0) {
@@ -363,7 +363,7 @@ retire(th); return 2;
 }
 }
 }
-q306_0 = (a7 = h1.value, ((typeof a7 === "number" && a7 === a7) || a7 === 0) ? a7 === 0 : eqSlow(a7, 0));
+q306_0 = (a11 = h1.value, ((typeof a11 === "number" && a11 === a11) || a11 === 0) ? a11 === 0 : eqSlow(a11, 0));
 q306_1 = "dummy = 0 (each -0.1)";
 inl306: {
 if (!q306_0) {
@@ -460,7 +460,7 @@ case 11:
 while (fr.s10 < 5) {
 fr.s10++;
 h0.value = fr.s10;
-q316_0 = (a8 = h0.value, a9 = h1.value, ((typeof a8 === "number" && typeof a9 === "number" && a8 === a8 && a9 === a9) || a8 === a9) ? a8 === a9 : eqSlow(a8, a9));
+q316_0 = (a12 = h0.value, a13 = h1.value, ((typeof a12 === "number" && typeof a13 === "number" && a12 === a12 && a13 === a13) || a12 === a13) ? a12 === a13 : eqSlow(a12, a13));
 q316_1 = "i = dummy (each 5 w/set+dummy check)";
 inl316: {
 if (!q316_0) {

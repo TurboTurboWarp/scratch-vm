@@ -54,8 +54,8 @@ Fs_0.prototype.fnRef = rs_0;
 function fs_1 (th, S) {
 const target = S.target;
 const h0 = g0;
-let a0;
-if ((a0 = h0.value, typeof a0 === "number" ? false : (a0 === "Initial" || ("" + a0).toLowerCase() === "initial"))) {
+let a0, a1;
+if ((a0 = h0.value, typeof a0 === "number" ? false : (a1 = "" + a0, (a1.length === 7 && (a1 === "Initial" || a1 === "initial" || a1.toLowerCase() === "initial"))))) {
 runtime.ext_scratch3_looks._say("pass", target);
 }
 }

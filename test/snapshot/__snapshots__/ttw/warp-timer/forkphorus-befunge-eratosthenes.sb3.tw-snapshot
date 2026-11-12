@@ -565,33 +565,33 @@ const L3 = gl2;
 const L4 = gl7;
 const L5 = gl8;
 const L6 = gl9;
-let n0 = 0, n1 = 0, n2 = 0, n3 = 0, n4 = 0, n5 = 0, n6 = 0, n7 = 0, n8 = 0, n9 = 0, n10 = 0, n11 = 0, n12 = 0, n13 = 0, n14 = 0, n15 = 0, n16 = 0, n17 = 0, n18 = 0, n19 = 0, n20 = 0, n21 = 0, n22 = 0, n23 = 0, n24 = 0, n25 = 0, n26 = 0, n27 = 0, n28 = 0, n29 = 0, n30 = 0, n31 = 0, n32 = 0, n33 = 0, n34 = 0, n35 = 0, n36 = 0, n37 = 0, n38 = 0, n39 = 0, n40 = 0, n41 = 0, n42 = 0, n43 = 0, n44 = 0, n45 = 0, n46 = 0, n47 = 0, n48 = 0, n49 = 0, n50 = 0, n51 = 0, n52 = 0, n53 = 0, n54 = 0, n55 = 0, n56 = 0, n57 = 0, n58 = 0, n59 = 0, n60 = 0, n61 = 0, n62 = 0, n63 = 0, n64 = 0, n65 = 0, n66 = 0, n67 = 0, n68 = 0, n69 = 0, n70 = 0, n71 = 0, n72 = 0, n73 = 0, n74 = 0, n75 = 0, n76 = 0, n77 = 0, n78 = 0, n79 = 0, n80 = 0, n81 = 0, n82 = 0, n83 = 0, n84 = 0, n85 = 0, n86 = 0, n87 = 0, n88 = 0, n89 = 0, n90 = 0, n91 = 0, n92 = 0, n93 = 0, n94 = 0, n95 = 0, n96 = 0, n97 = 0, n98 = 0, n99 = 0, n100 = 0, n101 = 0, n102 = 0, n103 = 0, n104 = 0, n105 = 0, n106 = 0, n107 = 0, n108 = 0, n109 = 0, n110 = 0, n111 = 0, n112 = 0, n113 = 0, n114 = 0, n115 = 0, n116 = 0, n117 = 0, n118 = 0, n119 = 0, n120 = 0, n121 = 0, n122 = 0, n123 = 0, n124 = 0, n125 = 0, n126 = 0, n127 = 0, n128 = 0, n129 = 0, n130 = 0, n131 = 0, n132 = 0, n133 = 0, n134 = 0, n135 = 0, n136 = 0, n137 = 0, n138 = 0, n139 = 0, n140 = 0, a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19, a20, a21, a22, a23, a24, a25, a26, a27, a28, a29, a30, a31, a32, a33, a34, a35, a36, a37, a38, a39, a40, a41, a42, a43, a44, a45, a46, a47, a48, a49, a50, a51, a52, a53, a54, a55, a56, a57, a58, a59, a60, a61, a62, a63, a64, a65, a66, a67, a68, a69, a70, a71, a72, a73, a74, a75, a76, a77, a78, a79, a80, a81, a82, a83, a84, a85, a86, q247_0 = 0, q248_0 = 0, q249_0 = 0, q250_0 = 0, q251_0 = 0, q252_0 = 0, q253_0 = 0, q254_0 = 0, q255_0 = 0, q256_0 = 0, q257_0 = 0, q258_0 = 0, q259_0 = 0, q260_0 = 0, q261_0 = 0, q262_0 = 0, q263_0 = 0, q264_0 = 0, q265_0 = 0, q266_0 = 0;
+let n0 = 0, n1 = 0, n2 = 0, n3 = 0, n4 = 0, n5 = 0, n6 = 0, n7 = 0, n8 = 0, n9 = 0, n10 = 0, n11 = 0, n12 = 0, n13 = 0, n14 = 0, n15 = 0, n16 = 0, n17 = 0, n18 = 0, n19 = 0, n20 = 0, n21 = 0, n22 = 0, n23 = 0, n24 = 0, n25 = 0, n26 = 0, n27 = 0, n28 = 0, n29 = 0, n30 = 0, n31 = 0, n32 = 0, n33 = 0, n34 = 0, n35 = 0, n36 = 0, n37 = 0, n38 = 0, n39 = 0, n40 = 0, n41 = 0, n42 = 0, n43 = 0, n44 = 0, n45 = 0, n46 = 0, n47 = 0, n48 = 0, n49 = 0, n50 = 0, n51 = 0, n52 = 0, n53 = 0, n54 = 0, n55 = 0, n56 = 0, n57 = 0, n58 = 0, n59 = 0, n60 = 0, n61 = 0, n62 = 0, n63 = 0, n64 = 0, n65 = 0, n66 = 0, n67 = 0, n68 = 0, n69 = 0, n70 = 0, n71 = 0, n72 = 0, n73 = 0, n74 = 0, n75 = 0, n76 = 0, n77 = 0, n78 = 0, n79 = 0, n80 = 0, n81 = 0, n82 = 0, n83 = 0, n84 = 0, n85 = 0, n86 = 0, n87 = 0, n88 = 0, n89 = 0, n90 = 0, n91 = 0, n92 = 0, n93 = 0, n94 = 0, n95 = 0, n96 = 0, n97 = 0, n98 = 0, n99 = 0, n100 = 0, n101 = 0, n102 = 0, n103 = 0, n104 = 0, n105 = 0, n106 = 0, n107 = 0, n108 = 0, n109 = 0, n110 = 0, n111 = 0, n112 = 0, n113 = 0, n114 = 0, n115 = 0, n116 = 0, n117 = 0, n118 = 0, n119 = 0, n120 = 0, n121 = 0, n122 = 0, n123 = 0, n124 = 0, n125 = 0, n126 = 0, n127 = 0, n128 = 0, n129 = 0, n130 = 0, n131 = 0, n132 = 0, n133 = 0, n134 = 0, n135 = 0, n136 = 0, n137 = 0, n138 = 0, n139 = 0, n140 = 0, a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18, a19, a20, a21, a22, a23, a24, a25, a26, a27, a28, a29, a30, a31, a32, a33, a34, a35, a36, a37, a38, a39, a40, a41, a42, a43, a44, a45, a46, a47, a48, a49, a50, a51, a52, a53, a54, a55, a56, a57, a58, a59, a60, a61, a62, a63, a64, a65, a66, a67, a68, a69, a70, a71, a72, a73, a74, a75, a76, a77, a78, a79, a80, a81, a82, a83, a84, a85, a86, a87, a88, a89, a90, a91, a92, a93, a94, a95, a96, a97, a98, a99, a100, a101, a102, a103, a104, a105, a106, a107, a108, a109, a110, a111, a112, a113, q247_0 = 0, q248_0 = 0, q249_0 = 0, q250_0 = 0, q251_0 = 0, q252_0 = 0, q253_0 = 0, q254_0 = 0, q255_0 = 0, q256_0 = 0, q257_0 = 0, q258_0 = 0, q259_0 = 0, q260_0 = 0, q261_0 = 0, q262_0 = 0, q263_0 = 0, q264_0 = 0, q265_0 = 0, q266_0 = 0;
 for (;;) switch (fr.pc) {
 case 0:
 h2.value = ((("" + (typeof (a1 = h0.value) === "number" ? (a1 >= 1 && a1 <= L0.len ? (n1 = (a1 | 0) - 1, ((n0 = L0.f64[n1]) === n0 ? n0 : ((a0 = L0.objs[n1]) === undefined ? NaN : a0))) : "") : L0.getSlow(a1))))[((+h1.value) | 0) - 1] || "");
-if ((h2.value.toLowerCase() === ">".toLowerCase())) {
-h3.value = (a2 = runtime.getSpriteTargetByName("directions"), (a3 = a2 && a2.lookupVariableByNameAndType("RIGHT", "", true)) ? a3.value : 0);
+if ((a2 = h2.value, (a2 === ">"))) {
+h3.value = (a3 = runtime.getSpriteTargetByName("directions"), (a4 = a3 && a3.lookupVariableByNameAndType("RIGHT", "", true)) ? a4.value : 0);
 }
-if ((h2.value.toLowerCase() === "<".toLowerCase())) {
-h3.value = (a4 = runtime.getSpriteTargetByName("directions"), (a5 = a4 && a4.lookupVariableByNameAndType("LEFT", "", true)) ? a5.value : 0);
+if ((a5 = h2.value, (a5 === "<"))) {
+h3.value = (a6 = runtime.getSpriteTargetByName("directions"), (a7 = a6 && a6.lookupVariableByNameAndType("LEFT", "", true)) ? a7.value : 0);
 }
-if ((h2.value.toLowerCase() === "^".toLowerCase())) {
-h3.value = (a6 = runtime.getSpriteTargetByName("directions"), (a7 = a6 && a6.lookupVariableByNameAndType("UP", "", true)) ? a7.value : 0);
+if ((a8 = h2.value, (a8 === "^"))) {
+h3.value = (a9 = runtime.getSpriteTargetByName("directions"), (a10 = a9 && a9.lookupVariableByNameAndType("UP", "", true)) ? a10.value : 0);
 }
-if ((h2.value.toLowerCase() === "v".toLowerCase())) {
-h3.value = (a8 = runtime.getSpriteTargetByName("directions"), (a9 = a8 && a8.lookupVariableByNameAndType("DOWN", "", true)) ? a9.value : 0);
+if ((a11 = h2.value, (a11 === "V" || a11 === "v"))) {
+h3.value = (a12 = runtime.getSpriteTargetByName("directions"), (a13 = a12 && a12.lookupVariableByNameAndType("DOWN", "", true)) ? a13.value : 0);
 }
-if ((h2.value.toLowerCase() === "?".toLowerCase())) {
+if ((a14 = h2.value, (a14 === "?"))) {
 h3.value = randomInt(1, 4);
 }
-if (!(h2.value.toLowerCase() === "@".toLowerCase())) { fr.pc = 1; continue; }
+if (!(a15 = h2.value, (a15 === "@"))) { fr.pc = 1; continue; }
 { const nf = new Fp_7(fr); th.frame = nf; th.fn = rp_7; }
 fr.pc = 3; return 1;
 case 3:
 fr.pc = 2; continue;
 case 1:
 case 2:
-if (!(a10 = h2.value, typeof a10 === "number" ? false : (a10 === "+" || ("" + a10).toLowerCase() === "+"))) { fr.pc = 4; continue; }
+if (!(a16 = h2.value, typeof a16 === "number" ? false : (a17 = "" + a16, (a17 === "+")))) { fr.pc = 4; continue; }
 { const nf = new Fp_8(fr); nf.s0 = 2; th.frame = nf; th.fn = rp_8; }
 fr.pc = 6; return 1;
 case 6:
@@ -604,7 +604,7 @@ L2.upToDate = false;
 fr.pc = 5; continue;
 case 4:
 case 5:
-if (!(a11 = h2.value, typeof a11 === "number" ? false : (a11 === "-" || ("" + a11).toLowerCase() === "-"))) { fr.pc = 7; continue; }
+if (!(a18 = h2.value, typeof a18 === "number" ? false : (a19 = "" + a18, (a19 === "-")))) { fr.pc = 7; continue; }
 { const nf = new Fp_8(fr); nf.s0 = 2; th.frame = nf; th.fn = rp_8; }
 fr.pc = 9; return 1;
 case 9:
@@ -617,7 +617,7 @@ L2.upToDate = false;
 fr.pc = 8; continue;
 case 7:
 case 8:
-if (!(a12 = h2.value, typeof a12 === "number" ? false : (a12 === "*" || ("" + a12).toLowerCase() === "*"))) { fr.pc = 10; continue; }
+if (!(a20 = h2.value, typeof a20 === "number" ? false : (a21 = "" + a20, (a21 === "*")))) { fr.pc = 10; continue; }
 { const nf = new Fp_8(fr); nf.s0 = 2; th.frame = nf; th.fn = rp_8; }
 fr.pc = 12; return 1;
 case 12:
@@ -630,7 +630,7 @@ L2.upToDate = false;
 fr.pc = 11; continue;
 case 10:
 case 11:
-if (!(a13 = h2.value, typeof a13 === "number" ? false : (a13 === "/" || ("" + a13).toLowerCase() === "/"))) { fr.pc = 13; continue; }
+if (!(a22 = h2.value, typeof a22 === "number" ? false : (a23 = "" + a22, (a23 === "/")))) { fr.pc = 13; continue; }
 { const nf = new Fp_8(fr); nf.s0 = 2; th.frame = nf; th.fn = rp_8; }
 fr.pc = 15; return 1;
 case 15:
@@ -643,7 +643,7 @@ L2.upToDate = false;
 fr.pc = 14; continue;
 case 13:
 case 14:
-if (!(a14 = h2.value, typeof a14 === "number" ? false : (a14 === "%" || ("" + a14).toLowerCase() === "%"))) { fr.pc = 16; continue; }
+if (!(a24 = h2.value, typeof a24 === "number" ? false : (a25 = "" + a24, (a25 === "%")))) { fr.pc = 16; continue; }
 { const nf = new Fp_8(fr); nf.s0 = 2; th.frame = nf; th.fn = rp_8; }
 fr.pc = 18; return 1;
 case 18:
@@ -656,11 +656,11 @@ L2.upToDate = false;
 fr.pc = 17; continue;
 case 16:
 case 17:
-if (!(a15 = h2.value, typeof a15 === "number" ? false : (a15 === "!" || ("" + a15).toLowerCase() === "!"))) { fr.pc = 19; continue; }
+if (!(a26 = h2.value, typeof a26 === "number" ? false : (a27 = "" + a26, (a27 === "!")))) { fr.pc = 19; continue; }
 { const nf = new Fp_8(fr); nf.s0 = 1; th.frame = nf; th.fn = rp_8; }
 fr.pc = 21; return 1;
 case 21:
-q252_0 = (((n31 = 1) >= 1 && n31 <= L1.len && (n32 = L1.f64[(n31 | 0) - 1]) === n32 && true) ? n32 === 0 : eqSlow((n31 >= 1 && n31 <= L1.len ? (n33 = (n31 | 0) - 1, ((n32 = L1.f64[n33]) === n32 ? n32 : ((a16 = L1.objs[n33]) === undefined ? NaN : a16))) : ""), 0));
+q252_0 = (((n31 = 1) >= 1 && n31 <= L1.len && (n32 = L1.f64[(n31 | 0) - 1]) === n32 && true) ? n32 === 0 : eqSlow((n31 >= 1 && n31 <= L1.len ? (n33 = (n31 | 0) - 1, ((n32 = L1.f64[n33]) === n32 ? n32 : ((a28 = L1.objs[n33]) === undefined ? NaN : a28))) : ""), 0));
 inl252: {
 if (q252_0) {
 q253_0 = 1;
@@ -681,11 +681,11 @@ L2.upToDate = false;
 fr.pc = 20; continue;
 case 19:
 case 20:
-if (!(a17 = h2.value, typeof a17 === "number" ? false : (a17 === "`" || ("" + a17).toLowerCase() === "`"))) { fr.pc = 22; continue; }
+if (!(a29 = h2.value, typeof a29 === "number" ? false : (a30 = "" + a29, (a30 === "`")))) { fr.pc = 22; continue; }
 { const nf = new Fp_8(fr); nf.s0 = 2; th.frame = nf; th.fn = rp_8; }
 fr.pc = 24; return 1;
 case 24:
-q255_0 = (a20 = ((n41 = 1) >= 1 && n41 <= L1.len ? (n40 = (n41 | 0) - 1, ((n39 = L1.f64[n40]) === n39 ? n39 : ((a19 = L1.objs[n40]) === undefined ? NaN : a19))) : ""), ((n36 = 2) >= 1 && n36 <= L1.len && (n37 = L1.f64[(n36 | 0) - 1]) === n37 && (typeof a20 === "number")) ? n37 > a20 : gtSlow((n36 >= 1 && n36 <= L1.len ? (n38 = (n36 | 0) - 1, ((n37 = L1.f64[n38]) === n37 ? n37 : ((a18 = L1.objs[n38]) === undefined ? NaN : a18))) : ""), a20));
+q255_0 = (a33 = ((n41 = 1) >= 1 && n41 <= L1.len ? (n40 = (n41 | 0) - 1, ((n39 = L1.f64[n40]) === n39 ? n39 : ((a32 = L1.objs[n40]) === undefined ? NaN : a32))) : ""), ((n36 = 2) >= 1 && n36 <= L1.len && (n37 = L1.f64[(n36 | 0) - 1]) === n37 && (typeof a33 === "number")) ? n37 > a33 : gtSlow((n36 >= 1 && n36 <= L1.len ? (n38 = (n36 | 0) - 1, ((n37 = L1.f64[n38]) === n37 ? n37 : ((a31 = L1.objs[n38]) === undefined ? NaN : a31))) : ""), a33));
 inl255: {
 if (q255_0) {
 q256_0 = 1;
@@ -706,37 +706,37 @@ L2.upToDate = false;
 fr.pc = 23; continue;
 case 22:
 case 23:
-if (!(a21 = h2.value, typeof a21 === "number" ? false : (a21 === "_" || ("" + a21).toLowerCase() === "_"))) { fr.pc = 25; continue; }
+if (!(a34 = h2.value, typeof a34 === "number" ? false : (a35 = "" + a34, (a35 === "_")))) { fr.pc = 25; continue; }
 { const nf = new Fp_8(fr); nf.s0 = 1; th.frame = nf; th.fn = rp_8; }
 fr.pc = 27; return 1;
 case 27:
-if (((((n44 = 1) >= 1 && n44 <= L1.len && (n45 = L1.f64[(n44 | 0) - 1]) === n45 && true) ? n45 === 0 : eqSlow((n44 >= 1 && n44 <= L1.len ? (n46 = (n44 | 0) - 1, ((n45 = L1.f64[n46]) === n45 ? n45 : ((a22 = L1.objs[n46]) === undefined ? NaN : a22))) : ""), 0)) || ((n47 = 1) >= 1 && n47 <= L1.len && (n48 = L1.f64[(n47 | 0) - 1]) === n48 ? false : (a24 = (n47 >= 1 && n47 <= L1.len ? (n49 = (n47 | 0) - 1, ((n48 = L1.f64[n49]) === n48 ? n48 : ((a23 = L1.objs[n49]) === undefined ? NaN : a23))) : ""), typeof a24 === "number" ? false : ("" + a24).length === 0)))) {
-h3.value = (a25 = runtime.getSpriteTargetByName("directions"), (a26 = a25 && a25.lookupVariableByNameAndType("RIGHT", "", true)) ? a26.value : 0);
+if (((((n44 = 1) >= 1 && n44 <= L1.len && (n45 = L1.f64[(n44 | 0) - 1]) === n45 && true) ? n45 === 0 : eqSlow((n44 >= 1 && n44 <= L1.len ? (n46 = (n44 | 0) - 1, ((n45 = L1.f64[n46]) === n45 ? n45 : ((a36 = L1.objs[n46]) === undefined ? NaN : a36))) : ""), 0)) || ((n47 = 1) >= 1 && n47 <= L1.len && (n48 = L1.f64[(n47 | 0) - 1]) === n48 ? false : (a38 = (n47 >= 1 && n47 <= L1.len ? (n49 = (n47 | 0) - 1, ((n48 = L1.f64[n49]) === n48 ? n48 : ((a37 = L1.objs[n49]) === undefined ? NaN : a37))) : ""), typeof a38 === "number" ? false : ("" + a38).length === 0)))) {
+h3.value = (a39 = runtime.getSpriteTargetByName("directions"), (a40 = a39 && a39.lookupVariableByNameAndType("RIGHT", "", true)) ? a40.value : 0);
 } else {
-h3.value = (a27 = runtime.getSpriteTargetByName("directions"), (a28 = a27 && a27.lookupVariableByNameAndType("LEFT", "", true)) ? a28.value : 0);
+h3.value = (a41 = runtime.getSpriteTargetByName("directions"), (a42 = a41 && a41.lookupVariableByNameAndType("LEFT", "", true)) ? a42.value : 0);
 }
 fr.pc = 26; continue;
 case 25:
 case 26:
-if (!(a29 = h2.value, typeof a29 === "number" ? false : (a29 === "|" || ("" + a29).toLowerCase() === "|"))) { fr.pc = 28; continue; }
+if (!(a43 = h2.value, typeof a43 === "number" ? false : (a44 = "" + a43, (a44 === "|")))) { fr.pc = 28; continue; }
 { const nf = new Fp_8(fr); nf.s0 = 1; th.frame = nf; th.fn = rp_8; }
 fr.pc = 30; return 1;
 case 30:
-if (((((n50 = 1) >= 1 && n50 <= L1.len && (n51 = L1.f64[(n50 | 0) - 1]) === n51 && true) ? n51 === 0 : eqSlow((n50 >= 1 && n50 <= L1.len ? (n52 = (n50 | 0) - 1, ((n51 = L1.f64[n52]) === n51 ? n51 : ((a30 = L1.objs[n52]) === undefined ? NaN : a30))) : ""), 0)) || ((n53 = 1) >= 1 && n53 <= L1.len && (n54 = L1.f64[(n53 | 0) - 1]) === n54 ? false : (a32 = (n53 >= 1 && n53 <= L1.len ? (n55 = (n53 | 0) - 1, ((n54 = L1.f64[n55]) === n54 ? n54 : ((a31 = L1.objs[n55]) === undefined ? NaN : a31))) : ""), typeof a32 === "number" ? false : ("" + a32).length === 0)))) {
-h3.value = (a33 = runtime.getSpriteTargetByName("directions"), (a34 = a33 && a33.lookupVariableByNameAndType("DOWN", "", true)) ? a34.value : 0);
+if (((((n50 = 1) >= 1 && n50 <= L1.len && (n51 = L1.f64[(n50 | 0) - 1]) === n51 && true) ? n51 === 0 : eqSlow((n50 >= 1 && n50 <= L1.len ? (n52 = (n50 | 0) - 1, ((n51 = L1.f64[n52]) === n51 ? n51 : ((a45 = L1.objs[n52]) === undefined ? NaN : a45))) : ""), 0)) || ((n53 = 1) >= 1 && n53 <= L1.len && (n54 = L1.f64[(n53 | 0) - 1]) === n54 ? false : (a47 = (n53 >= 1 && n53 <= L1.len ? (n55 = (n53 | 0) - 1, ((n54 = L1.f64[n55]) === n54 ? n54 : ((a46 = L1.objs[n55]) === undefined ? NaN : a46))) : ""), typeof a47 === "number" ? false : ("" + a47).length === 0)))) {
+h3.value = (a48 = runtime.getSpriteTargetByName("directions"), (a49 = a48 && a48.lookupVariableByNameAndType("DOWN", "", true)) ? a49.value : 0);
 } else {
-h3.value = (a35 = runtime.getSpriteTargetByName("directions"), (a36 = a35 && a35.lookupVariableByNameAndType("UP", "", true)) ? a36.value : 0);
+h3.value = (a50 = runtime.getSpriteTargetByName("directions"), (a51 = a50 && a50.lookupVariableByNameAndType("UP", "", true)) ? a51.value : 0);
 }
 fr.pc = 29; continue;
 case 28:
 case 29:
-if (!(a37 = h2.value, typeof a37 === "number" ? false : (a37 === "\"" || ("" + a37).toLowerCase() === "\""))) { fr.pc = 31; continue; }
+if (!(a52 = h2.value, typeof a52 === "number" ? false : (a53 = "" + a52, (a53 === "\"")))) { fr.pc = 31; continue; }
 { const nf = new Fp_11(fr); th.frame = nf; th.fn = rp_11; }
 fr.pc = 33; return 1;
 case 33:
 case 34:
-if (!!(((("" + (typeof (a39 = h0.value) === "number" ? (a39 >= 1 && a39 <= L0.len ? (n57 = (a39 | 0) - 1, ((n56 = L0.f64[n57]) === n56 ? n56 : ((a38 = L0.objs[n57]) === undefined ? NaN : a38))) : "") : L0.getSlow(a39))))[((+h1.value) | 0) - 1] || "").toLowerCase() === "\"".toLowerCase())) { fr.pc = 35; continue; }
-fr.s0 = ((("" + (typeof (a41 = h0.value) === "number" ? (a41 >= 1 && a41 <= L0.len ? (n59 = (a41 | 0) - 1, ((n58 = L0.f64[n59]) === n58 ? n58 : ((a40 = L0.objs[n59]) === undefined ? NaN : a40))) : "") : L0.getSlow(a41))))[((+h1.value) | 0) - 1] || "");
+if (!!(a54 = ((("" + (typeof (a56 = h0.value) === "number" ? (a56 >= 1 && a56 <= L0.len ? (n57 = (a56 | 0) - 1, ((n56 = L0.f64[n57]) === n56 ? n56 : ((a55 = L0.objs[n57]) === undefined ? NaN : a55))) : "") : L0.getSlow(a56))))[((+h1.value) | 0) - 1] || ""), (a54 === "\""))) { fr.pc = 35; continue; }
+fr.s0 = ((("" + (typeof (a58 = h0.value) === "number" ? (a58 >= 1 && a58 <= L0.len ? (n59 = (a58 | 0) - 1, ((n58 = L0.f64[n59]) === n58 ? n58 : ((a57 = L0.objs[n59]) === undefined ? NaN : a57))) : "") : L0.getSlow(a58))))[((+h1.value) | 0) - 1] || "");
 { const nf = new Fp_12(fr); nf.s0 = fr.s0; th.frame = nf; th.fn = rp_12; }
 fr.pc = 36; return 1;
 case 36:
@@ -754,54 +754,54 @@ case 35:
 fr.pc = 32; continue;
 case 31:
 case 32:
-if ((a42 = h2.value, typeof a42 === "number" ? false : (a42 === ":" || ("" + a42).toLowerCase() === ":"))) {
-q259_0 = ((n62 = L2.len - 1) >= 0 ? ((n61 = L2.f64[n62]) === n61 ? n61 : ((a43 = L2.objs[n62]) === undefined ? NaN : a43)) : "");
+if ((a59 = h2.value, typeof a59 === "number" ? false : (a60 = "" + a59, (a60 === ":")))) {
+q259_0 = ((n62 = L2.len - 1) >= 0 ? ((n61 = L2.f64[n62]) === n61 ? n61 : ((a61 = L2.objs[n62]) === undefined ? NaN : a61)) : "");
 inl259: {
-a44 = q259_0;
-if (typeof a44 === "number" && L2.len < L2.f64.length && L2.objs.length === 0) L2.f64[L2.len++] = a44; else L2.pushSlow(a44);
+a62 = q259_0;
+if (typeof a62 === "number" && L2.len < L2.f64.length && L2.objs.length === 0) L2.f64[L2.len++] = a62; else L2.pushSlow(a62);
 L2.upToDate = false;
 }
 }
-if (!(a45 = h2.value, typeof a45 === "number" ? false : (a45 === "\\" || ("" + a45).toLowerCase() === "\\"))) { fr.pc = 38; continue; }
+if (!(a63 = h2.value, typeof a63 === "number" ? false : (a64 = "" + a63, (a64 === "\\")))) { fr.pc = 38; continue; }
 { const nf = new Fp_8(fr); nf.s0 = 2; th.frame = nf; th.fn = rp_8; }
 fr.pc = 40; return 1;
 case 40:
-q260_0 = ((n65 = 1) >= 1 && n65 <= L1.len ? (n64 = (n65 | 0) - 1, ((n63 = L1.f64[n64]) === n63 ? n63 : ((a46 = L1.objs[n64]) === undefined ? NaN : a46))) : "");
+q260_0 = ((n65 = 1) >= 1 && n65 <= L1.len ? (n64 = (n65 | 0) - 1, ((n63 = L1.f64[n64]) === n63 ? n63 : ((a65 = L1.objs[n64]) === undefined ? NaN : a65))) : "");
 inl260: {
-a47 = q260_0;
-if (typeof a47 === "number" && L2.len < L2.f64.length && L2.objs.length === 0) L2.f64[L2.len++] = a47; else L2.pushSlow(a47);
+a66 = q260_0;
+if (typeof a66 === "number" && L2.len < L2.f64.length && L2.objs.length === 0) L2.f64[L2.len++] = a66; else L2.pushSlow(a66);
 L2.upToDate = false;
 }
-q261_0 = ((n68 = 2) >= 1 && n68 <= L1.len ? (n67 = (n68 | 0) - 1, ((n66 = L1.f64[n67]) === n66 ? n66 : ((a48 = L1.objs[n67]) === undefined ? NaN : a48))) : "");
+q261_0 = ((n68 = 2) >= 1 && n68 <= L1.len ? (n67 = (n68 | 0) - 1, ((n66 = L1.f64[n67]) === n66 ? n66 : ((a67 = L1.objs[n67]) === undefined ? NaN : a67))) : "");
 inl261: {
-a49 = q261_0;
-if (typeof a49 === "number" && L2.len < L2.f64.length && L2.objs.length === 0) L2.f64[L2.len++] = a49; else L2.pushSlow(a49);
+a68 = q261_0;
+if (typeof a68 === "number" && L2.len < L2.f64.length && L2.objs.length === 0) L2.f64[L2.len++] = a68; else L2.pushSlow(a68);
 L2.upToDate = false;
 }
 fr.pc = 39; continue;
 case 38:
 case 39:
-if (!(a50 = h2.value, typeof a50 === "number" ? false : (a50 === "$" || ("" + a50).toLowerCase() === "$"))) { fr.pc = 41; continue; }
+if (!(a69 = h2.value, typeof a69 === "number" ? false : (a70 = "" + a69, (a70 === "$")))) { fr.pc = 41; continue; }
 { const nf = new Fp_8(fr); nf.s0 = 1; th.frame = nf; th.fn = rp_8; }
 fr.pc = 43; return 1;
 case 43:
 fr.pc = 42; continue;
 case 41:
 case 42:
-if (!(a51 = h2.value, typeof a51 === "number" ? false : (a51 === "." || ("" + a51).toLowerCase() === "."))) { fr.pc = 44; continue; }
+if (!(a71 = h2.value, typeof a71 === "number" ? false : (a72 = "" + a71, (a72 === ".")))) { fr.pc = 44; continue; }
 { const nf = new Fp_8(fr); nf.s0 = 1; th.frame = nf; th.fn = rp_8; }
 fr.pc = 46; return 1;
 case 46:
-if ((n69 = 1) >= 1 && n69 <= L1.len && (n70 = L1.f64[(n69 | 0) - 1]) === n70 && L3.len < L3.f64.length && L3.objs.length === 0) L3.f64[L3.len++] = n70; else L3.pushSlow((n69 >= 1 && n69 <= L1.len ? (n71 = (n69 | 0) - 1, ((n70 = L1.f64[n71]) === n70 ? n70 : ((a52 = L1.objs[n71]) === undefined ? NaN : a52))) : ""));
+if ((n69 = 1) >= 1 && n69 <= L1.len && (n70 = L1.f64[(n69 | 0) - 1]) === n70 && L3.len < L3.f64.length && L3.objs.length === 0) L3.f64[L3.len++] = n70; else L3.pushSlow((n69 >= 1 && n69 <= L1.len ? (n71 = (n69 | 0) - 1, ((n70 = L1.f64[n71]) === n70 ? n70 : ((a73 = L1.objs[n71]) === undefined ? NaN : a73))) : ""));
 L3.upToDate = false;
 fr.pc = 45; continue;
 case 44:
 case 45:
-if (!(a53 = h2.value, typeof a53 === "number" ? false : (a53 === "," || ("" + a53).toLowerCase() === ","))) { fr.pc = 47; continue; }
+if (!(a74 = h2.value, typeof a74 === "number" ? false : (a75 = "" + a74, (a75 === ",")))) { fr.pc = 47; continue; }
 { const nf = new Fp_8(fr); nf.s0 = 1; th.frame = nf; th.fn = rp_8; }
 fr.pc = 49; return 1;
 case 49:
-q262_0 = ("did not expect ascii output: " + ("" + ((n74 = (((n76 = 1) >= 1 && n76 <= L1.len && (n75 = L1.f64[(n76 | 0) - 1]) === n75 ? n75 : L1.numSlow(n76)) + 1)) >= 1 && n74 <= L4.len ? (n73 = (n74 | 0) - 1, ((n72 = L4.f64[n73]) === n72 ? n72 : ((a54 = L4.objs[n73]) === undefined ? NaN : a54))) : "")));
+q262_0 = ("did not expect ascii output: " + ("" + ((n74 = (((n76 = 1) >= 1 && n76 <= L1.len && (n75 = L1.f64[(n76 | 0) - 1]) === n75 ? n75 : L1.numSlow(n76)) + 1)) >= 1 && n74 <= L4.len ? (n73 = (n74 | 0) - 1, ((n72 = L4.f64[n73]) === n72 ? n72 : ((a76 = L4.objs[n73]) === undefined ? NaN : a76))) : "")));
 inl262: {
 runtime.ext_scratch3_looks._say("plan 1", target);
 runtime.ext_scratch3_looks._say(("fail " + "0"), target);
@@ -812,18 +812,18 @@ retire(th); return 2;
 fr.pc = 48; continue;
 case 47:
 case 48:
-if (!(a55 = h2.value, typeof a55 === "number" ? false : (a55 === "#" || ("" + a55).toLowerCase() === "#"))) { fr.pc = 50; continue; }
+if (!(a77 = h2.value, typeof a77 === "number" ? false : (a78 = "" + a77, (a78 === "#")))) { fr.pc = 50; continue; }
 { const nf = new Fp_11(fr); th.frame = nf; th.fn = rp_11; }
 fr.pc = 52; return 1;
 case 52:
 fr.pc = 51; continue;
 case 50:
 case 51:
-if (!(a56 = h2.value, typeof a56 === "number" ? false : (a56 === "g" || ("" + a56).toLowerCase() === "g"))) { fr.pc = 53; continue; }
+if (!(a79 = h2.value, typeof a79 === "number" ? false : (a80 = "" + a79, (a80 === "G" || a80 === "g")))) { fr.pc = 53; continue; }
 { const nf = new Fp_8(fr); nf.s0 = 2; th.frame = nf; th.fn = rp_8; }
 fr.pc = 55; return 1;
 case 55:
-fr.s1 = ((("" + ((n79 = (((n81 = 1) >= 1 && n81 <= L1.len && (n80 = L1.f64[(n81 | 0) - 1]) === n80 ? n80 : L1.numSlow(n81)) + 1)) >= 1 && n79 <= L0.len ? (n78 = (n79 | 0) - 1, ((n77 = L0.f64[n78]) === n77 ? n77 : ((a57 = L0.objs[n78]) === undefined ? NaN : a57))) : "")))[((((n83 = 2) >= 1 && n83 <= L1.len && (n82 = L1.f64[(n83 | 0) - 1]) === n82 ? n82 : L1.numSlow(n83)) + 1) | 0) - 1] || "");
+fr.s1 = ((("" + ((n79 = (((n81 = 1) >= 1 && n81 <= L1.len && (n80 = L1.f64[(n81 | 0) - 1]) === n80 ? n80 : L1.numSlow(n81)) + 1)) >= 1 && n79 <= L0.len ? (n78 = (n79 | 0) - 1, ((n77 = L0.f64[n78]) === n77 ? n77 : ((a81 = L0.objs[n78]) === undefined ? NaN : a81))) : "")))[((((n83 = 2) >= 1 && n83 <= L1.len && (n82 = L1.f64[(n83 | 0) - 1]) === n82 ? n82 : L1.numSlow(n83)) + 1) | 0) - 1] || "");
 { const nf = new Fp_14(fr); nf.s0 = fr.s1; th.frame = nf; th.fn = rp_14; }
 fr.pc = 56; return 1;
 case 56:
@@ -836,7 +836,7 @@ L2.upToDate = false;
 fr.pc = 54; continue;
 case 53:
 case 54:
-if (!(a58 = h2.value, typeof a58 === "number" ? false : (a58 === "p" || ("" + a58).toLowerCase() === "p"))) { fr.pc = 57; continue; }
+if (!(a82 = h2.value, typeof a82 === "number" ? false : (a83 = "" + a82, (a83 === "P" || a83 === "p")))) { fr.pc = 57; continue; }
 { const nf = new Fp_8(fr); nf.s0 = 3; th.frame = nf; th.fn = rp_8; }
 fr.pc = 59; return 1;
 case 59:
@@ -848,37 +848,37 @@ n90 = 2;
 n92 = (((n94 = 2) >= 1 && n94 <= L1.len && (n93 = L1.f64[(n94 | 0) - 1]) === n93 ? n93 : L1.numSlow(n94)) + 1);
 if (n90 >= 1 && n90 <= L1.len) { L1.f64[n91 = (n90 | 0) - 1] = n92; if (L1.objs.length !== 0 && L1.objs[n91] !== undefined) L1.clearObj(n91); }
 L1.upToDate = false;
-if (!(a60 = L0.len, ((n95 = 1) >= 1 && n95 <= L1.len && (n96 = L1.f64[(n95 | 0) - 1]) === n96 && true) ? a60 < n96 : ltSlow(a60, (n95 >= 1 && n95 <= L1.len ? (n97 = (n95 | 0) - 1, ((n96 = L1.f64[n97]) === n96 ? n96 : ((a59 = L1.objs[n97]) === undefined ? NaN : a59))) : "")))) { fr.pc = 60; continue; }
+if (!(a85 = L0.len, ((n95 = 1) >= 1 && n95 <= L1.len && (n96 = L1.f64[(n95 | 0) - 1]) === n96 && true) ? a85 < n96 : ltSlow(a85, (n95 >= 1 && n95 <= L1.len ? (n97 = (n95 | 0) - 1, ((n96 = L1.f64[n97]) === n96 ? n96 : ((a84 = L1.objs[n97]) === undefined ? NaN : a84))) : "")))) { fr.pc = 60; continue; }
 case 62:
-while (!(a62 = L0.len, ((n98 = 1) >= 1 && n98 <= L1.len && (n99 = L1.f64[(n98 | 0) - 1]) === n99 && true) ? a62 === n99 : eqSlow(a62, (n98 >= 1 && n98 <= L1.len ? (n100 = (n98 | 0) - 1, ((n99 = L1.f64[n100]) === n99 ? n99 : ((a61 = L1.objs[n100]) === undefined ? NaN : a61))) : "")))) {
-a63 = "";
-if (typeof a63 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a63; else L0.pushSlow(a63);
+while (!(a87 = L0.len, ((n98 = 1) >= 1 && n98 <= L1.len && (n99 = L1.f64[(n98 | 0) - 1]) === n99 && true) ? a87 === n99 : eqSlow(a87, (n98 >= 1 && n98 <= L1.len ? (n100 = (n98 | 0) - 1, ((n99 = L1.f64[n100]) === n99 ? n99 : ((a86 = L1.objs[n100]) === undefined ? NaN : a86))) : "")))) {
+a88 = "";
+if (typeof a88 === "number" && L0.len < L0.f64.length && L0.objs.length === 0) L0.f64[L0.len++] = a88; else L0.pushSlow(a88);
 L0.upToDate = false;
 fr.pc = 62; return 0;
 }
 fr.pc = 61; continue;
 case 60:
 case 61:
-if (!(a68 = ("" + (typeof (a66 = ((n108 = 1) >= 1 && n108 <= L1.len ? (n107 = (n108 | 0) - 1, ((n106 = L1.f64[n107]) === n106 ? n106 : ((a67 = L1.objs[n107]) === undefined ? NaN : a67))) : "")) === "number" ? (a66 >= 1 && a66 <= L0.len ? (n105 = (a66 | 0) - 1, ((n104 = L0.f64[n105]) === n104 ? n104 : ((a65 = L0.objs[n105]) === undefined ? NaN : a65))) : "") : L0.getSlow(a66))).length, ((n101 = 2) >= 1 && n101 <= L1.len && (n102 = L1.f64[(n101 | 0) - 1]) === n102 && true) ? a68 < n102 : ltSlow(a68, (n101 >= 1 && n101 <= L1.len ? (n103 = (n101 | 0) - 1, ((n102 = L1.f64[n103]) === n102 ? n102 : ((a64 = L1.objs[n103]) === undefined ? NaN : a64))) : "")))) { fr.pc = 63; continue; }
+if (!(a93 = ("" + (typeof (a91 = ((n108 = 1) >= 1 && n108 <= L1.len ? (n107 = (n108 | 0) - 1, ((n106 = L1.f64[n107]) === n106 ? n106 : ((a92 = L1.objs[n107]) === undefined ? NaN : a92))) : "")) === "number" ? (a91 >= 1 && a91 <= L0.len ? (n105 = (a91 | 0) - 1, ((n104 = L0.f64[n105]) === n104 ? n104 : ((a90 = L0.objs[n105]) === undefined ? NaN : a90))) : "") : L0.getSlow(a91))).length, ((n101 = 2) >= 1 && n101 <= L1.len && (n102 = L1.f64[(n101 | 0) - 1]) === n102 && true) ? a93 < n102 : ltSlow(a93, (n101 >= 1 && n101 <= L1.len ? (n103 = (n101 | 0) - 1, ((n102 = L1.f64[n103]) === n102 ? n102 : ((a89 = L1.objs[n103]) === undefined ? NaN : a89))) : "")))) { fr.pc = 63; continue; }
 case 65:
-while (!(a73 = ("" + (typeof (a71 = ((n116 = 1) >= 1 && n116 <= L1.len ? (n115 = (n116 | 0) - 1, ((n114 = L1.f64[n115]) === n114 ? n114 : ((a72 = L1.objs[n115]) === undefined ? NaN : a72))) : "")) === "number" ? (a71 >= 1 && a71 <= L0.len ? (n113 = (a71 | 0) - 1, ((n112 = L0.f64[n113]) === n112 ? n112 : ((a70 = L0.objs[n113]) === undefined ? NaN : a70))) : "") : L0.getSlow(a71))).length, ((n109 = 2) >= 1 && n109 <= L1.len && (n110 = L1.f64[(n109 | 0) - 1]) === n110 && true) ? a73 === n110 : eqSlow(a73, (n109 >= 1 && n109 <= L1.len ? (n111 = (n109 | 0) - 1, ((n110 = L1.f64[n111]) === n110 ? n110 : ((a69 = L1.objs[n111]) === undefined ? NaN : a69))) : "")))) {
-L0.setSlow(((n119 = 1) >= 1 && n119 <= L1.len ? (n118 = (n119 | 0) - 1, ((n117 = L1.f64[n118]) === n117 ? n117 : ((a74 = L1.objs[n118]) === undefined ? NaN : a74))) : ""), (("" + (typeof (a76 = ((n124 = 1) >= 1 && n124 <= L1.len ? (n123 = (n124 | 0) - 1, ((n122 = L1.f64[n123]) === n122 ? n122 : ((a77 = L1.objs[n123]) === undefined ? NaN : a77))) : "")) === "number" ? (a76 >= 1 && a76 <= L0.len ? (n121 = (a76 | 0) - 1, ((n120 = L0.f64[n121]) === n120 ? n120 : ((a75 = L0.objs[n121]) === undefined ? NaN : a75))) : "") : L0.getSlow(a76))) + " "));
+while (!(a98 = ("" + (typeof (a96 = ((n116 = 1) >= 1 && n116 <= L1.len ? (n115 = (n116 | 0) - 1, ((n114 = L1.f64[n115]) === n114 ? n114 : ((a97 = L1.objs[n115]) === undefined ? NaN : a97))) : "")) === "number" ? (a96 >= 1 && a96 <= L0.len ? (n113 = (a96 | 0) - 1, ((n112 = L0.f64[n113]) === n112 ? n112 : ((a95 = L0.objs[n113]) === undefined ? NaN : a95))) : "") : L0.getSlow(a96))).length, ((n109 = 2) >= 1 && n109 <= L1.len && (n110 = L1.f64[(n109 | 0) - 1]) === n110 && true) ? a98 === n110 : eqSlow(a98, (n109 >= 1 && n109 <= L1.len ? (n111 = (n109 | 0) - 1, ((n110 = L1.f64[n111]) === n110 ? n110 : ((a94 = L1.objs[n111]) === undefined ? NaN : a94))) : "")))) {
+L0.setSlow(((n119 = 1) >= 1 && n119 <= L1.len ? (n118 = (n119 | 0) - 1, ((n117 = L1.f64[n118]) === n117 ? n117 : ((a99 = L1.objs[n118]) === undefined ? NaN : a99))) : ""), (("" + (typeof (a101 = ((n124 = 1) >= 1 && n124 <= L1.len ? (n123 = (n124 | 0) - 1, ((n122 = L1.f64[n123]) === n122 ? n122 : ((a102 = L1.objs[n123]) === undefined ? NaN : a102))) : "")) === "number" ? (a101 >= 1 && a101 <= L0.len ? (n121 = (a101 | 0) - 1, ((n120 = L0.f64[n121]) === n120 ? n120 : ((a100 = L0.objs[n121]) === undefined ? NaN : a100))) : "") : L0.getSlow(a101))) + " "));
 fr.pc = 65; return 0;
 }
 fr.pc = 64; continue;
 case 63:
 case 64:
-fr.s2 = (typeof (a79 = ((n129 = 1) >= 1 && n129 <= L1.len ? (n128 = (n129 | 0) - 1, ((n127 = L1.f64[n128]) === n127 ? n127 : ((a80 = L1.objs[n128]) === undefined ? NaN : a80))) : "")) === "number" ? (a79 >= 1 && a79 <= L0.len ? (n126 = (a79 | 0) - 1, ((n125 = L0.f64[n126]) === n125 ? n125 : ((a78 = L0.objs[n126]) === undefined ? NaN : a78))) : "") : L0.getSlow(a79));
-fr.s3 = ((n132 = 2) >= 1 && n132 <= L1.len ? (n131 = (n132 | 0) - 1, ((n130 = L1.f64[n131]) === n130 ? n130 : ((a81 = L1.objs[n131]) === undefined ? NaN : a81))) : "");
-fr.s4 = ((n135 = (((n137 = 3) >= 1 && n137 <= L1.len && (n136 = L1.f64[(n137 | 0) - 1]) === n136 ? n136 : L1.numSlow(n137)) + 1)) >= 1 && n135 <= L5.len ? (n134 = (n135 | 0) - 1, ((n133 = L5.f64[n134]) === n133 ? n133 : ((a82 = L5.objs[n134]) === undefined ? NaN : a82))) : "");
+fr.s2 = (typeof (a104 = ((n129 = 1) >= 1 && n129 <= L1.len ? (n128 = (n129 | 0) - 1, ((n127 = L1.f64[n128]) === n127 ? n127 : ((a105 = L1.objs[n128]) === undefined ? NaN : a105))) : "")) === "number" ? (a104 >= 1 && a104 <= L0.len ? (n126 = (a104 | 0) - 1, ((n125 = L0.f64[n126]) === n125 ? n125 : ((a103 = L0.objs[n126]) === undefined ? NaN : a103))) : "") : L0.getSlow(a104));
+fr.s3 = ((n132 = 2) >= 1 && n132 <= L1.len ? (n131 = (n132 | 0) - 1, ((n130 = L1.f64[n131]) === n130 ? n130 : ((a106 = L1.objs[n131]) === undefined ? NaN : a106))) : "");
+fr.s4 = ((n135 = (((n137 = 3) >= 1 && n137 <= L1.len && (n136 = L1.f64[(n137 | 0) - 1]) === n136 ? n136 : L1.numSlow(n137)) + 1)) >= 1 && n135 <= L5.len ? (n134 = (n135 | 0) - 1, ((n133 = L5.f64[n134]) === n133 ? n133 : ((a107 = L5.objs[n134]) === undefined ? NaN : a107))) : "");
 { const nf = new Fp_15(fr); nf.s0 = fr.s2; nf.s1 = fr.s3; nf.s2 = fr.s4; th.frame = nf; th.fn = rp_15; }
 fr.pc = 66; return 1;
 case 66:
-L0.setSlow(((n140 = 1) >= 1 && n140 <= L1.len ? (n139 = (n140 | 0) - 1, ((n138 = L1.f64[n139]) === n138 ? n138 : ((a83 = L1.objs[n139]) === undefined ? NaN : a83))) : ""), h4.value);
+L0.setSlow(((n140 = 1) >= 1 && n140 <= L1.len ? (n139 = (n140 | 0) - 1, ((n138 = L1.f64[n139]) === n138 ? n138 : ((a108 = L1.objs[n139]) === undefined ? NaN : a108))) : ""), h4.value);
 fr.pc = 58; continue;
 case 57:
 case 58:
-if ((a84 = h2.value, typeof a84 === "number" ? false : (a84 === "&" || ("" + a84).toLowerCase() === "&"))) {
+if ((a109 = h2.value, typeof a109 === "number" ? false : (a110 = "" + a109, (a110 === "&")))) {
 q264_0 = "unexpected ask for integer input";
 inl264: {
 runtime.ext_scratch3_looks._say("plan 1", target);
@@ -888,7 +888,7 @@ runtime.stopAll();
 retire(th); return 2;
 }
 }
-if ((a85 = h2.value, typeof a85 === "number" ? false : (a85 === "~" || ("" + a85).toLowerCase() === "~"))) {
+if ((a111 = h2.value, typeof a111 === "number" ? false : (a112 = "" + a111, (a112 === "~")))) {
 q265_0 = "unexpected ask for ascii input";
 inl265: {
 runtime.ext_scratch3_looks._say("plan 1", target);
@@ -901,8 +901,8 @@ retire(th); return 2;
 if (L6.contains(h2.value)) {
 q266_0 = h2.value;
 inl266: {
-a86 = q266_0;
-if (typeof a86 === "number" && L2.len < L2.f64.length && L2.objs.length === 0) L2.f64[L2.len++] = a86; else L2.pushSlow(a86);
+a113 = q266_0;
+if (typeof a113 === "number" && L2.len < L2.f64.length && L2.objs.length === 0) L2.f64[L2.len++] = a113; else L2.pushSlow(a113);
 L2.upToDate = false;
 }
 }

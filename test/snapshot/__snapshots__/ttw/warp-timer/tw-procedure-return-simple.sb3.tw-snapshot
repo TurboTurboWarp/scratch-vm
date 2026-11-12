@@ -72,15 +72,16 @@ function fp_8 (th, S, p0, p1) {
 const target = S.target;
 const h0 = g0;
 let v0 = h0.value;
-if (((p0.toLowerCase() === "f".toLowerCase()) && (p1.toLowerCase() === "g".toLowerCase()))) {
+let a0, a1, a2, a3, a4, a5;
+if (((a0 = p0, (a0 === "F" || a0 === "f")) && (a1 = p1, (a1 === "G" || a1 === "g")))) {
 runtime.ext_scratch3_looks._say("pass shadow check 1", target);
 }
 v0 = fp_7(th, S, 1, 2);
-if (((p0.toLowerCase() === "f".toLowerCase()) && (p1.toLowerCase() === "g".toLowerCase()))) {
+if (((a2 = p0, (a2 === "F" || a2 === "f")) && (a3 = p1, (a3 === "G" || a3 === "g")))) {
 runtime.ext_scratch3_looks._say("pass shadow check 2", target);
 }
 v0 = fp_7(th, S, 3, 4);
-if (((p0.toLowerCase() === "f".toLowerCase()) && (p1.toLowerCase() === "g".toLowerCase()))) {
+if (((a4 = p0, (a4 === "F" || a4 === "f")) && (a5 = p1, (a5 === "G" || a5 === "g")))) {
 runtime.ext_scratch3_looks._say("pass shadow check 3", target);
 }
 h0.value = v0;
@@ -90,12 +91,12 @@ function fs_9 (th, S) {
 const target = S.target;
 const h0 = g0;
 let v0 = h0.value;
-let n0 = 0, n1 = 0, a0;
+let n0 = 0, n1 = 0, a0, a1, a2, a3;
 runtime.ext_scratch3_looks._say("plan 8", target);
-if ((fp_0(th, S).toLowerCase() === "It works!".toLowerCase())) {
+if ((a0 = fp_0(th, S), (a0.length === 9 && (a0 === "It works!" || a0 === "it works!" || a0.toLowerCase() === "it works!")))) {
 runtime.ext_scratch3_looks._say("pass simplest", target);
 }
-if ((fp_3(th, S).toLowerCase() === "42-54".toLowerCase())) {
+if ((a1 = fp_3(th, S), (a1.length === 5 && (a1 === "42-54" || a1.toLowerCase() === "42-54")))) {
 runtime.ext_scratch3_looks._say("pass nesting1", target);
 }
 if ((((n0 = +fp_5(th, S, 12)) === n0 ? n0 : 0) === 144)) {
@@ -104,8 +105,8 @@ runtime.ext_scratch3_looks._say("pass fib 12", target);
 if ((((n1 = fp_6(th, S, 12)) === n1 ? n1 : 0) === 479001600)) {
 runtime.ext_scratch3_looks._say("pass factorial 12", target);
 }
-v0 = (h0.value = v0, a0 = fp_8(th, S, "f", "g"), v0 = h0.value, a0);
-if ((v0.toLowerCase() === "".toLowerCase())) {
+v0 = (h0.value = v0, a2 = fp_8(th, S, "f", "g"), v0 = h0.value, a2);
+if ((a3 = v0, a3.length === 0)) {
 runtime.ext_scratch3_looks._say("pass default return value", target);
 }
 runtime.ext_scratch3_looks._say("end", target);

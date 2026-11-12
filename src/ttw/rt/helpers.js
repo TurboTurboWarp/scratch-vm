@@ -192,22 +192,30 @@ const retire = thread => {
  */
 const waitThreads = (thread, threads) => {
     const runtime = thread.target.runtime;
-    let anyRunning = false;
     const all = runtime.threads;
-    for (let i = 0; i < threads.length; i++) {
-        if (all.indexOf(threads[i]) !== -1) {
+    const n = threads.length;
+    // One scan of the thread list per waited thread gives both of TW's conditions:
+    // "some thread is still in the list" and "every thread is waiting" (runtime.isWaitingThread).
+    let anyRunning = false;
+    let allWaiting = true;
+    for (let i = 0; i < n; i++) {
+        const t = threads[i];
+        const listed = all.indexOf(t) !== -1;
+        if (listed) {
             anyRunning = true;
-            break;
+            const status = t.status;
+            if (
+                allWaiting &&
+                status !== STATUS_PROMISE_WAIT &&
+                status !== STATUS_YIELD_TICK &&
+                t.stack.length > 0 &&
+                status !== STATUS_DONE
+            ) {
+                allWaiting = false;
+            }
         }
     }
     if (!anyRunning) return false;
-    let allWaiting = true;
-    for (let i = 0; i < threads.length; i++) {
-        if (!runtime.isWaitingThread(threads[i])) {
-            allWaiting = false;
-            break;
-        }
-    }
     if (allWaiting) {
         thread.status = STATUS_YIELD_TICK;
     }

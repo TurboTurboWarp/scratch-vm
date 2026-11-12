@@ -24,12 +24,13 @@ function fs_1 (th, S) {
 const target = S.target;
 const h0 = g0;
 let v0 = h0.value;
+let a0;
 runtime.ext_scratch3_looks._say("plan 1", target);
 v0 = "";
 inl1093: {
 v0 = "help";
 }
-if (!(v0.toLowerCase() === "".toLowerCase())) {
+if (!(a0 = v0, a0.length === 0)) {
 runtime.ext_scratch3_looks._say("pass", target);
 }
 runtime.ext_scratch3_looks._say("end", target);

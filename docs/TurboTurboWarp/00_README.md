@@ -57,4 +57,4 @@
 
 ## 4. ファイル一覧
 
-`01_architecture.md` 全体構成 / `02_ir_analysis.md` IR と解析 / `03_tlist.md` リスト表現 / `04_codegen_native.md` 非 yield コード生成 / `05_codegen_resumable.md` yield するコードと互換レイヤ / `06_runtime_scheduler.md` スレッド・broadcast / `07_v8_rules.md` V8 向け出力規則 / `08_testing_bench.md` 検証 / `09_phases.md` 実装順 / `bench/` 計測コード
+`01_architecture.md` 全体構成 / `02_ir_analysis.md` IR と解析 / `03_tlist.md` リスト表現 / `04_codegen_native.md` 非 yield コード生成 / `05_codegen_resumable.md` yield するコードと互換レイヤ / `06_runtime_scheduler.md` スレッド・broadcast / `07_v8_rules.md` V8 向け出力規則 / `08_testing_bench.md` 検証 / `09_phases.md` 実装順 / `bench/` 計測コード / `10_implementation.md` 実装状況・実測値

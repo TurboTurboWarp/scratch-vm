@@ -58,7 +58,9 @@ const runBcast = async (NPROC, backend) => {
 
 const clonesProject = N => {
     const st = new Proj();
-    st.flag([]);
+    // Counts the sequencer's passes over the thread list (every thread is stepped once per pass), so the
+    // benchmark can count thread steps without hooking the sequencer.
+    st.flag([{op: 'control_forever', sub: {SUBSTACK: [chg(st.v('passes'), 1)]}}]);
     const sp = new Proj();
     sp.flag([repeat(N, [{op: 'control_create_clone_of', in: {CLONE_OPTION: {op: 'control_create_clone_of_menu', f: {CLONE_OPTION: ['_myself_', null]}}}}])]);
     const hid = 'clone_hat';
@@ -75,18 +77,16 @@ const runClones = async (N, backend) => {
     for (let i = 0; i < 50; i++) vm.runtime._step();
     let best = Infinity;
     let xs = null;
+    const passes = Object.values(vm.runtime.getTargetForStage().variables).find(v => v.name === 'passes');
     for (let r = 0; r < 5; r++) {
-        let n = 0;
-        const seq = vm.runtime.sequencer;
-        const orig = seq.stepThread;
-        seq.stepThread = function (th) {
-            n++;
-            return orig.call(this, th);
-        };
+        // Every thread runs a forever loop, so each pass steps each thread exactly once.
+        const threadCount = vm.runtime.threads.length;
+        const before = passes.value;
         const t = time(() => {
             for (let i = 0; i < 40; i++) vm.runtime._step();
         });
-        seq.stepThread = orig;
+        const n = (passes.value - before) * threadCount;
+        if (vm.runtime.threads.length !== threadCount) throw new Error('thread count changed');
         best = Math.min(best, t / n * 1e6);
         xs = vm.runtime.targets.filter(t2 => !t2.isOriginal).length;
     }
